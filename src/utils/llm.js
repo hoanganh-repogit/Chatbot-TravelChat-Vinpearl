@@ -2,7 +2,7 @@ import { getWeatherForecast } from './rag'
 
 // Custom LLM Config
 const CUSTOM_KEY = import.meta.env.VITE_CUSTOM_LLM_KEY || '';
-const CUSTOM_URL = '/api-llm/zen/go/v1';
+const CUSTOM_URL = import.meta.env.VITE_CUSTOM_LLM_BASE_URL || '/api-llm/zen/go/v1';
 const CUSTOM_MODEL = import.meta.env.VITE_CUSTOM_LLM_MODEL || 'deepseek-v4-flash';
 
 // Fallback OpenAI Config
@@ -130,18 +130,18 @@ export async function executeLLMChat(messages, systemPrompt = '') {
   if (CUSTOM_KEY) {
     try {
       const url = `${CUSTOM_URL.replace(/\/$/, '')}/chat/completions`;
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${CUSTOM_KEY}`
-      },
-      body: JSON.stringify({
-        model: CUSTOM_MODEL,
-        messages: [{ role: 'system', content: systemPrompt }, ...messages],
-        temperature: 0.7
-      })
-    });
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${CUSTOM_KEY}`
+        },
+        body: JSON.stringify({
+          model: CUSTOM_MODEL,
+          messages: [{ role: 'system', content: systemPrompt }, ...messages],
+          temperature: 0.7
+        })
+      });
 
       if (response.ok) {
         const data = await response.json();
@@ -212,6 +212,16 @@ export async function runAIAgentResponse(
   const mapLink = destMapLinks[destinationId] || destMapLinks.phu_quoc;
 
   // 2. Prepare tool prompt
+  const toolsEnabled = options.toolsEnabled !== false;
+  const toolInstructions = toolsEnabled
+    ? `**TOOL CALLING - Cập nhật lịch trình:**
+In cú pháp sau ở CUỐI câu trả lời (dòng riêng biệt) khi muốn thay đổi lịch trình:
+- Thêm: [TOOL_CALL: add_activity, {"day": 1, "time": "14:30", "title": "Tên hoạt động", "desc": "Mô tả"}]
+- Sửa: [TOOL_CALL: edit_activity, {"day": 1, "index": 0, "time": "09:00", "title": "Tên mới", "desc": "Mô tả mới"}]
+- Xóa: [TOOL_CALL: delete_activity, {"day": 1, "index": 0}]`
+    : `**TRẠNG THÁI LỊCH TRÌNH: ĐÃ CHỐT**
+Bạn không được thêm, sửa hoặc xóa lịch trình trong cuộc trò chuyện này. Nếu khách muốn thay đổi lịch, hãy nói khách mở lại chế độ chỉnh sửa trước rồi mới yêu cầu điều chỉnh. Không in TOOL_CALL.`;
+
   const systemPrompt = `Bạn là Vinpearl AI, trợ lý du lịch 5 sao thông minh của hệ thống Vinpearl Resort.
 Nhiệm vụ: hỗ trợ du khách tìm hiểu địa điểm, đặt phòng và lên lịch trình nghỉ dưỡng tại Phú Quốc, Nha Trang, Nam Hội An và Hạ Long.
 
@@ -230,11 +240,9 @@ ${ragContext}
 **LỊCH TRÌNH HIỆN TẠI:**
 ${currentItinerary ? JSON.stringify(currentItinerary, null, 2) : 'Chưa có lịch trình. Hỏi thông tin khách để lên kế hoạch.'}
 
-**TOOL CALLING - Cập nhật lịch trình:**
-In cú pháp sau ở CUỐI câu trả lời (dòng riêng biệt) khi muốn thay đổi lịch trình:
-- Thêm: [TOOL_CALL: add_activity, {"day": 1, "time": "14:30", "title": "Tên hoạt động", "desc": "Mô tả"}]
-- Sửa: [TOOL_CALL: edit_activity, {"day": 1, "index": 0, "time": "09:00", "title": "Tên mới", "desc": "Mô tả mới"}]
-- Xóa: [TOOL_CALL: delete_activity, {"day": 1, "index": 0}]`;
+${toolInstructions}
+
+Chú ý: Phản hồi hoàn toàn bằng tiếng Việt với giọng điệu hiếu khách, trang trọng.`;
 
   // 3. Format history messages
   const apiMessages = chatHistory.map(msg => ({
@@ -268,6 +276,10 @@ In cú pháp sau ở CUỐI câu trả lời (dòng riêng biệt) khi muốn th
       const args = JSON.parse(toolArgsStr);
       console.log(`AI Agent executing tool: ${toolName}`, args);
 
+      if (!toolsEnabled) {
+        return;
+      }
+
       if (toolName === 'add_activity' && itineraryCallbacks.addActivity) {
         itineraryCallbacks.addActivity(args.day, args.time, args.title, args.desc);
         itineraryWasUpdated = true;
@@ -285,7 +297,9 @@ In cú pháp sau ở CUỐI câu trả lời (dòng riêng biệt) khi muốn th
 
   if (toolCalls.length > 0) {
     reply = reply.replace(toolCallRegex, '').trim();
-    if (itineraryWasUpdated) {
+    if (!toolsEnabled && !reply) {
+      reply = 'Lịch trình đã được chốt. Bạn vui lòng mở lại chỉnh sửa trước khi yêu cầu thay đổi lịch.';
+    } else if (itineraryWasUpdated) {
       reply += '\n\n*(Hệ thống: Trợ lý AI đã cập nhật tab Lịch trình đúng theo điểm đến trong cuộc chat.)*';
     }
   }

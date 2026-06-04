@@ -18,7 +18,7 @@ export function isRainRisk(ctx) {
   return RAINY_WEATHER.has(ctx.weather) || Number(ctx.rainProb || 0) >= RAIN_PROB_THRESHOLD
 }
 
-const BLOCK_TO_ENTITY = {
+const FALLBACK_BLOCK_TO_ENTITY = {
   typhoon_world: 'a_typhoon_world',
   roller_coaster: 'a_roller_coaster',
   aquarium: 'a_sea_shell',
@@ -29,7 +29,7 @@ const BLOCK_TO_ENTITY = {
   night_show_optional: 'a_grand_world_show',
 }
 
-const DEFAULT_DAY_2_BLOCKS = [
+const DEFAULT_LIVE_BLOCKS = [
   'typhoon_world',
   'roller_coaster',
   'giraffe_lunch',
@@ -58,16 +58,30 @@ export function normalizeLiveContext(preset = {}) {
   }
 }
 
-export function buildLiveData({ attractions, restaurants, transport, vouchers, itineraryTemplates, latestQueues, queueSnapshots = [] }) {
+export function buildLiveData({
+  attractions,
+  restaurants,
+  transport,
+  vouchers,
+  itineraryTemplates,
+  latestQueues,
+  queueSnapshots = [],
+  destinationId = 'phu_quoc',
+  destinationName = 'Vinpearl',
+}) {
   const attractionById = Object.fromEntries(attractions.map((item) => [item.id, item]))
   const restaurantById = Object.fromEntries(restaurants.map((item) => [item.id, item]))
   const voucherById = Object.fromEntries(vouchers.map((item) => [item.id, item]))
   // Ưu tiên dùng latestQueues đã precompute (file nhỏ); fallback tính từ snapshot nếu được truyền vào.
   const resolvedLatestQueues = latestQueues || buildLatestQueues(queueSnapshots)
-  const template = itineraryTemplates.find((item) => item.id === 'tpl_active_3n2d') || itineraryTemplates[0]
-  const dayTwoBlocks = template?.days?.find((day) => day.day === 2)?.blocks || DEFAULT_DAY_2_BLOCKS
+  const template = itineraryTemplates.find((item) => item.id.includes('active') && item.id.includes('3n2d'))
+    || itineraryTemplates.find((item) => item.id.includes('3n2d'))
+    || itineraryTemplates[0]
+  const dayTwoBlocks = template?.days?.find((day) => day.day === 2)?.blocks || template?.days?.[0]?.blocks || DEFAULT_LIVE_BLOCKS
 
   return {
+    destinationId,
+    destinationName,
     attractions,
     restaurants,
     transport,
@@ -81,9 +95,11 @@ export function buildLiveData({ attractions, restaurants, transport, vouchers, i
 }
 
 export function createInitialTimeline(data) {
-  const blockIds = [...new Set([...data.dayTwoBlocks, ...DEFAULT_DAY_2_BLOCKS])]
-    .map((block) => BLOCK_TO_ENTITY[block])
-    .filter(Boolean)
+  const blockIds = [...new Set(
+    [...new Set([...data.dayTwoBlocks, ...DEFAULT_LIVE_BLOCKS])]
+      .map((block) => resolveBlockEntityId(block, data))
+      .filter(Boolean)
+  )]
 
   const orderedIds = [
     'a_typhoon_world',
@@ -95,17 +111,20 @@ export function createInitialTimeline(data) {
     'a_grand_world_show',
   ].filter((id) => blockIds.includes(id))
 
-  return orderedIds.map((id, index) => {
+  const timelineIds = orderedIds.length ? orderedIds : blockIds
+
+  return timelineIds.map((id, index) => {
     const attraction = data.attractionById[id]
     const restaurant = data.restaurantById[id]
     const base = attraction || restaurant
+    if (!base) return null
 
     return {
       id,
       sourceId: id,
       time: DEFAULT_TIMES[index] || '16:00',
       title: base.name,
-      zone: base.zone || base.park || 'Phu Quoc',
+      zone: base.zone || base.park || data.destinationName || 'Vinpearl',
       type: attraction ? attraction.type : 'meal',
       sourceType: attraction ? 'attraction' : 'restaurant',
       indoor: attraction ? attraction.indoor : restaurant.indoor,
@@ -118,9 +137,60 @@ export function createInitialTimeline(data) {
       elderlyFriendly: attraction?.elderlyFriendly ?? restaurant?.elderlyFriendly ?? true,
       acceptsVoucher: restaurant?.acceptsVoucher || [],
       mealPeriod: index >= 5 ? 'dinner' : restaurant ? 'lunch' : null,
-      reason: 'Lấy từ mock itinerary + attraction/restaurant Phú Quốc',
+      reason: `Lấy từ mock itinerary + attraction/restaurant ${data.destinationName || 'Vinpearl'}`,
     }
-  })
+  }).filter(Boolean)
+}
+
+function resolveBlockEntityId(block, data) {
+  if (data.attractionById[block] || data.restaurantById[block]) return block
+
+  const fallbackId = FALLBACK_BLOCK_TO_ENTITY[block]
+  if (fallbackId && (data.attractionById[fallbackId] || data.restaurantById[fallbackId])) return fallbackId
+
+  const normalizedBlock = normalizeIdentifier(block)
+  const entities = [...data.attractions, ...data.restaurants]
+  const directMatch = entities.find((entity) => normalizeIdentifier(entity.id).includes(normalizedBlock))
+    || entities.find((entity) => normalizeIdentifier(entity.name).includes(normalizedBlock))
+
+  if (directMatch) return directMatch.id
+
+  if (isMealBlock(normalizedBlock)) {
+    const period = normalizedBlock.includes('dinner') ? 'dinner' : 'lunch'
+    const restaurant = data.restaurants.find((item) => item.mealPeriods?.includes(period))
+      || data.restaurants.find((item) => item.slots?.some((slot) => period === 'dinner' ? slot >= '17:00' : slot >= '10:00' && slot < '15:00'))
+      || data.restaurants[0]
+    return restaurant?.id || null
+  }
+
+  if (normalizedBlock.includes('spa')) {
+    return entities.find((entity) => normalizeIdentifier(`${entity.id} ${entity.name}`).includes('spa'))?.id || null
+  }
+
+  if (normalizedBlock.includes('pool') || normalizedBlock.includes('nap') || normalizedBlock.includes('rest')) {
+    return data.attractions.find((item) => {
+      const value = normalizeIdentifier(`${item.id} ${item.name} ${item.zone || ''}`)
+      return value.includes('pool') || value.includes('rest') || value.includes('lobby')
+    })?.id || null
+  }
+
+  return null
+}
+
+function normalizeIdentifier(value = '') {
+  return value
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'D')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+}
+
+function isMealBlock(normalizedBlock) {
+  return ['lunch', 'dinner', 'breakfast', 'bbq', 'seafood', 'bar', 'tea'].some((keyword) => normalizedBlock.includes(keyword))
 }
 
 function buildLatestQueues(queueSnapshots) {
@@ -278,11 +348,13 @@ export function optimizeTimeline(timeline, liveContext, itemLocks = {}, data) {
   }
 
   if (liveContext.elderlyMode || liveContext.avoidLongWalk) {
-    const greenSm = data.transport.find((item) => item.id === 'tr_greensm_7')
-    if (greenSm) {
+    const supportVehicle = data.transport.find((item) => item.acAndStepFree || item.elderlyFriendly)
+      || data.transport.find((item) => /green|car|taxi|xe|boat|shuttle/i.test(`${item.type || ''} ${item.id || ''}`))
+      || data.transport[0]
+    if (supportVehicle) {
       const pickup = LOCATION_LABELS[liveContext.location] || 'điểm hiện tại'
-      reasons.push(`${greenSm.type} phù hợp elderly/avoid long walk, đón tại ${pickup}, ETA ${greenSm.etaMin} phút.`)
-      toasts.push(`✓ ${greenSm.type} đón tại ${pickup} sau ${greenSm.etaMin} phút`)
+      reasons.push(`${supportVehicle.type} phù hợp elderly/avoid long walk, đón tại ${pickup}, ETA ${supportVehicle.etaMin} phút.`)
+      toasts.push(`✓ ${supportVehicle.type} đón tại ${pickup} sau ${supportVehicle.etaMin} phút`)
     }
   }
 

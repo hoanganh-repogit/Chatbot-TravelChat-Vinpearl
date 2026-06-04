@@ -36,10 +36,25 @@ const normalizeImageSrc = (src) => {
 }
 
 export default function ChatScreen({
-  chats, activeChatId, setActiveChatId, onNewChat, onRenameChat, onDeleteChat,
-  messages, setMessages, onSelectDestination, onGenerateItinerary, setActiveTab,
-  activeItineraryId, setActiveItineraryId, currentItinerary, getItinerary,
-  onAddActivity, onEditActivity, onDeleteActivity
+  chats,
+  activeChatId,
+  setActiveChatId,
+  onNewChat,
+  onRenameChat,
+  onDeleteChat,
+  messages,
+  setMessages,
+  onSelectDestination,
+  onGenerateItinerary,
+  setActiveTab,
+  activeItineraryId,
+  setActiveItineraryId,
+  currentItinerary,
+  getItinerary,
+  journeyStatus = 'draft',
+  onAddActivity,
+  onEditActivity,
+  onDeleteActivity
 }) {
   const [inputText, setInputText] = useState('')
   const [isTyping, setIsTyping] = useState(false)
@@ -82,6 +97,9 @@ export default function ChatScreen({
           addActivity: (day, time, title, desc) => onAddActivity(destId, day, time, title, desc),
           editActivity: (day, index, time, title, desc) => onEditActivity(destId, day, index, time, title, desc),
           deleteActivity: (day, index) => onDeleteActivity(destId, day, index)
+        },
+        {
+          toolsEnabled: journeyStatus === 'draft'
         }
       )
 

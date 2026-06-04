@@ -5,12 +5,18 @@ import {
   BatteryMedium,
   BellRing,
   Bus,
+  Car,
+  Check,
   CheckCircle2,
+  ChevronRight,
+  Clock,
   CloudRain,
+  Footprints,
   Gift,
   Lock,
   LockOpen,
   MapPin,
+  PlayCircle,
   RefreshCcw,
   Sparkles,
   ThermometerSun,
@@ -18,13 +24,6 @@ import {
   Users,
   Wand2,
 } from 'lucide-react'
-import liveContextMock from '../../data-mooc/phu-quoc/mock/live-context.json'
-import attractions from '../../data-mooc/phu-quoc/mock/attractions.json'
-import latestQueues from '../../data-mooc/phu-quoc/mock/latest-queues.json'
-import vouchers from '../../data-mooc/phu-quoc/mock/vouchers.json'
-import transport from '../../data-mooc/phu-quoc/mock/transport.json'
-import restaurants from '../../data-mooc/phu-quoc/mock/restaurants.json'
-import itineraryTemplates from '../../data-mooc/phu-quoc/mock/itinerary-templates.json'
 import {
   buildLiveData,
   buildSuggestion,
@@ -36,21 +35,13 @@ import {
   normalizeLiveContext,
   optimizeTimeline,
 } from '../lib/liveOptimization'
-
-const REQUIRED_PRESETS = ['normal_day', 'rainy_afternoon', 'overcrowded', 'family_fatigue', 'upsell']
+import { getDestinationName, normalizeDestinationId } from '../lib/destinations'
+import { loadLiveMoocClientData } from '../utils/liveMoocData'
 
 const WEATHER_OPTIONS = ['sunny', 'light_rain', 'heavy_rain', 'very_hot', 'thunderstorm']
 const CROWD_OPTIONS = ['low', 'medium', 'high', 'overcrowded']
 const ENERGY_OPTIONS = ['high', 'medium', 'low']
 const LOCATION_OPTIONS = ['resort_lobby', 'vinwonders_gate', 'typhoon_world', 'aquarium', 'safari', 'grand_world']
-
-const QUEUE_CONTROLS = [
-  { id: 'a_typhoon_world', label: 'Water Park' },
-  { id: 'a_sea_shell', label: 'Sea Shell' },
-  { id: 'a_roller_coaster', label: 'Roller Coaster' },
-  { id: 'a_safari_bus', label: 'Safari' },
-  { id: 'a_grand_world_show', label: 'Show' },
-]
 
 const presetLabels = {
   normal_day: 'Normal',
@@ -91,9 +82,11 @@ const locationLabels = {
 }
 
 export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_quoc' }) {
+  const normalizedDestinationId = normalizeDestinationId(destinationId)
+  const localMoocData = useMemo(() => loadLiveMoocClientData(normalizedDestinationId), [normalizedDestinationId])
   const fallbackData = useMemo(
-    () => buildLiveData({ attractions, restaurants, transport, vouchers, itineraryTemplates, latestQueues }),
-    []
+    () => buildLiveData(localMoocData),
+    [localMoocData]
   )
   const fallbackTimeline = useMemo(
     () => itineraryToLiveTimeline(confirmedItinerary, fallbackData) || createInitialTimeline(fallbackData),
@@ -101,10 +94,10 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
   )
   const liveDay = getLiveDay(confirmedItinerary)
   const [data, setData] = useState(fallbackData)
-  const [presets, setPresets] = useState(liveContextMock.presets)
+  const [presets, setPresets] = useState(localMoocData.liveContext.presets)
   const [initialTimeline, setInitialTimeline] = useState(fallbackTimeline)
   const [selectedPreset, setSelectedPreset] = useState('normal_day')
-  const [liveContext, setLiveContext] = useState(() => normalizeLiveContext(liveContextMock.presets.normal_day))
+  const [liveContext, setLiveContext] = useState(() => normalizeLiveContext(localMoocData.liveContext.presets.normal_day))
   const [timeline, setTimeline] = useState(fallbackTimeline)
   const [itemLocks, setItemLocks] = useState({})
   const [toasts, setToasts] = useState([])
@@ -125,25 +118,46 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
     let cancelled = false
 
     async function bootstrap() {
+      const localPresets = localMoocData.liveContext.presets
+      const localPresetId = localPresets[selectedPreset] ? selectedPreset : Object.keys(localPresets)[0]
+      const localTimeline = fallbackTimeline
+
+      setData(fallbackData)
+      setPresets(localPresets)
+      setSelectedPreset(localPresetId)
+      setInitialTimeline(localTimeline)
+      setTimeline(localTimeline)
+      setLiveContext(normalizeLiveContext(localPresets[localPresetId]))
+      setItemLocks({})
+      setToasts([])
+      setReasons([])
+      setExplanation('')
+      setServerSuggestion('')
+      setAiProvider('')
+
       try {
-        const payload = await apiGet('/api/live/bootstrap')
+        const payload = await apiGet(`/api/live/bootstrap?destinationId=${encodeURIComponent(normalizedDestinationId)}`)
         if (cancelled) return
 
         const remoteData = buildLiveData({
-          attractions,
+          destinationId: normalizedDestinationId,
+          destinationName: getDestinationName(normalizedDestinationId),
+          attractions: localMoocData.attractions,
           restaurants: payload.restaurants,
           transport: payload.transport,
           vouchers: payload.vouchers,
-          itineraryTemplates,
+          itineraryTemplates: localMoocData.itineraryTemplates,
           latestQueues: payload.latestQueues,
         })
 
         setData(remoteData)
         setPresets(payload.presets)
+        const remotePresetId = payload.presets[selectedPreset] ? selectedPreset : Object.keys(payload.presets)[0]
         const nextInitialTimeline = itineraryToLiveTimeline(confirmedItinerary, remoteData) || payload.initialTimeline
         setInitialTimeline(nextInitialTimeline)
         setTimeline(nextInitialTimeline)
-        setLiveContext(normalizeLiveContext(payload.presets.normal_day))
+        setSelectedPreset(remotePresetId)
+        setLiveContext(normalizeLiveContext(payload.presets[remotePresetId]))
         setBackendAvailable(true)
       } catch {
         if (cancelled) return
@@ -157,7 +171,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
     return () => {
       cancelled = true
     }
-  }, [confirmedItinerary])
+  }, [confirmedItinerary, fallbackData, fallbackTimeline, localMoocData, normalizedDestinationId])
 
   useEffect(() => {
     if (!backendAvailable) {
@@ -171,7 +185,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       try {
         // Deterministic + fast: live warnings/suggestion only. The provider
         // pill is driven by /optimize, so a control change never regresses it.
-        const payload = await apiPost('/api/live/suggest', { timeline, liveContext })
+        const payload = await apiPost('/api/live/suggest', { destinationId: normalizedDestinationId, timeline, liveContext })
         if (cancelled) return
         setServerSuggestion(payload.suggestion)
         setWarningsByItem(payload.warningsByItem || {})
@@ -187,7 +201,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       cancelled = true
       window.clearTimeout(timer)
     }
-  }, [timeline, liveContext, backendAvailable])
+  }, [timeline, liveContext, backendAvailable, normalizedDestinationId])
 
   const updateContext = (patch) => {
     setLiveContext((current) => ({ ...current, ...patch }))
@@ -199,7 +213,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
   const selectPreset = (presetId) => {
     setSelectedPreset(presetId)
-    setLiveContext(normalizeLiveContext(presets[presetId]))
+    setLiveContext(normalizeLiveContext(presets[presetId] || Object.values(presets)[0]))
     setTimeline(initialTimeline)
     setItemLocks({})
     setToasts([])
@@ -238,17 +252,17 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
   const handleAction = async (action, params = {}) => {
     if (!backendAvailable) {
-      appendToast(localActionToast(action))
+      appendToast(localActionToast(action, params))
       return
     }
 
     setActionBusy(true)
     try {
-      const payload = await apiPost('/api/live/action', { action, params })
+      const payload = await apiPost('/api/live/action', { destinationId: normalizedDestinationId, action, params })
       appendToast(payload.toast)
     } catch {
       setBackendAvailable(false)
-      appendToast(localActionToast(action))
+      appendToast(localActionToast(action, params))
     } finally {
       setActionBusy(false)
     }
@@ -262,7 +276,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
     setOptimizing(true)
     try {
-      const payload = await apiPost('/api/live/optimize', { timeline, liveContext, itemLocks })
+      const payload = await apiPost('/api/live/optimize', { destinationId: normalizedDestinationId, timeline, liveContext, itemLocks })
       setTimeline(payload.timeline)
       setServerSuggestion(payload.suggestion)
       setToasts(payload.toasts || [])
@@ -294,7 +308,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
             <p className="live-kicker">Vinpearl Journey Concierge</p>
             <h2 className="live-title">Live Reflex</h2>
             <p className="live-subtitle">
-              Ngày {liveDay?.dayNum || 2} · {formatDestinationName(destinationId)} · {confirmedItinerary?.title || 'Lịch trình demo'}
+              Ngày {liveDay?.dayNum || 1} · {getDestinationName(normalizedDestinationId)} · {confirmedItinerary?.title || 'Lịch trình demo'}
             </p>
           </div>
           <div className="live-hero-icon">
@@ -329,6 +343,8 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
             liveContext={liveContext}
             selectedPreset={selectedPreset}
             presetHint={presetHint}
+            presets={presets}
+            data={data}
             onPreset={selectPreset}
             onChange={updateContext}
             onQueueChange={updateQueue}
@@ -362,6 +378,12 @@ function PhoneWidget({
   const activeVoucher = liveContext.voucherExpiring ? data.voucherById[liveContext.voucherExpiring] : null
   const providerLabel = providerPillLabel({ backendAvailable, optimizing, aiProvider })
 
+  const nowMinutes = useNowMinutes(timeline)
+  const currentIndex = findCurrentIndex(timeline, nowMinutes)
+  const currentItem = currentIndex >= 0 ? timeline[currentIndex] : null
+  const nextItem = timeline[currentIndex + 1] || null
+  const nextTransport = nextItem ? pickTransport(currentItem, nextItem, liveContext, data) : null
+
   return (
     <section className="live-phone-widget">
       <div className="live-widget-top">
@@ -376,6 +398,34 @@ function PhoneWidget({
           <button className="live-icon-btn" type="button" onClick={onReset} aria-label="Reset timeline">
             <RefreshCcw size={16} />
           </button>
+        </div>
+      </div>
+
+      {/* NOW — chỉ rõ đang ở khung giờ nào và hoạt động hiện tại */}
+      <div className="live-now-card">
+        <div className="live-now-clock">
+          <span className="live-now-pulse" />
+          <strong>{formatMinutes(nowMinutes)}</strong>
+          <span>Bây giờ</span>
+        </div>
+        <div className="live-now-body">
+          {currentItem ? (
+            <>
+              <p className="live-now-status"><PlayCircle size={13} /> Đang diễn ra</p>
+              <h4>{currentItem.title}</h4>
+              <p className="live-now-zone"><MapPin size={12} /> {currentItem.zone}</p>
+            </>
+          ) : (
+            <>
+              <p className="live-now-status"><Clock size={13} /> Chuẩn bị khởi hành</p>
+              <h4>{nextItem ? nextItem.title : 'Chưa có hoạt động'}</h4>
+            </>
+          )}
+          {nextItem && (
+            <p className="live-now-next">
+              <ChevronRight size={13} /> Tiếp theo <strong>{nextItem.title}</strong> lúc {nextItem.time}
+            </p>
+          )}
         </div>
       </div>
 
@@ -396,54 +446,72 @@ function PhoneWidget({
       </div>
 
       <div className="live-timeline">
-        {timeline.map((item) => {
+        {timeline.map((item, index) => {
           const warningRecord = warningsByItem[item.id]
           const warnings = warningRecord?.warnings || getItemWarnings(item, liveContext)
           const queue = warningRecord?.queueMin ?? getQueueMin(item, liveContext)
           const score = warningRecord?.fitScore ?? fitScore(item, liveContext)
           const locked = Boolean(itemLocks[item.id])
+          const status = index < currentIndex ? 'done' : index === currentIndex ? 'current' : 'upcoming'
+          const nextStop = timeline[index + 1]
+          const transit = nextStop ? pickTransport(item, nextStop, liveContext, data) : null
 
           return (
-            <div
-              className={`live-timeline-row ${warnings.length ? 'has-warning' : ''} ${locked ? 'is-locked' : ''}`}
-              key={item.id}
-            >
-              <div className="live-time">{item.time}</div>
-              <div className="live-line-wrap">
-                <span className="live-node" />
-              </div>
-              <div className="live-card">
-                <div className="live-card-head">
-                  <div>
-                    <h4>{item.title}</h4>
-                    <p>{item.zone} · {item.type}</p>
-                  </div>
-                  <button
-                    className={`live-lock-btn ${locked ? 'active' : ''}`}
-                    type="button"
-                    onClick={() => onToggleLock(item.id)}
-                    aria-label={locked ? 'Unlock activity' : 'Lock activity'}
-                  >
-                    {locked ? <Lock size={14} /> : <LockOpen size={14} />}
-                  </button>
+            <React.Fragment key={item.id}>
+              <div
+                className={`live-timeline-row status-${status} ${warnings.length ? 'has-warning' : ''} ${locked ? 'is-locked' : ''}`}
+              >
+                <div className="live-time">{item.time}</div>
+                <div className="live-line-wrap">
+                  <span className="live-node">
+                    {status === 'done' && <Check size={9} strokeWidth={3.5} />}
+                  </span>
                 </div>
-
-                <div className="live-card-meta">
-                  {item.sourceType === 'attraction' && <span>Queue {queue}’</span>}
-                  <span>Fit {Math.round(score * 100)}%</span>
-                  {item.voucherTitle && <span className="live-voucher-pill"><TicketPercent size={12} /> F&B</span>}
-                </div>
-
-                {(warnings.length > 0 || item.reason || item.voucherTitle) && (
-                  <div className="live-card-badges">
-                    {warnings.map((warning) => (
-                      <span className={`live-warning-chip ${warning.tone}`} key={warning.key}>{warning.label}</span>
-                    ))}
-                    {item.voucherTitle && <span className="live-warning-chip success">{item.voucherTitle}</span>}
+                <div className="live-card">
+                  <div className="live-card-head">
+                    <div>
+                      {status === 'current' && <span className="live-now-chip"><PlayCircle size={11} /> Đang diễn ra</span>}
+                      <h4>{item.title}</h4>
+                      <p>{item.zone} · {item.type}</p>
+                    </div>
+                    <button
+                      className={`live-lock-btn ${locked ? 'active' : ''}`}
+                      type="button"
+                      onClick={() => onToggleLock(item.id)}
+                      aria-label={locked ? 'Unlock activity' : 'Lock activity'}
+                    >
+                      {locked ? <Lock size={14} /> : <LockOpen size={14} />}
+                    </button>
                   </div>
-                )}
+
+                  <div className="live-card-meta">
+                    {item.sourceType === 'attraction' && <span>Queue {queue}’</span>}
+                    <span>Fit {Math.round(score * 100)}%</span>
+                    {item.voucherTitle && <span className="live-voucher-pill"><TicketPercent size={12} /> F&B</span>}
+                  </div>
+
+                  {(warnings.length > 0 || item.voucherTitle) && (
+                    <div className="live-card-badges">
+                      {warnings.map((warning) => (
+                        <span className={`live-warning-chip ${warning.tone}`} key={warning.key}>{warning.label}</span>
+                      ))}
+                      {item.voucherTitle && <span className="live-warning-chip success">{item.voucherTitle}</span>}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+
+              {transit && (
+                <TransitSegment
+                  transit={transit}
+                  from={item}
+                  to={nextStop}
+                  active={index === currentIndex}
+                  actionBusy={actionBusy}
+                  onAction={onAction}
+                />
+              )}
+            </React.Fragment>
           )
         })}
       </div>
@@ -483,6 +551,41 @@ function PhoneWidget({
   )
 }
 
+function TransitSegment({ transit, from, to, active, actionBusy, onAction }) {
+  const Icon = transit.bookable
+    ? (/shuttle|van|bus/i.test(transit.mode) ? Bus : Car)
+    : Footprints
+  const route = `${shortZone(from?.zone)} → ${shortZone(to?.zone)}`
+
+  return (
+    <div className={`live-transit ${active ? 'active' : ''}`}>
+      <div className="live-transit-spacer" />
+      <div className="live-transit-rail">
+        <span className="live-transit-icon"><Icon size={13} /></span>
+      </div>
+      <div className="live-transit-card">
+        <div className="live-transit-info">
+          <strong>{transit.mode}</strong>
+          <span>{route} · {transit.etaMin}′ · {formatVnd(transit.price)}</span>
+          {transit.note && <em>{transit.note}</em>}
+        </div>
+        {transit.bookable ? (
+          <button
+            className="live-transit-btn"
+            type="button"
+            disabled={actionBusy}
+            onClick={() => onAction('call_green_sm', { transportId: transit.vehicleId, mode: transit.mode, etaMin: transit.etaMin })}
+          >
+            <Car size={13} /> {actionBusy ? 'Đang gọi…' : 'Gọi xe'}
+          </button>
+        ) : (
+          <span className="live-transit-walk"><Footprints size={13} /> Đi bộ</span>
+        )}
+      </div>
+    </div>
+  )
+}
+
 function providerPillLabel({ backendAvailable, optimizing, aiProvider }) {
   if (!backendAvailable) return 'Offline · local'
   if (optimizing) return 'AI · đang xử lý…'
@@ -490,7 +593,20 @@ function providerPillLabel({ backendAvailable, optimizing, aiProvider }) {
   return 'AI · sẵn sàng'
 }
 
-function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPreset, onChange, onQueueChange }) {
+function SimulationControlPanel({ liveContext, selectedPreset, presetHint, presets, data, onPreset, onChange, onQueueChange }) {
+  const presetIds = useMemo(() => {
+    const ids = Object.keys(presets || {})
+    return ids.length ? ids : ['normal_day']
+  }, [presets])
+  const queueControls = useMemo(() => {
+    const controls = (data?.attractions || [])
+      .filter((item) => item.defaultQueueMin != null || data.latestQueues?.[item.id] != null)
+      .slice(0, 5)
+      .map((item) => ({ id: item.id, label: item.name }))
+    return controls.length ? controls : (data?.attractions || []).slice(0, 5).map((item) => ({ id: item.id, label: item.name }))
+  }, [data])
+  const voucherOptions = data?.vouchers || []
+
   return (
     <section className="live-control-panel">
       <div className="live-control-header">
@@ -506,14 +622,14 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPre
 
       <ControlSection step={1} title="Kịch bản mẫu" hint="Chọn nhanh một tình huống có sẵn">
         <div className="live-preset-grid">
-          {REQUIRED_PRESETS.map((presetId) => (
+          {presetIds.map((presetId) => (
             <button
               key={presetId}
               type="button"
               className={`live-preset-btn ${selectedPreset === presetId ? 'active' : ''}`}
               onClick={() => onPreset(presetId)}
             >
-              {presetLabels[presetId]}
+              {presetLabels[presetId] || presetId}
             </button>
           ))}
         </div>
@@ -589,7 +705,7 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPre
         />
         <div className="live-queue-panel">
           <p className="live-mini-title">Thời gian chờ (phút)</p>
-          {QUEUE_CONTROLS.map((control) => (
+          {queueControls.map((control) => (
             <label className="live-queue-row" key={control.id}>
               <span>{control.label}</span>
               <input
@@ -612,8 +728,9 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPre
             onChange={(event) => onChange({ voucherExpiring: event.target.value })}
           >
             <option value="">Không dùng</option>
-            <option value="v_fnb_today">Giảm 30% F&B hôm nay</option>
-            <option value="v_safari_meal">Voucher bữa ăn Safari</option>
+            {voucherOptions.map((voucher) => (
+              <option value={voucher.id} key={voucher.id}>{voucher.title}</option>
+            ))}
           </select>
         </label>
       </ControlSection>
@@ -672,7 +789,11 @@ function ToggleControl({ label, checked, onChange }) {
 
 function getLiveDay(itinerary) {
   if (!itinerary?.days?.length) return null
-  return itinerary.days.find((day) => day.dayNum === 2) || itinerary.days[0]
+  const explicitDayNum = itinerary.liveDayNum || itinerary.activeDayNum || itinerary.currentDayNum
+  return itinerary.days.find((day) => day.dayNum === explicitDayNum)
+    || itinerary.days.find((day) => day.isLive || day.isCurrent)
+    || itinerary.days.find((day) => day.events?.length)
+    || itinerary.days[0]
 }
 
 function itineraryToLiveTimeline(itinerary, data) {
@@ -809,14 +930,91 @@ function timeToMinutes(time = '00:00') {
   return Number(hours) * 60 + Number(minutes)
 }
 
-function formatDestinationName(destinationId) {
-  const labels = {
-    phu_quoc: 'Phú Quốc',
-    nha_trang: 'Nha Trang',
-    hoi_an: 'Nam Hội An',
-    ha_long: 'Hạ Long',
+// "Bây giờ" tracker: dùng giờ thực nếu rơi trong khung lịch trình,
+// nếu không thì neo vào hoạt động thứ 2 để demo luôn có mốc hiện tại.
+function useNowMinutes(timeline) {
+  const [nowMs, setNowMs] = useState(() => Date.now())
+
+  useEffect(() => {
+    const id = window.setInterval(() => setNowMs(Date.now()), 30000)
+    return () => window.clearInterval(id)
+  }, [])
+
+  return useMemo(() => {
+    if (!timeline.length) return 0
+    const starts = timeline.map((item) => timeToMinutes(item.time))
+    const first = starts[0]
+    const last = starts[starts.length - 1]
+    const now = new Date(nowMs)
+    const real = now.getHours() * 60 + now.getMinutes()
+    if (real >= first - 20 && real <= last + 90) return real
+    const anchorIdx = Math.min(1, timeline.length - 1)
+    return starts[anchorIdx] + 7
+  }, [nowMs, timeline])
+}
+
+function findCurrentIndex(timeline, nowMinutes) {
+  let index = -1
+  timeline.forEach((item, i) => {
+    if (timeToMinutes(item.time) <= nowMinutes) index = i
+  })
+  return index
+}
+
+// Gợi ý phương tiện di chuyển giữa hai điểm theo bối cảnh thực tế.
+function pickTransport(from, to, ctx, data) {
+  const vehicles = data?.transport || []
+  const fromZone = normalizeText(from?.zone || 'resort')
+  const toZone = normalizeText(to?.zone || '')
+  const sameZone = Boolean(fromZone) && fromZone === toZone
+  const elderly = Boolean(ctx?.elderlyMode || ctx?.avoidLongWalk)
+  const rainy = isRainRisk(ctx)
+
+  const make = (vehicle, note, fallbackMode) => ({
+    mode: vehicle?.type || fallbackMode || 'Green SM xe điện',
+    etaMin: vehicle?.etaMin ?? 8,
+    price: vehicle?.pricePerTrip ?? 0,
+    bookable: true,
+    vehicleId: vehicle?.id || null,
+    note,
+  })
+  const vehicleByType = (pattern) => vehicles.find((vehicle) => pattern.test(`${vehicle.type || ''} ${vehicle.id || ''}`))
+  const coveredVehicle = vehicles.find((vehicle) => vehicle.acAndStepFree || vehicle.elderlyFriendly)
+    || vehicleByType(/green|car|taxi|xe|boat|shuttle/i)
+    || vehicles[0]
+  const buggy = vehicleByType(/buggy|cart|xe dien|electric/i) || coveredVehicle
+  const shuttle = vehicleByType(/shuttle|bus|van|boat|transfer/i) || coveredVehicle
+
+  if (sameZone && !elderly && !rainy) {
+    return { mode: 'Đi bộ', etaMin: 5, price: 0, bookable: false, vehicleId: null, note: 'Cùng khu vực, đi bộ ~5 phút' }
   }
-  return labels[destinationId] || 'Vinpearl'
+  if (rainy) {
+    return make(coveredVehicle, 'Có mái che, tránh mưa', 'Xe nội khu')
+  }
+  if (elderly) {
+    return make(sameZone ? buggy : coveredVehicle, 'Ưu tiên xe êm, lên xuống dễ', 'Xe hỗ trợ')
+  }
+  if (sameZone) {
+    return make(buggy, 'Buggy nội khu di chuyển nhanh', 'Buggy nội khu')
+  }
+  return make(shuttle, 'Tuyến shuttle nối khu', 'Resort Shuttle')
+}
+
+function formatMinutes(total) {
+  const value = Math.max(0, Math.round(total))
+  const hours = Math.floor(value / 60) % 24
+  const minutes = value % 60
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
+}
+
+function formatVnd(value) {
+  if (!value) return 'Miễn phí'
+  return `${Math.round(value / 1000)}k đ`
+}
+
+function shortZone(zone) {
+  if (!zone) return 'Vinpearl'
+  return zone.length > 16 ? `${zone.slice(0, 15)}…` : zone
 }
 
 async function apiGet(url) {
@@ -845,7 +1043,11 @@ function formatProvider(provider) {
   return 'Fallback'
 }
 
-function localActionToast(action) {
-  if (action === 'call_green_sm') return '✓ Green SM xe điện 7 chỗ đang đến điểm đón (demo offline)'
+function localActionToast(action, params = {}) {
+  if (action === 'call_green_sm') {
+    const mode = params.mode || 'Green SM xe điện 7 chỗ'
+    const eta = params.etaMin ? `, ETA ${params.etaMin} phút` : ''
+    return `✓ Đã gọi ${mode}${eta}, xe đang đến điểm đón (demo offline)`
+  }
   return '✓ Đã ghi nhận yêu cầu (demo offline)'
 }

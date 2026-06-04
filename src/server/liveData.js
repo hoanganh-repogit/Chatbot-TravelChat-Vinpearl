@@ -1,35 +1,43 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { getDestinationMeta } from '../lib/destinations.js'
 import { buildLiveData, createInitialTimeline } from '../lib/liveOptimization.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.resolve(__dirname, '../..')
-const MOCK_DIR = path.join(ROOT_DIR, 'data-mooc/phu-quoc/mock')
 
-function readJson(fileName) {
-  return JSON.parse(fs.readFileSync(path.join(MOCK_DIR, fileName), 'utf8'))
+function getMockDir(destinationId) {
+  return path.join(ROOT_DIR, 'data-mooc', getDestinationMeta(destinationId).folder, 'mock')
+}
+
+function readJson(mockDir, fileName) {
+  return JSON.parse(fs.readFileSync(path.join(mockDir, fileName), 'utf8'))
 }
 
 // MOOC data is static, but /suggest fires on every control change. Without this
 // cache we re-read ~9 JSON files from disk per keystroke. Build once, reuse.
-let cachedData = null
+const cachedDataByDestination = new Map()
 
-export function loadLiveMoocData() {
-  if (cachedData) return cachedData
+export function loadLiveMoocData(destinationId) {
+  const meta = getDestinationMeta(destinationId)
+  if (cachedDataByDestination.has(meta.id)) return cachedDataByDestination.get(meta.id)
 
-  const liveContext = readJson('live-context.json')
-  const attractions = readJson('attractions.json')
-  const latestQueues = readOptionalJson('latest-queues.json')
-  const queueSnapshots = latestQueues ? [] : readJson('queue-snapshots.json')
-  const vouchers = readJson('vouchers.json')
-  const transport = readJson('transport.json')
-  const restaurants = readJson('restaurants.json')
-  const itineraryTemplates = readJson('itinerary-templates.json')
-  const serviceRequests = readJson('service-requests.json')
-  const bookings = readJson('bookings.json')
+  const mockDir = getMockDir(meta.id)
+  const liveContext = readJson(mockDir, 'live-context.json')
+  const attractions = readJson(mockDir, 'attractions.json')
+  const latestQueues = readOptionalJson(mockDir, 'latest-queues.json')
+  const queueSnapshots = latestQueues ? [] : readJson(mockDir, 'queue-snapshots.json')
+  const vouchers = readJson(mockDir, 'vouchers.json')
+  const transport = readJson(mockDir, 'transport.json')
+  const restaurants = readJson(mockDir, 'restaurants.json')
+  const itineraryTemplates = readJson(mockDir, 'itinerary-templates.json')
+  const serviceRequests = readJson(mockDir, 'service-requests.json')
+  const bookings = readJson(mockDir, 'bookings.json')
 
   const engineData = buildLiveData({
+    destinationId: meta.id,
+    destinationName: meta.name,
     attractions,
     restaurants,
     transport,
@@ -39,7 +47,9 @@ export function loadLiveMoocData() {
     queueSnapshots,
   })
 
-  cachedData = {
+  const data = {
+    destinationId: meta.id,
+    destinationName: meta.name,
     liveContext,
     attractions,
     latestQueues: engineData.latestQueues,
@@ -54,13 +64,16 @@ export function loadLiveMoocData() {
     initialTimeline: createInitialTimeline(engineData),
   }
 
-  return cachedData
+  cachedDataByDestination.set(meta.id, data)
+  return data
 }
 
-export function createBootstrapPayload() {
-  const data = loadLiveMoocData()
+export function createBootstrapPayload(destinationId) {
+  const data = loadLiveMoocData(destinationId)
 
   return {
+    destinationId: data.destinationId,
+    destinationName: data.destinationName,
     presets: data.liveContext.presets,
     initialTimeline: data.initialTimeline,
     latestQueues: data.latestQueues,
@@ -70,8 +83,8 @@ export function createBootstrapPayload() {
   }
 }
 
-function readOptionalJson(fileName) {
-  const fullPath = path.join(MOCK_DIR, fileName)
+function readOptionalJson(mockDir, fileName) {
+  const fullPath = path.join(mockDir, fileName)
   if (!fs.existsSync(fullPath)) return null
-  return readJson(fileName)
+  return readJson(mockDir, fileName)
 }

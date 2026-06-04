@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Compass, Sparkles, Calendar, User, Signal, Wifi, Battery } from 'lucide-react'
+import { Compass, Sparkles, CalendarCheck, User, Signal, Wifi, Battery } from 'lucide-react'
 import ExploreScreen, { destinationsData } from './components/ExploreScreen'
 import ChatScreen from './components/ChatScreen'
 import DetailScreen from './components/DetailScreen'
 import ItineraryScreen from './components/ItineraryScreen'
 import AccountScreen from './components/AccountScreen'
+import { generateItineraryWithAI } from './utils/itineraryAI'
 
 // Initial database templates for the 4 destinations
 const initialItineraries = {
@@ -138,6 +139,7 @@ export default function App() {
   const [activeItineraryId, setActiveItineraryId] = useState('phu_quoc')
   const [journeyStatus, setJourneyStatus] = useState('draft')
   const [confirmedItinerary, setConfirmedItinerary] = useState(null)
+  const [generatingItinerary, setGeneratingItinerary] = useState(false)
   
   // Custom itineraries state holding user modifications
   const [customItineraries, setCustomItineraries] = useState(initialItineraries)
@@ -244,11 +246,27 @@ export default function App() {
     });
   };
 
-  // Generate itinerary action
-  const handleGenerateItinerary = (destinationId) => {
+  // Generate itinerary action — SEAM: AI sinh lịch trình (fallback = template tĩnh)
+  const handleGenerateItinerary = async (destinationId) => {
     setActiveItineraryId(destinationId)
     setJourneyStatus('draft')
     setConfirmedItinerary(null)
+
+    const fallback = customItineraries[destinationId] || initialItineraries[destinationId]
+    setGeneratingItinerary(true)
+    try {
+      const { itinerary } = await generateItineraryWithAI({
+        destinationId,
+        dayCount: fallback?.days?.length || 3,
+        party: 'Gia đình 4 người',
+        fallback,
+      })
+      if (itinerary) {
+        setCustomItineraries(prev => ({ ...prev, [destinationId]: itinerary }))
+      }
+    } finally {
+      setGeneratingItinerary(false)
+    }
   }
 
   const handleConfirmItinerary = () => {
@@ -359,8 +377,9 @@ export default function App() {
               setActiveTab={setActiveTab}
               activeItineraryId={activeItineraryId}
               setActiveItineraryId={setActiveItineraryId}
-              currentItinerary={customItineraries[activeItineraryId]}
-              getItinerary={(destinationId) => customItineraries[destinationId]}
+              currentItinerary={journeyStatus === 'draft' ? customItineraries[activeItineraryId] : confirmedItinerary}
+              getItinerary={(destinationId) => journeyStatus === 'draft' ? customItineraries[destinationId] : confirmedItinerary}
+              journeyStatus={journeyStatus}
               onAddActivity={(destinationId, dayNum, time, title, desc) => handleAddItineraryActivity(destinationId, dayNum, time, title, desc)}
               onEditActivity={(destinationId, dayNum, index, time, title, desc) => handleEditItineraryActivity(destinationId, dayNum, index, time, title, desc)}
               onDeleteActivity={(destinationId, dayNum, index) => handleDeleteItineraryActivity(destinationId, dayNum, index)}
@@ -373,6 +392,7 @@ export default function App() {
               itinerary={customItineraries[activeItineraryId]}
               confirmedItinerary={confirmedItinerary}
               journeyStatus={journeyStatus}
+              isGenerating={generatingItinerary}
               onUpdateItinerary={handleUpdateItinerary}
               onConfirmItinerary={handleConfirmItinerary}
               onStartLive={handleStartLive}
@@ -402,7 +422,7 @@ export default function App() {
         {/* Bottom Tab Navigation Bar */}
         <nav className="nav-bar">
           <button
-            className={`nav-item ${activeTab === 'explore' ? 'active' : ''}`}
+            className={`nav-item nav-explore ${activeTab === 'explore' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('explore')
               setSelectedDestinationId(null)
@@ -415,7 +435,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'chat' ? 'active' : ''}`}
+            className={`nav-item nav-ai ${activeTab === 'chat' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('chat')
               setSelectedDestinationId(null)
@@ -428,7 +448,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'itinerary' ? 'active' : ''}`}
+            className={`nav-item nav-itinerary ${activeTab === 'itinerary' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('itinerary')
               setSelectedDestinationId(null)
@@ -441,7 +461,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'account' ? 'active' : ''}`}
+            className={`nav-item nav-account ${activeTab === 'account' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('account')
               setSelectedDestinationId(null)
