@@ -5,6 +5,7 @@ import ChatScreen from './components/ChatScreen'
 import DetailScreen from './components/DetailScreen'
 import ItineraryScreen from './components/ItineraryScreen'
 import AccountScreen from './components/AccountScreen'
+import { generateItineraryWithAI } from './utils/itineraryAI'
 
 // Initial database templates for the 4 destinations
 const initialItineraries = {
@@ -138,6 +139,7 @@ export default function App() {
   const [activeItineraryId, setActiveItineraryId] = useState('phu_quoc')
   const [journeyStatus, setJourneyStatus] = useState('draft')
   const [confirmedItinerary, setConfirmedItinerary] = useState(null)
+  const [generatingItinerary, setGeneratingItinerary] = useState(false)
   
   // Custom itineraries state holding user modifications
   const [customItineraries, setCustomItineraries] = useState(initialItineraries)
@@ -244,11 +246,27 @@ export default function App() {
     });
   };
 
-  // Generate itinerary action
-  const handleGenerateItinerary = (destinationId) => {
+  // Generate itinerary action — SEAM: AI sinh lịch trình (fallback = template tĩnh)
+  const handleGenerateItinerary = async (destinationId) => {
     setActiveItineraryId(destinationId)
     setJourneyStatus('draft')
     setConfirmedItinerary(null)
+
+    const fallback = customItineraries[destinationId] || initialItineraries[destinationId]
+    setGeneratingItinerary(true)
+    try {
+      const { itinerary } = await generateItineraryWithAI({
+        destinationId,
+        dayCount: fallback?.days?.length || 3,
+        party: 'Gia đình 4 người',
+        fallback,
+      })
+      if (itinerary) {
+        setCustomItineraries(prev => ({ ...prev, [destinationId]: itinerary }))
+      }
+    } finally {
+      setGeneratingItinerary(false)
+    }
   }
 
   const handleConfirmItinerary = () => {
@@ -372,6 +390,7 @@ export default function App() {
               itinerary={customItineraries[activeItineraryId]}
               confirmedItinerary={confirmedItinerary}
               journeyStatus={journeyStatus}
+              isGenerating={generatingItinerary}
               onUpdateItinerary={handleUpdateItinerary}
               onConfirmItinerary={handleConfirmItinerary}
               onStartLive={handleStartLive}

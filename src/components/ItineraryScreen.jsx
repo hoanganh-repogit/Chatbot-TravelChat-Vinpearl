@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {
   ArrowRight,
   Bed,
@@ -27,6 +27,7 @@ import {
   X
 } from 'lucide-react'
 import { getWeatherForecast } from '../utils/rag'
+import { getDaySuggestion } from '../utils/itineraryAI'
 import LiveScreen from './LiveScreen'
 
 const destinationProfiles = {
@@ -61,6 +62,7 @@ export default function ItineraryScreen({
   itinerary,
   confirmedItinerary,
   journeyStatus = 'draft',
+  isGenerating = false,
   onUpdateItinerary,
   onConfirmItinerary,
   onStartLive,
@@ -72,6 +74,8 @@ export default function ItineraryScreen({
   const [editForm, setEditForm] = useState({ time: '', title: '', desc: '' })
   const [weatherForecast, setWeatherForecast] = useState([])
   const [showMapModal, setShowMapModal] = useState(false)
+  const [aiDaySuggestion, setAiDaySuggestion] = useState('')
+  const aiSuggestCacheRef = useRef({})
   const displayItinerary = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
   const readOnly = journeyStatus !== 'draft'
 
@@ -83,6 +87,60 @@ export default function ItineraryScreen({
       })
     }
   }, [activeItineraryId])
+
+  // SEAM: gợi ý AI theo ngày cho badge "Gợi ý từ AI" (fallback = text rule thời tiết)
+  useEffect(() => {
+    const dayWeather = weatherForecast[activeDay - 1]
+    if (!dayWeather) {
+      setAiDaySuggestion('')
+      return undefined
+    }
+
+    const fallbackText = dayWeather.rainProb > 50
+      ? 'Dự báo có mưa. Nên đổi lịch trình vui chơi ngoài trời sang Akoya Spa hoặc tham quan indoor.'
+      : dayWeather.recommendation
+
+    const cacheKey = `${activeItineraryId}-${activeDay}`
+    if (aiSuggestCacheRef.current[cacheKey]) {
+      setAiDaySuggestion(aiSuggestCacheRef.current[cacheKey])
+      return undefined
+    }
+
+    setAiDaySuggestion(fallbackText)
+
+    const source = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
+    const dayData = source?.days?.find(d => d.dayNum === activeDay) || source?.days?.[0] || { events: [] }
+
+    let cancelled = false
+    getDaySuggestion({
+      destinationId: activeItineraryId,
+      dayNum: activeDay,
+      events: dayData.events,
+      dayWeather,
+      fallback: fallbackText,
+    }).then(text => {
+      if (cancelled || !text) return
+      aiSuggestCacheRef.current[cacheKey] = text
+      setAiDaySuggestion(text)
+    })
+
+    return () => {
+      cancelled = true
+    }
+  }, [activeItineraryId, activeDay, weatherForecast, journeyStatus, itinerary, confirmedItinerary])
+
+  // AI đang sinh lịch trình — chặn chỉnh sửa tới khi xong
+  if (isGenerating) {
+    return (
+      <div className="itinerary-empty itinerary-generating">
+        <span className="itinerary-ai-spinner"><Sparkles size={30} /></span>
+        <h3>Vinpearl AI đang thiết kế lịch trình…</h3>
+        <p className="itinerary-empty-text">
+          Đang cá nhân hóa hoạt động theo điểm đến, nhóm khách và thời tiết. Chỉ mất vài giây.
+        </p>
+      </div>
+    )
+  }
 
   if (!displayItinerary) {
     return (
@@ -250,7 +308,7 @@ export default function ItineraryScreen({
 
             <button className="weather-ai-suggestion" type="button" onClick={() => setActiveTab('chat')}>
               <span className="weather-ai-icon"><Sparkles size={16} /></span>
-              <span className="weather-ai-text"><strong>Gợi ý từ AI:</strong> {aiSuggestion}</span>
+              <span className="weather-ai-text"><strong>Gợi ý từ AI:</strong> {aiDaySuggestion || aiSuggestion}</span>
               <ArrowRight size={18} className="weather-ai-arrow" />
             </button>
           </div>

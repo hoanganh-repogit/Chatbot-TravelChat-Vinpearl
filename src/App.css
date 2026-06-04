@@ -1542,6 +1542,32 @@ body {
   margin-bottom: 20px;
 }
 
+/* AI đang sinh lịch trình */
+.itinerary-generating h3 {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 850;
+  color: #6d28d9;
+}
+
+.itinerary-ai-spinner {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.30);
+  animation: itineraryAiPulse 1.3s ease-in-out infinite;
+}
+
+@keyframes itineraryAiPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 12px 26px rgba(124, 58, 237, 0.30); }
+  50% { transform: scale(1.08); box-shadow: 0 16px 32px rgba(124, 58, 237, 0.45); }
+}
+
 /* 5. ACCOUNT SCREEN (Screen 6) */
 .account-profile-section {
   padding: 24px 20px;
