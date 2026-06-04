@@ -1,0 +1,145 @@
+[
+  {
+    "id": "hl_h_vinpearl_resort_spa",
+    "name": "Vinpearl Resort & Spa Hạ Long",
+    "tier": 5,
+    "zone": "Đảo Rều, Bãi Cháy",
+    "distanceToMainlandPierMin": 5,
+    "distanceToSunWorldMin": 10,
+    "distanceToCruisePortMin": 12,
+    "distanceToBaiChayBeachMin": 8,
+    "distanceToHaLongBayPierMin": 12,
+    "distanceToHanoiMin": 155,
+    "accessModes": [
+      "speedboat",
+      "resort_shuttle_boat"
+    ],
+    "amenities": [
+      "private_island",
+      "bay_view",
+      "spa",
+      "indoor_pool",
+      "outdoor_pool",
+      "kids_club",
+      "shuttle_boat",
+      "beachfront"
+    ],
+    "familyFit": 0.92,
+    "elderlyFit": 0.86,
+    "coupleFit": 0.91,
+    "groupFit": 0.75,
+    "note": "Resort chính của Vinpearl tại Hạ Long, nằm trên đảo Rều, cần boat transfer ngắn"
+  },
+  {
+    "id": "hl_h_bai_chay_mainland",
+    "name": "Bãi Cháy Mainland Family Hotel",
+    "tier": 4,
+    "zone": "Bãi Cháy Mainland",
+    "distanceToMainlandPierMin": 8,
+    "distanceToSunWorldMin": 5,
+    "distanceToCruisePortMin": 10,
+    "distanceToBaiChayBeachMin": 4,
+    "distanceToHaLongBayPierMin": 10,
+    "distanceToHanoiMin": 150,
+    "accessModes": [
+      "road"
+    ],
+    "amenities": [
+      "mainland_access",
+      "family_rooms",
+      "pool",
+      "breakfast",
+      "near_night_market",
+      "value_stay"
+    ],
+    "familyFit": 0.82,
+    "elderlyFit": 0.8,
+    "coupleFit": 0.72,
+    "groupFit": 0.88,
+    "note": "Mock mainland option để demo khách muốn dễ di chuyển/tiết kiệm"
+  },
+  {
+    "id": "hl_h_marina_bay",
+    "name": "Hạ Long Marina Bay Hotel",
+    "tier": 5,
+    "zone": "Tuần Châu / Marina",
+    "distanceToMainlandPierMin": 12,
+    "distanceToSunWorldMin": 18,
+    "distanceToCruisePortMin": 4,
+    "distanceToBaiChayBeachMin": 15,
+    "distanceToHaLongBayPierMin": 4,
+    "distanceToHanoiMin": 160,
+    "accessModes": [
+      "road",
+      "cruise_pier"
+    ],
+    "amenities": [
+      "near_cruise_port",
+      "bay_view",
+      "spa",
+      "rooftop_bar",
+      "pool",
+      "quiet_zone"
+    ],
+    "familyFit": 0.78,
+    "elderlyFit": 0.84,
+    "coupleFit": 0.89,
+    "groupFit": 0.82,
+    "note": "Mock option sát bến du thuyền, hợp lịch cruise"
+  },
+  {
+    "id": "hl_h_hon_gai_view",
+    "name": "Hòn Gai Bay View Hotel",
+    "tier": 4,
+    "zone": "Hòn Gai",
+    "distanceToMainlandPierMin": 18,
+    "distanceToSunWorldMin": 20,
+    "distanceToCruisePortMin": 14,
+    "distanceToBaiChayBeachMin": 18,
+    "distanceToHaLongBayPierMin": 10,
+    "distanceToHanoiMin": 160,
+    "accessModes": [
+      "road"
+    ],
+    "amenities": [
+      "bay_view",
+      "local_food_nearby",
+      "museum_nearby",
+      "breakfast",
+      "value_stay"
+    ],
+    "familyFit": 0.75,
+    "elderlyFit": 0.78,
+    "coupleFit": 0.8,
+    "groupFit": 0.72,
+    "note": "Mock option cho khách thích local food/museum"
+  },
+  {
+    "id": "hl_h_team_resort",
+    "name": "Bãi Cháy Team Resort",
+    "tier": 4,
+    "zone": "Bãi Cháy Mainland",
+    "distanceToMainlandPierMin": 10,
+    "distanceToSunWorldMin": 7,
+    "distanceToCruisePortMin": 12,
+    "distanceToBaiChayBeachMin": 3,
+    "distanceToHaLongBayPierMin": 12,
+    "distanceToHanoiMin": 150,
+    "accessModes": [
+      "road"
+    ],
+    "amenities": [
+      "bulk_rooms",
+      "team_activity",
+      "pool",
+      "bbq_area",
+      "near_beach",
+      "parking"
+    ],
+    "familyFit": 0.74,
+    "elderlyFit": 0.7,
+    "coupleFit": 0.62,
+    "groupFit": 0.94,
+    "note": "Mock option cho team building đông người"
+  }
+]

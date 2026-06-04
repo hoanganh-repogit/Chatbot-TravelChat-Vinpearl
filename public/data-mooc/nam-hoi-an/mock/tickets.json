@@ -1,0 +1,181 @@
+[
+  {
+    "id": "nha_t_vinwonders_1d",
+    "name": "Vé VinWonders Nam Hội An 1 ngày",
+    "covers": [
+      "VinWonders"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 650000,
+      "child": 490000,
+      "senior": 490000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "theme_park_only",
+      "short_trip"
+    ]
+  },
+  {
+    "id": "nha_t_vinwonders_family",
+    "name": "Family Combo VinWonders + River Safari",
+    "covers": [
+      "VinWonders",
+      "RiverSafari"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 780000,
+      "child": 590000,
+      "senior": 590000
+    },
+    "savingVsSeparate": 0.12,
+    "currency": "VND",
+    "bestFor": [
+      "family",
+      "river_safari"
+    ]
+  },
+  {
+    "id": "nha_t_waterworld",
+    "name": "Water World Add-on",
+    "covers": [
+      "WaterWorld"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 280000,
+      "child": 220000,
+      "senior": 220000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "summer",
+      "kids",
+      "active"
+    ]
+  },
+  {
+    "id": "nha_t_resort_park_bundle",
+    "name": "Resort + VinWonders Nam Hội An Bundle",
+    "covers": [
+      "VinWonders",
+      "RiverSafari",
+      "ResortGuestBenefit"
+    ],
+    "validDays": 3,
+    "pricePerPax": {
+      "adult": 980000,
+      "child": 760000,
+      "senior": 760000
+    },
+    "savingVsSeparate": 0.2,
+    "currency": "VND",
+    "bestFor": [
+      "resort",
+      "family",
+      "multi_day"
+    ]
+  },
+  {
+    "id": "nha_t_fastpass_adventure",
+    "name": "Adventure Land Fastpass",
+    "covers": [
+      "AdventureLandFastpass"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 320000,
+      "child": 250000,
+      "senior": 250000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "overcrowded",
+      "active"
+    ]
+  },
+  {
+    "id": "nha_t_oldtown_shuttle",
+    "name": "Hội An Old Town Evening Shuttle",
+    "covers": [
+      "OldTownShuttle",
+      "GuideMap"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 220000,
+      "child": 160000,
+      "senior": 160000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "old_town",
+      "evening"
+    ]
+  },
+  {
+    "id": "nha_t_golf_9holes",
+    "name": "Vinpearl Golf Nam Hội An 9 holes",
+    "covers": [
+      "Golf9Holes"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 1350000,
+      "child": 0,
+      "senior": 1350000
+    },
+    "savingVsSeparate": 0.08,
+    "currency": "VND",
+    "bestFor": [
+      "golf",
+      "premium"
+    ]
+  },
+  {
+    "id": "nha_t_spa_couple",
+    "name": "Couple Akoya Spa Add-on",
+    "covers": [
+      "AkoyaSpa"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 1200000,
+      "child": 0,
+      "senior": 950000
+    },
+    "savingVsSeparate": 0.1,
+    "currency": "VND",
+    "bestFor": [
+      "couple",
+      "rainy_day",
+      "premium"
+    ]
+  },
+  {
+    "id": "nha_t_group_daypass",
+    "name": "Group Day Pass 10+ VinWonders Nam Hội An",
+    "covers": [
+      "VinWonders",
+      "GroupEntry"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 560000,
+      "child": 440000,
+      "senior": 440000
+    },
+    "savingVsSeparate": 0.14,
+    "currency": "VND",
+    "bestFor": [
+      "team_building",
+      "large_group"
+    ]
+  }
+]

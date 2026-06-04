@@ -1,0 +1,452 @@
+[
+  {
+    "id": "a_sea_shell",
+    "name": "The Sea Shell Aquarium",
+    "park": "VinWonders",
+    "indoor": true,
+    "type": "show_walk",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "18:00"
+    ],
+    "avgDurationMin": 65,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 12,
+    "zone": "VinWonders Indoor",
+    "tags": [
+      "marine_life",
+      "rain_safe"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_indoor_show",
+    "name": "Indoor Mini Show",
+    "park": "VinWonders",
+    "indoor": true,
+    "type": "show",
+    "intensity": "low",
+    "openHours": [
+      "11:00",
+      "18:30"
+    ],
+    "avgDurationMin": 35,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 8,
+    "zone": "Fantasy World",
+    "tags": [
+      "rain_safe",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_typhoon_world",
+    "name": "Typhoon World Water Park",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "water_park",
+    "intensity": "medium",
+    "openHours": [
+      "10:00",
+      "17:30"
+    ],
+    "avgDurationMin": 120,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 25,
+    "zone": "Typhoon World",
+    "tags": [
+      "water_park",
+      "heat_relief"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_roller_coaster",
+    "name": "Wrath of Zeus Roller Coaster",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "thrill_ride",
+    "intensity": "high",
+    "openHours": [
+      "10:00",
+      "18:00"
+    ],
+    "avgDurationMin": 25,
+    "walkLevel": "medium",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 30,
+    "zone": "Adventure World",
+    "tags": [
+      "thrill",
+      "teen"
+    ],
+    "minHeightCm": 120,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_viking_village",
+    "name": "Mysterious Viking Village",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "walk_zone",
+    "intensity": "medium",
+    "openHours": [
+      "10:00",
+      "17:30"
+    ],
+    "avgDurationMin": 75,
+    "walkLevel": "high",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 20,
+    "zone": "Viking Village",
+    "tags": [
+      "photo",
+      "outdoor"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_european_avenue",
+    "name": "European Avenue",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "walk_zone",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "19:30"
+    ],
+    "avgDurationMin": 45,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 10,
+    "zone": "European Streetmosphere",
+    "tags": [
+      "photo",
+      "parade"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_fairy_world",
+    "name": "Fairy World",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "kids_zone",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "18:00"
+    ],
+    "avgDurationMin": 70,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Fantasy World",
+    "tags": [
+      "kids",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_safari_bus",
+    "name": "Safari Bus Tour",
+    "park": "Safari",
+    "indoor": false,
+    "type": "safari_bus",
+    "intensity": "low",
+    "openHours": [
+      "08:30",
+      "16:00"
+    ],
+    "avgDurationMin": 75,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Safari Semi-wild",
+    "tags": [
+      "animals",
+      "elderly_friendly"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_giraffe_restaurant",
+    "name": "Giraffe Feeding Experience",
+    "park": "Safari",
+    "indoor": false,
+    "type": "animal_interaction",
+    "intensity": "low",
+    "openHours": [
+      "10:30",
+      "15:30"
+    ],
+    "avgDurationMin": 45,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 15,
+    "zone": "Safari Restaurant Zone",
+    "tags": [
+      "animals",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_bird_show",
+    "name": "Bird Show",
+    "park": "Safari",
+    "indoor": false,
+    "type": "show",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "15:30"
+    ],
+    "avgDurationMin": 30,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 12,
+    "zone": "Safari Show Area",
+    "tags": [
+      "show",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_night_safari",
+    "name": "Night Safari Tour",
+    "park": "Safari",
+    "indoor": false,
+    "type": "premium_tour",
+    "intensity": "medium",
+    "openHours": [
+      "19:00",
+      "21:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 8,
+    "zone": "Safari Night Route",
+    "tags": [
+      "premium",
+      "night"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "a_grand_world_show",
+    "name": "Tinh hoa Việt Nam Show",
+    "park": "GrandWorld",
+    "indoor": false,
+    "type": "night_show",
+    "intensity": "medium",
+    "openHours": [
+      "20:15",
+      "21:00"
+    ],
+    "avgDurationMin": 60,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 20,
+    "zone": "Grand World Stage",
+    "tags": [
+      "signature_show",
+      "night"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "a_charm_venice",
+    "name": "Charm of Venice Show",
+    "park": "GrandWorld",
+    "indoor": false,
+    "type": "night_show",
+    "intensity": "low",
+    "openHours": [
+      "21:30",
+      "21:55"
+    ],
+    "avgDurationMin": 25,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 12,
+    "zone": "Lake of Love",
+    "tags": [
+      "signature_show",
+      "romantic"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "a_bamboo_legend",
+    "name": "Bamboo Legend Photo Spot",
+    "park": "GrandWorld",
+    "indoor": false,
+    "type": "photo_spot",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "23:00"
+    ],
+    "avgDurationMin": 30,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 5,
+    "zone": "Grand World",
+    "tags": [
+      "photo",
+      "walk"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_venice_boat",
+    "name": "Venice River Boat",
+    "park": "GrandWorld",
+    "indoor": false,
+    "type": "boat_ride",
+    "intensity": "low",
+    "openHours": [
+      "16:00",
+      "22:00"
+    ],
+    "avgDurationMin": 35,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Venice River",
+    "tags": [
+      "romantic",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_teddy_bear",
+    "name": "Teddy Bear Museum",
+    "park": "GrandWorld",
+    "indoor": true,
+    "type": "museum",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "22:00"
+    ],
+    "avgDurationMin": 60,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 10,
+    "zone": "Grand World Indoor",
+    "tags": [
+      "rain_safe",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "a_spa_akoya",
+    "name": "Akoya Spa Session",
+    "park": "Resort",
+    "indoor": true,
+    "type": "spa",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "22:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "low",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 5,
+    "zone": "Resort Spa",
+    "tags": [
+      "relax",
+      "voucher"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "a_beach_sunset",
+    "name": "Bãi Dài Sunset Walk",
+    "park": "Resort",
+    "indoor": false,
+    "type": "beach",
+    "intensity": "low",
+    "openHours": [
+      "16:30",
+      "18:30"
+    ],
+    "avgDurationMin": 45,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 5,
+    "zone": "Bãi Dài",
+    "tags": [
+      "sunset",
+      "relax"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  }
+]

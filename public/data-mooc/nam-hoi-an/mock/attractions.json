@@ -1,0 +1,505 @@
+[
+  {
+    "id": "nha_a_harbor_corner",
+    "name": "Harbor Corner",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "photo_walk",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "20:00"
+    ],
+    "avgDurationMin": 45,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 12,
+    "zone": "Harbor Corner",
+    "tags": [
+      "photo",
+      "entry_zone"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_river_safari",
+    "name": "River Safari Boat Tour",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "river_safari",
+    "intensity": "low",
+    "openHours": [
+      "09:30",
+      "17:30"
+    ],
+    "avgDurationMin": 70,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 20,
+    "zone": "River Safari",
+    "tags": [
+      "signature",
+      "animals",
+      "boat"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "nha_a_bird_show",
+    "name": "Bird Show",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "show",
+    "intensity": "low",
+    "openHours": [
+      "10:30",
+      "16:30"
+    ],
+    "avgDurationMin": 30,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 12,
+    "zone": "River Safari",
+    "tags": [
+      "animals",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_happy_zoo",
+    "name": "Happy Zoo",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "animal_interaction",
+    "intensity": "low",
+    "openHours": [
+      "09:30",
+      "17:00"
+    ],
+    "avgDurationMin": 45,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 14,
+    "zone": "River Safari",
+    "tags": [
+      "animals",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_folk_island",
+    "name": "Island of Folk Culture",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "culture_walk",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "18:30"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 16,
+    "zone": "Island of Folk Culture",
+    "tags": [
+      "culture",
+      "craft",
+      "photo"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_craft_village",
+    "name": "Traditional Craft Village Demo",
+    "park": "VinWonders",
+    "indoor": true,
+    "type": "culture_show",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "17:00"
+    ],
+    "avgDurationMin": 40,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 8,
+    "zone": "Island of Folk Culture",
+    "tags": [
+      "rain_safe",
+      "culture"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_water_world",
+    "name": "Water World",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "water_park",
+    "intensity": "medium",
+    "openHours": [
+      "10:00",
+      "18:00"
+    ],
+    "avgDurationMin": 140,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 28,
+    "zone": "Water World",
+    "tags": [
+      "water_park",
+      "summer"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_lazy_river",
+    "name": "Lazy River",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "water_park",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "18:00"
+    ],
+    "avgDurationMin": 55,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Water World",
+    "tags": [
+      "water_park",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_adventure_land",
+    "name": "Adventure Land Rides",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "thrill_ride",
+    "intensity": "high",
+    "openHours": [
+      "09:30",
+      "18:30"
+    ],
+    "avgDurationMin": 100,
+    "walkLevel": "medium",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 34,
+    "zone": "Adventure Land",
+    "tags": [
+      "thrill",
+      "active"
+    ],
+    "minHeightCm": 120,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_drop_tower",
+    "name": "Swiss Tower Drop Ride",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "thrill_ride",
+    "intensity": "high",
+    "openHours": [
+      "10:00",
+      "18:00"
+    ],
+    "avgDurationMin": 25,
+    "walkLevel": "medium",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 32,
+    "zone": "Adventure Land",
+    "tags": [
+      "thrill"
+    ],
+    "minHeightCm": 120,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_indoor_games",
+    "name": "Indoor Games Castle",
+    "park": "VinWonders",
+    "indoor": true,
+    "type": "indoor_games",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "20:00"
+    ],
+    "avgDurationMin": 80,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 15,
+    "zone": "Indoor Games",
+    "tags": [
+      "rain_safe",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_4d_castle",
+    "name": "4D Movie Castle",
+    "park": "VinWonders",
+    "indoor": true,
+    "type": "cinema",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "19:00"
+    ],
+    "avgDurationMin": 30,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 10,
+    "zone": "Indoor Games",
+    "tags": [
+      "rain_safe",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_mapping_show",
+    "name": "3D Mapping Show",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "night_show",
+    "intensity": "low",
+    "openHours": [
+      "19:15",
+      "19:45"
+    ],
+    "avgDurationMin": 30,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Central Square",
+    "tags": [
+      "night_show",
+      "signature"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "nha_a_fountain_show",
+    "name": "Musical Fountain Show",
+    "park": "VinWonders",
+    "indoor": false,
+    "type": "night_show",
+    "intensity": "low",
+    "openHours": [
+      "20:00",
+      "20:25"
+    ],
+    "avgDurationMin": 25,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 16,
+    "zone": "Central Square",
+    "tags": [
+      "night_show",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "nha_a_beach_time",
+    "name": "Bình Minh Beach Time",
+    "park": "Resort",
+    "indoor": false,
+    "type": "beach",
+    "intensity": "low",
+    "openHours": [
+      "06:00",
+      "18:30"
+    ],
+    "avgDurationMin": 75,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 5,
+    "zone": "Bình Minh Beach",
+    "tags": [
+      "relax",
+      "sunset"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_resort_pool",
+    "name": "Resort Pool Morning",
+    "park": "Resort",
+    "indoor": false,
+    "type": "pool",
+    "intensity": "low",
+    "openHours": [
+      "06:00",
+      "20:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 6,
+    "zone": "Resort Pool",
+    "tags": [
+      "relax",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "nha_a_spa_akoya",
+    "name": "Akoya Spa Session",
+    "park": "Resort",
+    "indoor": true,
+    "type": "spa",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "22:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "low",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 5,
+    "zone": "Akoya Spa",
+    "tags": [
+      "rain_safe",
+      "voucher",
+      "romantic"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "nha_a_golf_9holes",
+    "name": "Vinpearl Golf Nam Hội An 9 holes",
+    "park": "Golf",
+    "indoor": false,
+    "type": "golf",
+    "intensity": "medium",
+    "openHours": [
+      "06:00",
+      "17:30"
+    ],
+    "avgDurationMin": 150,
+    "walkLevel": "medium",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 8,
+    "zone": "Golf Course",
+    "tags": [
+      "golf",
+      "premium"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "nha_a_old_town_evening",
+    "name": "Hội An Old Town Evening",
+    "park": "HoiAnOldTown",
+    "indoor": false,
+    "type": "old_town_walk",
+    "intensity": "medium",
+    "openHours": [
+      "17:00",
+      "22:00"
+    ],
+    "avgDurationMin": 150,
+    "walkLevel": "high",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 20,
+    "zone": "Hội An Old Town",
+    "tags": [
+      "culture",
+      "lantern",
+      "food"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "nha_a_basket_boat",
+    "name": "Cẩm Thanh Basket Boat",
+    "park": "HoiAnArea",
+    "indoor": false,
+    "type": "boat_activity",
+    "intensity": "medium",
+    "openHours": [
+      "08:30",
+      "16:30"
+    ],
+    "avgDurationMin": 75,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 15,
+    "zone": "Cẩm Thanh",
+    "tags": [
+      "local_experience",
+      "weather_sensitive"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  }
+]

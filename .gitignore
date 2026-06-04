@@ -31,3 +31,6 @@ dist-ssr/
 .env
 .venv
 
+# Dataset
+VinPearl_dataset/dataset_clean/images/*
+

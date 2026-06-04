@@ -1,0 +1,137 @@
+[
+  {
+    "id": "tpl_family_3n2d_relaxed",
+    "name": "Gia đình 3N2Đ relaxed",
+    "target": {
+      "partyType": "family",
+      "pace": "relaxed",
+      "elderly": true
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + light Grand World",
+        "blocks": [
+          "airport_transfer",
+          "checkin",
+          "resort_rest",
+          "grand_world_dinner",
+          "night_show_optional"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Safari + indoor VinWonders",
+        "blocks": [
+          "safari_bus",
+          "giraffe_lunch",
+          "nap",
+          "aquarium",
+          "indoor_show"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "VinWonders highlights + checkout",
+        "blocks": [
+          "european_avenue",
+          "fairy_world",
+          "souvenir",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "avoid_high_walk_after_15",
+      "insert_rest_after_120min",
+      "prefer_indoor_if_rainProb_gt_60"
+    ]
+  },
+  {
+    "id": "tpl_active_3n2d",
+    "name": "Nhóm bạn 3N2Đ active",
+    "target": {
+      "partyType": "friends",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + Water Park + Grand World",
+        "blocks": [
+          "checkin",
+          "typhoon_world",
+          "bbq_dinner",
+          "charm_venice"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Thrill rides + Safari",
+        "blocks": [
+          "roller_coaster",
+          "viking_village",
+          "safari_bus",
+          "night_safari"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Photo spots + checkout",
+        "blocks": [
+          "bamboo_legend",
+          "venice_boat",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "offer_fastpass_if_queue_gt_40",
+      "move_water_park_if_heavy_rain"
+    ]
+  },
+  {
+    "id": "tpl_couple_3n2d",
+    "name": "Cặp đôi nghỉ dưỡng 3N2Đ",
+    "target": {
+      "partyType": "couple",
+      "pace": "balanced",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + spa + romantic dinner",
+        "blocks": [
+          "checkin",
+          "spa_akoya",
+          "pino_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "VinWonders + sunset",
+        "blocks": [
+          "aquarium",
+          "european_avenue",
+          "beach_sunset",
+          "charm_venice"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Late checkout",
+        "blocks": [
+          "breakfast",
+          "pool",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "prioritize_spa_voucher",
+      "prefer_romantic_dining_slot"
+    ]
+  }
+]

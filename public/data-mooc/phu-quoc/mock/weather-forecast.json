@@ -1,0 +1,312 @@
+[
+  {
+    "date": "2026-06-04",
+    "location": "Phú Quốc",
+    "weather": "sunny",
+    "rainProb": 13,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 33,
+    "windKmh": 14,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-05",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 55,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 32,
+    "windKmh": 22,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-06",
+    "location": "Phú Quốc",
+    "weather": "sunny",
+    "rainProb": 15,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 32,
+    "windKmh": 14,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-07",
+    "location": "Phú Quốc",
+    "weather": "cloudy",
+    "rainProb": 34,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 30,
+    "windKmh": 12,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-08",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 50,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 30,
+    "windKmh": 8,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-09",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 56,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 33,
+    "windKmh": 10,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-10",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 60,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 34,
+    "windKmh": 8,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-11",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 90,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 30,
+    "windKmh": 19,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-12",
+    "location": "Phú Quốc",
+    "weather": "very_hot",
+    "rainProb": 6,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 35,
+    "windKmh": 13,
+    "recommendation": "Nên chơi outdoor buổi sáng, nghỉ trưa tránh nóng"
+  },
+  {
+    "date": "2026-06-13",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 80,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 33,
+    "windKmh": 19,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-14",
+    "location": "Phú Quốc",
+    "weather": "very_hot",
+    "rainProb": 7,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 34,
+    "windKmh": 8,
+    "recommendation": "Nên chơi outdoor buổi sáng, nghỉ trưa tránh nóng"
+  },
+  {
+    "date": "2026-06-15",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 60,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 31,
+    "windKmh": 10,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-16",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 90,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 31,
+    "windKmh": 15,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-17",
+    "location": "Phú Quốc",
+    "weather": "very_hot",
+    "rainProb": 5,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 35,
+    "windKmh": 23,
+    "recommendation": "Nên chơi outdoor buổi sáng, nghỉ trưa tránh nóng"
+  },
+  {
+    "date": "2026-06-18",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 89,
+    "temperatureMinC": 26,
+    "temperatureMaxC": 30,
+    "windKmh": 14,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-19",
+    "location": "Phú Quốc",
+    "weather": "very_hot",
+    "rainProb": 10,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 34,
+    "windKmh": 16,
+    "recommendation": "Nên chơi outdoor buổi sáng, nghỉ trưa tránh nóng"
+  },
+  {
+    "date": "2026-06-20",
+    "location": "Phú Quốc",
+    "weather": "cloudy",
+    "rainProb": 32,
+    "temperatureMinC": 26,
+    "temperatureMaxC": 34,
+    "windKmh": 14,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-21",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 59,
+    "temperatureMinC": 26,
+    "temperatureMaxC": 30,
+    "windKmh": 12,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-22",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 52,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 34,
+    "windKmh": 15,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-23",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 84,
+    "temperatureMinC": 26,
+    "temperatureMaxC": 30,
+    "windKmh": 16,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-24",
+    "location": "Phú Quốc",
+    "weather": "light_rain",
+    "rainProb": 57,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 33,
+    "windKmh": 9,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-25",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 85,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 33,
+    "windKmh": 16,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-26",
+    "location": "Phú Quốc",
+    "weather": "sunny",
+    "rainProb": 13,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 33,
+    "windKmh": 19,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-27",
+    "location": "Phú Quốc",
+    "weather": "cloudy",
+    "rainProb": 25,
+    "temperatureMinC": 26,
+    "temperatureMaxC": 30,
+    "windKmh": 16,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-28",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 88,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 32,
+    "windKmh": 8,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-06-29",
+    "location": "Phú Quốc",
+    "weather": "cloudy",
+    "rainProb": 30,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 34,
+    "windKmh": 8,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-06-30",
+    "location": "Phú Quốc",
+    "weather": "very_hot",
+    "rainProb": 3,
+    "temperatureMinC": 28,
+    "temperatureMaxC": 34,
+    "windKmh": 15,
+    "recommendation": "Nên chơi outdoor buổi sáng, nghỉ trưa tránh nóng"
+  },
+  {
+    "date": "2026-07-01",
+    "location": "Phú Quốc",
+    "weather": "sunny",
+    "rainProb": 10,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 30,
+    "windKmh": 11,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-07-02",
+    "location": "Phú Quốc",
+    "weather": "sunny",
+    "rainProb": 11,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 34,
+    "windKmh": 18,
+    "recommendation": "Phù hợp lịch trình outdoor/park bình thường"
+  },
+  {
+    "date": "2026-07-03",
+    "location": "Phú Quốc",
+    "weather": "heavy_rain",
+    "rainProb": 83,
+    "temperatureMinC": 25,
+    "temperatureMaxC": 33,
+    "windKmh": 15,
+    "recommendation": "Ưu tiên indoor và giữ phương án shuttle"
+  },
+  {
+    "date": "2026-07-04",
+    "location": "Phú Quốc",
+    "weather": "very_hot",
+    "rainProb": 0,
+    "temperatureMinC": 27,
+    "temperatureMaxC": 36,
+    "windKmh": 15,
+    "recommendation": "Nên chơi outdoor buổi sáng, nghỉ trưa tránh nóng"
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "id": "nt_u_001",
+    "name": "Gia đình Minh đi Nha Trang",
+    "origin": "HAN",
+    "destination": "CXR",
+    "travelWindow": {
+      "start": "2026-06-14",
+      "end": "2026-06-17",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Gold",
+      "points": 12400
+    },
+    "party": {
+      "adults": 2,
+      "children": 2,
+      "elderly": 1,
+      "childAges": [
+        5,
+        8
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "theme_park",
+        "aquarium",
+        "show",
+        "island_resort"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "comfort",
+      "roomPreference": [
+        "connecting",
+        "near_elevator",
+        "sea_view"
+      ],
+      "mealPreference": [
+        "seafood",
+        "vietnamese",
+        "kids_menu"
+      ],
+      "transportSensitivity": [
+        "avoid_rough_sea",
+        "prefer_cable_car"
+      ]
+    }
+  },
+  {
+    "id": "nt_u_002",
+    "name": "Nhóm bạn Linh Nha Trang",
+    "origin": "SGN",
+    "destination": "CXR",
+    "travelWindow": {
+      "start": "2026-06-21",
+      "end": "2026-06-24",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Platinum",
+      "points": 28700
+    },
+    "party": {
+      "adults": 4,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "active",
+      "interests": [
+        "water_park",
+        "zipline",
+        "alpine_coaster",
+        "night_show",
+        "beach"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "villa",
+        "private_pool",
+        "beachfront"
+      ],
+      "mealPreference": [
+        "bbq",
+        "seafood",
+        "bar"
+      ]
+    }
+  },
+  {
+    "id": "nt_u_003",
+    "name": "Cặp đôi Huy & An Nha Trang",
+    "origin": "DAD",
+    "destination": "CXR",
+    "travelWindow": {
+      "start": "2026-06-27",
+      "end": "2026-06-30",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Silver",
+      "points": 5400
+    },
+    "party": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "balanced",
+      "interests": [
+        "spa",
+        "fine_dining",
+        "sea_view",
+        "tata_show",
+        "romantic"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "luxury_villa",
+        "private_pool",
+        "quiet_zone"
+      ],
+      "mealPreference": [
+        "western",
+        "seafood",
+        "romantic"
+      ]
+    }
+  },
+  {
+    "id": "nt_u_004",
+    "name": "Đại gia đình Phương ở Hòn Tre",
+    "origin": "HAN",
+    "destination": "CXR",
+    "travelWindow": {
+      "start": "2026-06-08",
+      "end": "2026-06-12",
+      "nights": 4
+    },
+    "vinclub": {
+      "tier": "Diamond",
+      "points": 64200
+    },
+    "party": {
+      "adults": 6,
+      "children": 3,
+      "elderly": 2,
+      "childAges": [
+        4,
+        7,
+        11
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "king_garden",
+        "aquarium",
+        "show",
+        "buffet",
+        "beach"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "multi_bedroom_villa",
+        "buggy",
+        "near_lobby"
+      ],
+      "mealPreference": [
+        "buffet",
+        "vietnamese",
+        "kids_menu"
+      ]
+    }
+  },
+  {
+    "id": "nt_u_005",
+    "name": "Team building Beta Nha Trang",
+    "origin": "SGN",
+    "destination": "CXR",
+    "travelWindow": {
+      "start": "2026-07-02",
+      "end": "2026-07-04",
+      "nights": 2
+    },
+    "vinclub": {
+      "tier": "Gold",
+      "points": 21800
+    },
+    "party": {
+      "adults": 14,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "active",
+      "interests": [
+        "team_activity",
+        "water_park",
+        "zipline",
+        "beach_party",
+        "night_show"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "value",
+      "roomPreference": [
+        "twin_room",
+        "bulk_rooms",
+        "mainland_access"
+      ],
+      "mealPreference": [
+        "buffet",
+        "bbq",
+        "beer_pairing"
+      ]
+    }
+  },
+  {
+    "id": "nt_u_006",
+    "name": "Gia đình nhỏ Hà",
+    "origin": "HPH",
+    "destination": "CXR",
+    "travelWindow": {
+      "start": "2026-06-18",
+      "end": "2026-06-20",
+      "nights": 2
+    },
+    "vinclub": {
+      "tier": "Member",
+      "points": 900
+    },
+    "party": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0,
+      "childAges": [
+        3
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "aquarium",
+        "kids_zone",
+        "beach",
+        "short_trip"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "value",
+      "roomPreference": [
+        "standard_room",
+        "breakfast_included"
+      ],
+      "mealPreference": [
+        "kids_menu",
+        "vietnamese"
+      ]
+    }
+  }
+]

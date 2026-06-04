@@ -1,0 +1,112 @@
+[
+  {
+    "id": "v_fnb_today",
+    "type": "F&B",
+    "title": "Giảm 30% F&B - ưu đãi sắp hết hạn",
+    "value": 0.3,
+    "expires": "2026-06-12T23:59:00+07:00",
+    "minSpend": 400000,
+    "applicableZones": [
+      "Grand World",
+      "Resort",
+      "VinWonders"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "v_spa_akoya",
+    "type": "Spa",
+    "title": "Giảm 25% Akoya Spa",
+    "value": 0.25,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1200000,
+    "applicableZones": [
+      "Resort"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "v_combo_ticket_unused",
+    "type": "Ticket",
+    "title": "Ưu đãi 15% combo VinWonders + Safari",
+    "value": 0.15,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 2000000,
+    "applicableZones": [
+      "VinWonders",
+      "Safari"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "v_late_checkout",
+    "type": "Hotel",
+    "title": "Late checkout đến 14:00",
+    "value": 0,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 0,
+    "applicableZones": [
+      "Resort",
+      "Bãi Dài",
+      "Grand World"
+    ],
+    "tier": "Gold",
+    "stackable": true
+  },
+  {
+    "id": "v_diamond_dining",
+    "type": "F&B",
+    "title": "Diamond Dining Privilege - giảm 35%",
+    "value": 0.35,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 800000,
+    "applicableZones": [
+      "Grand World",
+      "Resort"
+    ],
+    "tier": "Diamond",
+    "stackable": false
+  },
+  {
+    "id": "v_safari_meal",
+    "type": "Meal",
+    "title": "Tặng meal voucher Safari",
+    "value": 180000,
+    "expires": "2026-06-25T23:59:00+07:00",
+    "minSpend": 1500000,
+    "applicableZones": [
+      "Safari"
+    ],
+    "tier": "Silver",
+    "stackable": true
+  },
+  {
+    "id": "v_pool_drink",
+    "type": "Drink",
+    "title": "Buy 1 Get 1 Pool Bar",
+    "value": 0.5,
+    "expires": "2026-06-18T23:59:00+07:00",
+    "minSpend": 250000,
+    "applicableZones": [
+      "Resort"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "v_couple_dining",
+    "type": "F&B",
+    "title": "Couple dining set giảm 20%",
+    "value": 0.2,
+    "expires": "2026-07-01T23:59:00+07:00",
+    "minSpend": 900000,
+    "applicableZones": [
+      "Grand World"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  }
+]

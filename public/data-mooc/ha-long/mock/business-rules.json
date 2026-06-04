@@ -1,0 +1,44 @@
+{
+  "capacityRules": [
+    "room.capacity.adults must be >= party.adults + party.elderly",
+    "room.capacity.children must be >= party.children",
+    "transport.capacity must be >= party.adults + party.children + party.elderly",
+    "team users should prefer 16-seat road transfer or grouped transfer"
+  ],
+  "haLongTransferRules": [
+    "If origin=HAN, road transfer should be primary; flights are not required",
+    "If arrival airport is HPH or VDO, include ground transfer to Ha Long",
+    "If hotel.zone includes Đảo Rều, always include resort boat transfer",
+    "If bayCondition=rough or windLevel=strong, add 30-60 minutes pier/boat buffer",
+    "If road traffic=high, avoid tight same-day cruise after Hanoi pickup"
+  ],
+  "cruiseRules": [
+    "If bayCondition=rough or cruiseStatus=weather_hold, replace cruise with museum/indoor pool/spa",
+    "If elderlyMode=true, avoid Ti Top viewpoint and Sung Sot Cave stairs unless explicitly requested",
+    "If kayakAllowed=false, replace kayak with onboard viewing deck or cave-free cruise route",
+    "For family relaxed pace, schedule cruise on the best weather day, not necessarily day 1"
+  ],
+  "pacingRules": [
+    "relaxed pace: max 3 major activities/day",
+    "family with elderly: avoid more than 2 medium/high walkLevel activities in same day",
+    "childTired=true: insert rest block within next 60 minutes",
+    "elderlyMode=true: prefer indoor pool, museum, resort boat priority, low walkLevel"
+  ],
+  "weatherRules": [
+    "rainProb >= 60: deprioritize weatherSensitive=true unless indoor backup exists nearby",
+    "heavy_rain: replace water park/outdoor/cruise with museum/indoor pool/spa",
+    "very_hot: avoid outdoor activity between 12:00 and 15:30",
+    "strong wind: monitor cruise, resort boat, Queen Cable Car"
+  ],
+  "queueRules": [
+    "queueMin >= 40: suggest fastpass or alternate attraction",
+    "queueMin >= 55: avoid unless user interest is thrill/theme_park and pace=active",
+    "resort boat queue >= 25: suggest priority boarding or shift dinner to island restaurant"
+  ],
+  "voucherRules": [
+    "expires within 24h: surface voucher in plan if applicable and user tier is eligible",
+    "F&B voucher: match restaurant.acceptsVoucher and minSpend",
+    "late checkout: recommend for afternoon road return or evening flights",
+    "cruise voucher: only recommend if bayRiskForecast not high"
+  ]
+}

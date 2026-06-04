@@ -1,0 +1,189 @@
+[
+  {
+    "id": "hl_t_cruise_day",
+    "name": "Hạ Long Bay Day Cruise 4 tiếng",
+    "covers": [
+      "HaLongBayCruise",
+      "LunchOnBoard"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 950000,
+      "child": 720000,
+      "senior": 720000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "bay_cruise",
+      "family",
+      "first_time"
+    ]
+  },
+  {
+    "id": "hl_t_sunset_cruise",
+    "name": "Sunset Cruise + Canapé",
+    "covers": [
+      "SunsetCruise",
+      "LightMeal"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 1250000,
+      "child": 920000,
+      "senior": 920000
+    },
+    "savingVsSeparate": 0.08,
+    "currency": "VND",
+    "bestFor": [
+      "couple",
+      "romantic",
+      "sunset"
+    ]
+  },
+  {
+    "id": "hl_t_private_family_cruise",
+    "name": "Private Family Cruise",
+    "covers": [
+      "PrivateCruise",
+      "FlexibleRoute",
+      "LunchOnBoard"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 2200000,
+      "child": 1650000,
+      "senior": 1650000
+    },
+    "savingVsSeparate": 0.05,
+    "currency": "VND",
+    "bestFor": [
+      "large_family",
+      "elderly",
+      "premium"
+    ]
+  },
+  {
+    "id": "hl_t_sunworld_combo",
+    "name": "Sun World Hạ Long Combo: Dragon Park + Queen Cable Car",
+    "covers": [
+      "DragonPark",
+      "QueenCableCar",
+      "SunWheel"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 680000,
+      "child": 510000,
+      "senior": 510000
+    },
+    "savingVsSeparate": 0.16,
+    "currency": "VND",
+    "bestFor": [
+      "active",
+      "family",
+      "theme_park"
+    ]
+  },
+  {
+    "id": "hl_t_waterpark",
+    "name": "Typhoon Water Park Day Pass",
+    "covers": [
+      "TyphoonWaterPark"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 450000,
+      "child": 350000,
+      "senior": 350000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "summer",
+      "kids",
+      "active"
+    ]
+  },
+  {
+    "id": "hl_t_resort_cruise_bundle",
+    "name": "Vinpearl Resort + Bay Cruise Bundle",
+    "covers": [
+      "ResortGuestBenefit",
+      "HaLongBayCruise",
+      "BoatTransfer"
+    ],
+    "validDays": 3,
+    "pricePerPax": {
+      "adult": 1500000,
+      "child": 1150000,
+      "senior": 1150000
+    },
+    "savingVsSeparate": 0.2,
+    "currency": "VND",
+    "bestFor": [
+      "resort",
+      "family",
+      "multi_day"
+    ]
+  },
+  {
+    "id": "hl_t_group_waterpark",
+    "name": "Group Water Park 10+",
+    "covers": [
+      "TyphoonWaterPark",
+      "GroupEntry"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 380000,
+      "child": 300000,
+      "senior": 300000
+    },
+    "savingVsSeparate": 0.14,
+    "currency": "VND",
+    "bestFor": [
+      "team_building",
+      "large_group"
+    ]
+  },
+  {
+    "id": "hl_t_spa_couple",
+    "name": "Couple Spa Add-on",
+    "covers": [
+      "VinpearlSpa"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 1200000,
+      "child": 0,
+      "senior": 950000
+    },
+    "savingVsSeparate": 0.1,
+    "currency": "VND",
+    "bestFor": [
+      "couple",
+      "rainy_day",
+      "premium"
+    ]
+  },
+  {
+    "id": "hl_t_fastpass_dragon",
+    "name": "Dragon Park Fastpass",
+    "covers": [
+      "DragonParkFastpass"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 320000,
+      "child": 260000,
+      "senior": 260000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "overcrowded",
+      "active"
+    ]
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "nha_u_001",
+    "name": "Gia đình Minh đi Nam Hội An",
+    "origin": "HAN",
+    "destination": "DAD",
+    "travelWindow": {
+      "start": "2026-06-13",
+      "end": "2026-06-16",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Gold",
+      "points": 12400
+    },
+    "party": {
+      "adults": 2,
+      "children": 2,
+      "elderly": 1,
+      "childAges": [
+        5,
+        8
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "river_safari",
+        "water_world",
+        "folk_culture",
+        "show",
+        "resort"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "comfort",
+      "roomPreference": [
+        "connecting",
+        "sea_view",
+        "near_elevator",
+        "ground_floor_available"
+      ],
+      "mealPreference": [
+        "vietnamese",
+        "seafood",
+        "kids_menu"
+      ],
+      "transportPreference": [
+        "private_van",
+        "airport_shuttle",
+        "avoid_midday_heat"
+      ]
+    }
+  },
+  {
+    "id": "nha_u_002",
+    "name": "Nhóm bạn Linh Nam Hội An",
+    "origin": "SGN",
+    "destination": "DAD",
+    "travelWindow": {
+      "start": "2026-06-20",
+      "end": "2026-06-23",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Platinum",
+      "points": 28700
+    },
+    "party": {
+      "adults": 4,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "active",
+      "interests": [
+        "adventure_land",
+        "water_world",
+        "old_town",
+        "night_show",
+        "bar"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "villa",
+        "private_pool",
+        "beachfront"
+      ],
+      "mealPreference": [
+        "bbq",
+        "seafood",
+        "bar"
+      ]
+    }
+  },
+  {
+    "id": "nha_u_003",
+    "name": "Cặp đôi Huy & An Nam Hội An",
+    "origin": "DAD",
+    "destination": "Nam Hội An",
+    "travelWindow": {
+      "start": "2026-06-27",
+      "end": "2026-06-30",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Silver",
+      "points": 5400
+    },
+    "party": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "balanced",
+      "interests": [
+        "spa",
+        "fine_dining",
+        "old_town",
+        "beach",
+        "romantic"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "executive_suite",
+        "beachfront",
+        "quiet_zone"
+      ],
+      "mealPreference": [
+        "western",
+        "seafood",
+        "romantic"
+      ]
+    }
+  },
+  {
+    "id": "nha_u_004",
+    "name": "Đại gia đình Phương Nam Hội An",
+    "origin": "HAN",
+    "destination": "DAD",
+    "travelWindow": {
+      "start": "2026-06-08",
+      "end": "2026-06-12",
+      "nights": 4
+    },
+    "vinclub": {
+      "tier": "Diamond",
+      "points": 64200
+    },
+    "party": {
+      "adults": 6,
+      "children": 3,
+      "elderly": 2,
+      "childAges": [
+        4,
+        7,
+        11
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "river_safari",
+        "folk_culture",
+        "resort_pool",
+        "buffet",
+        "show"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "multi_bedroom_villa",
+        "buggy",
+        "near_lobby"
+      ],
+      "mealPreference": [
+        "buffet",
+        "vietnamese",
+        "kids_menu"
+      ]
+    }
+  },
+  {
+    "id": "nha_u_005",
+    "name": "Team building Delta Nam Hội An",
+    "origin": "SGN",
+    "destination": "DAD",
+    "travelWindow": {
+      "start": "2026-07-02",
+      "end": "2026-07-04",
+      "nights": 2
+    },
+    "vinclub": {
+      "tier": "Gold",
+      "points": 21800
+    },
+    "party": {
+      "adults": 18,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "active",
+      "interests": [
+        "team_activity",
+        "water_world",
+        "adventure_land",
+        "beach_party",
+        "old_town"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "value",
+      "roomPreference": [
+        "bulk_rooms",
+        "twin_room",
+        "event_space"
+      ],
+      "mealPreference": [
+        "buffet",
+        "bbq",
+        "beer_pairing"
+      ]
+    }
+  },
+  {
+    "id": "nha_u_006",
+    "name": "Gia đình nhỏ Hà cuối tuần",
+    "origin": "DAD",
+    "destination": "Nam Hội An",
+    "travelWindow": {
+      "start": "2026-06-18",
+      "end": "2026-06-20",
+      "nights": 2
+    },
+    "vinclub": {
+      "tier": "Member",
+      "points": 900
+    },
+    "party": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0,
+      "childAges": [
+        3
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "kids_zone",
+        "river_safari",
+        "water_world",
+        "short_trip"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "value",
+      "roomPreference": [
+        "standard_room",
+        "breakfast_included"
+      ],
+      "mealPreference": [
+        "kids_menu",
+        "vietnamese"
+      ]
+    }
+  }
+]

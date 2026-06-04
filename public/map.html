@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản đồ Vinpearl</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+      background: #f1f5f9;
+    }
+    /* Customize Leaflet Popup styling to match our purple theme */
+    .leaflet-popup-content-wrapper {
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      padding: 2px;
+    }
+    .leaflet-popup-content {
+      margin: 12px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #1e293b;
+    }
+    .popup-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #7c3aed;
+      margin-bottom: 4px;
+    }
+    .popup-desc {
+      color: #64748b;
+      font-size: 11px;
+    }
+    .popup-badge {
+      display: inline-block;
+      background: #f3e8ff;
+      color: #7c3aed;
+      font-size: 9px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 9999px;
+      margin-top: 6px;
+    }
+    /* Layer control styling */
+    .leaflet-control-layers {
+      border-radius: 8px !important;
+      border: 1px solid #cbd5e1 !important;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <script>
+    // Coordinates data matching the 4 destinations
+    const coordinateData = {
+      phu_quoc: {
+        center: [10.3295, 103.8575],
+        zoom: 13,
+        markers: [
+          { coords: [10.3295, 103.8575], title: 'Vinpearl Resort & Spa Phú Quốc', desc: 'Resort 5 sao có bể bơi ngoài trời hình vỏ sò khổng lồ và bãi biển riêng Bãi Dài.', badge: 'Khách sạn' },
+          { coords: [10.3395, 103.8480], title: 'Vinpearl Wonderworld Phú Quốc', desc: 'Khu resort gồm các căn biệt thự sang trọng có hồ bơi riêng, tối ưu cho gia đình đông người.', badge: 'Khách sạn' },
+          { coords: [10.3350, 103.8610], title: 'VinWonders Phú Quốc', desc: 'Công viên chủ đề lớn nhất Việt Nam với các phân khu: Thế giới diệu kỳ, Cung điện Hải Vương.', badge: 'Giải trí' },
+          { coords: [10.3450, 103.8920], title: 'Vinpearl Safari Phú Quốc', desc: 'Công viên chăm sóc và bảo tồn động vật bán hoang dã đầu tiên và lớn nhất tại Việt Nam.', badge: 'Giải trí' },
+          { coords: [10.3150, 103.8580], title: 'Grand World Phú Quốc', desc: 'Thành phố lễ hội không ngủ, tổ hợp mua sắm, ẩm thực và show diễn thực cảnh hoành tráng.', badge: 'Điểm tham quan' }
+        ]
+      },
+      nha_trang: {
+        center: [12.2150, 109.2350],
+        zoom: 14,
+        markers: [
+          { coords: [12.2180, 109.2240], title: 'Vinpearl Resort Nha Trang', desc: 'Resort 5 sao mang phong cách kiến trúc Đông Dương, nằm biệt lập trên đảo Hòn Tre xinh đẹp.', badge: 'Khách sạn' },
+          { coords: [12.2150, 109.2420], title: 'VinWonders Nha Trang', desc: 'Công viên giải trí kỷ lục với cáp treo vượt biển, vườn thực vật Đồi Vạn Hoa, công viên nước.', badge: 'Giải trí' },
+          { coords: [12.2100, 109.2300], title: 'Vinpearl Golf Nha Trang', desc: 'Sân golf 18 hố tiêu chuẩn quốc tế thiết kế bởi IMG Worldwide trên thung lũng thơ mộng.', badge: 'Thể thao' },
+          { coords: [12.2220, 109.2000], title: 'Ga Cáp treo Nha Trang', desc: 'Ga đi cáp treo nối từ đất liền sang đảo Hòn Tre vượt qua vịnh biển Nha Trang.', badge: 'Giao thông' }
+        ]
+      },
+      hoi_an: {
+        center: [15.8286, 108.3847],
+        zoom: 14,
+        markers: [
+          { coords: [15.8286, 108.3847], title: 'Vinpearl Resort & Golf Nam Hội An', desc: 'Kiệt tác kiến trúc giao hòa di sản phố cổ Hội An và phong cách hiện đại ven biển.', badge: 'Khách sạn' },
+          { coords: [15.8350, 108.3810], title: 'VinWonders Nam Hội An', desc: 'Tổ hợp trải nghiệm văn hóa dân gian độc đáo kết hợp công viên nước và trò chơi cảm giác mạnh.', badge: 'Giải trí' },
+          { coords: [15.8370, 108.3780], title: 'River Safari Nam Hội An', desc: 'Khu bảo tồn động vật bán hoang dã bằng đường thủy độc bản tại Việt Nam.', badge: 'Giải trí' },
+          { coords: [15.8200, 108.3700], title: 'Trang trại công nghệ cao VinEco', desc: 'Trang trại nông nghiệp xanh cung cấp rau quả hữu cơ sạch cho toàn khu nghỉ dưỡng.', badge: 'Điểm tham quan' }
+        ]
+      },
+      ha_long: {
+        center: [20.9328, 107.0396],
+        zoom: 14,
+        markers: [
+          { coords: [20.9328, 107.0396], title: 'Vinpearl Resort & Spa Hạ Long', desc: 'Lâu đài nghỉ dưỡng biệt lập 4 mặt giáp biển trên Đảo Rều, ngắm trọn kỳ quan vịnh Hạ Long.', badge: 'Khách sạn' },
+          { coords: [20.9250, 107.0100], title: 'Cảng tàu Tuần Châu', desc: 'Cảng tàu du lịch lớn nhất Hạ Long, điểm xuất phát của các du thuyền tham quan vịnh.', badge: 'Giao thông' },
+          { coords: [20.9450, 107.0500], title: 'Bãi tắm Bãi Cháy', desc: 'Bãi tắm cát trắng nhân tạo dài 900m nằm ven bờ vịnh Hạ Long lộng gió.', badge: 'Điểm tham quan' }
+        ]
+      }
+    };
+
+    // Parse URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const destId = urlParams.get('destId') || 'phu_quoc';
+    const activeData = coordinateData[destId] || coordinateData.phu_quoc;
+
+    // Initialize Map centered on target destination
+    const map = L.map('map', {
+      zoomControl: true
+    }).setView(activeData.center, activeData.zoom);
+
+    // Google Maps Tile Layers
+    const googleRoads = L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      subdomains: ['mt0','mt1','mt2','mt3'],
+      attribution: 'Map data &copy; <a href="https://maps.google.com">Google</a>'
+    });
+
+    const googleSatellite = L.tileLayer('https://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      subdomains: ['mt0','mt1','mt2','mt3'],
+      attribution: 'Map data &copy; <a href="https://maps.google.com">Google</a>'
+    });
+
+    // Default to Standard Roads layer
+    googleRoads.addTo(map);
+
+    // Layer selection control
+    const baseMaps = {
+      "Bản đồ Google": googleRoads,
+      "Vệ tinh Google": googleSatellite
+    };
+    L.control.layers(baseMaps).addTo(map);
+
+    // Draw markers
+    activeData.markers.forEach(m => {
+      const marker = L.marker(m.coords).addTo(map);
+      
+      const popupContent = `
+        <div class="popup-title">${m.title}</div>
+        <div class="popup-desc">${m.desc}</div>
+        <div class="popup-badge">${m.badge}</div>
+      `;
+      
+      marker.bindPopup(popupContent);
+    });
+
+    // Force refresh resize trigger
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 200);
+  </script>
+</body>
+</html>

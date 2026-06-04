@@ -1,0 +1,37 @@
+{
+  "capacityRules": [
+    "room.capacity.adults must be >= party.adults + party.elderly",
+    "room.capacity.children must be >= party.children",
+    "transport.capacity must be >= party.adults + party.children + party.elderly",
+    "group users should prefer 16-seat airport van or grouped transfers"
+  ],
+  "islandTransferRules": [
+    "If windLevel=strong or seaCondition=choppy, add 30-45 minutes transfer buffer",
+    "If cableCarStatus=delayed and elderlyMode=true, suggest waiting lounge or mainland dining instead of rushing",
+    "If late arrival after 19:30, avoid scheduling VinWonders entry on day 1",
+    "If hotel.zone=Đảo Hòn Tre, always include return transfer before flight"
+  ],
+  "pacingRules": [
+    "relaxed pace: max 3 major activities/day",
+    "family with elderly: avoid more than 2 medium/high walkLevel activities in same day",
+    "childTired=true: insert rest block within next 60 minutes",
+    "elderlyMode=true: prefer buggy, shuttle, indoor, low walkLevel"
+  ],
+  "weatherRules": [
+    "rainProb >= 60: deprioritize weatherSensitive=true unless attraction is signature and near",
+    "heavy_rain: replace water park/outdoor gardens with Sea World/Mermaid Show/Spa",
+    "very_hot: avoid outdoor activity between 12:00 and 15:30",
+    "windy/strong wind: monitor cable car, zipline and speedboat"
+  ],
+  "queueRules": [
+    "queueMin >= 40: suggest fastpass or alternate attraction",
+    "queueMin >= 55: avoid unless user interest is thrill and pace=active",
+    "cable car queue >= 45: show transfer delay banner and propose lounge/meal buffer"
+  ],
+  "voucherRules": [
+    "expires within 24h: surface voucher in plan if applicable and user tier is eligible",
+    "F&B voucher: match restaurant.acceptsVoucher and minSpend",
+    "late checkout: recommend for afternoon/evening return flights",
+    "priority cable car voucher: recommend for Gold+ users on crowded days"
+  ]
+}

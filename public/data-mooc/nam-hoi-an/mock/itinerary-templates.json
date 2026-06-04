@@ -1,0 +1,210 @@
+[
+  {
+    "id": "nha_tpl_family_3n2d_relaxed",
+    "name": "Nam Hội An family 3N2Đ relaxed",
+    "target": {
+      "partyType": "family",
+      "pace": "relaxed",
+      "elderly": true
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + resort rest",
+        "blocks": [
+          "airport_transfer",
+          "checkin",
+          "resort_pool",
+          "fnb_voucher_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "River Safari + Folk Culture",
+        "blocks": [
+          "river_safari",
+          "bird_show",
+          "lunch",
+          "nap",
+          "folk_culture",
+          "mapping_show"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Water World light + checkout",
+        "blocks": [
+          "lazy_river",
+          "indoor_games",
+          "late_checkout",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "river_safari_morning",
+      "insert_rest_after_120min",
+      "avoid_adventure_if_elderly"
+    ]
+  },
+  {
+    "id": "nha_tpl_active_friends_3n2d",
+    "name": "Nam Hội An active friends 3N2Đ",
+    "target": {
+      "partyType": "friends",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + Water World",
+        "blocks": [
+          "airport_transfer",
+          "water_world",
+          "rooftop_bar"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Adventure Land + Old Town",
+        "blocks": [
+          "adventure_land",
+          "drop_tower",
+          "resort_rest",
+          "old_town_evening"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Beach + return",
+        "blocks": [
+          "beach_time",
+          "group_lunch",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "offer_fastpass_if_queue_gt_40",
+      "oldtown_shuttle_if_traffic_low",
+      "move_waterworld_if_heavy_rain"
+    ]
+  },
+  {
+    "id": "nha_tpl_couple_3n2d",
+    "name": "Nam Hội An couple luxury 3N2Đ",
+    "target": {
+      "partyType": "couple",
+      "pace": "balanced",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + spa + rooftop",
+        "blocks": [
+          "private_transfer",
+          "suite_checkin",
+          "akoya_spa",
+          "latitude_rooftop"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Culture + Old Town",
+        "blocks": [
+          "craft_village",
+          "folk_island",
+          "old_town_evening",
+          "romantic_dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Slow beach morning",
+        "blocks": [
+          "breakfast",
+          "beach_time",
+          "late_checkout",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "prioritize_spa_voucher",
+      "avoid_oldtown_if_traffic_high",
+      "prefer_romantic_dining_slot"
+    ]
+  },
+  {
+    "id": "nha_tpl_team_2n1d",
+    "name": "Nam Hội An team building 2N1Đ",
+    "target": {
+      "partyType": "team",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + team water challenge + BBQ",
+        "blocks": [
+          "airport_coach",
+          "group_checkin",
+          "water_world",
+          "bbq_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Adventure challenge + return",
+        "blocks": [
+          "adventure_land",
+          "team_photo",
+          "lunch",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "use_29seat_coach",
+      "book_group_dining_early",
+      "fallback_indoor_if_rain"
+    ]
+  },
+  {
+    "id": "nha_tpl_short_family_2n1d",
+    "name": "Nam Hội An short family 2N1Đ",
+    "target": {
+      "partyType": "family",
+      "pace": "relaxed",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + River Safari",
+        "blocks": [
+          "transfer",
+          "river_safari",
+          "kids_lunch",
+          "resort_pool"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Indoor + beach",
+        "blocks": [
+          "indoor_games",
+          "beach_time",
+          "checkout"
+        ]
+      }
+    ],
+    "rules": [
+      "keep_under_2_major_activities_per_day",
+      "avoid_midday_heat"
+    ]
+  }
+]

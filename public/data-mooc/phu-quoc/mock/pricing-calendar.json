@@ -1,0 +1,281 @@
+[
+  {
+    "date": "2026-06-04",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-05",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-06",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-07",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-08",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-09",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-10",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-11",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-12",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-13",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-14",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-15",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-16",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-17",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-18",
+    "season": "summer",
+    "isWeekend": false,
+    "hotelMultiplier": 1,
+    "flightMultiplier": 1,
+    "crowdForecast": "medium",
+    "recommendation": "Còn linh hoạt để tối ưu chi phí"
+  },
+  {
+    "date": "2026-06-19",
+    "season": "summer",
+    "isWeekend": true,
+    "hotelMultiplier": 1.18,
+    "flightMultiplier": 1.14,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-20",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-21",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-22",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-23",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-24",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-25",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-26",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-27",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-28",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-29",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-06-30",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-07-01",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-07-02",
+    "season": "early_summer_peak",
+    "isWeekend": false,
+    "hotelMultiplier": 1.12,
+    "flightMultiplier": 1.08,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-07-03",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  },
+  {
+    "date": "2026-07-04",
+    "season": "early_summer_peak",
+    "isWeekend": true,
+    "hotelMultiplier": 1.3,
+    "flightMultiplier": 1.22,
+    "crowdForecast": "high",
+    "recommendation": "Nên giữ phòng/vé sớm"
+  }
+]
