@@ -48,6 +48,9 @@ export default function ChatScreen({
   onSelectDestination,
   onGenerateItinerary,
   setActiveTab,
+  registerSendHandler,
+  initialMessage,
+  onInitialMessageConsumed,
   activeItineraryId,
   setActiveItineraryId,
   currentItinerary,
@@ -134,6 +137,29 @@ export default function ChatScreen({
     setInputText('')
     await triggerAiResponse(textToSend.trim(), updatedMessages)
   }
+
+  // Expose send handler to parent when requested
+  React.useEffect(() => {
+    if (typeof registerSendHandler === 'function') {
+      registerSendHandler(handleSendMessage)
+      return () => registerSendHandler(null)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [registerSendHandler])
+
+  // Handle initial message passed from parent (e.g., when switching from Explore)
+  const initialSentRef = React.useRef(false)
+  React.useEffect(() => {
+    if (!initialMessage || !initialMessage.trim()) return
+    if (initialSentRef.current) return
+    if (isTyping) return
+    initialSentRef.current = true;
+    (async () => {
+      await handleSendMessage(initialMessage.trim())
+      if (typeof onInitialMessageConsumed === 'function') onInitialMessageConsumed()
+    })()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialMessage])
 
   const handleEditMessage = async (msgId, newText) => {
     if (isTyping || !newText.trim()) return

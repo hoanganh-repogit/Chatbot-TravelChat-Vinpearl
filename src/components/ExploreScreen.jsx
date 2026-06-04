@@ -109,7 +109,7 @@ const searchTargets = {
   ha_long: 'hạ long ha long vịnh đảo thiên nhiên luxury stay'
 }
 
-export default function ExploreScreen({ onSelectDestination }) {
+export default function ExploreScreen({ onSelectDestination, sendChatQuery }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeFilter, setActiveFilter] = useState('hot')
   const [activeAudience, setActiveAudience] = useState('Gia đình')
@@ -192,7 +192,10 @@ export default function ExploreScreen({ onSelectDestination }) {
             <button
               key={label}
               className={activeAudience === label ? 'active' : ''}
-              onClick={() => setActiveAudience(label)}
+              onClick={() => {
+                const message = label === 'Một mình' ? 'Tôi muốn đi du lịch một mình' : `Tôi muốn đi du lịch với ${label}`
+                if (typeof sendChatQuery === 'function') sendChatQuery(message)
+              }}
             >
               <Icon size={19} />
               <span>{label}</span>
