@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import {
-  Bell, Building2, ChevronRight, Flame, Gamepad2, Gem, Heart, Leaf, MapPin,
+  Bell, Building2, ChevronRight, Flame, Gamepad2, Gem, Heart, Leaf,
   Menu, Play, Search, ShipWheel, SlidersHorizontal, Sparkles, Star, Umbrella,
   UserRound, Users
 } from 'lucide-react'

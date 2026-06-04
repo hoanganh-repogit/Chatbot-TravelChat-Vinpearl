@@ -44,6 +44,9 @@ const DEFAULT_TIMES = ['10:00', '11:20', '12:30', '14:00', '15:30', '18:30', '20
 export function normalizeLiveContext(preset = {}) {
   return {
     weather: preset.weather || 'sunny',
+    windLevel: preset.windLevel || 'light',
+    seaCondition: preset.seaCondition || 'calm',
+    cableCarStatus: preset.cableCarStatus || 'normal',
     rainProb: Number(preset.rainProb || 0),
     temperatureC: Number(preset.temperatureC || 30),
     crowd: preset.crowd || 'medium',
@@ -55,6 +58,8 @@ export function normalizeLiveContext(preset = {}) {
     location: preset.location || 'vinwonders_gate',
     voucherExpiring: preset.voucherExpiring || '',
     dinnerSlotTight: Boolean(preset.dinnerSlotTight),
+    flightDelayMin: Number(preset.flightDelayMin || 0),
+    checkoutPressure: Boolean(preset.checkoutPressure),
   }
 }
 
@@ -262,16 +267,30 @@ export function buildSuggestion(timeline, ctx, data) {
   const overcrowded = ctx.crowd === 'overcrowded'
   const voucher = ctx.voucherExpiring ? data.voucherById[ctx.voucherExpiring] : null
 
+  if (ctx.flightDelayMin >= 45) {
+    return `Chuyến bay đang trễ khoảng ${ctx.flightDelayMin} phút. Nên rút gọn ngày đầu, ưu tiên transfer, check-in và bữa tối tại resort.`
+  }
+
+  if (ctx.checkoutPressure) {
+    return 'Đang có áp lực check-out. Nên giữ các hoạt động gần resort, tránh chặng xa và chuẩn bị hành lý trước giờ trả phòng.'
+  }
+
+  if (ctx.cableCarStatus && ctx.cableCarStatus !== 'normal') {
+    return 'Kết nối cáp treo/transfer đang cần buffer. Nên chèn thời gian dự phòng và ưu tiên hoạt động gần vị trí hiện tại.'
+  }
+
   if (voucher && ctx.dinnerSlotTight) {
     return `${voucher.title} đang cần dùng trong bữa tối. Giữ một slot dinner hiện có ở Grand World/Resort và gắn voucher, không tạo thêm bữa ăn.`
   }
 
   if (hasRainRisk && fatigue) {
-    return 'Trời mưa lớn và gia đình đang xuống sức. Nên chuyển hoạt động outdoor sang indoor, chèn nghỉ 45 phút tại resort và dùng xe điện cho chặng liên khu.'
+    const rainLabel = RAINY_WEATHER.has(ctx.weather) ? 'Trời mưa lớn' : 'Khả năng mưa cao'
+    return `${rainLabel} và gia đình đang xuống sức. Nên chuyển hoạt động outdoor sang indoor, chèn nghỉ 45 phút tại resort và dùng xe điện cho chặng liên khu.`
   }
 
   if (hasRainRisk) {
-    return 'Mưa lớn làm các hoạt động outdoor kém phù hợp. Nên đổi Water Park/ride ngoài trời sang Sea Shell Aquarium, Teddy Bear Museum hoặc mini show trong nhà.'
+    const rainLabel = RAINY_WEATHER.has(ctx.weather) ? 'Mưa lớn' : 'Khả năng mưa cao'
+    return `${rainLabel} làm các hoạt động outdoor kém phù hợp. Nên đổi Water Park/ride ngoài trời sang Sea Shell Aquarium, Teddy Bear Museum hoặc mini show trong nhà.`
   }
 
   if (highQueueItem) {
@@ -333,9 +352,9 @@ export function optimizeTimeline(timeline, liveContext, itemLocks = {}, data) {
   let nextTimeline = transformed
 
   if (fatigue) {
-    const restItem = createRestItem()
+    const restItem = createRestItem(pickRestTime(nextTimeline))
     if (!nextTimeline.some((item) => item.id === restItem.id)) {
-      const insertAfter = Math.max(1, nextTimeline.findIndex((item) => item.mealPeriod === 'lunch'))
+      const insertAfter = Math.max(0, findLastTimelineIndex(nextTimeline, timeToMinutes(restItem.time)))
       const withRest = [
         ...nextTimeline.slice(0, insertAfter + 1),
         restItem,
@@ -356,6 +375,16 @@ export function optimizeTimeline(timeline, liveContext, itemLocks = {}, data) {
       reasons.push(`${supportVehicle.type} phù hợp elderly/avoid long walk, đón tại ${pickup}, ETA ${supportVehicle.etaMin} phút.`)
       toasts.push(`✓ ${supportVehicle.type} đón tại ${pickup} sau ${supportVehicle.etaMin} phút`)
     }
+  }
+
+  if (liveContext.flightDelayMin >= 45) {
+    reasons.push(`Flight delay ${liveContext.flightDelayMin} phút: giữ lịch gần resort và giảm hoạt động xa trong ngày đầu.`)
+    toasts.push(`✓ Đã thêm buffer transfer do chuyến bay trễ ${liveContext.flightDelayMin} phút`)
+  }
+
+  if (liveContext.checkoutPressure) {
+    reasons.push('Checkout pressure: ưu tiên hoạt động gần resort và chuẩn bị hành lý trước khi di chuyển.')
+    toasts.push('✓ Đã ưu tiên nhịp gần resort do áp lực check-out')
   }
 
   if (liveContext.voucherExpiring && liveContext.dinnerSlotTight) {
@@ -439,11 +468,40 @@ function attractionToTimelineItem(attraction, time, reason = 'Tối ưu từ moc
   }
 }
 
-function createRestItem() {
+function pickRestTime(timeline) {
+  const lunchItem = timeline.find((item) => item.mealPeriod === 'lunch')
+  if (lunchItem) return addMinutes(lunchItem.time, 50)
+
+  const anchor = timeline[Math.min(1, Math.max(timeline.length - 1, 0))]
+  if (anchor) return addMinutes(anchor.time, 45)
+  return '13:20'
+}
+
+function findLastTimelineIndex(timeline, minutes) {
+  let index = -1
+  timeline.forEach((item, itemIndex) => {
+    if (timeToMinutes(item.time) <= minutes) index = itemIndex
+  })
+  return index
+}
+
+function addMinutes(time, delta) {
+  const value = timeToMinutes(time) + delta
+  const hours = Math.floor(value / 60) % 24
+  const minutes = value % 60
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
+}
+
+function timeToMinutes(time = '00:00') {
+  const [hours = '0', minutes = '0'] = String(time).split(':')
+  return Number(hours) * 60 + Number(minutes)
+}
+
+function createRestItem(time = '13:20') {
   return {
     id: 'rest_resort_45',
     sourceId: 'rest_resort_45',
-    time: '13:20',
+    time,
     title: 'Rest at resort 45’',
     zone: 'Resort',
     type: 'rest',

@@ -42,6 +42,7 @@ export default function ChatScreen({
   onNewChat,
   onRenameChat,
   onDeleteChat,
+  onUpdateChatDestination,
   messages,
   setMessages,
   onSelectDestination,
@@ -67,25 +68,29 @@ export default function ChatScreen({
 
   const messagesEndRef = useRef(null)
   const activeChat = chats.find(c => c.id === activeChatId) || chats[0]
+  const canEditItinerary = journeyStatus === 'draft'
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, isTyping])
 
   useEffect(() => {
-    if (activeItineraryId) setActiveDestinationId(activeItineraryId)
-  }, [activeItineraryId])
+    setActiveDestinationId(activeChat?.destinationId || activeItineraryId || 'phu_quoc')
+  }, [activeChatId, activeChat?.destinationId, activeItineraryId])
 
   const triggerAiResponse = async (textToSend, currentMessages) => {
     setIsTyping(true)
 
-    const destId = detectDestinationId(textToSend, activeDestinationId)
+    const destId = detectDestinationId(textToSend, activeChat?.destinationId || activeDestinationId)
     const itineraryForDestination = typeof getItinerary === 'function'
       ? getItinerary(destId)
       : currentItinerary
 
     setActiveDestinationId(destId)
-    if (typeof setActiveItineraryId === 'function') setActiveItineraryId(destId)
+    onUpdateChatDestination?.(activeChatId, destId)
+    if (canEditItinerary && typeof setActiveItineraryId === 'function') {
+      setActiveItineraryId(destId)
+    }
 
     try {
       const result = await runAIAgentResponse(
@@ -94,16 +99,16 @@ export default function ChatScreen({
         destId,
         itineraryForDestination,
         {
-          addActivity: (day, time, title, desc) => onAddActivity(destId, day, time, title, desc),
-          editActivity: (day, index, time, title, desc) => onEditActivity(destId, day, index, time, title, desc),
-          deleteActivity: (day, index) => onDeleteActivity(destId, day, index)
+          addActivity: (day, time, title, desc) => onAddActivity?.(destId, day, time, title, desc),
+          editActivity: (day, index, time, title, desc) => onEditActivity?.(destId, day, index, time, title, desc),
+          deleteActivity: (day, index) => onDeleteActivity?.(destId, day, index)
         },
         {
-          toolsEnabled: journeyStatus === 'draft'
+          toolsEnabled: canEditItinerary
         }
       )
 
-      setMessages(prev => [...currentMessages, {
+      setMessages(prev => [...prev, {
         id: Date.now() + 1,
         sender: 'bot',
         text: result.text,
@@ -111,7 +116,7 @@ export default function ChatScreen({
       }])
     } catch (e) {
       console.error('AI Agent execution error:', e)
-      setMessages(prev => [...currentMessages, {
+      setMessages(prev => [...prev, {
         id: Date.now() + 1,
         sender: 'bot',
         text: 'Hệ thống AI của Vinpearl hiện đang bận hoặc gặp lỗi kết nối.\n\nBạn có thể tiếp tục xem và tùy chỉnh Lịch trình, hoặc khám phá các địa điểm trong dữ liệu Vinpearl.'
@@ -122,7 +127,7 @@ export default function ChatScreen({
   }
 
   const handleSendMessage = async (textToSend) => {
-    if (!textToSend.trim()) return
+    if (isTyping || !textToSend.trim()) return
     const userMsg = { id: Date.now(), sender: 'user', text: textToSend.trim() }
     const updatedMessages = [...messages, userMsg]
     setMessages(updatedMessages)
@@ -131,7 +136,7 @@ export default function ChatScreen({
   }
 
   const handleEditMessage = async (msgId, newText) => {
-    if (!newText.trim()) return
+    if (isTyping || !newText.trim()) return
     const msgIndex = messages.findIndex(m => m.id === msgId)
     if (msgIndex === -1) return
 
@@ -328,10 +333,15 @@ export default function ChatScreen({
                   className="welcome-input-field"
                   placeholder="Nhập câu hỏi của bạn..."
                   value={inputText}
+                  disabled={isTyping}
                   onChange={e => setInputText(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && inputText.trim() && handleSendMessage(inputText)}
                 />
-                <button onClick={() => inputText.trim() && handleSendMessage(inputText)} title={inputText ? 'Gửi' : 'Nhập bằng giọng nói'}>
+                <button
+                  onClick={() => handleSendMessage(inputText.trim() || 'Gợi ý hành trình Vinpearl phù hợp cho gia đình')}
+                  title={inputText ? 'Gửi' : 'Gợi ý nhanh'}
+                  disabled={isTyping}
+                >
                   {inputText ? <Send size={17} /> : <Mic size={20} />}
                 </button>
               </div>
@@ -340,7 +350,7 @@ export default function ChatScreen({
 
           <div className="vinai-quick-row">
             {quickChips.map(({ icon: Icon, label, query }) => (
-              <button key={label} className="vinai-quick-chip" onClick={() => handleSendMessage(query)}>
+              <button key={label} className="vinai-quick-chip" onClick={() => handleSendMessage(query)} disabled={isTyping}>
                 <Icon size={17} />
                 <span>{label}</span>
               </button>
@@ -441,7 +451,7 @@ export default function ChatScreen({
                       />
                       <div className="message-edit-actions">
                         <button className="message-edit-cancel" onClick={() => setEditingMessageId(null)}>Hủy</button>
-                        <button className="message-edit-save" onClick={() => handleEditMessage(msg.id, editingText)}>Lưu & gửi lại</button>
+                        <button className="message-edit-save" onClick={() => handleEditMessage(msg.id, editingText)} disabled={isTyping}>Lưu & gửi lại</button>
                       </div>
                     </div>
                   ) : (
@@ -455,6 +465,7 @@ export default function ChatScreen({
                               setEditingMessageId(msg.id)
                               setEditingText(msg.text)
                             }}
+                            disabled={isTyping}
                             title="Sửa tin nhắn"
                           >
                             <Edit3 size={11} />
@@ -484,7 +495,7 @@ export default function ChatScreen({
                               <button
                                 className="recommend-btn primary"
                                 onClick={() => {
-                                  onGenerateItinerary(msg.recommendation.id)
+                                  onGenerateItinerary(msg.recommendation.id, msg.recommendation.itinerary)
                                   setActiveTab('itinerary')
                                 }}
                               >
@@ -526,15 +537,16 @@ export default function ChatScreen({
                 className="chat-input-field"
                 placeholder={journeyStatus === 'draft' ? 'Hỏi thời tiết, vé bay, khách sạn, vui chơi...' : 'Lịch đã chốt, chat chỉ tư vấn thêm...'}
                 value={inputText}
+                disabled={isTyping}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSendMessage(inputText)}
               />
               {inputText ? (
-                <button className="chat-input-send" onClick={() => handleSendMessage(inputText)} title="Gửi">
+                <button className="chat-input-send" onClick={() => handleSendMessage(inputText)} title="Gửi" disabled={isTyping}>
                   <Send size={14} />
                 </button>
               ) : (
-                <button className="chat-input-mic" onClick={() => handleSendMessage('Thời tiết Phú Quốc hôm nay thế nào?')} title="Gợi ý giọng nói">
+                <button className="chat-input-mic" onClick={() => handleSendMessage('Thời tiết Phú Quốc hôm nay thế nào?')} title="Gợi ý giọng nói" disabled={isTyping}>
                   <Mic size={18} />
                 </button>
               )}

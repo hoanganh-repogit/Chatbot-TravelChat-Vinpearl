@@ -7,10 +7,19 @@ import {
 } from '../lib/liveOptimization.js'
 import { normalizeDestinationId } from '../lib/destinations.js'
 import { createBootstrapPayload, loadLiveMoocData } from './liveData.js'
-import { explainOptimization } from './llmGateway.js'
+import { completeChat, explainOptimization } from './llmGateway.js'
 
 export async function handleLiveApi({ method, pathname, searchParams, body }) {
   const destinationId = getRequestDestinationId(searchParams, body)
+
+  if (method === 'POST' && pathname === '/api/chat/completions') {
+    const { messages = [], systemPrompt = '', temperature = 0.7, maxTokens = 1200 } = body || {}
+    if (!Array.isArray(messages)) return jsonResponse({ error: 'messages must be an array' }, 400)
+
+    const result = await completeChat({ messages, systemPrompt, temperature, maxTokens })
+    if (!result.content) return jsonResponse({ error: 'No LLM provider configured' }, 503)
+    return jsonResponse(result)
+  }
 
   if (method === 'GET' && pathname === '/api/live/bootstrap') {
     return jsonResponse(createBootstrapPayload(destinationId))

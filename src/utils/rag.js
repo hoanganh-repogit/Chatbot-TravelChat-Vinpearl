@@ -36,10 +36,15 @@ export async function searchMockDatabase(query, destinationId = 'phu_quoc') {
       // Standardize date matching (our data contains dates from 2026-06-04 to 2026-07-04)
       let matchedDay = null;
       
-      // Simple date extraction regex matching formats like "04/06", "04-06", "4/6", "2026-06-04"
-      const dateRegex = /(\d{1,2})[\/\-](\d{1,2})/;
-      const match = queryLower.match(dateRegex);
-      
+      const isoMatch = queryLower.match(/\b(20\d{2})-(\d{2})-(\d{2})\b/);
+      if (isoMatch) {
+        matchedDay = weatherData.find(w => w.date === `${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`);
+      }
+
+      // Simple date extraction regex matching formats like "04/06", "04-06", "4/6"
+      const dateRegex = /\b(\d{1,2})[\/\-](\d{1,2})\b/;
+      const match = !matchedDay ? queryLower.match(dateRegex) : null;
+
       if (match) {
         let day = match[1].padStart(2, '0');
         let month = match[2].padStart(2, '0');

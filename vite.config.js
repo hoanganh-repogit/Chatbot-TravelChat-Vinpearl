@@ -47,11 +47,6 @@ export default defineConfig({
   plugins: [serveDatasetImages(), react()],
   server: {
     proxy: {
-      '/api-llm': {
-        target: 'https://opencode.ai',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-llm/, '')
-      },
       '/api': {
         target: 'http://localhost:8787',
         changeOrigin: true,

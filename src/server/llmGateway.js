@@ -30,6 +30,34 @@ export async function explainOptimization({ suggestion, reasons, toasts }) {
   }
 }
 
+export async function completeChat({ messages = [], systemPrompt = '', temperature = 0.7, maxTokens = 1200 }) {
+  const providers = [
+    createMimoProvider(),
+    createOpenAiProvider(),
+    createOpenRouterProvider(),
+  ].filter(Boolean)
+
+  const chatMessages = [
+    ...(systemPrompt ? [{ role: 'system', content: systemPrompt }] : []),
+    ...messages,
+  ].filter((message) => message?.role && typeof message.content === 'string')
+
+  if (!chatMessages.length) {
+    return { provider: 'fallback', content: '' }
+  }
+
+  for (const provider of providers) {
+    try {
+      const content = await callOpenAiCompatibleChat(provider, chatMessages, { temperature, maxTokens })
+      if (content) return { provider: provider.name, content }
+    } catch (error) {
+      console.warn(`[chat-agent] ${provider.name} failed: ${error.message}`)
+    }
+  }
+
+  return { provider: 'fallback', content: '' }
+}
+
 async function callFirstAvailableProvider(prompt, { fallbackText, maxTokens }) {
   const providers = [
     createMimoProvider(),
@@ -47,6 +75,39 @@ async function callFirstAvailableProvider(prompt, { fallbackText, maxTokens }) {
   }
 
   return { provider: 'fallback', text: fallbackText }
+}
+
+async function callOpenAiCompatibleChat(provider, messages, { temperature, maxTokens }) {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS)
+
+  try {
+    const response = await fetch(provider.url, {
+      method: 'POST',
+      signal: controller.signal,
+      headers: {
+        'content-type': 'application/json',
+        authorization: `Bearer ${provider.apiKey}`,
+        ...(provider.extraHeaders || {}),
+      },
+      body: JSON.stringify({
+        model: provider.model,
+        temperature,
+        max_tokens: maxTokens,
+        messages,
+      }),
+    })
+
+    if (!response.ok) {
+      const body = await response.text()
+      throw new Error(`HTTP ${response.status}: ${body.slice(0, 200)}`)
+    }
+
+    const payload = await response.json()
+    return payload.choices?.[0]?.message?.content?.trim() || ''
+  } finally {
+    clearTimeout(timeout)
+  }
 }
 
 function createMimoProvider() {

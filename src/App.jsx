@@ -130,6 +130,7 @@ const initialItineraries = {
 const welcomeChat = {
   id: 'welcome_chat',
   title: 'Hành trình Vinpearl 1',
+  destinationId: 'phu_quoc',
   messages: []
 };
 
@@ -139,6 +140,7 @@ export default function App() {
   const [activeItineraryId, setActiveItineraryId] = useState('phu_quoc')
   const [journeyStatus, setJourneyStatus] = useState('draft')
   const [confirmedItinerary, setConfirmedItinerary] = useState(null)
+  const [confirmedItineraryDestinationId, setConfirmedItineraryDestinationId] = useState(null)
   const [generatingItinerary, setGeneratingItinerary] = useState(false)
   
   // Custom itineraries state holding user modifications
@@ -188,35 +190,45 @@ export default function App() {
 
   // AI Agent tools itinerary event manipulators
   const handleAddItineraryActivity = (destinationId, dayNum, time, title, desc) => {
-    if (journeyStatus !== 'draft') return
+    if (journeyStatus !== 'draft') return false
+    const normalizedDayNum = normalizeDayNum(dayNum)
+    const normalizedEvent = normalizeItineraryEvent({ time, title, desc })
+    if (!normalizedDayNum || !normalizedEvent) return false
+
     setCustomItineraries(prev => {
       const itin = prev[destinationId] || { title: `${destinationId} - Lịch trình`, days: [] };
-      const days = [...itin.days];
-      let day = days.find(d => d.dayNum === dayNum);
-      if (!day) {
-        day = { dayNum, events: [] };
-        days.push(day);
-      }
-      day.events = [...day.events, { time, title, desc }];
+      const hasDay = itin.days.some(d => d.dayNum === normalizedDayNum);
+      const days = hasDay
+        ? itin.days.map(d => (
+            d.dayNum === normalizedDayNum
+              ? { ...d, events: sortEventsByTime([...d.events, normalizedEvent]) }
+              : d
+          ))
+        : [...itin.days, { dayNum: normalizedDayNum, events: [normalizedEvent] }];
       return {
         ...prev,
-        [destinationId]: { ...itin, days }
+        [destinationId]: { ...itin, days: days.sort((a, b) => a.dayNum - b.dayNum) }
       };
     });
+    return true
   };
 
   const handleEditItineraryActivity = (destinationId, dayNum, eventIndex, time, title, desc) => {
-    if (journeyStatus !== 'draft') return
+    if (journeyStatus !== 'draft') return false
+    const normalizedDayNum = normalizeDayNum(dayNum)
+    const normalizedIndex = normalizeEventIndex(eventIndex)
+    const normalizedEvent = normalizeItineraryEvent({ time, title, desc })
+    const targetDay = customItineraries[destinationId]?.days?.find(d => d.dayNum === normalizedDayNum)
+    if (!targetDay || normalizedIndex == null || !targetDay.events?.[normalizedIndex] || !normalizedEvent) return false
+
     setCustomItineraries(prev => {
       const itin = prev[destinationId];
       if (!itin) return prev;
       const days = itin.days.map(d => {
-        if (d.dayNum === dayNum) {
+        if (d.dayNum === normalizedDayNum) {
           const events = [...d.events];
-          if (events[eventIndex]) {
-            events[eventIndex] = { time, title, desc };
-          }
-          return { ...d, events };
+          events[normalizedIndex] = normalizedEvent;
+          return { ...d, events: sortEventsByTime(events) };
         }
         return d;
       });
@@ -225,16 +237,22 @@ export default function App() {
         [destinationId]: { ...itin, days }
       };
     });
+    return true
   };
 
   const handleDeleteItineraryActivity = (destinationId, dayNum, eventIndex) => {
-    if (journeyStatus !== 'draft') return
+    if (journeyStatus !== 'draft') return false
+    const normalizedDayNum = normalizeDayNum(dayNum)
+    const normalizedIndex = normalizeEventIndex(eventIndex)
+    const targetDay = customItineraries[destinationId]?.days?.find(d => d.dayNum === normalizedDayNum)
+    if (!targetDay || normalizedIndex == null || !targetDay.events?.[normalizedIndex]) return false
+
     setCustomItineraries(prev => {
       const itin = prev[destinationId];
       if (!itin) return prev;
       const days = itin.days.map(d => {
-        if (d.dayNum === dayNum) {
-          const events = d.events.filter((_, idx) => idx !== eventIndex);
+        if (d.dayNum === normalizedDayNum) {
+          const events = d.events.filter((_, idx) => idx !== normalizedIndex);
           return { ...d, events };
         }
         return d;
@@ -244,13 +262,20 @@ export default function App() {
         [destinationId]: { ...itin, days }
       };
     });
+    return true
   };
 
   // Generate itinerary action — SEAM: AI sinh lịch trình (fallback = template tĩnh)
-  const handleGenerateItinerary = async (destinationId) => {
+  const handleGenerateItinerary = async (destinationId, sourceItinerary = null) => {
     setActiveItineraryId(destinationId)
     setJourneyStatus('draft')
     setConfirmedItinerary(null)
+    setConfirmedItineraryDestinationId(null)
+
+    if (sourceItinerary) {
+      setCustomItineraries(prev => ({ ...prev, [destinationId]: JSON.parse(JSON.stringify(sourceItinerary)) }))
+      return
+    }
 
     const fallback = customItineraries[destinationId] || initialItineraries[destinationId]
     setGeneratingItinerary(true)
@@ -273,14 +298,22 @@ export default function App() {
     const itinerary = customItineraries[activeItineraryId]
     if (!itinerary) return
     setConfirmedItinerary(JSON.parse(JSON.stringify(itinerary)))
+    setConfirmedItineraryDestinationId(activeItineraryId)
     setJourneyStatus('confirmed')
   }
 
-  const handleStartLive = () => {
-    if (!confirmedItinerary) {
+  const handleStartLive = (liveDayNum = null) => {
+    const normalizedLiveDayNum = normalizeDayNum(liveDayNum)
+    if (!confirmedItinerary || confirmedItineraryDestinationId !== activeItineraryId) {
       const itinerary = customItineraries[activeItineraryId]
       if (!itinerary) return
-      setConfirmedItinerary(JSON.parse(JSON.stringify(itinerary)))
+      setConfirmedItinerary({
+        ...JSON.parse(JSON.stringify(itinerary)),
+        ...(normalizedLiveDayNum ? { liveDayNum: normalizedLiveDayNum } : {}),
+      })
+      setConfirmedItineraryDestinationId(activeItineraryId)
+    } else if (normalizedLiveDayNum) {
+      setConfirmedItinerary(prev => prev ? { ...prev, liveDayNum: normalizedLiveDayNum } : prev)
     }
     setJourneyStatus('live')
   }
@@ -299,6 +332,7 @@ export default function App() {
     const newChat = {
       id: newId,
       title: `Hành trình Vinpearl ${chats.length + 1}`,
+      destinationId: activeItineraryId,
       messages: []
     };
     setChats(prev => [newChat, ...prev]);
@@ -315,6 +349,7 @@ export default function App() {
       const welcome = {
         id: 'welcome_chat',
         title: 'Hành trình Vinpearl 1',
+        destinationId: 'phu_quoc',
         messages: []
       };
       setChats([welcome]);
@@ -330,6 +365,16 @@ export default function App() {
   const handleUpdateMessages = (chatId, newMessages) => {
     setChats(prev => prev.map(c => c.id === chatId ? { ...c, messages: newMessages } : c));
   };
+
+  const handleUpdateChatDestination = (chatId, destinationId) => {
+    setChats(prev => prev.map(c => c.id === chatId ? { ...c, destinationId } : c));
+  };
+
+  const getItineraryForChat = (destinationId) => {
+    if (journeyStatus === 'draft') return customItineraries[destinationId]
+    if (confirmedItineraryDestinationId === destinationId) return confirmedItinerary
+    return null
+  }
 
   // Count user/bot messages for stats
   const chatMessageCount = chats.reduce((acc, curr) => acc + (curr.messages ? curr.messages.length : 0), 0);
@@ -366,11 +411,16 @@ export default function App() {
               onNewChat={handleNewChat}
               onRenameChat={handleRenameChat}
               onDeleteChat={handleDeleteChat}
+              onUpdateChatDestination={handleUpdateChatDestination}
               messages={activeChat ? activeChat.messages : []}
               setMessages={(updater) => {
-                const currentMsgs = activeChat ? activeChat.messages : [];
-                const updated = typeof updater === 'function' ? updater(currentMsgs) : updater;
-                handleUpdateMessages(activeChatId, updated);
+                const targetChatId = activeChatId;
+                setChats(prev => prev.map(chat => {
+                  if (chat.id !== targetChatId) return chat;
+                  const currentMsgs = chat.messages || [];
+                  const updated = typeof updater === 'function' ? updater(currentMsgs) : updater;
+                  return { ...chat, messages: updated };
+                }));
               }}
               onSelectDestination={setSelectedDestinationId}
               onGenerateItinerary={handleGenerateItinerary}
@@ -378,7 +428,7 @@ export default function App() {
               activeItineraryId={activeItineraryId}
               setActiveItineraryId={setActiveItineraryId}
               currentItinerary={journeyStatus === 'draft' ? customItineraries[activeItineraryId] : confirmedItinerary}
-              getItinerary={(destinationId) => journeyStatus === 'draft' ? customItineraries[destinationId] : confirmedItinerary}
+              getItinerary={getItineraryForChat}
               journeyStatus={journeyStatus}
               onAddActivity={(destinationId, dayNum, time, title, desc) => handleAddItineraryActivity(destinationId, dayNum, time, title, desc)}
               onEditActivity={(destinationId, dayNum, index, time, title, desc) => handleEditItineraryActivity(destinationId, dayNum, index, time, title, desc)}
@@ -476,4 +526,43 @@ export default function App() {
       </div>
     </div>
   )
+}
+
+function normalizeDayNum(value) {
+  const dayNum = Number(value)
+  if (!Number.isInteger(dayNum) || dayNum < 1 || dayNum > 30) return null
+  return dayNum
+}
+
+function normalizeEventIndex(value) {
+  const index = Number(value)
+  if (!Number.isInteger(index) || index < 0) return null
+  return index
+}
+
+function normalizeItineraryEvent({ time, title, desc }) {
+  const normalizedTime = normalizeTime(time)
+  const normalizedTitle = String(title || '').trim()
+  const normalizedDesc = String(desc || '').trim()
+  if (!normalizedTime || !normalizedTitle) return null
+  return {
+    time: normalizedTime,
+    title: normalizedTitle,
+    desc: normalizedDesc || 'Hoạt động được cập nhật từ trợ lý Vinpearl AI.',
+  }
+}
+
+function normalizeTime(value) {
+  const match = String(value || '').trim().match(/^([01]?\d|2[0-3]):([0-5]\d)$/)
+  if (!match) return null
+  return `${match[1].padStart(2, '0')}:${match[2]}`
+}
+
+function sortEventsByTime(events) {
+  return [...events].sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time))
+}
+
+function timeToMinutes(time = '00:00') {
+  const [hours = '0', minutes = '0'] = String(time).split(':')
+  return Number(hours) * 60 + Number(minutes)
 }

@@ -41,7 +41,7 @@ function extractJson(text) {
 }
 
 // Chuẩn hóa + kiểm tra hợp lệ lịch trình AI sinh ra; lỗi -> null.
-function normalizeItinerary(raw, fallback) {
+function normalizeItinerary(raw, fallback, expectedDayCount) {
   if (!raw || !Array.isArray(raw.days)) return null
 
   const days = raw.days
@@ -50,10 +50,11 @@ function normalizeItinerary(raw, fallback) {
         ? day.events
             .filter((evt) => evt && (evt.title || evt.desc))
             .map((evt) => ({
-              time: String(evt.time || '').trim().slice(0, 5) || '09:00',
+              time: normalizeTime(evt.time) || '09:00',
               title: String(evt.title || 'Hoạt động').trim(),
               desc: String(evt.desc || '').trim(),
             }))
+            .sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time))
         : []
       return { dayNum: Number(day.dayNum) || index + 1, events }
     })
@@ -65,7 +66,18 @@ function normalizeItinerary(raw, fallback) {
     ? raw.title.trim()
     : fallback?.title
 
-  return { title, days }
+  const expected = Number(expectedDayCount) || 0
+  const fallbackDays = Array.isArray(fallback?.days) ? fallback.days : []
+  const normalizedDays = expected > 0 && days.length < expected
+    ? Array.from({ length: expected }, (_, index) => {
+        const dayNum = index + 1
+        return days.find((day) => day.dayNum === dayNum)
+          || fallbackDays.find((day) => day.dayNum === dayNum)
+          || days[index]
+      }).filter(Boolean)
+    : days
+
+  return { title, days: normalizedDays }
 }
 
 /**
@@ -100,7 +112,7 @@ ${ragContext}`
     } Chỉ trả về JSON theo schema đã yêu cầu.`
 
     const reply = await executeLLMChat([{ role: 'user', content: userPrompt }], systemPrompt)
-    return normalizeItinerary(extractJson(reply), fallback)
+    return normalizeItinerary(extractJson(reply), fallback, dayCount)
   })()
 
   try {
@@ -158,3 +170,14 @@ Hoạt động trong ngày: ${events.map((e) => `${e.time} ${e.title}`).join('; 
  * Re-export để gom mọi seam lịch trình về một chỗ; gắn vào nút bất kỳ khi cần.
  */
 export { getItineraryOptimizationSuggestions as optimizeItineraryWithAI }
+
+function normalizeTime(value) {
+  const match = String(value || '').trim().match(/^([01]?\d|2[0-3]):([0-5]\d)$/)
+  if (!match) return null
+  return `${match[1].padStart(2, '0')}:${match[2]}`
+}
+
+function timeToMinutes(time = '00:00') {
+  const [hours = '0', minutes = '0'] = String(time).split(':')
+  return Number(hours) * 60 + Number(minutes)
+}
