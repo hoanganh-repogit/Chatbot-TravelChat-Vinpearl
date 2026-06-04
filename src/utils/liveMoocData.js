@@ -10,7 +10,7 @@ export function loadLiveMoocClientData(destinationId) {
   const read = (fileName, { optional = false } = {}) => {
     const key = `../../data-mooc/${meta.folder}/mock/${fileName}`
     const fallbackKey = `../../data-mooc/phu-quoc/mock/${fileName}`
-    const value = moocModules[key] ?? moocModules[fallbackKey]
+    const value = moocModules[key] ?? (optional ? null : moocModules[fallbackKey])
 
     if (!value && !optional) {
       throw new Error(`Missing live MOOC fixture: ${key}`)

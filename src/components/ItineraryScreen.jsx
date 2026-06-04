@@ -7,6 +7,7 @@ import {
   Car,
   Check,
   Clock,
+  CloudLightning,
   CloudRain,
   CloudSun,
   Edit2,
@@ -24,6 +25,7 @@ import {
   Trash2,
   Utensils,
   Waves,
+  Wind,
   X
 } from 'lucide-react'
 import { getWeatherForecast } from '../utils/rag'
@@ -74,19 +76,35 @@ export default function ItineraryScreen({
   const [editForm, setEditForm] = useState({ time: '', title: '', desc: '' })
   const [weatherForecast, setWeatherForecast] = useState([])
   const [showMapModal, setShowMapModal] = useState(false)
+  const [showHourlyWeather, setShowHourlyWeather] = useState(true)
   const [aiDaySuggestion, setAiDaySuggestion] = useState('')
   const aiSuggestCacheRef = useRef({})
   const displayItinerary = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
+  const days = displayItinerary?.days || []
+  const daySignature = days.map((day) => day.dayNum).join('|')
   const readOnly = journeyStatus !== 'draft'
 
   // Fetch weather forecast whenever destination changes
   useEffect(() => {
+    setWeatherForecast([])
     if (activeItineraryId) {
       getWeatherForecast(activeItineraryId).then(data => {
-        if (data) setWeatherForecast(data)
+        setWeatherForecast(Array.isArray(data) ? data : [])
       })
     }
   }, [activeItineraryId])
+
+  useEffect(() => {
+    if (!days.length) {
+      setEditingIndex(null)
+      return
+    }
+
+    if (!days.some((day) => day.dayNum === activeDay)) {
+      setActiveDay(days[0].dayNum)
+    }
+    setEditingIndex(null)
+  }, [activeItineraryId, daySignature, journeyStatus])
 
   // SEAM: gợi ý AI theo ngày cho badge "Gợi ý từ AI" (fallback = text rule thời tiết)
   useEffect(() => {
@@ -100,16 +118,19 @@ export default function ItineraryScreen({
       ? 'Dự báo có mưa. Nên đổi lịch trình vui chơi ngoài trời sang Akoya Spa hoặc tham quan indoor.'
       : dayWeather.recommendation
 
-    const cacheKey = `${activeItineraryId}-${activeDay}`
+    const source = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
+    const dayData = source?.days?.find(d => d.dayNum === activeDay) || source?.days?.[0] || { events: [] }
+    const eventSignature = dayData.events
+      .map(event => `${event.time || ''}:${event.title || ''}:${event.desc || ''}`)
+      .join('|')
+    const weatherSignature = `${dayWeather.date || ''}:${dayWeather.weather || ''}:${dayWeather.rainProb || 0}:${dayWeather.temperatureMaxC || ''}`
+    const cacheKey = `${activeItineraryId}-${activeDay}-${weatherSignature}-${eventSignature}`
     if (aiSuggestCacheRef.current[cacheKey]) {
       setAiDaySuggestion(aiSuggestCacheRef.current[cacheKey])
       return undefined
     }
 
     setAiDaySuggestion(fallbackText)
-
-    const source = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
-    const dayData = source?.days?.find(d => d.dayNum === activeDay) || source?.days?.[0] || { events: [] }
 
     let cancelled = false
     getDaySuggestion({
@@ -163,14 +184,15 @@ export default function ItineraryScreen({
       <LiveScreen
         confirmedItinerary={displayItinerary}
         destinationId={activeItineraryId}
+        setActiveTab={setActiveTab}
       />
     )
   }
 
   // Current day weather + derived display values
   const currentDayWeather = weatherForecast.find((_, index) => index === activeDay - 1)
-  const days = displayItinerary.days || []
   const currentDayData = days.find(d => d.dayNum === activeDay) || days[0] || { events: [] }
+  const effectiveDayNum = currentDayData.dayNum || activeDay || 1
   const destination = destinationProfiles[activeItineraryId] || destinationProfiles.phu_quoc
 
   const dayCount = days.length || 1
@@ -200,7 +222,8 @@ export default function ItineraryScreen({
     if (readOnly) return
     const updatedEvents = [...currentDayData.events]
     updatedEvents[idx] = { ...editForm }
-    const updatedDays = days.map(d => (d.dayNum === activeDay ? { ...d, events: updatedEvents } : d))
+    const sortedEvents = sortEventsByTime(updatedEvents)
+    const updatedDays = days.map(d => (d.dayNum === effectiveDayNum ? { ...d, events: sortedEvents } : d))
     onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
     setEditingIndex(null)
   }
@@ -210,7 +233,7 @@ export default function ItineraryScreen({
     if (readOnly) return
     if (window.confirm('Bạn có chắc chắn muốn xóa hoạt động này?')) {
       const updatedEvents = currentDayData.events.filter((_, i) => i !== idx)
-      const updatedDays = days.map(d => (d.dayNum === activeDay ? { ...d, events: updatedEvents } : d))
+      const updatedDays = days.map(d => (d.dayNum === effectiveDayNum ? { ...d, events: updatedEvents } : d))
       onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
       if (editingIndex === idx) setEditingIndex(null)
     }
@@ -220,10 +243,13 @@ export default function ItineraryScreen({
   const addNewEvent = () => {
     if (readOnly) return
     const newEvent = { time: '12:00', title: 'Hoạt động mới', desc: 'Nhập mô tả chi tiết tại đây.' }
-    const updatedEvents = [...currentDayData.events, newEvent]
-    const updatedDays = days.map(d => (d.dayNum === activeDay ? { ...d, events: updatedEvents } : d))
+    const sortedEvents = sortEventsByTime([...currentDayData.events, newEvent])
+    const updatedDays = days.some(d => d.dayNum === effectiveDayNum)
+      ? days.map(d => (d.dayNum === effectiveDayNum ? { ...d, events: sortedEvents } : d))
+      : [...days, { dayNum: effectiveDayNum, events: sortedEvents }]
     onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
-    startEdit(updatedEvents.length - 1, newEvent)
+    // Sau khi sort, sự kiện mới không còn ở cuối mảng — mở đúng vị trí của nó để chỉnh sửa
+    startEdit(sortedEvents.indexOf(newEvent), newEvent)
   }
 
   // Render weather icon helper
@@ -236,6 +262,10 @@ export default function ItineraryScreen({
       case 'light_rain':
       case 'heavy_rain':
         return <CloudRain size={size} style={{ color: '#ffffff' }} />
+      case 'thunderstorm':
+        return <CloudLightning size={size} style={{ color: '#ffffff' }} />
+      case 'windy':
+        return <Wind size={size} style={{ color: '#ffffff' }} />
       case 'very_hot':
         return <Flame size={size} style={{ color: '#f97316' }} />
       default:
@@ -284,8 +314,12 @@ export default function ItineraryScreen({
           <div className="weather-card-content">
             <div className="weather-card-top">
               <span className="weather-location"><MapPin size={16} /> {destination.stay}</span>
-              <button className="weather-hourly-toggle" type="button">
-                <Clock size={14} /> Dự báo giờ
+              <button
+                className="weather-hourly-toggle"
+                type="button"
+                onClick={() => setShowHourlyWeather((value) => !value)}
+              >
+                <Clock size={14} /> {showHourlyWeather ? 'Ẩn dự báo giờ' : 'Dự báo giờ'}
               </button>
             </div>
 
@@ -296,15 +330,17 @@ export default function ItineraryScreen({
             </div>
             <div className="weather-temp-range">C:{maxTemp}°&nbsp;&nbsp;T:{minTemp}°</div>
 
-            <div className="weather-hourly-row">
-              {buildHourlyWeather(currentDayWeather).map((slot) => (
-                <div className="weather-hour-slot" key={slot.label}>
-                  <span className="weather-hour-label">{slot.label}</span>
-                  {renderWeatherIcon(slot.weather, 24)}
-                  <strong>{slot.temp}°</strong>
-                </div>
-              ))}
-            </div>
+            {showHourlyWeather && (
+              <div className="weather-hourly-row">
+                {buildHourlyWeather(currentDayWeather).map((slot) => (
+                  <div className="weather-hour-slot" key={slot.label}>
+                    <span className="weather-hour-label">{slot.label}</span>
+                    {renderWeatherIcon(slot.weather, 24)}
+                    <strong>{slot.temp}°</strong>
+                  </div>
+                ))}
+              </div>
+            )}
 
             <button className="weather-ai-suggestion" type="button" onClick={() => setActiveTab('chat')}>
               <span className="weather-ai-icon"><Sparkles size={16} /></span>
@@ -339,7 +375,7 @@ export default function ItineraryScreen({
       <div className="itinerary-day-section">
         <div className="day-section-title">
           <span className="day-section-icon"><Palmtree size={18} /></span>
-          Lịch ngày {activeDay}
+          Lịch ngày {effectiveDayNum}
         </div>
         {!readOnly && (
           <button className="day-section-add-btn" onClick={addNewEvent}>
@@ -452,7 +488,7 @@ export default function ItineraryScreen({
               <button className="itinerary-save-btn secondary" onClick={onReopenDraft}>
                 <RotateCcw size={16} /> Mở lại chỉnh sửa
               </button>
-              <button className="itinerary-save-btn" onClick={onStartLive}>
+              <button className="itinerary-save-btn" onClick={() => onStartLive(effectiveDayNum)}>
                 <PlayCircle size={16} /> Bắt đầu Live
               </button>
             </>
@@ -510,11 +546,23 @@ function getWeatherLabel(weatherType) {
   const labels = {
     sunny: 'Nhiều nắng',
     cloudy: 'Có mây',
+    windy: 'Gió mạnh',
     light_rain: 'Mưa nhẹ',
     heavy_rain: 'Mưa lớn',
+    thunderstorm: 'Dông',
     very_hot: 'Nắng nóng',
   }
   return labels[weatherType] || 'Nhiều nắng'
+}
+
+// Sắp xếp các hoạt động trong ngày theo thời gian để timeline luôn đúng thứ tự
+function sortEventsByTime(events) {
+  return [...events].sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time))
+}
+
+function timeToMinutes(time = '00:00') {
+  const [hours = '0', minutes = '0'] = String(time).split(':')
+  return Number(hours) * 60 + Number(minutes)
 }
 
 // Single category tag shown on each itinerary card

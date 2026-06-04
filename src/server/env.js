@@ -6,6 +6,11 @@ export function loadEnv(cwd = process.cwd()) {
   if (!fs.existsSync(envPath)) return
 
   const content = fs.readFileSync(envPath, 'utf8')
+
+  // Parse the whole file first so a duplicated key takes its LAST value
+  // (matching dotenv); applying line-by-line would let the first occurrence
+  // win and silently shadow a corrected value lower in the file.
+  const parsed = {}
   content.split(/\r?\n/).forEach((line) => {
     const trimmed = line.trim()
     if (!trimmed || trimmed.startsWith('#')) return
@@ -19,8 +24,13 @@ export function loadEnv(cwd = process.cwd()) {
       value = value.slice(1, -1)
     }
 
-    if (key && process.env[key] === undefined) {
+    if (key) parsed[key] = value
+  })
+
+  // Real environment variables (shell/CI) still win over .env values.
+  for (const [key, value] of Object.entries(parsed)) {
+    if (process.env[key] === undefined) {
       process.env[key] = value
     }
-  })
+  }
 }

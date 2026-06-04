@@ -1,5 +1,5 @@
 import React from 'react'
-import { User, ShieldAlert, Globe, CircleDollarSign, ChevronRight, Crown } from 'lucide-react'
+import { User, Globe, CircleDollarSign, ChevronRight, Crown } from 'lucide-react'
 
 export default function AccountScreen({ chatMessageCount, itineraryCount }) {
   return (

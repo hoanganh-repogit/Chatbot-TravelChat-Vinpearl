@@ -5,6 +5,7 @@ import {
   BatteryMedium,
   BellRing,
   Bus,
+  CalendarDays,
   Car,
   Check,
   CheckCircle2,
@@ -16,6 +17,7 @@ import {
   Lock,
   LockOpen,
   MapPin,
+  MessageSquare,
   PlayCircle,
   RefreshCcw,
   Sparkles,
@@ -38,10 +40,24 @@ import {
 import { getDestinationName, normalizeDestinationId } from '../lib/destinations'
 import { loadLiveMoocClientData } from '../utils/liveMoocData'
 
-const WEATHER_OPTIONS = ['sunny', 'light_rain', 'heavy_rain', 'very_hot', 'thunderstorm']
+const WEATHER_OPTIONS = ['sunny', 'cloudy', 'windy', 'light_rain', 'heavy_rain', 'very_hot', 'thunderstorm']
 const CROWD_OPTIONS = ['low', 'medium', 'high', 'overcrowded']
 const ENERGY_OPTIONS = ['high', 'medium', 'low']
-const LOCATION_OPTIONS = ['resort_lobby', 'vinwonders_gate', 'typhoon_world', 'aquarium', 'safari', 'grand_world']
+const LOCATION_OPTIONS = [
+  'resort_lobby',
+  'hotel_lobby',
+  'vinwonders_gate',
+  'typhoon_world',
+  'aquarium',
+  'safari',
+  'grand_world',
+  'cable_car_station',
+  'mainland_pier',
+  'fairy_land',
+  'kings_garden',
+  'hon_tre_resort',
+  'cam_ranh_airport',
+]
 
 const presetLabels = {
   normal_day: 'Normal',
@@ -53,6 +69,8 @@ const presetLabels = {
 
 const weatherLabels = {
   sunny: 'Nắng',
+  cloudy: 'Có mây',
+  windy: 'Gió mạnh',
   light_rain: 'Mưa nhẹ',
   heavy_rain: 'Mưa lớn',
   very_hot: 'Rất nóng',
@@ -74,31 +92,42 @@ const energyLabels = {
 
 const locationLabels = {
   resort_lobby: 'Resort lobby',
+  hotel_lobby: 'Hotel lobby',
   vinwonders_gate: 'VinWonders gate',
   typhoon_world: 'Typhoon World',
   aquarium: 'Aquarium',
   safari: 'Safari',
   grand_world: 'Grand World',
+  cable_car_station: 'Cable car station',
+  mainland_pier: 'Mainland pier',
+  fairy_land: 'Fairy Land',
+  kings_garden: 'King’s Garden',
+  hon_tre_resort: 'Hòn Tre resort',
+  cam_ranh_airport: 'Cam Ranh airport',
 }
 
-export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_quoc' }) {
+export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_quoc', setActiveTab }) {
   const normalizedDestinationId = normalizeDestinationId(destinationId)
   const localMoocData = useMemo(() => loadLiveMoocClientData(normalizedDestinationId), [normalizedDestinationId])
   const fallbackData = useMemo(
     () => buildLiveData(localMoocData),
     [localMoocData]
   )
+  const liveDayOptions = useMemo(() => getLiveDayOptions(confirmedItinerary), [confirmedItinerary])
+  const initialLiveDay = useMemo(() => getLiveDay(confirmedItinerary), [confirmedItinerary])
+  const [selectedLiveDayNum, setSelectedLiveDayNum] = useState(() => initialLiveDay?.dayNum || 1)
   const fallbackTimeline = useMemo(
-    () => itineraryToLiveTimeline(confirmedItinerary, fallbackData) || createInitialTimeline(fallbackData),
-    [confirmedItinerary, fallbackData]
+    () => itineraryToLiveTimeline(confirmedItinerary, fallbackData, selectedLiveDayNum) || createInitialTimeline(fallbackData),
+    [confirmedItinerary, fallbackData, selectedLiveDayNum]
   )
-  const liveDay = getLiveDay(confirmedItinerary)
+  const liveDay = getLiveDay(confirmedItinerary, selectedLiveDayNum)
   const [data, setData] = useState(fallbackData)
   const [presets, setPresets] = useState(localMoocData.liveContext.presets)
   const [initialTimeline, setInitialTimeline] = useState(fallbackTimeline)
   const [selectedPreset, setSelectedPreset] = useState('normal_day')
   const [liveContext, setLiveContext] = useState(() => normalizeLiveContext(localMoocData.liveContext.presets.normal_day))
   const [timeline, setTimeline] = useState(fallbackTimeline)
+  const [simulatedNowMinutes, setSimulatedNowMinutes] = useState(() => getDefaultNowMinutes(fallbackTimeline))
   const [itemLocks, setItemLocks] = useState({})
   const [toasts, setToasts] = useState([])
   const [reasons, setReasons] = useState([])
@@ -127,6 +156,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       setSelectedPreset(localPresetId)
       setInitialTimeline(localTimeline)
       setTimeline(localTimeline)
+      setSimulatedNowMinutes(getDefaultNowMinutes(localTimeline))
       setLiveContext(normalizeLiveContext(localPresets[localPresetId]))
       setItemLocks({})
       setToasts([])
@@ -153,9 +183,10 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
         setData(remoteData)
         setPresets(payload.presets)
         const remotePresetId = payload.presets[selectedPreset] ? selectedPreset : Object.keys(payload.presets)[0]
-        const nextInitialTimeline = itineraryToLiveTimeline(confirmedItinerary, remoteData) || payload.initialTimeline
+        const nextInitialTimeline = itineraryToLiveTimeline(confirmedItinerary, remoteData, selectedLiveDayNum) || payload.initialTimeline
         setInitialTimeline(nextInitialTimeline)
         setTimeline(nextInitialTimeline)
+        setSimulatedNowMinutes(getDefaultNowMinutes(nextInitialTimeline))
         setSelectedPreset(remotePresetId)
         setLiveContext(normalizeLiveContext(payload.presets[remotePresetId]))
         setBackendAvailable(true)
@@ -172,6 +203,13 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       cancelled = true
     }
   }, [confirmedItinerary, fallbackData, fallbackTimeline, localMoocData, normalizedDestinationId])
+
+  useEffect(() => {
+    const nextDay = getLiveDay(confirmedItinerary, selectedLiveDayNum)
+    if (!nextDay && liveDayOptions.length) {
+      setSelectedLiveDayNum(liveDayOptions[0].dayNum)
+    }
+  }, [confirmedItinerary, liveDayOptions, selectedLiveDayNum])
 
   useEffect(() => {
     if (!backendAvailable) {
@@ -215,6 +253,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
     setSelectedPreset(presetId)
     setLiveContext(normalizeLiveContext(presets[presetId] || Object.values(presets)[0]))
     setTimeline(initialTimeline)
+    setSimulatedNowMinutes(getDefaultNowMinutes(initialTimeline))
     setItemLocks({})
     setToasts([])
     setReasons([])
@@ -293,6 +332,21 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
   const handleReset = () => {
     setTimeline(initialTimeline)
+    setSimulatedNowMinutes(getDefaultNowMinutes(initialTimeline))
+    setItemLocks({})
+    setToasts([])
+    setReasons([])
+    setExplanation('')
+    setServerSuggestion('')
+  }
+
+  const handleLiveDayChange = (dayNum) => {
+    const nextDayNum = Number(dayNum)
+    const nextTimeline = itineraryToLiveTimeline(confirmedItinerary, data, nextDayNum) || createInitialTimeline(data)
+    setSelectedLiveDayNum(nextDayNum)
+    setInitialTimeline(nextTimeline)
+    setTimeline(nextTimeline)
+    setSimulatedNowMinutes(getDefaultNowMinutes(nextTimeline))
     setItemLocks({})
     setToasts([])
     setReasons([])
@@ -318,6 +372,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
         <PhoneWidget
           timeline={timeline}
+          nowMinutes={simulatedNowMinutes}
           liveContext={liveContext}
           itemLocks={itemLocks}
           suggestion={suggestion}
@@ -334,6 +389,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
           onOptimize={handleOptimize}
           onAction={handleAction}
           onReset={handleReset}
+          setActiveTab={setActiveTab}
         />
       </div>
 
@@ -345,9 +401,15 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
             presetHint={presetHint}
             presets={presets}
             data={data}
+            liveDayOptions={liveDayOptions}
+            selectedLiveDayNum={selectedLiveDayNum}
+            timeline={timeline}
+            nowMinutes={simulatedNowMinutes}
+            onLiveDayChange={handleLiveDayChange}
             onPreset={selectPreset}
             onChange={updateContext}
             onQueueChange={updateQueue}
+            onNowChange={setSimulatedNowMinutes}
           />
         </aside>,
         document.body
@@ -358,6 +420,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
 function PhoneWidget({
   timeline,
+  nowMinutes,
   liveContext,
   itemLocks,
   suggestion,
@@ -374,11 +437,11 @@ function PhoneWidget({
   onOptimize,
   onAction,
   onReset,
+  setActiveTab,
 }) {
   const activeVoucher = liveContext.voucherExpiring ? data.voucherById[liveContext.voucherExpiring] : null
   const providerLabel = providerPillLabel({ backendAvailable, optimizing, aiProvider })
 
-  const nowMinutes = useNowMinutes(timeline)
   const currentIndex = findCurrentIndex(timeline, nowMinutes)
   const currentItem = currentIndex >= 0 ? timeline[currentIndex] : null
   const nextItem = timeline[currentIndex + 1] || null
@@ -430,9 +493,9 @@ function PhoneWidget({
       </div>
 
       <div className="live-badges">
-        <StatusBadge icon={CloudRain} label={weatherLabels[liveContext.weather]} alert={isRainRisk(liveContext)} />
-        <StatusBadge icon={Users} label={crowdLabels[liveContext.crowd]} alert={['high', 'overcrowded'].includes(liveContext.crowd)} />
-        <StatusBadge icon={BatteryMedium} label={energyLabels[liveContext.energy]} alert={liveContext.energy === 'low'} />
+        <StatusBadge icon={CloudRain} label={weatherLabels[liveContext.weather] || liveContext.weather || 'Thời tiết'} alert={isRainRisk(liveContext)} />
+        <StatusBadge icon={Users} label={crowdLabels[liveContext.crowd] || liveContext.crowd || 'Đám đông'} alert={['high', 'overcrowded'].includes(liveContext.crowd)} />
+        <StatusBadge icon={BatteryMedium} label={energyLabels[liveContext.energy] || liveContext.energy || 'Năng lượng'} alert={liveContext.energy === 'low'} />
         {liveContext.childTired && <StatusBadge icon={AlertTriangle} label="Bé mệt" alert />}
         {liveContext.elderlyMode && <StatusBadge icon={Bus} label="Elderly" alert />}
         {activeVoucher && <StatusBadge icon={Gift} label="Voucher" alert />}
@@ -533,20 +596,21 @@ function PhoneWidget({
         </div>
       )}
 
-      <div className="live-action-row">
-        <button
-          className="live-action-btn"
-          type="button"
-          onClick={() => onAction('call_green_sm')}
-          disabled={actionBusy}
+
+
+      <div style={{ display: 'flex', gap: '8px' }}>
+        <button className="live-optimize-btn" style={{ flex: 1, margin: 0 }} type="button" onClick={onOptimize} disabled={optimizing}>
+          <Wand2 size={16} /> {optimizing ? 'Optimizing...' : 'Optimize'}
+        </button>
+        <button 
+          style={{ width: '44px', height: '44px', borderRadius: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', cursor: 'pointer', flexShrink: 0 }} 
+          type="button" 
+          onClick={() => setActiveTab && setActiveTab('chat')} 
+          title="Tùy chỉnh lịch trình với AI"
         >
-          <Bus size={15} /> {actionBusy ? 'Đang gọi…' : 'Gọi Green SM'}
+          <MessageSquare size={18} />
         </button>
       </div>
-
-      <button className="live-optimize-btn" type="button" onClick={onOptimize} disabled={optimizing}>
-        <Wand2 size={16} /> {optimizing ? 'Optimizing...' : 'Optimize'}
-      </button>
     </section>
   )
 }
@@ -593,7 +657,22 @@ function providerPillLabel({ backendAvailable, optimizing, aiProvider }) {
   return 'AI · sẵn sàng'
 }
 
-function SimulationControlPanel({ liveContext, selectedPreset, presetHint, presets, data, onPreset, onChange, onQueueChange }) {
+function SimulationControlPanel({
+  liveContext,
+  selectedPreset,
+  presetHint,
+  presets,
+  data,
+  liveDayOptions,
+  selectedLiveDayNum,
+  timeline,
+  nowMinutes,
+  onLiveDayChange,
+  onPreset,
+  onChange,
+  onQueueChange,
+  onNowChange,
+}) {
   const presetIds = useMemo(() => {
     const ids = Object.keys(presets || {})
     return ids.length ? ids : ['normal_day']
@@ -629,7 +708,7 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, prese
               className={`live-preset-btn ${selectedPreset === presetId ? 'active' : ''}`}
               onClick={() => onPreset(presetId)}
             >
-              {presetLabels[presetId] || presetId}
+              {presetLabels[presetId] || formatPresetLabel(presetId)}
             </button>
           ))}
         </div>
@@ -638,7 +717,20 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, prese
         )}
       </ControlSection>
 
-      <ControlSection step={2} title="Thời tiết & đám đông" hint="Tác động tới hoạt động ngoài trời">
+      <ControlSection step={2} title="Ngày & thời gian" hint="Chọn ngày rồi tua mốc Bây giờ">
+        <DayControl
+          days={liveDayOptions}
+          selectedDayNum={selectedLiveDayNum}
+          onChange={onLiveDayChange}
+        />
+        <TimeOfDayControl
+          timeline={timeline}
+          nowMinutes={nowMinutes}
+          onChange={onNowChange}
+        />
+      </ControlSection>
+
+      <ControlSection step={3} title="Thời tiết & đám đông" hint="Tác động tới hoạt động ngoài trời">
         <div className="live-control-grid">
           <SelectControl
             label="Thời tiết"
@@ -670,7 +762,7 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, prese
         </label>
       </ControlSection>
 
-      <ControlSection step={3} title="Trạng thái gia đình" hint="Quyết định nhịp đi chơi và nghỉ ngơi">
+      <ControlSection step={4} title="Trạng thái gia đình" hint="Quyết định nhịp đi chơi và nghỉ ngơi">
         <div className="live-field">
           <p className="live-field-label">Năng lượng cả nhà</p>
           <div className="live-energy-row">
@@ -694,7 +786,7 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, prese
         </div>
       </ControlSection>
 
-      <ControlSection step={4} title="Vị trí & hàng chờ" hint="Số phút chờ hiện tại ở từng điểm">
+      <ControlSection step={5} title="Vị trí & hàng chờ" hint="Số phút chờ hiện tại ở từng điểm">
         <SelectControl
           label="Đang ở"
           value={liveContext.location}
@@ -720,7 +812,7 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, prese
         </div>
       </ControlSection>
 
-      <ControlSection step={5} title="Ưu đãi" hint="Voucher cần dùng trước khi hết hạn">
+      <ControlSection step={6} title="Ưu đãi" hint="Voucher cần dùng trước khi hết hạn">
         <label className="live-voucher-select">
           <span><Gift size={14} /> Voucher sắp hết hạn</span>
           <select
@@ -738,6 +830,72 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, prese
   )
 }
 
+function DayControl({ days, selectedDayNum, onChange }) {
+  if (!days?.length) return null
+
+  return (
+    <label className="live-day-select">
+      <span><CalendarDays size={14} /> Ngày demo</span>
+      <select
+        aria-label="Ngày demo"
+        value={selectedDayNum}
+        onChange={(event) => onChange(Number(event.target.value))}
+      >
+        {days.map((day) => (
+          <option value={day.dayNum} key={day.dayNum}>
+            Ngày {day.dayNum} · {day.eventCount} hoạt động
+          </option>
+        ))}
+      </select>
+    </label>
+  )
+}
+
+function TimeOfDayControl({ timeline, nowMinutes, onChange }) {
+  const bounds = useMemo(() => getTimelineTimeBounds(timeline), [timeline])
+  const currentMinutes = clampMinutes(nowMinutes ?? bounds.min, bounds.min, bounds.max)
+  const currentItem = timeline[findCurrentIndex(timeline, currentMinutes)]
+  const nextItem = timeline.find((item) => timeToMinutes(item.time) > currentMinutes)
+
+  return (
+    <div className="live-time-control">
+      <div className="live-time-control-top">
+        <label className="live-time-input">
+          <span><Clock size={14} /> Giờ demo</span>
+          <input
+            type="time"
+            aria-label="Giờ demo"
+            value={formatMinutes(currentMinutes)}
+            onChange={(event) => onChange(timeToMinutes(event.target.value))}
+          />
+        </label>
+        <div className="live-time-readout">
+          <strong>{formatMinutes(currentMinutes)}</strong>
+          <span>Bây giờ</span>
+        </div>
+      </div>
+      <input
+        className="live-time-range"
+        type="range"
+        aria-label="Tua thời gian trong ngày"
+        min={bounds.min}
+        max={bounds.max}
+        step="5"
+        value={currentMinutes}
+        onChange={(event) => onChange(Number(event.target.value))}
+      />
+      <div className="live-time-range-labels">
+        <span>{formatMinutes(bounds.min)}</span>
+        <span>{formatMinutes(bounds.max)}</span>
+      </div>
+      <div className="live-time-current">
+        <p>Đang neo</p>
+        <strong>{currentItem?.title || nextItem?.title || 'Chưa có hoạt động'}</strong>
+      </div>
+    </div>
+  )
+}
+
 function ControlSection({ step, title, hint, children }) {
   return (
     <div className="live-group">
@@ -751,6 +909,15 @@ function ControlSection({ step, title, hint, children }) {
       <div className="live-group-body">{children}</div>
     </div>
   )
+}
+
+function formatPresetLabel(presetId) {
+  return String(presetId || '')
+    .split('_')
+    .filter(Boolean)
+    .slice(0, 3)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
 }
 
 function StatusBadge({ icon: Icon, label, alert }) {
@@ -787,8 +954,21 @@ function ToggleControl({ label, checked, onChange }) {
   )
 }
 
-function getLiveDay(itinerary) {
+function getLiveDayOptions(itinerary) {
+  return (itinerary?.days || [])
+    .filter((day) => day?.events?.length)
+    .map((day) => ({
+      dayNum: day.dayNum,
+      eventCount: day.events.length,
+    }))
+}
+
+function getLiveDay(itinerary, selectedDayNum = null) {
   if (!itinerary?.days?.length) return null
+  if (selectedDayNum) {
+    const selectedDay = itinerary.days.find((day) => day.dayNum === selectedDayNum)
+    if (selectedDay?.events?.length) return selectedDay
+  }
   const explicitDayNum = itinerary.liveDayNum || itinerary.activeDayNum || itinerary.currentDayNum
   return itinerary.days.find((day) => day.dayNum === explicitDayNum)
     || itinerary.days.find((day) => day.isLive || day.isCurrent)
@@ -796,8 +976,8 @@ function getLiveDay(itinerary) {
     || itinerary.days[0]
 }
 
-function itineraryToLiveTimeline(itinerary, data) {
-  const liveDay = getLiveDay(itinerary)
+function itineraryToLiveTimeline(itinerary, data, selectedDayNum = null) {
+  const liveDay = getLiveDay(itinerary, selectedDayNum)
   const events = liveDay?.events || []
   if (!events.length) return null
 
@@ -878,21 +1058,108 @@ function eventToLiveItem(event, index, data) {
 
 function findLiveEntity(event, data) {
   const text = normalizeText(`${event.title || ''} ${event.desc || ''}`)
-  const attraction = data.attractions.find((item) => entityMatches(text, item.name))
+  const attraction = findBestEntityMatch(text, data.attractions)
   if (attraction) return { kind: 'attraction', entity: attraction }
 
-  const restaurant = data.restaurants.find((item) => entityMatches(text, item.name))
+  const restaurant = findBestEntityMatch(text, data.restaurants)
   if (restaurant) return { kind: 'restaurant', entity: restaurant }
 
   return null
 }
 
-function entityMatches(text, name) {
-  const normalizedName = normalizeText(name)
-  if (!normalizedName) return false
-  const nameTokens = normalizedName.split(' ').filter((token) => token.length >= 4)
-  if (text.includes(normalizedName)) return true
-  return nameTokens.some((token) => text.includes(token))
+const ENTITY_STOP_WORDS = new Set([
+  'vinpearl',
+  'vinwonders',
+  'phu',
+  'quoc',
+  'nha',
+  'trang',
+  'nam',
+  'hoi',
+  'long',
+  'world',
+  'show',
+  'park',
+  'restaurant',
+  'resort',
+  'indoor',
+  'outdoor',
+  'the',
+  'and',
+  'viet',
+])
+
+const DISTINCTIVE_ENTITY_TOKENS = new Set([
+  'akoya',
+  'alpine',
+  'aquarium',
+  'bamboo',
+  'beach',
+  'bird',
+  'buffet',
+  'cable',
+  'coaster',
+  'giraffe',
+  'kayak',
+  'mermaid',
+  'roller',
+  'safari',
+  'sea',
+  'shell',
+  'spa',
+  'tata',
+  'teddy',
+  'typhoon',
+  'venice',
+  'viking',
+  'water',
+  'zipline',
+])
+
+function findBestEntityMatch(text, entities = []) {
+  let best = null
+
+  entities.forEach((entity) => {
+    const score = entityMatchScore(text, entity)
+    if (score >= 3 && (!best || score > best.score)) {
+      best = { entity, score }
+    }
+  })
+
+  return best?.entity || null
+}
+
+function entityMatchScore(text, entity) {
+  const exactAliases = [entity.name].map(normalizeText).filter(Boolean)
+  const exactAlias = exactAliases.find((alias) => alias.length >= 8 && text.includes(alias))
+  if (exactAlias) return 10 + exactAlias.split(' ').length
+
+  const aliases = [
+    entity.name,
+    entity.zone,
+    ...(entity.tags || []),
+  ].map(normalizeText).filter(Boolean)
+  const tokens = [...new Set(
+    aliases.flatMap((alias) => alias.split(' '))
+      .filter((token) => token.length >= 3 && !ENTITY_STOP_WORDS.has(token))
+  )]
+  const hits = tokens.filter((token) => text.includes(token))
+  let score = hits.length
+
+  const park = normalizeText(entity.park || '')
+  const type = normalizeText(entity.type || '')
+  const zone = normalizeText(entity.zone || '')
+
+  if (text.includes('grand world') && (park.includes('grandworld') || zone.includes('grand world'))) score += 2
+  if (text.includes('safari') && (park.includes('safari') || type.includes('safari'))) score += 2
+  if ((text.includes('show') || text.includes('dien')) && type.includes('show')) score += 2
+  const looksLikeRestaurant = Array.isArray(entity.cuisine) || Array.isArray(entity.slots) || entity.pricePerPax != null
+  if ((text.includes('an') || text.includes('buffet') || text.includes('nha hang')) && looksLikeRestaurant) score += 2
+
+  if (hits.some((token) => DISTINCTIVE_ENTITY_TOKENS.has(token))) score += 1
+  if (score < 3 && hits.length < 2 && !hits.some((token) => DISTINCTIVE_ENTITY_TOKENS.has(token))) return 0
+
+  return score
 }
 
 function normalizeText(value = '') {
@@ -930,27 +1197,28 @@ function timeToMinutes(time = '00:00') {
   return Number(hours) * 60 + Number(minutes)
 }
 
-// "Bây giờ" tracker: dùng giờ thực nếu rơi trong khung lịch trình,
-// nếu không thì neo vào hoạt động thứ 2 để demo luôn có mốc hiện tại.
-function useNowMinutes(timeline) {
-  const [nowMs, setNowMs] = useState(() => Date.now())
+function getDefaultNowMinutes(timeline = []) {
+  if (!timeline.length) return 9 * 60
+  const starts = timeline.map((item) => timeToMinutes(item.time))
+  const first = starts[0]
+  const last = starts[starts.length - 1]
+  const now = new Date()
+  const real = now.getHours() * 60 + now.getMinutes()
+  if (real >= first - 20 && real <= last + 90) return real
+  const anchorIdx = Math.min(1, timeline.length - 1)
+  return starts[anchorIdx] + 7
+}
 
-  useEffect(() => {
-    const id = window.setInterval(() => setNowMs(Date.now()), 30000)
-    return () => window.clearInterval(id)
-  }, [])
+function getTimelineTimeBounds(timeline = []) {
+  if (!timeline.length) return { min: 8 * 60, max: 20 * 60 }
+  const starts = timeline.map((item) => timeToMinutes(item.time))
+  const min = Math.max(0, Math.min(...starts) - 30)
+  const max = Math.min(23 * 60 + 59, Math.max(...starts) + 90)
+  return { min, max }
+}
 
-  return useMemo(() => {
-    if (!timeline.length) return 0
-    const starts = timeline.map((item) => timeToMinutes(item.time))
-    const first = starts[0]
-    const last = starts[starts.length - 1]
-    const now = new Date(nowMs)
-    const real = now.getHours() * 60 + now.getMinutes()
-    if (real >= first - 20 && real <= last + 90) return real
-    const anchorIdx = Math.min(1, timeline.length - 1)
-    return starts[anchorIdx] + 7
-  }, [nowMs, timeline])
+function clampMinutes(value, min, max) {
+  return Math.min(max, Math.max(min, Number(value) || min))
 }
 
 function findCurrentIndex(timeline, nowMinutes) {
