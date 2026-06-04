@@ -1,9 +1,14 @@
 import { getWeatherForecast } from './rag'
 
-// Environment variables loaded by Vite
-const API_KEY = import.meta.env.VITE_CUSTOM_LLM_KEY || 'sk-MCkLdiMLeEi443oKQ3IipGBuiup7k28wpabKS3Sk3BbKwHT0w5vC7Vgjdkjkv8Xa';
-const BASE_URL = '/api-llm/zen/go/v1';
-const MODEL_NAME = import.meta.env.VITE_CUSTOM_LLM_MODEL || 'deepseek-v4-flash';
+// Custom LLM Config
+const CUSTOM_KEY = import.meta.env.VITE_CUSTOM_LLM_KEY || '';
+const CUSTOM_URL = '/api-llm/zen/go/v1';
+const CUSTOM_MODEL = import.meta.env.VITE_CUSTOM_LLM_MODEL || 'deepseek-v4-flash';
+
+// Fallback OpenAI Config
+const OPENAI_KEY = import.meta.env.VITE_OPENAI_API_KEY || '';
+const OPENAI_URL = 'https://api.openai.com/v1';
+const OPENAI_MODEL = import.meta.env.VITE_OPENAI_MODEL || 'gpt-4o-mini';
 
 let cachedHotels = null;
 
@@ -121,36 +126,66 @@ export async function getRAGContext(query, destinationId = 'phu_quoc') {
 
 // Invoke custom LLM completions API
 export async function executeLLMChat(messages, systemPrompt = '') {
-  const url = `${BASE_URL.replace(/\/$/, '')}/chat/completions`;
-  const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${API_KEY}`
-  };
-
-  const payload = {
-    model: MODEL_NAME,
-    messages: [
-      { role: 'system', content: systemPrompt },
-      ...messages
-    ],
-    temperature: 0.7
-  };
-
-  try {
+  // Try Custom DeepSeek LLM first when the key is configured.
+  if (CUSTOM_KEY) {
+    try {
+      const url = `${CUSTOM_URL.replace(/\/$/, '')}/chat/completions`;
     const response = await fetch(url, {
       method: 'POST',
-      headers,
-      body: JSON.stringify(payload)
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${CUSTOM_KEY}`
+      },
+      body: JSON.stringify({
+        model: CUSTOM_MODEL,
+        messages: [{ role: 'system', content: systemPrompt }, ...messages],
+        temperature: 0.7
+      })
+    });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data && data.choices && data.choices[0] && data.choices[0].message) {
+          return data.choices[0].message.content;
+        }
+      }
+      console.warn(`Custom LLM endpoint returned status ${response.status}. Falling back to OpenAI...`);
+    } catch (error) {
+      console.warn('Error invoking Custom LLM endpoint. Falling back to OpenAI...', error);
+    }
+  } else {
+    console.warn('VITE_CUSTOM_LLM_KEY is not configured. Skipping custom LLM path.');
+  }
+
+  // Fallback to OpenAI gpt-4o-mini only when the key is configured.
+  if (!OPENAI_KEY) {
+    console.warn('VITE_OPENAI_API_KEY is not configured. OpenAI fallback is unavailable.');
+    return null;
+  }
+
+  try {
+    const url = `${OPENAI_URL.replace(/\/$/, '')}/chat/completions`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${OPENAI_KEY}`
+      },
+      body: JSON.stringify({
+        model: OPENAI_MODEL,
+        messages: [{ role: 'system', content: systemPrompt }, ...messages],
+        temperature: 0.7
+      })
     });
 
     if (!response.ok) {
-      throw new Error(`LLM call failed: ${response.status} ${response.statusText}`);
+      throw new Error(`OpenAI API failed: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
     return data.choices[0].message.content;
   } catch (error) {
-    console.error('Error invoking DeepSeek LLM:', error);
+    console.error('Fallback LLM invocation failed:', error);
     return null;
   }
 }
@@ -167,35 +202,39 @@ export async function runAIAgentResponse(
   // 1. Gather context details
   const ragContext = await getRAGContext(userQuery, destinationId);
 
+  // Destination coordinates for Google Maps
+  const destMapLinks = {
+    phu_quoc: 'https://www.google.com/maps/search/Vinpearl+Phu+Quoc/@10.3333,103.8333,13z',
+    nha_trang: 'https://www.google.com/maps/search/Vinpearl+Nha+Trang/@12.2388,109.1967,13z',
+    hoi_an: 'https://www.google.com/maps/search/Vinpearl+Nam+Hoi+An/@15.8801,108.3380,13z',
+    ha_long: 'https://www.google.com/maps/search/Vinpearl+Ha+Long/@20.9101,107.1839,13z',
+  };
+  const mapLink = destMapLinks[destinationId] || destMapLinks.phu_quoc;
+
   // 2. Prepare tool prompt
-  const toolsEnabled = options.toolsEnabled !== false;
-  const toolInstructions = toolsEnabled
-    ? `**KHẢ NĂNG GỌI TOOL (ACTION CALLING):**
-Bạn có quyền thay đổi lịch trình du lịch của khách hàng bằng cách thêm, sửa hoặc xóa các hoạt động. Để gọi tool, bạn hãy in cú pháp sau ở CHÓT CÙNG của câu trả lời trên một dòng riêng biệt:
-- Thêm hoạt động: [TOOL_CALL: add_activity, {"day": 1, "time": "14:30", "title": "Hoạt động", "desc": "Mô tả"}]
-- Sửa hoạt động: [TOOL_CALL: edit_activity, {"day": 2, "index": 0, "time": "09:00", "title": "Hoạt động mới", "desc": "Mô tả mới"}]
-- Xóa hoạt động: [TOOL_CALL: delete_activity, {"day": 1, "index": 2}]
+  const systemPrompt = `Bạn là Vinpearl AI, trợ lý du lịch 5 sao thông minh của hệ thống Vinpearl Resort.
+Nhiệm vụ: hỗ trợ du khách tìm hiểu địa điểm, đặt phòng và lên lịch trình nghỉ dưỡng tại Phú Quốc, Nha Trang, Nam Hội An và Hạ Long.
 
-Ví dụ: Nếu khách yêu cầu "Thêm tắm biển vào chiều ngày 1 lúc 16h30", bạn trả lời xác nhận và in ở cuối:
-[TOOL_CALL: add_activity, {"day": 1, "time": "16:30", "title": "Tắm biển Bãi Dài", "desc": "Thư giãn bơi lội tại bãi biển cát trắng."}]`
-    : `**TRẠNG THÁI LỊCH TRÌNH: ĐÃ CHỐT**
-Bạn không được thêm, sửa hoặc xóa lịch trình trong cuộc trò chuyện này. Nếu khách muốn thay đổi lịch, hãy nói khách mở lại chế độ chỉnh sửa trước rồi mới yêu cầu điều chỉnh. Không in TOOL_CALL.`;
-
-  const systemPrompt = `Bạn là Vinpearl AI, một trợ lý du lịch 5 sao thông minh.
-Nhiệm vụ của bạn là hỗ trợ du khách lên lịch trình nghỉ dưỡng tại 4 quần thể: Phú Quốc, Nha Trang, Nam Hội An và Hạ Long.
-
-Hãy trả lời dựa trên thông tin thực tế từ cơ sở dữ liệu Vinpearl được cung cấp.
-Nếu có link hình ảnh trong phần context, bạn HÃY THÊM hình ảnh đó vào câu trả lời bằng cú pháp markdown: ![Tên ảnh](URL_ảnh) trên dòng riêng biệt. Sử dụng các đường dẫn bắt đầu bằng "/dataset/images/" hoặc "https://statics.vinpearl.com/".
+**QUY TẮC TRẢ LỜI:**
+1. Luôn trả lời bằng tiếng Việt, giọng điệu thân thiện, chuyên nghiệp.
+2. Khi giới thiệu địa điểm/resort, BẮT BUỘC phải:
+   - Hiển thị 1-2 hình ảnh thực tế bằng cú pháp markdown: ![Tên ảnh](URL) trên dòng riêng biệt
+   - Kèm link Google Maps: [📍 Xem vị trí trên Google Maps](${mapLink})
+3. Ưu tiên dùng ảnh từ phần "Hình ảnh thực tế" trong context (đường dẫn /dataset/images/... hoặc https://statics.vinpearl.com/)
+4. Khi người dùng hỏi về lịch trình, hãy hỏi các thông tin: số người (bao gồm trẻ em), số ngày, ngân sách, sở thích để lên lịch phù hợp.
+5. Nếu người dùng cung cấp đủ thông tin (số người, ngày, điểm đến), hãy gợi ý lịch trình chi tiết theo từng ngày.
 
 **DỮ LIỆU BỐI CẢNH (RAG):**
 ${ragContext}
 
-**CHI TIẾT LỊCH TRÌNH HIỆN TẠI CỦA NGƯỜI DÙNG:**
-${currentItinerary ? JSON.stringify(currentItinerary) : 'Chưa có lịch trình.'}
+**LỊCH TRÌNH HIỆN TẠI:**
+${currentItinerary ? JSON.stringify(currentItinerary, null, 2) : 'Chưa có lịch trình. Hỏi thông tin khách để lên kế hoạch.'}
 
-${toolInstructions}
-
-Chú ý: Phản hồi hoàn toàn bằng tiếng Việt với giọng điệu hiếu khách, trang trọng.`;
+**TOOL CALLING - Cập nhật lịch trình:**
+In cú pháp sau ở CUỐI câu trả lời (dòng riêng biệt) khi muốn thay đổi lịch trình:
+- Thêm: [TOOL_CALL: add_activity, {"day": 1, "time": "14:30", "title": "Tên hoạt động", "desc": "Mô tả"}]
+- Sửa: [TOOL_CALL: edit_activity, {"day": 1, "index": 0, "time": "09:00", "title": "Tên mới", "desc": "Mô tả mới"}]
+- Xóa: [TOOL_CALL: delete_activity, {"day": 1, "index": 0}]`;
 
   // 3. Format history messages
   const apiMessages = chatHistory.map(msg => ({
@@ -216,11 +255,12 @@ Chú ý: Phản hồi hoàn toàn bằng tiếng Việt với giọng điệu hi
     };
   }
 
-  // 5. Parse tool calls
-  const toolCallRegex = /\[TOOL_CALL:\s*([a-zA-Z0-9_]+)\s*,\s*({.*})\]/;
-  const match = reply.match(toolCallRegex);
+  // 5. Parse one or many tool calls, then strip them from visible chat text.
+  const toolCallRegex = /\[TOOL_CALL:\s*([a-zA-Z0-9_]+)\s*,\s*({[\s\S]*?})\]/g;
+  const toolCalls = [...reply.matchAll(toolCallRegex)];
+  let itineraryWasUpdated = false;
 
-  if (match) {
+  toolCalls.forEach(match => {
     const toolName = match[1];
     const toolArgsStr = match[2];
 
@@ -228,29 +268,25 @@ Chú ý: Phản hồi hoàn toàn bằng tiếng Việt với giọng điệu hi
       const args = JSON.parse(toolArgsStr);
       console.log(`AI Agent executing tool: ${toolName}`, args);
 
-      // Remove the raw tool call output from the reply text shown to user
-      reply = reply.replace(toolCallRegex, '').trim();
-
-      // Trigger respective callback to update state
-      if (!toolsEnabled) {
-        return {
-          text: reply.replace(toolCallRegex, '').trim() || 'Lịch trình đã được chốt. Bạn vui lòng mở lại chỉnh sửa trước khi yêu cầu thay đổi lịch.',
-          recommendation: null
-        };
-      }
-
       if (toolName === 'add_activity' && itineraryCallbacks.addActivity) {
         itineraryCallbacks.addActivity(args.day, args.time, args.title, args.desc);
-        reply += '\n\n*(Hệ thống: Trợ lý AI đã thêm hoạt động này vào tab Lịch trình của bạn!)*';
+        itineraryWasUpdated = true;
       } else if (toolName === 'edit_activity' && itineraryCallbacks.editActivity) {
         itineraryCallbacks.editActivity(args.day, args.index, args.time, args.title, args.desc);
-        reply += '\n\n*(Hệ thống: Trợ lý AI đã cập nhật hoạt động này trong Lịch trình của bạn!)*';
+        itineraryWasUpdated = true;
       } else if (toolName === 'delete_activity' && itineraryCallbacks.deleteActivity) {
         itineraryCallbacks.deleteActivity(args.day, args.index);
-        reply += '\n\n*(Hệ thống: Trợ lý AI đã xóa hoạt động này khỏi Lịch trình của bạn!)*';
+        itineraryWasUpdated = true;
       }
     } catch (e) {
       console.error('Failed to parse or run AI tool call arguments:', e);
+    }
+  });
+
+  if (toolCalls.length > 0) {
+    reply = reply.replace(toolCallRegex, '').trim();
+    if (itineraryWasUpdated) {
+      reply += '\n\n*(Hệ thống: Trợ lý AI đã cập nhật tab Lịch trình đúng theo điểm đến trong cuộc chat.)*';
     }
   }
 

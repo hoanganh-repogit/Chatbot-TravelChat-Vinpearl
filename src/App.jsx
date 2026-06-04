@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Compass, MessageSquare, CalendarCheck, User, Signal, Wifi, Battery } from 'lucide-react'
+import { Compass, Sparkles, Calendar, User, Signal, Wifi, Battery } from 'lucide-react'
 import ExploreScreen, { destinationsData } from './components/ExploreScreen'
 import ChatScreen from './components/ChatScreen'
 import DetailScreen from './components/DetailScreen'
@@ -358,11 +358,12 @@ export default function App() {
               onGenerateItinerary={handleGenerateItinerary}
               setActiveTab={setActiveTab}
               activeItineraryId={activeItineraryId}
-              currentItinerary={journeyStatus === 'draft' ? customItineraries[activeItineraryId] : confirmedItinerary}
-              journeyStatus={journeyStatus}
-              onAddActivity={(dayNum, time, title, desc) => handleAddItineraryActivity(activeItineraryId, dayNum, time, title, desc)}
-              onEditActivity={(dayNum, index, time, title, desc) => handleEditItineraryActivity(activeItineraryId, dayNum, index, time, title, desc)}
-              onDeleteActivity={(dayNum, index) => handleDeleteItineraryActivity(activeItineraryId, dayNum, index)}
+              setActiveItineraryId={setActiveItineraryId}
+              currentItinerary={customItineraries[activeItineraryId]}
+              getItinerary={(destinationId) => customItineraries[destinationId]}
+              onAddActivity={(destinationId, dayNum, time, title, desc) => handleAddItineraryActivity(destinationId, dayNum, time, title, desc)}
+              onEditActivity={(destinationId, dayNum, index, time, title, desc) => handleEditItineraryActivity(destinationId, dayNum, index, time, title, desc)}
+              onDeleteActivity={(destinationId, dayNum, index) => handleDeleteItineraryActivity(destinationId, dayNum, index)}
             />
           )}
 
@@ -421,9 +422,9 @@ export default function App() {
             }}
           >
             <div className="nav-item-icon-wrapper">
-              <MessageSquare size={20} />
+              <Sparkles size={20} />
             </div>
-            <span>Chat</span>
+            <span>AI</span>
           </button>
 
           <button

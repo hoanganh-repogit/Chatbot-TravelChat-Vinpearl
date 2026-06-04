@@ -134,6 +134,28 @@ export async function searchMockDatabase(query, destinationId = 'phu_quoc') {
         console.warn('Rooms file not found', e);
       }
 
+      // Also load from dataset for real images
+      let datasetImages = {}
+      try {
+        const dsResp = await fetch('/data-mooc/hotels_clean.json')
+        if (dsResp.ok) {
+          const dsHotels = await dsResp.json()
+          // Map slug keywords to dest
+          const slugMap = { phu_quoc: ['phu-quoc','phu_quoc'], nha_trang: ['nha-trang','nha_trang','hon-tam'], hoi_an: ['hoi-an','hoi_an','nam-hoi'], ha_long: ['ha-long','ha_long'] }
+          const slugKeys = slugMap[destinationId] || []
+          const matched = dsHotels.filter(h => slugKeys.some(k => (h.slug||'').includes(k)))
+          matched.slice(0,3).forEach(h => {
+            if (h.local_images && h.local_images.length > 0) {
+              datasetImages[h.name] = h.local_images.slice(0, 3).map(p => '/' + p)
+            }
+          })
+        }
+      } catch(e) {}
+
+      const imgContext = Object.entries(datasetImages).map(([name, imgs]) =>
+        `Hình ảnh thực tế ${name}:\n` + imgs.map(i => `![${name}](${i})`).join('\n')
+      ).join('\n\n')
+
       const hotelsList = matchedHotels.map(h => 
         `🏨 **${h.name}** (Hạng ${h.tier} sao)\n  • Khu vực: ${h.zone}\n  • Điểm cộng: ${h.note || 'Không gian yên bình đẳng cấp'}\n  • Thích hợp cho gia đình: ${Math.round(h.familyFit * 100)}% | Cặp đôi: ${Math.round(h.coupleFit * 100)}%`
       ).join('\n\n');
@@ -142,7 +164,7 @@ export async function searchMockDatabase(query, destinationId = 'phu_quoc') {
         found: true,
         type: 'hotels',
         title: `Thông tin khách sạn & resort tại ${destName}`,
-        content: hotelsList + roomsInfo
+        content: hotelsList + roomsInfo + (imgContext ? '\n\n' + imgContext : '')
       };
     }
 
@@ -205,11 +227,61 @@ export async function searchMockDatabase(query, destinationId = 'phu_quoc') {
       };
     }
 
+    // 6. DESTINATION INTRO INTENT (giới thiệu, khám phá, địa điểm, bản đồ, ảnh)
+    if (queryLower.includes('giới thiệu') || queryLower.includes('khám phá') || queryLower.includes('bản đồ') || queryLower.includes('ảnh') || queryLower.includes('introduce') || queryLower.includes('tell me about')) {
+      let introImages = []
+      try {
+        const dsResp = await fetch('/data-mooc/hotels_clean.json')
+        if (dsResp.ok) {
+          const dsHotels = await dsResp.json()
+          const slugMap = { phu_quoc: ['phu-quoc'], nha_trang: ['nha-trang','hon-tam'], hoi_an: ['nam-hoi','hoi-an'], ha_long: ['ha-long'] }
+          const slugKeys = slugMap[destinationId] || []
+          const matched = dsHotels.filter(h => slugKeys.some(k => (h.slug||'').includes(k)))
+          if (matched.length > 0 && matched[0].local_images) {
+            introImages = matched[0].local_images.slice(0, 4).map(p => '/' + p)
+          }
+        }
+      } catch(e) {}
+
+      const imgMarkdown = introImages.map(i => `![${destName} Vinpearl Resort](${i})`).join('\n')
+      const destDescMap = {
+        phu_quoc: 'Phú Quốc là thiên đường nghỉ dưỡng với bãi biển cát trắng dài, nước biển xanh ngọc. Vinpearl Phú Quốc sở hữu hệ thống biệt thự 5 sao, VinWonders và Safari động vật hoang dã.',
+        nha_trang: 'Nha Trang nổi tiếng với vịnh biển tuyệt đẹp và cáp treo vượt biển dài nhất thế giới. Vinpearl Nha Trang trên đảo Hòn Tre mang đến trải nghiệm nghỉ dưỡng đẳng cấp quốc tế.',
+        hoi_an: 'Nam Hội An kết hợp hài hòa di sản văn hóa phố cổ và nghỉ dưỡng hiện đại. Vinpearl Nam Hội An với bể bơi vỏ sò độc đáo và sân golf ven biển.',
+        ha_long: 'Hạ Long là kỳ quan thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi. Vinpearl Hạ Long tọa lạc trên đảo Rều, mang phong cách kiến trúc Pháp cổ điển.',
+      }
+      return {
+        found: true,
+        type: 'destination_intro',
+        title: `Giới thiệu ${destName} Vinpearl`,
+        content: (destDescMap[destinationId] || '') + '\n\n' + imgMarkdown
+      }
+    }
+
   } catch (err) {
     console.error('Error fetching mock RAG data:', err);
   }
 
-  // Fallback if not matched or error
+  // Fallback: load destination images from dataset even for generic queries
+  try {
+    const dsResp = await fetch('/data-mooc/hotels_clean.json')
+    if (dsResp.ok) {
+      const dsHotels = await dsResp.json()
+      const slugMap = { phu_quoc: ['phu-quoc'], nha_trang: ['nha-trang','hon-tam'], hoi_an: ['nam-hoi','hoi-an'], ha_long: ['ha-long'] }
+      const slugKeys = slugMap[destinationId] || []
+      const matched = dsHotels.filter(h => slugKeys.some(k => (h.slug||'').includes(k)))
+      if (matched.length > 0 && matched[0].local_images) {
+        const imgs = matched[0].local_images.slice(0, 2).map(p => '/' + p)
+        return {
+          found: true,
+          type: 'general',
+          title: `Hình ảnh ${destinationNameMap[destinationId] || destinationId}`,
+          content: imgs.map(i => `![Vinpearl ${destinationNameMap[destinationId]}](${i})`).join('\n')
+        }
+      }
+    }
+  } catch(e) {}
+
   return {
     found: false,
     content: ''
