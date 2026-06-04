@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import {
   AlertTriangle,
@@ -91,34 +91,116 @@ const locationLabels = {
 }
 
 export default function LiveScreen() {
-  const data = useMemo(
+  const fallbackData = useMemo(
     () => buildLiveData({ attractions, restaurants, transport, vouchers, itineraryTemplates, latestQueues }),
     []
   )
-  const initialTimeline = useMemo(() => createInitialTimeline(data), [data])
+  const fallbackTimeline = useMemo(() => createInitialTimeline(fallbackData), [fallbackData])
+  const [data, setData] = useState(fallbackData)
+  const [presets, setPresets] = useState(liveContextMock.presets)
+  const [initialTimeline, setInitialTimeline] = useState(fallbackTimeline)
   const [selectedPreset, setSelectedPreset] = useState('normal_day')
   const [liveContext, setLiveContext] = useState(() => normalizeLiveContext(liveContextMock.presets.normal_day))
-  const [timeline, setTimeline] = useState(initialTimeline)
+  const [timeline, setTimeline] = useState(fallbackTimeline)
   const [itemLocks, setItemLocks] = useState({})
   const [toasts, setToasts] = useState([])
   const [reasons, setReasons] = useState([])
+  const [serverSuggestion, setServerSuggestion] = useState('')
+  const [warningsByItem, setWarningsByItem] = useState({})
+  const [explanation, setExplanation] = useState('')
+  const [aiProvider, setAiProvider] = useState('')
+  const [backendAvailable, setBackendAvailable] = useState(false)
+  const [optimizing, setOptimizing] = useState(false)
+  const [actionBusy, setActionBusy] = useState(false)
 
-  const suggestion = useMemo(() => buildSuggestion(timeline, liveContext, data), [timeline, liveContext, data])
-  const presetHint = liveContextMock.presets[selectedPreset]?.recommendedReflex
+  const localSuggestion = useMemo(() => buildSuggestion(timeline, liveContext, data), [timeline, liveContext, data])
+  const suggestion = serverSuggestion || localSuggestion
+  const presetHint = presets[selectedPreset]?.recommendedReflex
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function bootstrap() {
+      try {
+        const payload = await apiGet('/api/live/bootstrap')
+        if (cancelled) return
+
+        const remoteData = buildLiveData({
+          attractions,
+          restaurants: payload.restaurants,
+          transport: payload.transport,
+          vouchers: payload.vouchers,
+          itineraryTemplates,
+          latestQueues: payload.latestQueues,
+        })
+
+        setData(remoteData)
+        setPresets(payload.presets)
+        setInitialTimeline(payload.initialTimeline)
+        setTimeline(payload.initialTimeline)
+        setLiveContext(normalizeLiveContext(payload.presets.normal_day))
+        setBackendAvailable(true)
+      } catch {
+        if (cancelled) return
+        setBackendAvailable(false)
+        setAiProvider('Local fallback')
+      }
+    }
+
+    bootstrap()
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!backendAvailable) {
+      setWarningsByItem({})
+      setServerSuggestion('')
+      return undefined
+    }
+
+    let cancelled = false
+    const timer = window.setTimeout(async () => {
+      try {
+        // Deterministic + fast: live warnings/suggestion only. The provider
+        // pill is driven by /optimize, so a control change never regresses it.
+        const payload = await apiPost('/api/live/suggest', { timeline, liveContext })
+        if (cancelled) return
+        setServerSuggestion(payload.suggestion)
+        setWarningsByItem(payload.warningsByItem || {})
+      } catch {
+        if (cancelled) return
+        setBackendAvailable(false)
+        setServerSuggestion('')
+        setWarningsByItem({})
+      }
+    }, 180)
+
+    return () => {
+      cancelled = true
+      window.clearTimeout(timer)
+    }
+  }, [timeline, liveContext, backendAvailable])
 
   const updateContext = (patch) => {
     setLiveContext((current) => ({ ...current, ...patch }))
     setToasts([])
     setReasons([])
+    setExplanation('')
+    setServerSuggestion('')
   }
 
   const selectPreset = (presetId) => {
     setSelectedPreset(presetId)
-    setLiveContext(normalizeLiveContext(liveContextMock.presets[presetId]))
+    setLiveContext(normalizeLiveContext(presets[presetId]))
     setTimeline(initialTimeline)
     setItemLocks({})
     setToasts([])
     setReasons([])
+    setExplanation('')
+    setServerSuggestion('')
   }
 
   const updateQueue = (id, value) => {
@@ -134,11 +216,60 @@ export default function LiveScreen() {
     setItemLocks((current) => ({ ...current, [itemId]: !current[itemId] }))
   }
 
-  const handleOptimize = () => {
+  const runLocalOptimize = () => {
     const result = optimizeTimeline(timeline, liveContext, itemLocks, data)
     setTimeline(result.timeline)
+    setServerSuggestion('')
     setToasts(result.toasts)
     setReasons(result.reasons)
+    setExplanation(result.suggestion)
+    setAiProvider('')
+  }
+
+  const appendToast = (toast) => {
+    if (!toast) return
+    setToasts((current) => (current.includes(toast) ? current : [...current, toast]))
+  }
+
+  const handleAction = async (action, params = {}) => {
+    if (!backendAvailable) {
+      appendToast(localActionToast(action))
+      return
+    }
+
+    setActionBusy(true)
+    try {
+      const payload = await apiPost('/api/live/action', { action, params })
+      appendToast(payload.toast)
+    } catch {
+      setBackendAvailable(false)
+      appendToast(localActionToast(action))
+    } finally {
+      setActionBusy(false)
+    }
+  }
+
+  const handleOptimize = async () => {
+    if (!backendAvailable) {
+      runLocalOptimize()
+      return
+    }
+
+    setOptimizing(true)
+    try {
+      const payload = await apiPost('/api/live/optimize', { timeline, liveContext, itemLocks })
+      setTimeline(payload.timeline)
+      setServerSuggestion(payload.suggestion)
+      setToasts(payload.toasts || [])
+      setReasons(payload.reasons || [])
+      setExplanation(payload.explanation || '')
+      setAiProvider(formatProvider(payload.provider))
+    } catch {
+      setBackendAvailable(false)
+      runLocalOptimize()
+    } finally {
+      setOptimizing(false)
+    }
   }
 
   const handleReset = () => {
@@ -146,6 +277,8 @@ export default function LiveScreen() {
     setItemLocks({})
     setToasts([])
     setReasons([])
+    setExplanation('')
+    setServerSuggestion('')
   }
 
   return (
@@ -169,9 +302,16 @@ export default function LiveScreen() {
           suggestion={suggestion}
           toasts={toasts}
           reasons={reasons}
+          explanation={explanation}
+          warningsByItem={warningsByItem}
+          aiProvider={aiProvider}
+          backendAvailable={backendAvailable}
+          optimizing={optimizing}
+          actionBusy={actionBusy}
           data={data}
           onToggleLock={toggleLock}
           onOptimize={handleOptimize}
+          onAction={handleAction}
           onReset={handleReset}
         />
       </div>
@@ -200,12 +340,20 @@ function PhoneWidget({
   suggestion,
   toasts,
   reasons,
+  explanation,
+  warningsByItem,
+  aiProvider,
+  backendAvailable,
+  optimizing,
+  actionBusy,
   data,
   onToggleLock,
   onOptimize,
+  onAction,
   onReset,
 }) {
   const activeVoucher = liveContext.voucherExpiring ? data.voucherById[liveContext.voucherExpiring] : null
+  const providerLabel = providerPillLabel({ backendAvailable, optimizing, aiProvider })
 
   return (
     <section className="live-phone-widget">
@@ -214,9 +362,14 @@ function PhoneWidget({
           <p className="live-section-label">PhoneWidget</p>
           <h3 className="live-widget-title">Timeline hôm nay</h3>
         </div>
-        <button className="live-icon-btn" type="button" onClick={onReset} aria-label="Reset timeline">
-          <RefreshCcw size={16} />
-        </button>
+        <div className="live-widget-actions">
+          <span className={`live-provider-pill ${backendAvailable ? 'online' : 'fallback'}`}>
+            {providerLabel}
+          </span>
+          <button className="live-icon-btn" type="button" onClick={onReset} aria-label="Reset timeline">
+            <RefreshCcw size={16} />
+          </button>
+        </div>
       </div>
 
       <div className="live-badges">
@@ -237,9 +390,10 @@ function PhoneWidget({
 
       <div className="live-timeline">
         {timeline.map((item) => {
-          const warnings = getItemWarnings(item, liveContext)
-          const queue = getQueueMin(item, liveContext)
-          const score = fitScore(item, liveContext)
+          const warningRecord = warningsByItem[item.id]
+          const warnings = warningRecord?.warnings || getItemWarnings(item, liveContext)
+          const queue = warningRecord?.queueMin ?? getQueueMin(item, liveContext)
+          const score = warningRecord?.fitScore ?? fitScore(item, liveContext)
           const locked = Boolean(itemLocks[item.id])
 
           return (
@@ -289,6 +443,7 @@ function PhoneWidget({
 
       {reasons.length > 0 && (
         <div className="live-reasons">
+          {explanation && <p><Sparkles size={13} /> {explanation}</p>}
           {reasons.slice(0, 3).map((reason) => (
             <p key={reason}><CheckCircle2 size={13} /> {reason}</p>
           ))}
@@ -303,11 +458,29 @@ function PhoneWidget({
         </div>
       )}
 
-      <button className="live-optimize-btn" type="button" onClick={onOptimize}>
-        <Wand2 size={16} /> Optimize
+      <div className="live-action-row">
+        <button
+          className="live-action-btn"
+          type="button"
+          onClick={() => onAction('call_green_sm')}
+          disabled={actionBusy}
+        >
+          <Bus size={15} /> {actionBusy ? 'Đang gọi…' : 'Gọi Green SM'}
+        </button>
+      </div>
+
+      <button className="live-optimize-btn" type="button" onClick={onOptimize} disabled={optimizing}>
+        <Wand2 size={16} /> {optimizing ? 'Optimizing...' : 'Optimize'}
       </button>
     </section>
   )
+}
+
+function providerPillLabel({ backendAvailable, optimizing, aiProvider }) {
+  if (!backendAvailable) return 'Offline · local'
+  if (optimizing) return 'AI · đang xử lý…'
+  if (aiProvider) return `AI · ${aiProvider}`
+  return 'AI · sẵn sàng'
 }
 
 function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPreset, onChange, onQueueChange }) {
@@ -488,4 +661,35 @@ function ToggleControl({ label, checked, onChange }) {
       <span className="live-switch" />
     </button>
   )
+}
+
+async function apiGet(url) {
+  const response = await fetch(url, { headers: { accept: 'application/json' } })
+  if (!response.ok) throw new Error(`GET ${url} failed: ${response.status}`)
+  return response.json()
+}
+
+async function apiPost(url, payload) {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+  if (!response.ok) throw new Error(`POST ${url} failed: ${response.status}`)
+  return response.json()
+}
+
+function formatProvider(provider) {
+  if (provider === 'mimo') return 'MIMO'
+  if (provider === 'openai') return 'OpenAI'
+  if (provider === 'openrouter') return 'OpenRouter'
+  return 'Fallback'
+}
+
+function localActionToast(action) {
+  if (action === 'call_green_sm') return '✓ Green SM xe điện 7 chỗ đang đến điểm đón (demo offline)'
+  return '✓ Đã ghi nhận yêu cầu (demo offline)'
 }

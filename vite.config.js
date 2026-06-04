@@ -10,7 +10,11 @@ export default defineConfig({
         target: 'https://opencode.ai',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-llm/, '')
-      }
-    }
-  }
+      },
+      '/api': {
+        target: 'http://localhost:8787',
+        changeOrigin: true,
+      },
+    },
+  },
 })
