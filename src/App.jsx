@@ -365,7 +365,7 @@ export default function App() {
         {/* Bottom Tab Navigation Bar */}
         <nav className="nav-bar">
           <button
-            className={`nav-item ${activeTab === 'explore' ? 'active' : ''}`}
+            className={`nav-item nav-explore ${activeTab === 'explore' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('explore')
               setSelectedDestinationId(null)
@@ -378,7 +378,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'chat' ? 'active' : ''}`}
+            className={`nav-item nav-ai ${activeTab === 'chat' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('chat')
               setSelectedDestinationId(null)
@@ -391,7 +391,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'itinerary' ? 'active' : ''}`}
+            className={`nav-item nav-itinerary ${activeTab === 'itinerary' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('itinerary')
               setSelectedDestinationId(null)
@@ -404,7 +404,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'account' ? 'active' : ''}`}
+            className={`nav-item nav-account ${activeTab === 'account' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('account')
               setSelectedDestinationId(null)
