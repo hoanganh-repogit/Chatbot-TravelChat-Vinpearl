@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Compass, MessageSquare, CalendarCheck, User, Signal, Wifi, Battery } from 'lucide-react'
+import { Compass, Sparkles, CalendarCheck, User, Signal, Wifi, Battery } from 'lucide-react'
 import ExploreScreen, { destinationsData } from './components/ExploreScreen'
 import ChatScreen from './components/ChatScreen'
 import DetailScreen from './components/DetailScreen'
@@ -376,11 +376,13 @@ export default function App() {
               onGenerateItinerary={handleGenerateItinerary}
               setActiveTab={setActiveTab}
               activeItineraryId={activeItineraryId}
+              setActiveItineraryId={setActiveItineraryId}
               currentItinerary={journeyStatus === 'draft' ? customItineraries[activeItineraryId] : confirmedItinerary}
+              getItinerary={(destinationId) => journeyStatus === 'draft' ? customItineraries[destinationId] : confirmedItinerary}
               journeyStatus={journeyStatus}
-              onAddActivity={(dayNum, time, title, desc) => handleAddItineraryActivity(activeItineraryId, dayNum, time, title, desc)}
-              onEditActivity={(dayNum, index, time, title, desc) => handleEditItineraryActivity(activeItineraryId, dayNum, index, time, title, desc)}
-              onDeleteActivity={(dayNum, index) => handleDeleteItineraryActivity(activeItineraryId, dayNum, index)}
+              onAddActivity={(destinationId, dayNum, time, title, desc) => handleAddItineraryActivity(destinationId, dayNum, time, title, desc)}
+              onEditActivity={(destinationId, dayNum, index, time, title, desc) => handleEditItineraryActivity(destinationId, dayNum, index, time, title, desc)}
+              onDeleteActivity={(destinationId, dayNum, index) => handleDeleteItineraryActivity(destinationId, dayNum, index)}
             />
           )}
 
@@ -420,7 +422,7 @@ export default function App() {
         {/* Bottom Tab Navigation Bar */}
         <nav className="nav-bar">
           <button
-            className={`nav-item ${activeTab === 'explore' ? 'active' : ''}`}
+            className={`nav-item nav-explore ${activeTab === 'explore' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('explore')
               setSelectedDestinationId(null)
@@ -433,20 +435,20 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'chat' ? 'active' : ''}`}
+            className={`nav-item nav-ai ${activeTab === 'chat' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('chat')
               setSelectedDestinationId(null)
             }}
           >
             <div className="nav-item-icon-wrapper">
-              <MessageSquare size={20} />
+              <Sparkles size={20} />
             </div>
-            <span>Chat</span>
+            <span>AI</span>
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'itinerary' ? 'active' : ''}`}
+            className={`nav-item nav-itinerary ${activeTab === 'itinerary' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('itinerary')
               setSelectedDestinationId(null)
@@ -459,7 +461,7 @@ export default function App() {
           </button>
 
           <button
-            className={`nav-item ${activeTab === 'account' ? 'active' : ''}`}
+            className={`nav-item nav-account ${activeTab === 'account' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('account')
               setSelectedDestinationId(null)
