@@ -179,6 +179,19 @@ export default function App() {
   // Find currently selected destination details if open
   const selectedDestination = destinationsData.find(d => d.id === selectedDestinationId)
 
+  // local ref to expose Chat send handler and initial message for cross-tab sends
+  const chatSendHandlerRef = React.useRef(null)
+  const [initialChatMessage, setInitialChatMessage] = React.useState('')
+
+  const sendChatQuery = (msg) => {
+    if (activeTab === 'chat' && chatSendHandlerRef.current) {
+      chatSendHandlerRef.current(msg)
+      return
+    }
+    setActiveTab('chat')
+    setInitialChatMessage(msg)
+  }
+
   // Update itinerary callback
   const handleUpdateItinerary = (destinationId, newItinerary) => {
     if (journeyStatus !== 'draft') return
@@ -400,6 +413,7 @@ export default function App() {
           {activeTab === 'explore' && (
             <ExploreScreen
               onSelectDestination={setSelectedDestinationId}
+              sendChatQuery={sendChatQuery}
             />
           )}
 
@@ -425,6 +439,9 @@ export default function App() {
               onSelectDestination={setSelectedDestinationId}
               onGenerateItinerary={handleGenerateItinerary}
               setActiveTab={setActiveTab}
+              registerSendHandler={(fn) => { chatSendHandlerRef.current = fn }}
+              initialMessage={initialChatMessage}
+              onInitialMessageConsumed={() => setInitialChatMessage('')}
               activeItineraryId={activeItineraryId}
               setActiveItineraryId={setActiveItineraryId}
               currentItinerary={journeyStatus === 'draft' ? customItineraries[activeItineraryId] : confirmedItinerary}
