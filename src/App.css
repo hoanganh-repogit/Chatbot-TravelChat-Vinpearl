@@ -1203,6 +1203,31 @@ body {
   flex: 1;
 }
 
+.journey-status-pill {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 800;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.journey-status-pill.draft {
+  color: #6d28d9;
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+.journey-status-pill.confirmed {
+  color: #0369a1;
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}
+
 .itinerary-title {
   font-size: 15px;
   font-weight: 700;
@@ -1212,6 +1237,21 @@ body {
 .itinerary-subtitle {
   font-size: 11px;
   color: var(--text-secondary);
+}
+
+.journey-confirmed-banner {
+  margin: 12px 20px 0;
+  padding: 10px 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: var(--radius-md);
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  color: #075985;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 /* Day Tabs */
@@ -1229,6 +1269,7 @@ body {
 
 .itinerary-day-tab {
   flex: 1;
+  min-height: 42px;
   padding: 10px 0;
   border-radius: var(--radius-md);
   background: var(--bg-card);
@@ -1249,12 +1290,47 @@ body {
   box-shadow: 0 4px 10px rgba(124, 58, 237, 0.15);
 }
 
+.itinerary-chat-edit-panel {
+  margin: 0 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.itinerary-chat-edit-btn {
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.16);
+}
+
+.itinerary-chat-edit-panel p {
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
 /* Timeline vertical line layout */
 .timeline-container {
-  padding: 16px 20px;
+  padding: 14px 20px 18px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.draft-timeline {
+  gap: 0;
 }
 
 .timeline-line {
@@ -1267,11 +1343,16 @@ body {
   z-index: 1;
 }
 
+.draft-timeline .timeline-line {
+  left: 74px;
+  background: #e2e8f0;
+}
+
 .timeline-event {
   display: flex;
   position: relative;
   z-index: 2;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .timeline-event:last-child {
@@ -1279,11 +1360,23 @@ body {
 }
 
 .timeline-time {
-  width: 44px;
+  width: 50px;
   font-size: 12px;
   font-weight: 700;
   color: var(--text-secondary);
-  padding-top: 2px;
+  padding-top: 0;
+}
+
+.draft-timeline .timeline-time {
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+  font-size: 11px;
 }
 
 .timeline-node-container {
@@ -1291,6 +1384,10 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 4px;
+}
+
+.draft-timeline .timeline-node-container {
+  padding-top: 8px;
 }
 
 .timeline-node {
@@ -1321,6 +1418,12 @@ body {
   margin-left: 10px;
 }
 
+.draft-timeline .timeline-card {
+  padding: 14px;
+  border-color: #e2e8f0;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
 .timeline-event.section-header {
   margin-top: 10px;
   margin-bottom: 16px;
@@ -1335,22 +1438,51 @@ body {
 }
 
 .timeline-card-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 3px;
+  margin-bottom: 0;
+  line-height: 1.25;
 }
 
 .timeline-card-desc {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+
+.timeline-card-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.timeline-card-index {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 800;
 }
 
 /* Save Itinerary Button */
 .itinerary-footer {
   padding: 12px 20px 20px 20px;
   background: var(--bg-main);
+}
+
+.itinerary-footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .itinerary-save-btn {
@@ -1373,6 +1505,18 @@ body {
 
 .itinerary-save-btn:hover {
   background: var(--primary-dark);
+}
+
+.itinerary-save-btn.secondary {
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.itinerary-save-btn.secondary:hover {
+  background: #f8fafc;
+  color: var(--primary);
 }
 
 /* Empty Itinerary State */
@@ -2827,72 +2971,120 @@ body {
   border-color: #7c3aed;
 }
 
-/* Weather Box in Itinerary Screen */
-.itinerary-weather-box {
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  margin: 0 20px 12px 20px;
-  padding: 12px;
-  box-shadow: var(--shadow);
+/* Weather Card in Itinerary Screen */
+.itinerary-weather-card {
+  margin: 0 20px 12px;
+  padding: 16px;
+  border-radius: 18px;
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 55%),
+    linear-gradient(135deg, #1e5f96 0%, #3f86bd 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 28px rgba(30, 95, 150, 0.22);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
-.itinerary-weather-box.warning {
-  border-color: #fed7aa;
-  background: #fff7ed;
+.itinerary-weather-card.warning {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 55%),
+    linear-gradient(135deg, #256d8f 0%, #2f80b7 52%, #5a8bbd 100%);
 }
 
-.weather-box-top {
+.weather-card-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 14px;
 }
 
-.weather-info-pill {
+.weather-location {
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 850;
+}
+
+.weather-current-temp {
+  font-size: 54px;
+  line-height: 0.95;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+
+.weather-condition-panel {
+  min-width: 104px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.weather-condition-panel p {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.weather-condition-panel span {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 750;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.weather-hourly-row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 8px;
 }
 
-.weather-temp-range {
-  font-size: 13px;
-  font-weight: 700;
-  color: #1e293b;
+.weather-hour-slot {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
-.weather-rain-prob {
+.weather-hour-label {
+  color: rgba(255, 255, 255, 0.74);
   font-size: 11px;
-  font-weight: 600;
-  color: #64748b;
-  background: #e0f2fe;
-  color: #0369a1;
-  padding: 2px 8px;
-  border-radius: 999px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.weather-hour-slot strong {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 850;
 }
 
 .weather-recommendation-text {
   font-size: 11px;
-  color: #475569;
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.4;
+  padding-top: 2px;
 }
 
 .weather-rain-warning {
   display: flex;
   gap: 8px;
-  background: #ffedd5;
+  background: rgba(255, 255, 255, 0.16);
   padding: 8px;
   border-radius: 8px;
   font-size: 10px;
-  color: #9a3412;
+  color: #ffffff;
   line-height: 1.4;
 }
 
 .warning-icon {
   flex-shrink: 0;
-  color: #ea580c;
+  color: #facc15;
   margin-top: 1px;
 }
 
@@ -3044,20 +3236,6 @@ body {
   background: #f8fafc;
   color: #7c3aed;
   border-color: #a78bfa;
-}
-
-/* Day Tabs sub weather temp label */
-.day-tab-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.2;
-}
-
-.day-tab-weather-temp {
-  font-size: 9px;
-  opacity: 0.8;
-  margin-top: 2px;
 }
 
 /* Chat History Drawer & Rename/Edit Styles */

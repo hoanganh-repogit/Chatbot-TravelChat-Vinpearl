@@ -18,6 +18,7 @@ export default function ChatScreen({
   setActiveTab,
   activeItineraryId,
   currentItinerary,
+  journeyStatus = 'draft',
   onAddActivity,
   onEditActivity,
   onDeleteActivity
@@ -61,6 +62,9 @@ export default function ChatScreen({
           addActivity: (day, time, title, desc) => onAddActivity(day, time, title, desc),
           editActivity: (day, index, time, title, desc) => onEditActivity(day, index, time, title, desc),
           deleteActivity: (day, index) => onDeleteActivity(day, index)
+        },
+        {
+          toolsEnabled: journeyStatus === 'draft'
         }
       )
 
@@ -344,7 +348,9 @@ export default function ChatScreen({
                   <Edit3 size={11} className="chat-title-edit-icon" />
                 </div>
               )}
-              <p className="chat-header-subtitle">Trợ lý du lịch Vinpearl</p>
+              <p className="chat-header-subtitle">
+                {journeyStatus === 'draft' ? 'Trợ lý du lịch Vinpearl' : 'Lịch trình đã chốt'}
+              </p>
             </div>
 
             <button className="chat-header-more" onClick={onNewChat} title="Tạo đoạn chat mới">
@@ -461,7 +467,7 @@ export default function ChatScreen({
               <input
                 type="text"
                 className="chat-input-field"
-                placeholder="Hỏi thời tiết, vé bay, khách sạn, vui chơi..."
+                placeholder={journeyStatus === 'draft' ? 'Hỏi thời tiết, vé bay, khách sạn, vui chơi...' : 'Lịch đã chốt, chat chỉ tư vấn thêm...'}
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSendMessage(inputText)}

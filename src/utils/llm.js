@@ -161,12 +161,26 @@ export async function runAIAgentResponse(
   chatHistory,
   destinationId,
   currentItinerary,
-  itineraryCallbacks = {}
+  itineraryCallbacks = {},
+  options = {}
 ) {
   // 1. Gather context details
   const ragContext = await getRAGContext(userQuery, destinationId);
 
   // 2. Prepare tool prompt
+  const toolsEnabled = options.toolsEnabled !== false;
+  const toolInstructions = toolsEnabled
+    ? `**KHẢ NĂNG GỌI TOOL (ACTION CALLING):**
+Bạn có quyền thay đổi lịch trình du lịch của khách hàng bằng cách thêm, sửa hoặc xóa các hoạt động. Để gọi tool, bạn hãy in cú pháp sau ở CHÓT CÙNG của câu trả lời trên một dòng riêng biệt:
+- Thêm hoạt động: [TOOL_CALL: add_activity, {"day": 1, "time": "14:30", "title": "Hoạt động", "desc": "Mô tả"}]
+- Sửa hoạt động: [TOOL_CALL: edit_activity, {"day": 2, "index": 0, "time": "09:00", "title": "Hoạt động mới", "desc": "Mô tả mới"}]
+- Xóa hoạt động: [TOOL_CALL: delete_activity, {"day": 1, "index": 2}]
+
+Ví dụ: Nếu khách yêu cầu "Thêm tắm biển vào chiều ngày 1 lúc 16h30", bạn trả lời xác nhận và in ở cuối:
+[TOOL_CALL: add_activity, {"day": 1, "time": "16:30", "title": "Tắm biển Bãi Dài", "desc": "Thư giãn bơi lội tại bãi biển cát trắng."}]`
+    : `**TRẠNG THÁI LỊCH TRÌNH: ĐÃ CHỐT**
+Bạn không được thêm, sửa hoặc xóa lịch trình trong cuộc trò chuyện này. Nếu khách muốn thay đổi lịch, hãy nói khách mở lại chế độ chỉnh sửa trước rồi mới yêu cầu điều chỉnh. Không in TOOL_CALL.`;
+
   const systemPrompt = `Bạn là Vinpearl AI, một trợ lý du lịch 5 sao thông minh.
 Nhiệm vụ của bạn là hỗ trợ du khách lên lịch trình nghỉ dưỡng tại 4 quần thể: Phú Quốc, Nha Trang, Nam Hội An và Hạ Long.
 
@@ -179,14 +193,7 @@ ${ragContext}
 **CHI TIẾT LỊCH TRÌNH HIỆN TẠI CỦA NGƯỜI DÙNG:**
 ${currentItinerary ? JSON.stringify(currentItinerary) : 'Chưa có lịch trình.'}
 
-**KHẢ NĂNG GỌI TOOL (ACTION CALLING):**
-Bạn có quyền thay đổi lịch trình du lịch của khách hàng bằng cách thêm, sửa hoặc xóa các hoạt động. Để gọi tool, bạn hãy in cú pháp sau ở CHÓT CÙNG của câu trả lời trên một dòng riêng biệt:
-- Thêm hoạt động: [TOOL_CALL: add_activity, {"day": 1, "time": "14:30", "title": "Hoạt động", "desc": "Mô tả"}]
-- Sửa hoạt động: [TOOL_CALL: edit_activity, {"day": 2, "index": 0, "time": "09:00", "title": "Hoạt động mới", "desc": "Mô tả mới"}]
-- Xóa hoạt động: [TOOL_CALL: delete_activity, {"day": 1, "index": 2}]
-
-Ví dụ: Nếu khách yêu cầu "Thêm tắm biển vào chiều ngày 1 lúc 16h30", bạn trả lời xác nhận và in ở cuối:
-[TOOL_CALL: add_activity, {"day": 1, "time": "16:30", "title": "Tắm biển Bãi Dài", "desc": "Thư giãn bơi lội tại bãi biển cát trắng."}]
+${toolInstructions}
 
 Chú ý: Phản hồi hoàn toàn bằng tiếng Việt với giọng điệu hiếu khách, trang trọng.`;
 
@@ -225,6 +232,13 @@ Chú ý: Phản hồi hoàn toàn bằng tiếng Việt với giọng điệu hi
       reply = reply.replace(toolCallRegex, '').trim();
 
       // Trigger respective callback to update state
+      if (!toolsEnabled) {
+        return {
+          text: reply.replace(toolCallRegex, '').trim() || 'Lịch trình đã được chốt. Bạn vui lòng mở lại chỉnh sửa trước khi yêu cầu thay đổi lịch.',
+          recommendation: null
+        };
+      }
+
       if (toolName === 'add_activity' && itineraryCallbacks.addActivity) {
         itineraryCallbacks.addActivity(args.day, args.time, args.title, args.desc);
         reply += '\n\n*(Hệ thống: Trợ lý AI đã thêm hoạt động này vào tab Lịch trình của bạn!)*';

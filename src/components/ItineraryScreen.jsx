@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from 'react'
-import { Calendar, Download, Map, ArrowRight, Edit2, Trash2, Plus, Check, X, CloudSun, CloudRain, Sun, Flame, AlertTriangle, Sparkles } from 'lucide-react'
+import { Map, ArrowRight, Edit2, Trash2, Plus, Check, X, CloudSun, CloudRain, Sun, Flame, AlertTriangle, Sparkles, Lock, PlayCircle, RotateCcw, MessageSquare } from 'lucide-react'
 import { getWeatherForecast } from '../utils/rag'
-import { getItineraryOptimizationSuggestions } from '../utils/llm'
+import LiveScreen from './LiveScreen'
 
-export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdateItinerary, setActiveTab }) {
+export default function ItineraryScreen({
+  activeItineraryId,
+  itinerary,
+  confirmedItinerary,
+  journeyStatus = 'draft',
+  onUpdateItinerary,
+  onConfirmItinerary,
+  onStartLive,
+  onReopenDraft,
+  setActiveTab
+}) {
   const [activeDay, setActiveDay] = useState(1)
   const [editingIndex, setEditingIndex] = useState(null)
   const [editForm, setEditForm] = useState({ time: '', title: '', desc: '' })
   const [weatherForecast, setWeatherForecast] = useState([])
   const [showMapModal, setShowMapModal] = useState(false)
-  const [aiSuggestions, setAiSuggestions] = useState(null)
-  const [isOptimizing, setIsOptimizing] = useState(false)
+  const displayItinerary = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
+  const readOnly = journeyStatus !== 'draft'
 
   // Reset suggestions and fetch weather forecast whenever destination changes
   useEffect(() => {
-    setAiSuggestions(null)
     if (activeItineraryId) {
       getWeatherForecast(activeItineraryId).then(data => {
         if (data) setWeatherForecast(data)
@@ -22,42 +31,7 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
     }
   }, [activeItineraryId])
 
-  const handleOptimizeItinerary = async () => {
-    setIsOptimizing(true)
-    setAiSuggestions(null)
-    try {
-      const suggestions = await getItineraryOptimizationSuggestions(activeItineraryId, itinerary, weatherForecast)
-      setAiSuggestions(suggestions)
-    } catch (e) {
-      console.error('Failed to optimize itinerary:', e)
-      setAiSuggestions('Hiện tại không thể kết nối đến Trợ lý AI để tối ưu hóa. Vui lòng kiểm tra lại sau!')
-    } finally {
-      setIsOptimizing(false)
-    }
-  }
-
-  const renderSuggestionsText = (text) => {
-    if (!text) return null
-    const lines = text.split('\n')
-    return lines.map((line, index) => {
-      let processedContent = []
-      const parts = line.split(/(\*\*.*?\*\*)/g)
-      parts.forEach((part, partIdx) => {
-        if (part.startsWith('**') && part.endsWith('**')) {
-          processedContent.push(<strong key={partIdx}>{part.slice(2, -2)}</strong>)
-        } else {
-          processedContent.push(part)
-        }
-      })
-      return (
-        <p key={index} style={{ margin: '4px 0', lineHeight: '1.4', fontSize: '13px' }}>
-          {processedContent}
-        </p>
-      )
-    })
-  }
-
-  if (!itinerary) {
+  if (!displayItinerary) {
     return (
       <div className="itinerary-empty">
         <Map size={60} className="itinerary-empty-icon" />
@@ -72,14 +46,24 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
     )
   }
 
+  if (journeyStatus === 'live') {
+    return (
+      <LiveScreen
+        confirmedItinerary={displayItinerary}
+        destinationId={activeItineraryId}
+      />
+    )
+  }
+
   // Get current day weather data
   const currentDayWeather = weatherForecast.find((_, index) => index === activeDay - 1);
 
-  const days = itinerary.days || []
+  const days = displayItinerary.days || []
   const currentDayData = days.find(d => d.dayNum === activeDay) || days[0] || { events: [] }
 
   // Start editing an event
   const startEdit = (idx, event) => {
+    if (readOnly) return
     setEditingIndex(idx)
     setEditForm({
       time: event.time,
@@ -95,6 +79,7 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
 
   // Save edit
   const saveEdit = (idx) => {
+    if (readOnly) return
     const updatedEvents = [...currentDayData.events]
     updatedEvents[idx] = { ...editForm }
     
@@ -105,12 +90,13 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
       return d
     })
 
-    onUpdateItinerary(activeItineraryId, { ...itinerary, days: updatedDays })
+    onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
     setEditingIndex(null)
   }
 
   // Delete an event
   const deleteEvent = (idx) => {
+    if (readOnly) return
     if (window.confirm('Bạn có chắc chắn muốn xóa hoạt động này?')) {
       const updatedEvents = currentDayData.events.filter((_, i) => i !== idx)
       const updatedDays = days.map(d => {
@@ -120,13 +106,14 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
         return d
       })
 
-      onUpdateItinerary(activeItineraryId, { ...itinerary, days: updatedDays })
+      onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
       if (editingIndex === idx) setEditingIndex(null)
     }
   }
 
   // Add a new blank event
   const addNewEvent = () => {
+    if (readOnly) return
     const newEvent = { time: '12:00', title: 'Hoạt động mới', desc: 'Nhập mô tả chi tiết tại đây.' }
     const updatedEvents = [...currentDayData.events, newEvent]
     
@@ -137,25 +124,25 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
       return d
     })
 
-    onUpdateItinerary(activeItineraryId, { ...itinerary, days: updatedDays })
+    onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
     // Set editing on the newly added item
     startEdit(updatedEvents.length - 1, newEvent)
   }
 
   // Render weather icon helper
-  const renderWeatherIcon = (weatherType) => {
+  const renderWeatherIcon = (weatherType, size = 20) => {
     switch (weatherType) {
       case 'sunny':
-        return <Sun size={20} className="weather-icon-sun" style={{ color: '#fbbf24' }} />
+        return <Sun size={size} className="weather-icon-sun" style={{ color: '#fbbf24' }} />
       case 'cloudy':
-        return <CloudSun size={20} className="weather-icon-cloud" style={{ color: '#94a3b8' }} />
+        return <CloudSun size={size} className="weather-icon-cloud" style={{ color: '#ffffff' }} />
       case 'light_rain':
       case 'heavy_rain':
-        return <CloudRain size={20} className="weather-icon-rain" style={{ color: '#38bdf8' }} />
+        return <CloudRain size={size} className="weather-icon-rain" style={{ color: '#ffffff' }} />
       case 'very_hot':
-        return <Flame size={20} className="weather-icon-hot" style={{ color: '#ef4444' }} />
+        return <Flame size={size} className="weather-icon-hot" style={{ color: '#f97316' }} />
       default:
-        return <Sun size={20} style={{ color: '#fbbf24' }} />
+        return <Sun size={size} style={{ color: '#fbbf24' }} />
     }
   }
 
@@ -168,49 +155,64 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
         </div>
         <div className="itinerary-header-info">
           <h2 className="itinerary-title">Lịch trình 3N2Đ</h2>
-          <p className="itinerary-subtitle">{itinerary.title}</p>
+          <p className="itinerary-subtitle">{displayItinerary.title}</p>
         </div>
+        <span className={`journey-status-pill ${journeyStatus}`}>
+          {journeyStatus === 'confirmed' ? <Lock size={12} /> : <Sparkles size={12} />}
+          {journeyStatus === 'confirmed' ? 'Đã chốt' : 'Đang chỉnh'}
+        </span>
       </div>
 
-      {/* Day Tabs with Weather quick glance */}
+      {journeyStatus === 'confirmed' && (
+        <div className="journey-confirmed-banner">
+          <Lock size={15} />
+          <span>Lịch trình đã được chốt. Bắt đầu Live để AI theo dõi thời tiết, queue và trạng thái gia đình theo thời gian thực.</span>
+        </div>
+      )}
+
+      {/* Day Tabs */}
       <div className="itinerary-days-row">
-        {days.map((d, index) => {
-          const dayWeather = weatherForecast[index];
-          return (
-            <button
-              key={d.dayNum}
-              className={`itinerary-day-tab ${activeDay === d.dayNum ? 'active' : ''}`}
-              onClick={() => {
-                setActiveDay(d.dayNum)
-                cancelEdit()
-              }}
-            >
-              <div className="day-tab-content">
-                <span>Ngày {d.dayNum}</span>
-                {dayWeather && (
-                  <span className="day-tab-weather-temp">{dayWeather.temperatureMaxC}°C</span>
-                )}
-              </div>
-            </button>
-          )
-        })}
+        {days.map((d) => (
+          <button
+            key={d.dayNum}
+            className={`itinerary-day-tab ${activeDay === d.dayNum ? 'active' : ''}`}
+            onClick={() => {
+              setActiveDay(d.dayNum)
+              cancelEdit()
+            }}
+          >
+            Ngày {d.dayNum}
+          </button>
+        ))}
       </div>
 
-      {/* Weather Recommendation Banner */}
+      {/* Weather Summary */}
       {currentDayWeather && (
-        <div className={`itinerary-weather-box ${currentDayWeather.rainProb > 50 ? 'warning' : ''}`}>
-          <div className="weather-box-top">
-            <div className="weather-info-pill">
-              {renderWeatherIcon(currentDayWeather.weather)}
-              <span className="weather-temp-range">
-                {currentDayWeather.temperatureMinC}°C - {currentDayWeather.temperatureMaxC}°C
-              </span>
+        <div className={`itinerary-weather-card ${currentDayWeather.rainProb > 50 ? 'warning' : ''}`}>
+          <div className="weather-card-top">
+            <div>
+              <p className="weather-location">{formatWeatherLocation(currentDayWeather.location)}</p>
+              <div className="weather-current-temp">{currentDayWeather.temperatureMaxC}°</div>
             </div>
-            <span className="weather-rain-prob">Mưa: {currentDayWeather.rainProb}%</span>
+            <div className="weather-condition-panel">
+              {renderWeatherIcon(currentDayWeather.weather, 28)}
+              <p>{getWeatherLabel(currentDayWeather.weather)}</p>
+              <span>C:{currentDayWeather.temperatureMaxC}° T:{currentDayWeather.temperatureMinC}°</span>
+            </div>
+          </div>
+
+          <div className="weather-hourly-row">
+            {buildHourlyWeather(currentDayWeather).map((slot) => (
+              <div className="weather-hour-slot" key={slot.label}>
+                <span className="weather-hour-label">{slot.label}</span>
+                {renderWeatherIcon(slot.weather, 25)}
+                <strong>{slot.temp}°</strong>
+              </div>
+            ))}
           </div>
           
           <div className="weather-recommendation-text">
-            <strong>Gợi ý hoạt động:</strong> {currentDayWeather.recommendation}
+            <strong>Gợi ý trong ngày:</strong> {currentDayWeather.recommendation}
           </div>
 
           {currentDayWeather.rainProb > 50 && (
@@ -222,100 +224,18 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
         </div>
       )}
 
-      {/* AI Itinerary Copilot Controller */}
-      <div className="itinerary-ai-copilot-panel" style={{ margin: '0 16px 12px 16px' }}>
-        {!aiSuggestions && !isOptimizing && (
-          <button 
-            className="itinerary-optimize-btn" 
-            onClick={handleOptimizeItinerary}
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
-              color: '#ffffff',
-              border: 'none',
-              padding: '10px 14px',
-              borderRadius: '12px',
-              fontSize: '13px',
-              fontWeight: '600',
-              boxShadow: '0 4px 12px rgba(124, 58, 237, 0.25)',
-              cursor: 'pointer',
-              transition: 'transform 0.2s ease'
-            }}
-          >
-            <Sparkles size={16} /> Tối ưu hóa lịch trình bằng AI
+      {!readOnly && (
+        <div className="itinerary-chat-edit-panel">
+          <button className="itinerary-chat-edit-btn" onClick={() => setActiveTab('chat')}>
+            <MessageSquare size={16} /> Chat để thay đổi lịch trình
           </button>
-        )}
-
-        {isOptimizing && (
-          <div 
-            className="itinerary-ai-loading"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '10px',
-              padding: '12px',
-              background: 'rgba(124, 58, 237, 0.05)',
-              borderRadius: '12px',
-              border: '1px dashed rgba(124, 58, 237, 0.3)',
-              fontSize: '13px',
-              color: '#7c3aed'
-            }}
-          >
-            <div className="typing-dot" style={{ background: '#7c3aed', width: '6px', height: '6px', display: 'inline-block', borderRadius: '50%', margin: '0 2px' }}></div>
-            <div className="typing-dot" style={{ background: '#7c3aed', width: '6px', height: '6px', display: 'inline-block', borderRadius: '50%', margin: '0 2px' }}></div>
-            <span>Trợ lý AI đang phân tích lịch trình & thời tiết...</span>
-          </div>
-        )}
-
-        {aiSuggestions && (
-          <div 
-            className="itinerary-ai-suggestions-card"
-            style={{
-              padding: '14px',
-              background: 'linear-gradient(135deg, #f5f3ff 0%, #faf5ff 100%)',
-              border: '1px solid #ddd6fe',
-              borderRadius: '16px',
-              boxShadow: '0 4px 16px rgba(124, 58, 237, 0.08)',
-              position: 'relative'
-            }}
-          >
-            <button 
-              onClick={() => setAiSuggestions(null)}
-              style={{
-                position: 'absolute',
-                top: '10px',
-                right: '10px',
-                background: 'none',
-                border: 'none',
-                color: '#94a3b8',
-                fontSize: '14px',
-                cursor: 'pointer'
-              }}
-            >
-              ✕
-            </button>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px', color: '#7c3aed' }}>
-              <Sparkles size={16} fill="#7c3aed" />
-              <strong style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Trợ lý AI Gợi ý Tối ưu</strong>
-            </div>
-            <div style={{ color: '#4c1d95', maxHeight: '200px', overflowY: 'auto', paddingRight: '4px' }}>
-              {renderSuggestionsText(aiSuggestions)}
-            </div>
-            <div style={{ marginTop: '10px', fontSize: '11px', color: '#6d28d9', fontStyle: 'italic' }}>
-              * Bạn có thể nhắn tin trực tiếp với AI trợ lý để yêu cầu áp dụng điều chỉnh này.
-            </div>
-          </div>
-        )}
-      </div>
+          <p>Yêu cầu trợ lý thêm, đổi giờ hoặc bỏ hoạt động; lịch draft sẽ cập nhật ngay trong màn này.</p>
+        </div>
+      )}
 
       {/* Scrollable Timeline */}
       <div style={{ flex: 1, overflowY: 'auto' }} className="itinerary-list-container">
-        <div className="timeline-container">
+        <div className={`timeline-container ${journeyStatus === 'draft' ? 'draft-timeline' : ''}`}>
           <div className="timeline-line"></div>
 
           {/* Group Header for Day */}
@@ -324,7 +244,7 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
             <div className="timeline-node-container">
               <div className="timeline-node"></div>
             </div>
-            <span className="timeline-section-title">Timeline ngày {activeDay}</span>
+            <span className="timeline-section-title">Lịch ngày {activeDay}</span>
           </div>
 
           {currentDayData.events.map((evt, idx) => {
@@ -376,15 +296,20 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
                 ) : (
                   <div className="timeline-card">
                     <div className="timeline-card-header">
-                      <h4 className="timeline-card-title">{evt.title}</h4>
-                      <div className="timeline-card-actions">
-                        <button className="action-icon-btn edit" onClick={() => startEdit(idx, evt)} title="Sửa hoạt động">
-                          <Edit2 size={12} />
-                        </button>
-                        <button className="action-icon-btn delete" onClick={() => deleteEvent(idx)} title="Xóa hoạt động">
-                          <Trash2 size={12} />
-                        </button>
+                      <div className="timeline-card-title-group">
+                        <span className="timeline-card-index">{idx + 1}</span>
+                        <h4 className="timeline-card-title">{evt.title}</h4>
                       </div>
+                      {!readOnly && (
+                        <div className="timeline-card-actions">
+                          <button className="action-icon-btn edit" onClick={() => startEdit(idx, evt)} title="Sửa hoạt động">
+                            <Edit2 size={12} />
+                          </button>
+                          <button className="action-icon-btn delete" onClick={() => deleteEvent(idx)} title="Xóa hoạt động">
+                            <Trash2 size={12} />
+                          </button>
+                        </div>
+                      )}
                     </div>
                     <p className="timeline-card-desc">{evt.desc}</p>
                   </div>
@@ -394,26 +319,41 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
           })}
 
           {/* Add Event Button at end of day timeline */}
-          <div className="timeline-event add-event-row">
-            <div className="timeline-time"></div>
-            <div className="timeline-node-container">
-              <div className="timeline-node add-node"><Plus size={12} /></div>
+          {!readOnly && (
+            <div className="timeline-event add-event-row">
+              <div className="timeline-time"></div>
+              <div className="timeline-node-container">
+                <div className="timeline-node add-node"><Plus size={12} /></div>
+              </div>
+              <button className="timeline-add-btn" onClick={addNewEvent}>
+                <Plus size={14} /> Thêm hoạt động mới
+              </button>
             </div>
-            <button className="timeline-add-btn" onClick={addNewEvent}>
-              <Plus size={14} /> Thêm hoạt động mới
-            </button>
-          </div>
+          )}
         </div>
       </div>
 
       {/* Footer Buttons */}
       <div className="itinerary-footer">
-        <button className="itinerary-save-btn secondary" onClick={() => setShowMapModal(true)}>
-          <Map size={16} /> Xem Bản Đồ
-        </button>
-        <button className="itinerary-save-btn" onClick={() => alert('Đã lưu lịch trình thành công vào máy của bạn!')}>
-          <Download size={16} /> Lưu Lịch Trình
-        </button>
+        <div className="itinerary-footer-actions">
+          <button className="itinerary-save-btn secondary" onClick={() => setShowMapModal(true)}>
+            <Map size={16} /> Xem Bản Đồ
+          </button>
+          {journeyStatus === 'draft' ? (
+            <button className="itinerary-save-btn" onClick={onConfirmItinerary}>
+              <Check size={16} /> Chốt lịch trình
+            </button>
+          ) : (
+            <>
+              <button className="itinerary-save-btn secondary" onClick={onReopenDraft}>
+                <RotateCcw size={16} /> Mở lại chỉnh sửa
+              </button>
+              <button className="itinerary-save-btn" onClick={onStartLive}>
+                <PlayCircle size={16} /> Bắt đầu Live
+              </button>
+            </>
+          )}
+        </div>
       </div>
 
       {/* Interactive Leaflet Google Maps Popup Modal */}
@@ -438,4 +378,42 @@ export default function ItineraryScreen({ activeItineraryId, itinerary, onUpdate
       )}
     </div>
   )
+}
+
+function buildHourlyWeather(dayWeather) {
+  const min = Number(dayWeather.temperatureMinC || 26)
+  const max = Number(dayWeather.temperatureMaxC || min + 5)
+  const baseWeather = dayWeather.weather || 'sunny'
+  const rainy = Number(dayWeather.rainProb || 0) >= 50
+
+  const temps = [
+    Math.max(min, max - 2),
+    max,
+    max,
+    Math.max(min, max - 1),
+    Math.max(min, max - 2),
+    Math.max(min, max - 3),
+  ]
+
+  return ['08 giờ', '10 giờ', '12 giờ', '14 giờ', '16 giờ', '18 giờ'].map((label, index) => ({
+    label,
+    temp: temps[index],
+    weather: rainy && index >= 3 ? 'light_rain' : baseWeather,
+  }))
+}
+
+function getWeatherLabel(weatherType) {
+  const labels = {
+    sunny: 'Nhiều nắng',
+    cloudy: 'Có mây',
+    light_rain: 'Mưa nhẹ',
+    heavy_rain: 'Mưa lớn',
+    very_hot: 'Nắng nóng',
+  }
+  return labels[weatherType] || 'Nhiều nắng'
+}
+
+function formatWeatherLocation(location) {
+  if (!location) return 'Vinpearl'
+  return location.replace('Phú Quốc', 'P. Quốc')
 }

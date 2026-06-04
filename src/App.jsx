@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Compass, MessageSquare, Calendar, User, Signal, Wifi, Battery, Radio } from 'lucide-react'
+import { Compass, MessageSquare, CalendarCheck, User, Signal, Wifi, Battery } from 'lucide-react'
 import ExploreScreen, { destinationsData } from './components/ExploreScreen'
 import ChatScreen from './components/ChatScreen'
 import DetailScreen from './components/DetailScreen'
 import ItineraryScreen from './components/ItineraryScreen'
 import AccountScreen from './components/AccountScreen'
-import LiveScreen from './components/LiveScreen'
 
 // Initial database templates for the 4 destinations
 const initialItineraries = {
@@ -137,6 +136,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('chat')
   const [selectedDestinationId, setSelectedDestinationId] = useState(null)
   const [activeItineraryId, setActiveItineraryId] = useState('phu_quoc')
+  const [journeyStatus, setJourneyStatus] = useState('draft')
+  const [confirmedItinerary, setConfirmedItinerary] = useState(null)
   
   // Custom itineraries state holding user modifications
   const [customItineraries, setCustomItineraries] = useState(initialItineraries)
@@ -176,6 +177,7 @@ export default function App() {
 
   // Update itinerary callback
   const handleUpdateItinerary = (destinationId, newItinerary) => {
+    if (journeyStatus !== 'draft') return
     setCustomItineraries(prev => ({
       ...prev,
       [destinationId]: newItinerary
@@ -184,6 +186,7 @@ export default function App() {
 
   // AI Agent tools itinerary event manipulators
   const handleAddItineraryActivity = (destinationId, dayNum, time, title, desc) => {
+    if (journeyStatus !== 'draft') return
     setCustomItineraries(prev => {
       const itin = prev[destinationId] || { title: `${destinationId} - Lịch trình`, days: [] };
       const days = [...itin.days];
@@ -201,6 +204,7 @@ export default function App() {
   };
 
   const handleEditItineraryActivity = (destinationId, dayNum, eventIndex, time, title, desc) => {
+    if (journeyStatus !== 'draft') return
     setCustomItineraries(prev => {
       const itin = prev[destinationId];
       if (!itin) return prev;
@@ -222,6 +226,7 @@ export default function App() {
   };
 
   const handleDeleteItineraryActivity = (destinationId, dayNum, eventIndex) => {
+    if (journeyStatus !== 'draft') return
     setCustomItineraries(prev => {
       const itin = prev[destinationId];
       if (!itin) return prev;
@@ -242,6 +247,32 @@ export default function App() {
   // Generate itinerary action
   const handleGenerateItinerary = (destinationId) => {
     setActiveItineraryId(destinationId)
+    setJourneyStatus('draft')
+    setConfirmedItinerary(null)
+  }
+
+  const handleConfirmItinerary = () => {
+    const itinerary = customItineraries[activeItineraryId]
+    if (!itinerary) return
+    setConfirmedItinerary(JSON.parse(JSON.stringify(itinerary)))
+    setJourneyStatus('confirmed')
+  }
+
+  const handleStartLive = () => {
+    if (!confirmedItinerary) {
+      const itinerary = customItineraries[activeItineraryId]
+      if (!itinerary) return
+      setConfirmedItinerary(JSON.parse(JSON.stringify(itinerary)))
+    }
+    setJourneyStatus('live')
+  }
+
+  const handleReopenDraft = () => {
+    if (journeyStatus === 'live') {
+      const shouldReopen = window.confirm('Mở lại chỉnh sửa sẽ kết thúc phiên Live hiện tại. Bạn muốn tiếp tục?')
+      if (!shouldReopen) return
+    }
+    setJourneyStatus('draft')
   }
 
   // Chats Handlers
@@ -327,7 +358,8 @@ export default function App() {
               onGenerateItinerary={handleGenerateItinerary}
               setActiveTab={setActiveTab}
               activeItineraryId={activeItineraryId}
-              currentItinerary={customItineraries[activeItineraryId]}
+              currentItinerary={journeyStatus === 'draft' ? customItineraries[activeItineraryId] : confirmedItinerary}
+              journeyStatus={journeyStatus}
               onAddActivity={(dayNum, time, title, desc) => handleAddItineraryActivity(activeItineraryId, dayNum, time, title, desc)}
               onEditActivity={(dayNum, index, time, title, desc) => handleEditItineraryActivity(activeItineraryId, dayNum, index, time, title, desc)}
               onDeleteActivity={(dayNum, index) => handleDeleteItineraryActivity(activeItineraryId, dayNum, index)}
@@ -338,19 +370,20 @@ export default function App() {
             <ItineraryScreen
               activeItineraryId={activeItineraryId}
               itinerary={customItineraries[activeItineraryId]}
+              confirmedItinerary={confirmedItinerary}
+              journeyStatus={journeyStatus}
               onUpdateItinerary={handleUpdateItinerary}
+              onConfirmItinerary={handleConfirmItinerary}
+              onStartLive={handleStartLive}
+              onReopenDraft={handleReopenDraft}
               setActiveTab={setActiveTab}
             />
-          )}
-
-          {activeTab === 'live' && (
-            <LiveScreen />
           )}
 
           {activeTab === 'account' && (
             <AccountScreen
               chatMessageCount={chatMessageCount}
-              itineraryCount={activeItineraryId ? 1 : 0}
+              itineraryCount={confirmedItinerary ? 1 : activeItineraryId ? 1 : 0}
             />
           )}
 
@@ -401,22 +434,9 @@ export default function App() {
             }}
           >
             <div className="nav-item-icon-wrapper">
-              <Calendar size={20} />
+              <CalendarCheck size={20} />
             </div>
-            <span>Lịch trình</span>
-          </button>
-
-          <button
-            className={`nav-item ${activeTab === 'live' ? 'active' : ''}`}
-            onClick={() => {
-              setActiveTab('live')
-              setSelectedDestinationId(null)
-            }}
-          >
-            <div className="nav-item-icon-wrapper">
-              <Radio size={20} />
-            </div>
-            <span>Live</span>
+            <span>Hành trình</span>
           </button>
 
           <button

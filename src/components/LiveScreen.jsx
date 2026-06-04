@@ -90,12 +90,16 @@ const locationLabels = {
   grand_world: 'Grand World',
 }
 
-export default function LiveScreen() {
+export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_quoc' }) {
   const fallbackData = useMemo(
     () => buildLiveData({ attractions, restaurants, transport, vouchers, itineraryTemplates, latestQueues }),
     []
   )
-  const fallbackTimeline = useMemo(() => createInitialTimeline(fallbackData), [fallbackData])
+  const fallbackTimeline = useMemo(
+    () => itineraryToLiveTimeline(confirmedItinerary, fallbackData) || createInitialTimeline(fallbackData),
+    [confirmedItinerary, fallbackData]
+  )
+  const liveDay = getLiveDay(confirmedItinerary)
   const [data, setData] = useState(fallbackData)
   const [presets, setPresets] = useState(liveContextMock.presets)
   const [initialTimeline, setInitialTimeline] = useState(fallbackTimeline)
@@ -136,8 +140,9 @@ export default function LiveScreen() {
 
         setData(remoteData)
         setPresets(payload.presets)
-        setInitialTimeline(payload.initialTimeline)
-        setTimeline(payload.initialTimeline)
+        const nextInitialTimeline = itineraryToLiveTimeline(confirmedItinerary, remoteData) || payload.initialTimeline
+        setInitialTimeline(nextInitialTimeline)
+        setTimeline(nextInitialTimeline)
         setLiveContext(normalizeLiveContext(payload.presets.normal_day))
         setBackendAvailable(true)
       } catch {
@@ -152,7 +157,7 @@ export default function LiveScreen() {
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [confirmedItinerary])
 
   useEffect(() => {
     if (!backendAvailable) {
@@ -288,7 +293,9 @@ export default function LiveScreen() {
           <div>
             <p className="live-kicker">Vinpearl Journey Concierge</p>
             <h2 className="live-title">Live Reflex</h2>
-            <p className="live-subtitle">Day 2 · Phú Quốc · Gia đình 5 người</p>
+            <p className="live-subtitle">
+              Ngày {liveDay?.dayNum || 2} · {formatDestinationName(destinationId)} · {confirmedItinerary?.title || 'Lịch trình demo'}
+            </p>
           </div>
           <div className="live-hero-icon">
             <BellRing size={22} />
@@ -661,6 +668,155 @@ function ToggleControl({ label, checked, onChange }) {
       <span className="live-switch" />
     </button>
   )
+}
+
+function getLiveDay(itinerary) {
+  if (!itinerary?.days?.length) return null
+  return itinerary.days.find((day) => day.dayNum === 2) || itinerary.days[0]
+}
+
+function itineraryToLiveTimeline(itinerary, data) {
+  const liveDay = getLiveDay(itinerary)
+  const events = liveDay?.events || []
+  if (!events.length) return null
+
+  return events
+    .map((event, index) => eventToLiveItem(event, index, data))
+    .sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time))
+}
+
+function eventToLiveItem(event, index, data) {
+  const matched = findLiveEntity(event, data)
+  const time = event.time || '09:00'
+
+  if (matched?.kind === 'attraction') {
+    const attraction = matched.entity
+    return {
+      id: `${attraction.id}_${index}_${time.replace(':', '')}`,
+      sourceId: attraction.id,
+      time,
+      title: event.title || attraction.name,
+      zone: attraction.zone,
+      type: attraction.type,
+      sourceType: 'attraction',
+      indoor: attraction.indoor,
+      outdoor: !attraction.indoor,
+      weatherSensitive: Boolean(attraction.weatherSensitive),
+      intensity: attraction.intensity || 'low',
+      walkLevel: attraction.walkLevel || 'low',
+      defaultQueueMin: data.latestQueues?.[attraction.id] ?? attraction.defaultQueueMin ?? 0,
+      kidFriendly: attraction.kidFriendly,
+      elderlyFriendly: attraction.elderlyFriendly,
+      reason: event.desc || 'Lấy từ lịch trình đã chốt.',
+    }
+  }
+
+  if (matched?.kind === 'restaurant') {
+    const restaurant = matched.entity
+    return {
+      id: `${restaurant.id}_${index}_${time.replace(':', '')}`,
+      sourceId: restaurant.id,
+      time,
+      title: event.title || restaurant.name,
+      zone: restaurant.zone || restaurant.park || 'Vinpearl',
+      type: 'meal',
+      sourceType: 'restaurant',
+      indoor: restaurant.indoor,
+      outdoor: !restaurant.indoor,
+      weatherSensitive: false,
+      intensity: 'low',
+      walkLevel: 'low',
+      defaultQueueMin: 0,
+      kidFriendly: restaurant.kidFriendly ?? true,
+      elderlyFriendly: restaurant.elderlyFriendly ?? true,
+      acceptsVoucher: restaurant.acceptsVoucher || [],
+      mealPeriod: inferMealPeriod(time),
+      reason: event.desc || 'Lấy từ lịch trình đã chốt.',
+    }
+  }
+
+  return {
+    id: `custom_${index}_${time.replace(':', '')}`,
+    sourceId: `custom_${index}`,
+    time,
+    title: event.title || 'Hoạt động trong lịch trình',
+    zone: 'Lịch đã chốt',
+    type: inferActivityType(event),
+    sourceType: 'custom',
+    indoor: false,
+    outdoor: true,
+    weatherSensitive: isLikelyOutdoor(event),
+    intensity: 'low',
+    walkLevel: 'low',
+    defaultQueueMin: 0,
+    kidFriendly: true,
+    elderlyFriendly: true,
+    reason: event.desc || 'Hoạt động do người dùng chốt.',
+  }
+}
+
+function findLiveEntity(event, data) {
+  const text = normalizeText(`${event.title || ''} ${event.desc || ''}`)
+  const attraction = data.attractions.find((item) => entityMatches(text, item.name))
+  if (attraction) return { kind: 'attraction', entity: attraction }
+
+  const restaurant = data.restaurants.find((item) => entityMatches(text, item.name))
+  if (restaurant) return { kind: 'restaurant', entity: restaurant }
+
+  return null
+}
+
+function entityMatches(text, name) {
+  const normalizedName = normalizeText(name)
+  if (!normalizedName) return false
+  const nameTokens = normalizedName.split(' ').filter((token) => token.length >= 4)
+  if (text.includes(normalizedName)) return true
+  return nameTokens.some((token) => text.includes(token))
+}
+
+function normalizeText(value = '') {
+  return value
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'D')
+    .toLowerCase()
+}
+
+function inferMealPeriod(time) {
+  const minutes = timeToMinutes(time)
+  if (minutes >= 17 * 60) return 'dinner'
+  if (minutes >= 10 * 60) return 'lunch'
+  return null
+}
+
+function inferActivityType(event) {
+  const text = normalizeText(`${event.title || ''} ${event.desc || ''}`)
+  if (text.includes('an ') || text.includes('buffet') || text.includes('nha hang')) return 'meal'
+  if (text.includes('spa') || text.includes('nghi')) return 'rest'
+  if (text.includes('check-in') || text.includes('check out') || text.includes('check-out')) return 'service'
+  return 'activity'
+}
+
+function isLikelyOutdoor(event) {
+  const text = normalizeText(`${event.title || ''} ${event.desc || ''}`)
+  return ['bien', 'safari', 'cong vien', 'vinwonders', 'grand world', 'kayak', 'ho boi'].some((keyword) => text.includes(keyword))
+}
+
+function timeToMinutes(time = '00:00') {
+  const [hours = '0', minutes = '0'] = time.split(':')
+  return Number(hours) * 60 + Number(minutes)
+}
+
+function formatDestinationName(destinationId) {
+  const labels = {
+    phu_quoc: 'Phú Quốc',
+    nha_trang: 'Nha Trang',
+    hoi_an: 'Nam Hội An',
+    ha_long: 'Hạ Long',
+  }
+  return labels[destinationId] || 'Vinpearl'
 }
 
 async function apiGet(url) {
