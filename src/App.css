@@ -2243,6 +2243,303 @@ body {
   transform: none;
 }
 
+/* ---- NOW card: cho biết đang ở khung giờ nào ---- */
+.live-now-card {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  color: #ffffff;
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 52%, #0891b2 135%);
+  box-shadow: 0 14px 30px rgba(109, 40, 217, 0.28);
+}
+
+.live-now-clock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding-right: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.live-now-clock strong {
+  font-size: 24px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.live-now-clock > span:last-child {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.live-now-pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  animation: livePulse 1.4s ease-in-out infinite;
+}
+
+.live-now-body {
+  min-width: 0;
+}
+
+.live-now-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.live-now-body h4 {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.live-now-zone {
+  margin-top: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.live-now-next {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.live-now-next strong {
+  font-weight: 850;
+}
+
+/* ---- Timeline status (đã xong / đang diễn ra / sắp tới) ---- */
+.live-time {
+  align-self: start;
+  margin-top: 12px;
+  padding: 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.live-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.status-done .live-card {
+  opacity: 0.66;
+}
+
+.status-done .live-time {
+  background: #eef0f6;
+  color: #94a3b8;
+}
+
+.status-done .live-node {
+  background: #c4b5fd;
+  box-shadow: 0 0 0 4px #f1ecfe;
+}
+
+.status-done .live-node svg {
+  color: #5b21b6;
+}
+
+.status-current .live-node {
+  background: #6d28d9;
+  box-shadow: 0 0 0 5px rgba(124, 58, 237, 0.20);
+  animation: livePulse 1.6s ease-in-out infinite;
+}
+
+.status-current .live-card {
+  border-color: #a78bfa;
+  background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.16);
+}
+
+.status-upcoming .live-node {
+  background: #a78bfa;
+  box-shadow: 0 0 0 4px #f3e8ff;
+}
+
+.live-now-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: #6d28d9;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+/* ---- Transit segment: di chuyển giữa các điểm + nút gọi xe ---- */
+.live-transit {
+  display: grid;
+  grid-template-columns: 44px 18px 1fr;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.live-transit-rail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.live-transit-rail::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(180deg, #ddd6fe 0 4px, transparent 4px 8px);
+}
+
+.live-transit-icon {
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #ddd6fe;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-transit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: #faf8ff;
+  border: 1px dashed #ddd6fe;
+}
+
+.live-transit-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.live-transit-info strong {
+  font-size: 12px;
+  font-weight: 800;
+  color: #4c1d95;
+}
+
+.live-transit-info span {
+  font-size: 10.5px;
+  font-weight: 650;
+  color: #6b668f;
+}
+
+.live-transit-info em {
+  font-size: 10px;
+  font-style: normal;
+  color: #94a3b8;
+}
+
+.live-transit-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 32px;
+  padding: 0 12px;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 6px 14px rgba(124, 58, 237, 0.22);
+  transition: var(--transition);
+}
+
+.live-transit-btn:hover {
+  transform: translateY(-1px);
+}
+
+.live-transit-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+.live-transit-walk {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 750;
+  color: #16a34a;
+}
+
+.live-transit.active .live-transit-card {
+  background: #f3e8ff;
+  border-style: solid;
+  border-color: #a78bfa;
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.14);
+}
+
+.live-transit.active .live-transit-icon {
+  background: #6d28d9;
+  border-color: #6d28d9;
+  color: #ffffff;
+}
+
 .live-control-panel {
   padding: 14px;
 }
@@ -3236,6 +3533,482 @@ body {
   background: #f8fafc;
   color: #7c3aed;
   border-color: #a78bfa;
+}
+
+/* ============================================================
+   ITINERARY (HÀNH TRÌNH) SCREEN — schedule editor
+   (distinct from the real-time Live Reflex screen)
+   ============================================================ */
+.itinerary-screen {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #faf8ff 58%, #ffffff 100%);
+}
+
+.itinerary-screen .itinerary-header {
+  padding: 14px 18px 8px;
+  background: transparent;
+  border-bottom: none;
+}
+
+.itinerary-avatar {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.itinerary-screen .itinerary-title {
+  font-size: 19px;
+  line-height: 1.1;
+  font-weight: 850;
+  color: #17152f;
+}
+
+.itinerary-screen .itinerary-subtitle {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b668f;
+}
+
+.itinerary-screen .journey-status-pill {
+  padding: 6px 12px;
+  font-size: 11px;
+}
+
+/* Day tabs as rounded pills */
+.itinerary-screen .itinerary-days-row {
+  padding: 4px 18px 12px;
+  background: transparent;
+  gap: 12px;
+}
+
+.itinerary-screen .itinerary-day-tab {
+  min-height: 46px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+/* ---- Weather forecast hero card (destination background image) ---- */
+.itinerary-screen .itinerary-weather-card {
+  position: relative;
+  display: block;
+  margin: 0 18px 14px;
+  padding: 0;
+  border: none;
+  border-radius: 22px;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 18px 36px rgba(30, 64, 110, 0.26);
+}
+
+.weather-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weather-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(12, 34, 64, 0.28) 0%, rgba(12, 34, 64, 0.52) 52%, rgba(12, 34, 64, 0.78) 100%);
+}
+
+.itinerary-screen .itinerary-weather-card.warning .weather-card-overlay {
+  background:
+    linear-gradient(180deg, rgba(22, 42, 72, 0.34) 0%, rgba(22, 42, 72, 0.58) 52%, rgba(22, 42, 72, 0.82) 100%);
+}
+
+.weather-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px 16px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.itinerary-screen .weather-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.itinerary-screen .weather-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.weather-hourly-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.itinerary-screen .weather-current-temp {
+  margin-top: 6px;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.weather-condition-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.weather-temp-range {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.itinerary-screen .weather-hourly-row {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4px;
+  padding: 12px 6px;
+  border-radius: 16px;
+  background: rgba(8, 24, 48, 0.40);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.itinerary-screen .weather-hour-slot {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.itinerary-screen .weather-hour-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.itinerary-screen .weather-hour-slot strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.weather-ai-suggestion {
+  margin-top: 12px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34px 1fr 18px;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  padding: 11px 12px;
+  border-radius: 16px;
+  background: rgba(8, 24, 48, 0.40);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.weather-ai-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.weather-ai-text {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.weather-ai-arrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Chat-to-edit call to action ---- */
+.itinerary-screen .itinerary-chat-edit-panel {
+  margin: 0 18px 14px;
+  gap: 8px;
+}
+
+.itinerary-screen .itinerary-chat-edit-btn {
+  min-height: 52px;
+  border-radius: 16px;
+  font-size: 15px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  box-shadow: 0 10px 22px rgba(124, 58, 237, 0.28);
+}
+
+.itinerary-screen .itinerary-chat-edit-panel > p {
+  padding: 0 6px;
+}
+
+/* ---- Day section header ---- */
+.itinerary-day-section {
+  margin: 2px 18px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.day-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 850;
+  color: #17152f;
+}
+
+.day-section-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  background: #ede9fe;
+  color: #6d28d9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-section-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  border: 1px solid #ddd6fe;
+  color: #6d28d9;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.10);
+  transition: var(--transition);
+}
+
+.day-section-add-btn:hover {
+  background: #f5f3ff;
+}
+
+/* ---- Timeline ---- */
+.itinerary-list-container {
+  min-height: 0;
+  overflow: visible;
+}
+
+.itinerary-screen .timeline-container {
+  padding: 6px 18px 14px;
+}
+
+.itinerary-screen .timeline-line {
+  top: 16px;
+  bottom: 30px;
+  left: 78px;
+  width: 2px;
+  background: linear-gradient(180deg, #a78bfa 0%, #d8b4fe 100%);
+}
+
+.itinerary-screen .draft-timeline .timeline-line {
+  background: linear-gradient(180deg, #a78bfa 0%, #d8b4fe 100%);
+}
+
+.itinerary-screen .timeline-event {
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.itinerary-screen .timeline-time,
+.itinerary-screen .draft-timeline .timeline-time {
+  width: 52px;
+  flex: 0 0 52px;
+  height: 26px;
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: #ede9fe;
+  color: #6d28d9;
+  border: none;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.itinerary-screen .timeline-node-container {
+  width: 18px;
+  padding-top: 22px;
+}
+
+.itinerary-screen .timeline-node {
+  width: 12px;
+  height: 12px;
+  background: #6d28d9;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #c4b5fd;
+}
+
+/* ---- Timeline activity card ---- */
+.itinerary-screen .timeline-card {
+  min-width: 0;
+  margin-left: 12px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid #eef0f6;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  column-gap: 12px;
+  align-items: stretch;
+}
+
+.itinerary-screen .timeline-card.editing-card {
+  display: flex;
+}
+
+.timeline-card-media {
+  width: 70px;
+}
+
+.timeline-card-media img {
+  width: 70px;
+  height: 100%;
+  min-height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-card-body {
+  min-width: 0;
+}
+
+.itinerary-screen .timeline-card-header {
+  align-items: flex-start;
+}
+
+.itinerary-screen .timeline-card-title-group {
+  gap: 8px;
+}
+
+.itinerary-screen .timeline-card-index {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 11px;
+}
+
+.itinerary-screen .timeline-card-title {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #17152f;
+}
+
+.itinerary-screen .timeline-card-desc {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #6b668f;
+}
+
+.timeline-card-tags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  background: #f3f0fb;
+  color: #6d28d9;
+}
+
+.timeline-card-tag.food { background: #fff1e6; color: #c2410c; }
+.timeline-card-tag.water { background: #e0f2fe; color: #0369a1; }
+.timeline-card-tag.transport { background: #ecfdf5; color: #16a34a; }
+.timeline-card-tag.stay { background: #ede9fe; color: #6d28d9; }
+.timeline-card-tag.attraction { background: #fef0f7; color: #be185d; }
+
+/* ---- Footer actions ---- */
+.itinerary-screen .itinerary-footer {
+  padding: 10px 18px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid #eef0f6;
+}
+
+.itinerary-screen .itinerary-footer-actions {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.itinerary-screen .itinerary-save-btn {
+  min-height: 46px;
+  padding: 9px 10px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+@media (max-width: 380px) {
+  .itinerary-screen .timeline-card {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .timeline-card-media,
+  .timeline-card-media img {
+    width: 58px;
+  }
+
+  .weather-ai-text {
+    font-size: 11px;
+  }
 }
 
 /* Chat History Drawer & Rename/Edit Styles */

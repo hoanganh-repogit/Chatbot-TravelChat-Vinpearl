@@ -8,14 +8,17 @@
     "server": "node src/server/liveServer.js",
     "dev:full": "npm run server & npm run dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed"
   },
   "dependencies": {
+    "lucide-react": "^0.395.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "lucide-react": "^0.395.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

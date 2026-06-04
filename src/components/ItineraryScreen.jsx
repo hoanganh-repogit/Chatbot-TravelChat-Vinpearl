@@ -1,7 +1,60 @@
 import React, { useState, useEffect } from 'react'
-import { Map, ArrowRight, Edit2, Trash2, Plus, Check, X, CloudSun, CloudRain, Sun, Flame, AlertTriangle, Sparkles, Lock, PlayCircle, RotateCcw, MessageSquare } from 'lucide-react'
+import {
+  ArrowRight,
+  Bed,
+  Bus,
+  Camera,
+  Car,
+  Check,
+  Clock,
+  CloudRain,
+  CloudSun,
+  Edit2,
+  Flame,
+  Lock,
+  Map,
+  MapPin,
+  MessageSquare,
+  Palmtree,
+  Plus,
+  PlayCircle,
+  RotateCcw,
+  Sparkles,
+  Sun,
+  Trash2,
+  Utensils,
+  Waves,
+  X
+} from 'lucide-react'
 import { getWeatherForecast } from '../utils/rag'
 import LiveScreen from './LiveScreen'
+
+const destinationProfiles = {
+  phu_quoc: {
+    name: 'Phú Quốc',
+    stay: 'Vinpearl Phú Quốc',
+    party: 'Gia đình 4 người',
+    image: '/images/phu_quoc.png'
+  },
+  nha_trang: {
+    name: 'Nha Trang',
+    stay: 'Vinpearl Nha Trang',
+    party: 'Gia đình 4 người',
+    image: '/images/nha_trang.png'
+  },
+  hoi_an: {
+    name: 'Nam Hội An',
+    stay: 'Vinpearl Nam Hội An',
+    party: 'Gia đình 4 người',
+    image: '/images/hoi_an.png'
+  },
+  ha_long: {
+    name: 'Hạ Long',
+    stay: 'Vinpearl Hạ Long',
+    party: 'Gia đình 4 người',
+    image: '/images/ha_long.png'
+  }
+}
 
 export default function ItineraryScreen({
   activeItineraryId,
@@ -22,7 +75,7 @@ export default function ItineraryScreen({
   const displayItinerary = journeyStatus === 'draft' ? itinerary : confirmedItinerary || itinerary
   const readOnly = journeyStatus !== 'draft'
 
-  // Reset suggestions and fetch weather forecast whenever destination changes
+  // Fetch weather forecast whenever destination changes
   useEffect(() => {
     if (activeItineraryId) {
       getWeatherForecast(activeItineraryId).then(data => {
@@ -46,6 +99,7 @@ export default function ItineraryScreen({
     )
   }
 
+  // The real-time Live Reflex experience lives in its own screen
   if (journeyStatus === 'live') {
     return (
       <LiveScreen
@@ -55,41 +109,40 @@ export default function ItineraryScreen({
     )
   }
 
-  // Get current day weather data
-  const currentDayWeather = weatherForecast.find((_, index) => index === activeDay - 1);
-
+  // Current day weather + derived display values
+  const currentDayWeather = weatherForecast.find((_, index) => index === activeDay - 1)
   const days = displayItinerary.days || []
   const currentDayData = days.find(d => d.dayNum === activeDay) || days[0] || { events: [] }
+  const destination = destinationProfiles[activeItineraryId] || destinationProfiles.phu_quoc
+
+  const dayCount = days.length || 1
+  const nightCount = Math.max(dayCount - 1, 0)
+  const tripLabel = `${dayCount}N${nightCount}Đ`
+
+  const maxTemp = currentDayWeather?.temperatureMaxC ?? 30
+  const minTemp = currentDayWeather?.temperatureMinC ?? 26
+  const weatherLabel = currentDayWeather ? getWeatherLabel(currentDayWeather.weather) : 'Đang cập nhật'
+  const aiSuggestion = currentDayWeather
+    ? (currentDayWeather.rainProb > 50
+        ? 'Dự báo có mưa. Nên đổi lịch trình vui chơi ngoài trời sang Akoya Spa hoặc tham quan indoor.'
+        : currentDayWeather.recommendation)
+    : 'Đang phân tích thời tiết để gợi ý hoạt động phù hợp nhất.'
 
   // Start editing an event
   const startEdit = (idx, event) => {
     if (readOnly) return
     setEditingIndex(idx)
-    setEditForm({
-      time: event.time,
-      title: event.title,
-      desc: event.desc
-    })
+    setEditForm({ time: event.time, title: event.title, desc: event.desc })
   }
 
-  // Cancel edit
-  const cancelEdit = () => {
-    setEditingIndex(null)
-  }
+  const cancelEdit = () => setEditingIndex(null)
 
   // Save edit
   const saveEdit = (idx) => {
     if (readOnly) return
     const updatedEvents = [...currentDayData.events]
     updatedEvents[idx] = { ...editForm }
-    
-    const updatedDays = days.map(d => {
-      if (d.dayNum === activeDay) {
-        return { ...d, events: updatedEvents }
-      }
-      return d
-    })
-
+    const updatedDays = days.map(d => (d.dayNum === activeDay ? { ...d, events: updatedEvents } : d))
     onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
     setEditingIndex(null)
   }
@@ -99,13 +152,7 @@ export default function ItineraryScreen({
     if (readOnly) return
     if (window.confirm('Bạn có chắc chắn muốn xóa hoạt động này?')) {
       const updatedEvents = currentDayData.events.filter((_, i) => i !== idx)
-      const updatedDays = days.map(d => {
-        if (d.dayNum === activeDay) {
-          return { ...d, events: updatedEvents }
-        }
-        return d
-      })
-
+      const updatedDays = days.map(d => (d.dayNum === activeDay ? { ...d, events: updatedEvents } : d))
       onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
       if (editingIndex === idx) setEditingIndex(null)
     }
@@ -116,16 +163,8 @@ export default function ItineraryScreen({
     if (readOnly) return
     const newEvent = { time: '12:00', title: 'Hoạt động mới', desc: 'Nhập mô tả chi tiết tại đây.' }
     const updatedEvents = [...currentDayData.events, newEvent]
-    
-    const updatedDays = days.map(d => {
-      if (d.dayNum === activeDay) {
-        return { ...d, events: updatedEvents }
-      }
-      return d
-    })
-
+    const updatedDays = days.map(d => (d.dayNum === activeDay ? { ...d, events: updatedEvents } : d))
     onUpdateItinerary(activeItineraryId, { ...displayItinerary, days: updatedDays })
-    // Set editing on the newly added item
     startEdit(updatedEvents.length - 1, newEvent)
   }
 
@@ -133,42 +172,35 @@ export default function ItineraryScreen({
   const renderWeatherIcon = (weatherType, size = 20) => {
     switch (weatherType) {
       case 'sunny':
-        return <Sun size={size} className="weather-icon-sun" style={{ color: '#fbbf24' }} />
+        return <Sun size={size} style={{ color: '#fbbf24' }} />
       case 'cloudy':
-        return <CloudSun size={size} className="weather-icon-cloud" style={{ color: '#ffffff' }} />
+        return <CloudSun size={size} style={{ color: '#ffffff' }} />
       case 'light_rain':
       case 'heavy_rain':
-        return <CloudRain size={size} className="weather-icon-rain" style={{ color: '#ffffff' }} />
+        return <CloudRain size={size} style={{ color: '#ffffff' }} />
       case 'very_hot':
-        return <Flame size={size} className="weather-icon-hot" style={{ color: '#f97316' }} />
+        return <Flame size={size} style={{ color: '#f97316' }} />
       default:
         return <Sun size={size} style={{ color: '#fbbf24' }} />
     }
   }
 
   return (
-    <div className="tab-view">
+    <div className="tab-view itinerary-screen">
       {/* Header */}
       <div className="itinerary-header">
-        <div className="chat-avatar-wrapper" style={{ width: '32px', height: '32px' }}>
+        <div className="chat-avatar-wrapper itinerary-avatar">
           <img src="/images/ai_avatar.png" alt="AI" className="chat-avatar" />
         </div>
         <div className="itinerary-header-info">
-          <h2 className="itinerary-title">Lịch trình 3N2Đ</h2>
-          <p className="itinerary-subtitle">{displayItinerary.title}</p>
+          <h2 className="itinerary-title">Lịch trình {tripLabel}</h2>
+          <p className="itinerary-subtitle">{destination.name} · {destination.party}</p>
         </div>
         <span className={`journey-status-pill ${journeyStatus}`}>
           {journeyStatus === 'confirmed' ? <Lock size={12} /> : <Sparkles size={12} />}
           {journeyStatus === 'confirmed' ? 'Đã chốt' : 'Đang chỉnh'}
         </span>
       </div>
-
-      {journeyStatus === 'confirmed' && (
-        <div className="journey-confirmed-banner">
-          <Lock size={15} />
-          <span>Lịch trình đã được chốt. Bắt đầu Live để AI theo dõi thời tiết, queue và trạng thái gia đình theo thời gian thực.</span>
-        </div>
-      )}
 
       {/* Day Tabs */}
       <div className="itinerary-days-row">
@@ -186,74 +218,91 @@ export default function ItineraryScreen({
         ))}
       </div>
 
-      {/* Weather Summary */}
+      {/* Weather Forecast Hero Card */}
       {currentDayWeather && (
         <div className={`itinerary-weather-card ${currentDayWeather.rainProb > 50 ? 'warning' : ''}`}>
-          <div className="weather-card-top">
-            <div>
-              <p className="weather-location">{formatWeatherLocation(currentDayWeather.location)}</p>
-              <div className="weather-current-temp">{currentDayWeather.temperatureMaxC}°</div>
+          <img src={destination.image} alt="" className="weather-card-bg" />
+          <div className="weather-card-overlay" />
+          <div className="weather-card-content">
+            <div className="weather-card-top">
+              <span className="weather-location"><MapPin size={16} /> {destination.stay}</span>
+              <button className="weather-hourly-toggle" type="button">
+                <Clock size={14} /> Dự báo giờ
+              </button>
             </div>
-            <div className="weather-condition-panel">
-              {renderWeatherIcon(currentDayWeather.weather, 28)}
-              <p>{getWeatherLabel(currentDayWeather.weather)}</p>
-              <span>C:{currentDayWeather.temperatureMaxC}° T:{currentDayWeather.temperatureMinC}°</span>
-            </div>
-          </div>
 
-          <div className="weather-hourly-row">
-            {buildHourlyWeather(currentDayWeather).map((slot) => (
-              <div className="weather-hour-slot" key={slot.label}>
-                <span className="weather-hour-label">{slot.label}</span>
-                {renderWeatherIcon(slot.weather, 25)}
-                <strong>{slot.temp}°</strong>
-              </div>
-            ))}
-          </div>
-          
-          <div className="weather-recommendation-text">
-            <strong>Gợi ý trong ngày:</strong> {currentDayWeather.recommendation}
-          </div>
-
-          {currentDayWeather.rainProb > 50 && (
-            <div className="weather-rain-warning">
-              <AlertTriangle size={14} className="warning-icon" />
-              <span>Dự báo ngày có mưa. Bạn nên đổi lịch trình vui chơi ngoài trời sang Akoya Spa hoặc bảo tàng trong nhà để đảm bảo chuyến đi thuận lợi!</span>
+            <div className="weather-current-temp">{maxTemp}°</div>
+            <div className="weather-condition-line">
+              {renderWeatherIcon(currentDayWeather.weather, 22)}
+              <span>{weatherLabel}</span>
             </div>
-          )}
+            <div className="weather-temp-range">C:{maxTemp}°&nbsp;&nbsp;T:{minTemp}°</div>
+
+            <div className="weather-hourly-row">
+              {buildHourlyWeather(currentDayWeather).map((slot) => (
+                <div className="weather-hour-slot" key={slot.label}>
+                  <span className="weather-hour-label">{slot.label}</span>
+                  {renderWeatherIcon(slot.weather, 24)}
+                  <strong>{slot.temp}°</strong>
+                </div>
+              ))}
+            </div>
+
+            <button className="weather-ai-suggestion" type="button" onClick={() => setActiveTab('chat')}>
+              <span className="weather-ai-icon"><Sparkles size={16} /></span>
+              <span className="weather-ai-text"><strong>Gợi ý từ AI:</strong> {aiSuggestion}</span>
+              <ArrowRight size={18} className="weather-ai-arrow" />
+            </button>
+          </div>
         </div>
       )}
 
+      {/* Chat to edit CTA (draft only) */}
       {!readOnly && (
         <div className="itinerary-chat-edit-panel">
-          <button className="itinerary-chat-edit-btn" onClick={() => setActiveTab('chat')}>
-            <MessageSquare size={16} /> Chat để thay đổi lịch trình
+          <button
+            className="itinerary-chat-edit-btn"
+            onClick={() => setActiveTab('chat')}
+          >
+            <MessageSquare size={18} /> Chat để thay đổi lịch trình
           </button>
           <p>Yêu cầu trợ lý thêm, đổi giờ hoặc bỏ hoạt động; lịch draft sẽ cập nhật ngay trong màn này.</p>
         </div>
       )}
 
-      {/* Scrollable Timeline */}
-      <div style={{ flex: 1, overflowY: 'auto' }} className="itinerary-list-container">
-        <div className={`timeline-container ${journeyStatus === 'draft' ? 'draft-timeline' : ''}`}>
+      {journeyStatus === 'confirmed' && (
+        <div className="journey-confirmed-banner">
+          <Lock size={15} />
+          <span>Lịch trình đã được chốt. Bắt đầu Live để AI theo dõi thời tiết, queue và trạng thái gia đình theo thời gian thực.</span>
+        </div>
+      )}
+
+      {/* Day section header */}
+      <div className="itinerary-day-section">
+        <div className="day-section-title">
+          <span className="day-section-icon"><Palmtree size={18} /></span>
+          Lịch ngày {activeDay}
+        </div>
+        {!readOnly && (
+          <button className="day-section-add-btn" onClick={addNewEvent}>
+            <Plus size={15} /> Thêm hoạt động
+          </button>
+        )}
+      </div>
+
+      {/* Timeline */}
+      <div className="itinerary-list-container">
+        <div className="timeline-container draft-timeline">
           <div className="timeline-line"></div>
 
-          {/* Group Header for Day */}
-          <div className="timeline-event section-header">
-            <div className="timeline-time"></div>
-            <div className="timeline-node-container">
-              <div className="timeline-node"></div>
-            </div>
-            <span className="timeline-section-title">Lịch ngày {activeDay}</span>
-          </div>
-
           {currentDayData.events.map((evt, idx) => {
-            const isEditing = editingIndex === idx;
+            const isEditing = editingIndex === idx
+            const category = getEventCategory(evt)
 
             return (
               <div key={idx} className="timeline-event">
                 {isEditing ? (
-                  <div className="timeline-time" style={{ paddingRight: 4 }}>
+                  <div className="timeline-time">
                     <input
                       type="text"
                       className="edit-time-input"
@@ -264,7 +313,7 @@ export default function ItineraryScreen({
                 ) : (
                   <div className="timeline-time">{evt.time}</div>
                 )}
-                
+
                 <div className="timeline-node-container">
                   <div className="timeline-node"></div>
                 </div>
@@ -295,41 +344,38 @@ export default function ItineraryScreen({
                   </div>
                 ) : (
                   <div className="timeline-card">
-                    <div className="timeline-card-header">
-                      <div className="timeline-card-title-group">
-                        <span className="timeline-card-index">{idx + 1}</span>
-                        <h4 className="timeline-card-title">{evt.title}</h4>
-                      </div>
-                      {!readOnly && (
-                        <div className="timeline-card-actions">
-                          <button className="action-icon-btn edit" onClick={() => startEdit(idx, evt)} title="Sửa hoạt động">
-                            <Edit2 size={12} />
-                          </button>
-                          <button className="action-icon-btn delete" onClick={() => deleteEvent(idx)} title="Xóa hoạt động">
-                            <Trash2 size={12} />
-                          </button>
-                        </div>
-                      )}
+                    <div className="timeline-card-media">
+                      <img src={destination.image} alt="" />
                     </div>
-                    <p className="timeline-card-desc">{evt.desc}</p>
+                    <div className="timeline-card-body">
+                      <div className="timeline-card-header">
+                        <div className="timeline-card-title-group">
+                          <span className="timeline-card-index">{idx + 1}</span>
+                          <h4 className="timeline-card-title">{evt.title}</h4>
+                        </div>
+                        {!readOnly && (
+                          <div className="timeline-card-actions">
+                            <button className="action-icon-btn edit" onClick={() => startEdit(idx, evt)} title="Sửa hoạt động">
+                              <Edit2 size={13} />
+                            </button>
+                            <button className="action-icon-btn delete" onClick={() => deleteEvent(idx)} title="Xóa hoạt động">
+                              <Trash2 size={13} />
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                      <p className="timeline-card-desc">{evt.desc}</p>
+                      <div className="timeline-card-tags">
+                        <span className={`timeline-card-tag ${category.kind}`}>
+                          {category.icon} {category.label}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
             )
           })}
-
-          {/* Add Event Button at end of day timeline */}
-          {!readOnly && (
-            <div className="timeline-event add-event-row">
-              <div className="timeline-time"></div>
-              <div className="timeline-node-container">
-                <div className="timeline-node add-node"><Plus size={12} /></div>
-              </div>
-              <button className="timeline-add-btn" onClick={addNewEvent}>
-                <Plus size={14} /> Thêm hoạt động mới
-              </button>
-            </div>
-          )}
         </div>
       </div>
 
@@ -356,7 +402,7 @@ export default function ItineraryScreen({
         </div>
       </div>
 
-      {/* Interactive Leaflet Google Maps Popup Modal */}
+      {/* Interactive Map Popup Modal */}
       {showMapModal && (
         <div className="detail-overlay active">
           <div className="detail-modal">
@@ -395,7 +441,7 @@ function buildHourlyWeather(dayWeather) {
     Math.max(min, max - 3),
   ]
 
-  return ['08 giờ', '10 giờ', '12 giờ', '14 giờ', '16 giờ', '18 giờ'].map((label, index) => ({
+  return ['08:00', '10:00', '12:00', '14:00', '16:00', '18:00'].map((label, index) => ({
     label,
     temp: temps[index],
     weather: rainy && index >= 3 ? 'light_rain' : baseWeather,
@@ -413,7 +459,21 @@ function getWeatherLabel(weatherType) {
   return labels[weatherType] || 'Nhiều nắng'
 }
 
-function formatWeatherLocation(location) {
-  if (!location) return 'Vinpearl'
-  return location.replace('Phú Quốc', 'P. Quốc')
+// Single category tag shown on each itinerary card
+function getEventCategory(event) {
+  const text = `${event.title} ${event.desc}`.toLowerCase()
+
+  if (/buffet|ăn|bữa|nhà hàng|ẩm thực|dinner|trưa|tối/.test(text)) {
+    return { kind: 'food', icon: <Utensils size={12} />, label: 'Ẩm thực' }
+  }
+  if (/di chuyển|bus|vinbus|taxi|cáp treo|xuồng|đón|rời|cao tốc/.test(text)) {
+    return { kind: 'transport', icon: /bus|vinbus/i.test(text) ? <Bus size={12} /> : <Car size={12} />, label: 'Di chuyển' }
+  }
+  if (/biển|hồ bơi|water|kayak|tắm/.test(text)) {
+    return { kind: 'water', icon: <Waves size={12} />, label: 'Biển & Thư giãn' }
+  }
+  if (/check-in|checkin|check-out|resort|phòng|nghỉ|spa|yoga/.test(text)) {
+    return { kind: 'stay', icon: <Bed size={12} />, label: 'Nghỉ dưỡng' }
+  }
+  return { kind: 'attraction', icon: <Camera size={12} />, label: 'Tham quan' }
 }

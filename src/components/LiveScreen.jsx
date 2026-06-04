@@ -5,12 +5,18 @@ import {
   BatteryMedium,
   BellRing,
   Bus,
+  Car,
+  Check,
   CheckCircle2,
+  ChevronRight,
+  Clock,
   CloudRain,
+  Footprints,
   Gift,
   Lock,
   LockOpen,
   MapPin,
+  PlayCircle,
   RefreshCcw,
   Sparkles,
   ThermometerSun,
@@ -238,7 +244,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
   const handleAction = async (action, params = {}) => {
     if (!backendAvailable) {
-      appendToast(localActionToast(action))
+      appendToast(localActionToast(action, params))
       return
     }
 
@@ -248,7 +254,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       appendToast(payload.toast)
     } catch {
       setBackendAvailable(false)
-      appendToast(localActionToast(action))
+      appendToast(localActionToast(action, params))
     } finally {
       setActionBusy(false)
     }
@@ -362,6 +368,12 @@ function PhoneWidget({
   const activeVoucher = liveContext.voucherExpiring ? data.voucherById[liveContext.voucherExpiring] : null
   const providerLabel = providerPillLabel({ backendAvailable, optimizing, aiProvider })
 
+  const nowMinutes = useNowMinutes(timeline)
+  const currentIndex = findCurrentIndex(timeline, nowMinutes)
+  const currentItem = currentIndex >= 0 ? timeline[currentIndex] : null
+  const nextItem = timeline[currentIndex + 1] || null
+  const nextTransport = nextItem ? pickTransport(currentItem, nextItem, liveContext, data) : null
+
   return (
     <section className="live-phone-widget">
       <div className="live-widget-top">
@@ -376,6 +388,34 @@ function PhoneWidget({
           <button className="live-icon-btn" type="button" onClick={onReset} aria-label="Reset timeline">
             <RefreshCcw size={16} />
           </button>
+        </div>
+      </div>
+
+      {/* NOW — chỉ rõ đang ở khung giờ nào và hoạt động hiện tại */}
+      <div className="live-now-card">
+        <div className="live-now-clock">
+          <span className="live-now-pulse" />
+          <strong>{formatMinutes(nowMinutes)}</strong>
+          <span>Bây giờ</span>
+        </div>
+        <div className="live-now-body">
+          {currentItem ? (
+            <>
+              <p className="live-now-status"><PlayCircle size={13} /> Đang diễn ra</p>
+              <h4>{currentItem.title}</h4>
+              <p className="live-now-zone"><MapPin size={12} /> {currentItem.zone}</p>
+            </>
+          ) : (
+            <>
+              <p className="live-now-status"><Clock size={13} /> Chuẩn bị khởi hành</p>
+              <h4>{nextItem ? nextItem.title : 'Chưa có hoạt động'}</h4>
+            </>
+          )}
+          {nextItem && (
+            <p className="live-now-next">
+              <ChevronRight size={13} /> Tiếp theo <strong>{nextItem.title}</strong> lúc {nextItem.time}
+            </p>
+          )}
         </div>
       </div>
 
@@ -396,54 +436,72 @@ function PhoneWidget({
       </div>
 
       <div className="live-timeline">
-        {timeline.map((item) => {
+        {timeline.map((item, index) => {
           const warningRecord = warningsByItem[item.id]
           const warnings = warningRecord?.warnings || getItemWarnings(item, liveContext)
           const queue = warningRecord?.queueMin ?? getQueueMin(item, liveContext)
           const score = warningRecord?.fitScore ?? fitScore(item, liveContext)
           const locked = Boolean(itemLocks[item.id])
+          const status = index < currentIndex ? 'done' : index === currentIndex ? 'current' : 'upcoming'
+          const nextStop = timeline[index + 1]
+          const transit = nextStop ? pickTransport(item, nextStop, liveContext, data) : null
 
           return (
-            <div
-              className={`live-timeline-row ${warnings.length ? 'has-warning' : ''} ${locked ? 'is-locked' : ''}`}
-              key={item.id}
-            >
-              <div className="live-time">{item.time}</div>
-              <div className="live-line-wrap">
-                <span className="live-node" />
-              </div>
-              <div className="live-card">
-                <div className="live-card-head">
-                  <div>
-                    <h4>{item.title}</h4>
-                    <p>{item.zone} · {item.type}</p>
-                  </div>
-                  <button
-                    className={`live-lock-btn ${locked ? 'active' : ''}`}
-                    type="button"
-                    onClick={() => onToggleLock(item.id)}
-                    aria-label={locked ? 'Unlock activity' : 'Lock activity'}
-                  >
-                    {locked ? <Lock size={14} /> : <LockOpen size={14} />}
-                  </button>
+            <React.Fragment key={item.id}>
+              <div
+                className={`live-timeline-row status-${status} ${warnings.length ? 'has-warning' : ''} ${locked ? 'is-locked' : ''}`}
+              >
+                <div className="live-time">{item.time}</div>
+                <div className="live-line-wrap">
+                  <span className="live-node">
+                    {status === 'done' && <Check size={9} strokeWidth={3.5} />}
+                  </span>
                 </div>
-
-                <div className="live-card-meta">
-                  {item.sourceType === 'attraction' && <span>Queue {queue}’</span>}
-                  <span>Fit {Math.round(score * 100)}%</span>
-                  {item.voucherTitle && <span className="live-voucher-pill"><TicketPercent size={12} /> F&B</span>}
-                </div>
-
-                {(warnings.length > 0 || item.reason || item.voucherTitle) && (
-                  <div className="live-card-badges">
-                    {warnings.map((warning) => (
-                      <span className={`live-warning-chip ${warning.tone}`} key={warning.key}>{warning.label}</span>
-                    ))}
-                    {item.voucherTitle && <span className="live-warning-chip success">{item.voucherTitle}</span>}
+                <div className="live-card">
+                  <div className="live-card-head">
+                    <div>
+                      {status === 'current' && <span className="live-now-chip"><PlayCircle size={11} /> Đang diễn ra</span>}
+                      <h4>{item.title}</h4>
+                      <p>{item.zone} · {item.type}</p>
+                    </div>
+                    <button
+                      className={`live-lock-btn ${locked ? 'active' : ''}`}
+                      type="button"
+                      onClick={() => onToggleLock(item.id)}
+                      aria-label={locked ? 'Unlock activity' : 'Lock activity'}
+                    >
+                      {locked ? <Lock size={14} /> : <LockOpen size={14} />}
+                    </button>
                   </div>
-                )}
+
+                  <div className="live-card-meta">
+                    {item.sourceType === 'attraction' && <span>Queue {queue}’</span>}
+                    <span>Fit {Math.round(score * 100)}%</span>
+                    {item.voucherTitle && <span className="live-voucher-pill"><TicketPercent size={12} /> F&B</span>}
+                  </div>
+
+                  {(warnings.length > 0 || item.voucherTitle) && (
+                    <div className="live-card-badges">
+                      {warnings.map((warning) => (
+                        <span className={`live-warning-chip ${warning.tone}`} key={warning.key}>{warning.label}</span>
+                      ))}
+                      {item.voucherTitle && <span className="live-warning-chip success">{item.voucherTitle}</span>}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+
+              {transit && (
+                <TransitSegment
+                  transit={transit}
+                  from={item}
+                  to={nextStop}
+                  active={index === currentIndex}
+                  actionBusy={actionBusy}
+                  onAction={onAction}
+                />
+              )}
+            </React.Fragment>
           )
         })}
       </div>
@@ -480,6 +538,41 @@ function PhoneWidget({
         <Wand2 size={16} /> {optimizing ? 'Optimizing...' : 'Optimize'}
       </button>
     </section>
+  )
+}
+
+function TransitSegment({ transit, from, to, active, actionBusy, onAction }) {
+  const Icon = transit.bookable
+    ? (/shuttle|van|bus/i.test(transit.mode) ? Bus : Car)
+    : Footprints
+  const route = `${shortZone(from?.zone)} → ${shortZone(to?.zone)}`
+
+  return (
+    <div className={`live-transit ${active ? 'active' : ''}`}>
+      <div className="live-transit-spacer" />
+      <div className="live-transit-rail">
+        <span className="live-transit-icon"><Icon size={13} /></span>
+      </div>
+      <div className="live-transit-card">
+        <div className="live-transit-info">
+          <strong>{transit.mode}</strong>
+          <span>{route} · {transit.etaMin}′ · {formatVnd(transit.price)}</span>
+          {transit.note && <em>{transit.note}</em>}
+        </div>
+        {transit.bookable ? (
+          <button
+            className="live-transit-btn"
+            type="button"
+            disabled={actionBusy}
+            onClick={() => onAction('call_green_sm', { transportId: transit.vehicleId, mode: transit.mode, etaMin: transit.etaMin })}
+          >
+            <Car size={13} /> {actionBusy ? 'Đang gọi…' : 'Gọi xe'}
+          </button>
+        ) : (
+          <span className="live-transit-walk"><Footprints size={13} /> Đi bộ</span>
+        )}
+      </div>
+    </div>
   )
 }
 
@@ -809,6 +902,88 @@ function timeToMinutes(time = '00:00') {
   return Number(hours) * 60 + Number(minutes)
 }
 
+// "Bây giờ" tracker: dùng giờ thực nếu rơi trong khung lịch trình,
+// nếu không thì neo vào hoạt động thứ 2 để demo luôn có mốc hiện tại.
+function useNowMinutes(timeline) {
+  const [nowMs, setNowMs] = useState(() => Date.now())
+
+  useEffect(() => {
+    const id = window.setInterval(() => setNowMs(Date.now()), 30000)
+    return () => window.clearInterval(id)
+  }, [])
+
+  return useMemo(() => {
+    if (!timeline.length) return 0
+    const starts = timeline.map((item) => timeToMinutes(item.time))
+    const first = starts[0]
+    const last = starts[starts.length - 1]
+    const now = new Date(nowMs)
+    const real = now.getHours() * 60 + now.getMinutes()
+    if (real >= first - 20 && real <= last + 90) return real
+    const anchorIdx = Math.min(1, timeline.length - 1)
+    return starts[anchorIdx] + 7
+  }, [nowMs, timeline])
+}
+
+function findCurrentIndex(timeline, nowMinutes) {
+  let index = -1
+  timeline.forEach((item, i) => {
+    if (timeToMinutes(item.time) <= nowMinutes) index = i
+  })
+  return index
+}
+
+// Gợi ý phương tiện di chuyển giữa hai điểm theo bối cảnh thực tế.
+function pickTransport(from, to, ctx, data) {
+  const vehicles = data?.transport || []
+  const byId = (id) => vehicles.find((v) => v.id === id)
+  const fromZone = normalizeText(from?.zone || 'resort')
+  const toZone = normalizeText(to?.zone || '')
+  const sameZone = Boolean(fromZone) && fromZone === toZone
+  const elderly = Boolean(ctx?.elderlyMode || ctx?.avoidLongWalk)
+  const rainy = isRainRisk(ctx)
+
+  const make = (vehicle, note, fallbackMode) => ({
+    mode: vehicle?.type || fallbackMode || 'Green SM xe điện',
+    etaMin: vehicle?.etaMin ?? 8,
+    price: vehicle?.pricePerTrip ?? 0,
+    bookable: true,
+    vehicleId: vehicle?.id || 'tr_greensm_7',
+    note,
+  })
+
+  if (sameZone && !elderly && !rainy) {
+    return { mode: 'Đi bộ', etaMin: 5, price: 0, bookable: false, vehicleId: null, note: 'Cùng khu vực, đi bộ ~5 phút' }
+  }
+  if (rainy) {
+    return make(byId('tr_greensm_7'), 'Có mái che, tránh mưa', 'Green SM xe điện')
+  }
+  if (elderly) {
+    return make(byId(sameZone ? 'tr_buggy' : 'tr_greensm_7'), 'Ưu tiên xe êm, lên xuống dễ', 'Buggy nội khu')
+  }
+  if (sameZone) {
+    return make(byId('tr_buggy'), 'Buggy nội khu di chuyển nhanh', 'Buggy nội khu')
+  }
+  return make(byId('tr_resort_shuttle') || byId('tr_greensm_7'), 'Tuyến shuttle nối khu', 'Resort Shuttle')
+}
+
+function formatMinutes(total) {
+  const value = Math.max(0, Math.round(total))
+  const hours = Math.floor(value / 60) % 24
+  const minutes = value % 60
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
+}
+
+function formatVnd(value) {
+  if (!value) return 'Miễn phí'
+  return `${Math.round(value / 1000)}k đ`
+}
+
+function shortZone(zone) {
+  if (!zone) return 'Vinpearl'
+  return zone.length > 16 ? `${zone.slice(0, 15)}…` : zone
+}
+
 function formatDestinationName(destinationId) {
   const labels = {
     phu_quoc: 'Phú Quốc',
@@ -845,7 +1020,11 @@ function formatProvider(provider) {
   return 'Fallback'
 }
 
-function localActionToast(action) {
-  if (action === 'call_green_sm') return '✓ Green SM xe điện 7 chỗ đang đến điểm đón (demo offline)'
+function localActionToast(action, params = {}) {
+  if (action === 'call_green_sm') {
+    const mode = params.mode || 'Green SM xe điện 7 chỗ'
+    const eta = params.etaMin ? `, ETA ${params.etaMin} phút` : ''
+    return `✓ Đã gọi ${mode}${eta}, xe đang đến điểm đón (demo offline)`
+  }
   return '✓ Đã ghi nhận yêu cầu (demo offline)'
 }
