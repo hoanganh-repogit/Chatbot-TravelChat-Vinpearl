@@ -1,0 +1,153 @@
+{
+  "updatedAt": "2026-06-04T09:00:00+07:00",
+  "controlMapping": {
+    "weather": "Weather selector",
+    "rainProb": "Rain probability slider",
+    "windLevel": "Wind level selector",
+    "seaCondition": "Sea condition selector",
+    "cableCarStatus": "Cable car status toggle",
+    "crowd": "Crowd selector",
+    "queues": "Per-attraction queue override",
+    "energy": "Family energy selector",
+    "childTired": "Child tired toggle",
+    "elderlyMode": "Elderly mode toggle",
+    "location": "Current location selector",
+    "voucherExpiring": "Expiring voucher selector",
+    "dinnerSlotTight": "Dinner slot pressure toggle"
+  },
+  "presets": {
+    "normal_island_day": {
+      "weather": "sunny",
+      "rainProb": 10,
+      "windLevel": "light",
+      "seaCondition": "calm",
+      "cableCarStatus": "normal",
+      "temperatureC": 30,
+      "crowd": "medium",
+      "queues": {
+        "nt_a_cable_car": 15,
+        "nt_a_sea_world_aquarium": 12,
+        "nt_a_tropical_waterpark": 22,
+        "nt_a_alpine_coaster": 28,
+        "nt_a_tata_show": 18
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "cable_car_station",
+      "recommendedReflex": "Giữ lịch outdoor buổi sáng, Sea World hoặc show sau ăn trưa"
+    },
+    "windy_cablecar_delay": {
+      "weather": "windy",
+      "rainProb": 35,
+      "windLevel": "strong",
+      "seaCondition": "choppy",
+      "cableCarStatus": "delayed",
+      "temperatureC": 28,
+      "crowd": "medium",
+      "queues": {
+        "nt_a_cable_car": 45,
+        "nt_a_sea_world_aquarium": 18,
+        "nt_a_spa_overwater": 5
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "mainland_pier",
+      "recommendedReflex": "Thêm buffer transfer, đề xuất chờ cáp treo hoặc chuyển lịch spa/ăn đất liền"
+    },
+    "rainy_waterpark_cancel": {
+      "weather": "heavy_rain",
+      "rainProb": 88,
+      "windLevel": "medium",
+      "seaCondition": "choppy",
+      "cableCarStatus": "normal",
+      "temperatureC": 27,
+      "crowd": "low",
+      "queues": {
+        "nt_a_tropical_waterpark": 5,
+        "nt_a_sea_world_aquarium": 35,
+        "nt_a_mermaid_show": 28
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "vinwonders_gate",
+      "recommendedReflex": "Đổi water park sang Sea World/Mermaid Show, đẩy water park sang ngày nắng"
+    },
+    "overcrowded_thrill": {
+      "weather": "sunny",
+      "rainProb": 5,
+      "windLevel": "light",
+      "seaCondition": "calm",
+      "cableCarStatus": "normal",
+      "temperatureC": 32,
+      "crowd": "high",
+      "queues": {
+        "nt_a_zipline": 65,
+        "nt_a_alpine_coaster": 58,
+        "nt_a_tropical_waterpark": 52,
+        "nt_a_ferris_wheel": 35
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "fairy_land",
+      "recommendedReflex": "Gợi ý Fastpass hoặc chuyển sang King’s Garden/World Garden ít queue hơn"
+    },
+    "family_fatigue_island": {
+      "weather": "very_hot",
+      "rainProb": 0,
+      "windLevel": "light",
+      "seaCondition": "calm",
+      "cableCarStatus": "normal",
+      "temperatureC": 35,
+      "crowd": "medium",
+      "queues": {
+        "nt_a_kings_garden": 25,
+        "nt_a_ferris_wheel": 20,
+        "nt_a_sea_world_aquarium": 18
+      },
+      "energy": "low",
+      "childTired": true,
+      "elderlyMode": true,
+      "location": "kings_garden",
+      "recommendedReflex": "Chèn nghỉ trưa, gọi buggy/shuttle, chuyển indoor Sea World hoặc về resort pool"
+    },
+    "upsell_island_dinner": {
+      "weather": "sunny",
+      "rainProb": 10,
+      "windLevel": "light",
+      "seaCondition": "calm",
+      "cableCarStatus": "normal",
+      "temperatureC": 30,
+      "crowd": "medium",
+      "queues": {},
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "hon_tre_resort",
+      "voucherExpiring": "nt_v_fnb_today",
+      "dinnerSlotTight": true,
+      "recommendedReflex": "Gợi ý giữ bàn Lagoon/Orchid sớm và dùng voucher F&B trước khi hết hạn"
+    },
+    "airport_to_island_late": {
+      "weather": "cloudy",
+      "rainProb": 40,
+      "windLevel": "medium",
+      "seaCondition": "slight_chop",
+      "cableCarStatus": "last_trip_pressure",
+      "temperatureC": 29,
+      "crowd": "medium",
+      "queues": {
+        "nt_a_cable_car": 35
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "cam_ranh_airport",
+      "flightDelayMin": 75,
+      "recommendedReflex": "Rút gọn ngày 1, ưu tiên transfer + check-in + dinner tại resort"
+    }
+  }
+}

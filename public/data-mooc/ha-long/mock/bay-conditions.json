@@ -1,0 +1,932 @@
+[
+  {
+    "id": "hl_bay_20260604_morning",
+    "date": "2026-06-04",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260604_afternoon",
+    "date": "2026-06-04",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260604_evening",
+    "date": "2026-06-04",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260605_morning",
+    "date": "2026-06-05",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260605_afternoon",
+    "date": "2026-06-05",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260605_evening",
+    "date": "2026-06-05",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260606_morning",
+    "date": "2026-06-06",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260606_afternoon",
+    "date": "2026-06-06",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260606_evening",
+    "date": "2026-06-06",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260607_morning",
+    "date": "2026-06-07",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260607_afternoon",
+    "date": "2026-06-07",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260607_evening",
+    "date": "2026-06-07",
+    "timeSlot": "evening",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260608_morning",
+    "date": "2026-06-08",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260608_afternoon",
+    "date": "2026-06-08",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260608_evening",
+    "date": "2026-06-08",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260609_morning",
+    "date": "2026-06-09",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260609_afternoon",
+    "date": "2026-06-09",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260609_evening",
+    "date": "2026-06-09",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260610_morning",
+    "date": "2026-06-10",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260610_afternoon",
+    "date": "2026-06-10",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260610_evening",
+    "date": "2026-06-10",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260611_morning",
+    "date": "2026-06-11",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260611_afternoon",
+    "date": "2026-06-11",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260611_evening",
+    "date": "2026-06-11",
+    "timeSlot": "evening",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260612_morning",
+    "date": "2026-06-12",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260612_afternoon",
+    "date": "2026-06-12",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260612_evening",
+    "date": "2026-06-12",
+    "timeSlot": "evening",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260613_morning",
+    "date": "2026-06-13",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260613_afternoon",
+    "date": "2026-06-13",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260613_evening",
+    "date": "2026-06-13",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260614_morning",
+    "date": "2026-06-14",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260614_afternoon",
+    "date": "2026-06-14",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260614_evening",
+    "date": "2026-06-14",
+    "timeSlot": "evening",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260615_morning",
+    "date": "2026-06-15",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260615_afternoon",
+    "date": "2026-06-15",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260615_evening",
+    "date": "2026-06-15",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260616_morning",
+    "date": "2026-06-16",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260616_afternoon",
+    "date": "2026-06-16",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260616_evening",
+    "date": "2026-06-16",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260617_morning",
+    "date": "2026-06-17",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260617_afternoon",
+    "date": "2026-06-17",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260617_evening",
+    "date": "2026-06-17",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260618_morning",
+    "date": "2026-06-18",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260618_afternoon",
+    "date": "2026-06-18",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260618_evening",
+    "date": "2026-06-18",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260619_morning",
+    "date": "2026-06-19",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260619_afternoon",
+    "date": "2026-06-19",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260619_evening",
+    "date": "2026-06-19",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260620_morning",
+    "date": "2026-06-20",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260620_afternoon",
+    "date": "2026-06-20",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "light",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260620_evening",
+    "date": "2026-06-20",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260621_morning",
+    "date": "2026-06-21",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260621_afternoon",
+    "date": "2026-06-21",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260621_evening",
+    "date": "2026-06-21",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260622_morning",
+    "date": "2026-06-22",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260622_afternoon",
+    "date": "2026-06-22",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260622_evening",
+    "date": "2026-06-22",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260623_morning",
+    "date": "2026-06-23",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260623_afternoon",
+    "date": "2026-06-23",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260623_evening",
+    "date": "2026-06-23",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260624_morning",
+    "date": "2026-06-24",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260624_afternoon",
+    "date": "2026-06-24",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260624_evening",
+    "date": "2026-06-24",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260625_morning",
+    "date": "2026-06-25",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260625_afternoon",
+    "date": "2026-06-25",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260625_evening",
+    "date": "2026-06-25",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260626_morning",
+    "date": "2026-06-26",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260626_afternoon",
+    "date": "2026-06-26",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260626_evening",
+    "date": "2026-06-26",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260627_morning",
+    "date": "2026-06-27",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260627_afternoon",
+    "date": "2026-06-27",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260627_evening",
+    "date": "2026-06-27",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260628_morning",
+    "date": "2026-06-28",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260628_afternoon",
+    "date": "2026-06-28",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260628_evening",
+    "date": "2026-06-28",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260629_morning",
+    "date": "2026-06-29",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260629_afternoon",
+    "date": "2026-06-29",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260629_evening",
+    "date": "2026-06-29",
+    "timeSlot": "evening",
+    "bayCondition": "rough",
+    "windLevel": "medium",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260630_morning",
+    "date": "2026-06-30",
+    "timeSlot": "morning",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260630_afternoon",
+    "date": "2026-06-30",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260630_evening",
+    "date": "2026-06-30",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "light",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260701_morning",
+    "date": "2026-07-01",
+    "timeSlot": "morning",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260701_afternoon",
+    "date": "2026-07-01",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260701_evening",
+    "date": "2026-07-01",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260702_morning",
+    "date": "2026-07-02",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260702_afternoon",
+    "date": "2026-07-02",
+    "timeSlot": "afternoon",
+    "bayCondition": "calm",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260702_evening",
+    "date": "2026-07-02",
+    "timeSlot": "evening",
+    "bayCondition": "calm",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": true,
+    "recommendedAction": "proceed"
+  },
+  {
+    "id": "hl_bay_20260703_morning",
+    "date": "2026-07-03",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260703_afternoon",
+    "date": "2026-07-03",
+    "timeSlot": "afternoon",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260703_evening",
+    "date": "2026-07-03",
+    "timeSlot": "evening",
+    "bayCondition": "slight_chop",
+    "windLevel": "medium",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260704_morning",
+    "date": "2026-07-04",
+    "timeSlot": "morning",
+    "bayCondition": "slight_chop",
+    "windLevel": "strong",
+    "cruiseStatus": "delayed",
+    "kayakAllowed": false,
+    "recommendedAction": "add_buffer"
+  },
+  {
+    "id": "hl_bay_20260704_afternoon",
+    "date": "2026-07-04",
+    "timeSlot": "afternoon",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "weather_hold",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  },
+  {
+    "id": "hl_bay_20260704_evening",
+    "date": "2026-07-04",
+    "timeSlot": "evening",
+    "bayCondition": "rough",
+    "windLevel": "strong",
+    "cruiseStatus": "normal",
+    "kayakAllowed": false,
+    "recommendedAction": "move_to_indoor_or_resort"
+  }
+]

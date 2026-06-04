@@ -1,0 +1,143 @@
+[
+  {
+    "id": "nt_h_resort",
+    "name": "Vinpearl Resort Nha Trang",
+    "tier": 5,
+    "zone": "Đảo Hòn Tre",
+    "distanceToCableCarMin": 8,
+    "distanceToVinWondersMin": 6,
+    "distanceToBeachMin": 3,
+    "distanceToMainlandPierMin": 10,
+    "distanceToAirportMin": 50,
+    "accessModes": [
+      "cable_car",
+      "speedboat"
+    ],
+    "amenities": [
+      "beachfront",
+      "pool",
+      "kids_club",
+      "spa",
+      "buggy",
+      "shuttle",
+      "buffet"
+    ],
+    "familyFit": 0.93,
+    "elderlyFit": 0.88,
+    "coupleFit": 0.82,
+    "groupFit": 0.78,
+    "note": "Resort đảo Hòn Tre cân bằng giữa nghỉ dưỡng và VinWonders"
+  },
+  {
+    "id": "nt_h_luxury",
+    "name": "Vinpearl Luxury Nha Trang",
+    "tier": 5,
+    "zone": "Đảo Hòn Tre",
+    "distanceToCableCarMin": 10,
+    "distanceToVinWondersMin": 8,
+    "distanceToBeachMin": 2,
+    "distanceToMainlandPierMin": 12,
+    "distanceToAirportMin": 52,
+    "accessModes": [
+      "speedboat",
+      "private_transfer"
+    ],
+    "amenities": [
+      "luxury_villa",
+      "private_pool",
+      "overwater_spa",
+      "quiet_zone",
+      "butler_like_service",
+      "beachfront"
+    ],
+    "familyFit": 0.84,
+    "elderlyFit": 0.86,
+    "coupleFit": 0.96,
+    "groupFit": 0.66,
+    "note": "Mock premium stay cho cặp đôi/gia đình ưu tiên riêng tư"
+  },
+  {
+    "id": "nt_h_beachfront",
+    "name": "Vinpearl Beachfront Nha Trang",
+    "tier": 5,
+    "zone": "Trần Phú Mainland",
+    "distanceToCableCarMin": 12,
+    "distanceToVinWondersMin": 25,
+    "distanceToBeachMin": 1,
+    "distanceToMainlandPierMin": 12,
+    "distanceToAirportMin": 42,
+    "accessModes": [
+      "road",
+      "cable_car"
+    ],
+    "amenities": [
+      "city_beachfront",
+      "condotel",
+      "pool",
+      "restaurant",
+      "mainland_access",
+      "sea_view"
+    ],
+    "familyFit": 0.8,
+    "elderlyFit": 0.82,
+    "coupleFit": 0.86,
+    "groupFit": 0.88,
+    "note": "Tốt cho khách muốn ở đất liền, dễ đi ăn uống và ra sân bay"
+  },
+  {
+    "id": "nt_h_harbour",
+    "name": "Vinpearl Harbour Nha Trang Stay",
+    "tier": 4,
+    "zone": "Mainland Harbour",
+    "distanceToCableCarMin": 4,
+    "distanceToVinWondersMin": 18,
+    "distanceToBeachMin": 8,
+    "distanceToMainlandPierMin": 3,
+    "distanceToAirportMin": 45,
+    "accessModes": [
+      "road",
+      "cable_car",
+      "speedboat"
+    ],
+    "amenities": [
+      "near_cable_car",
+      "value_stay",
+      "group_rooms",
+      "shuttle",
+      "breakfast"
+    ],
+    "familyFit": 0.78,
+    "elderlyFit": 0.74,
+    "coupleFit": 0.68,
+    "groupFit": 0.91,
+    "note": "Mock option để demo team building/nhóm đông gần cổng đi đảo"
+  },
+  {
+    "id": "nt_h_grand_bay",
+    "name": "Vinpearl Grand Bay Nha Trang Villas",
+    "tier": 5,
+    "zone": "Đảo Hòn Tre",
+    "distanceToCableCarMin": 12,
+    "distanceToVinWondersMin": 9,
+    "distanceToBeachMin": 4,
+    "distanceToMainlandPierMin": 14,
+    "distanceToAirportMin": 55,
+    "accessModes": [
+      "speedboat",
+      "private_transfer"
+    ],
+    "amenities": [
+      "multi_bedroom_villa",
+      "private_pool",
+      "buggy",
+      "quiet_zone",
+      "family_kitchen",
+      "sea_view"
+    ],
+    "familyFit": 0.91,
+    "elderlyFit": 0.84,
+    "coupleFit": 0.86,
+    "groupFit": 0.82,
+    "note": "Mock villa zone cho đại gia đình cần không gian riêng"
+  }
+]

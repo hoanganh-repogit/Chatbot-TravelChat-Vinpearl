@@ -1,0 +1,115 @@
+[
+  {
+    "id": "h_wonderworld",
+    "name": "Vinpearl Wonderworld Phú Quốc",
+    "tier": 5,
+    "zone": "Bãi Dài",
+    "distanceToVinWondersMin": 5,
+    "distanceToSafariMin": 8,
+    "distanceToGrandWorldMin": 6,
+    "distanceToAirportMin": 45,
+    "amenities": [
+      "private_pool_villa",
+      "spa_akoya",
+      "kids_club",
+      "shuttle",
+      "buggy",
+      "villa_kitchen"
+    ],
+    "familyFit": 0.96,
+    "elderlyFit": 0.91,
+    "coupleFit": 0.78,
+    "groupFit": 0.85,
+    "note": "Tối ưu cho gia đình đông người cần villa riêng và di chuyển ngắn"
+  },
+  {
+    "id": "h_resort_spa",
+    "name": "Vinpearl Resort & Spa Phú Quốc",
+    "tier": 5,
+    "zone": "Bãi Dài",
+    "distanceToVinWondersMin": 7,
+    "distanceToSafariMin": 10,
+    "distanceToGrandWorldMin": 8,
+    "distanceToAirportMin": 43,
+    "amenities": [
+      "beachfront",
+      "spa_akoya",
+      "kids_club",
+      "shuttle",
+      "pool",
+      "restaurant"
+    ],
+    "familyFit": 0.89,
+    "elderlyFit": 0.88,
+    "coupleFit": 0.87,
+    "groupFit": 0.74,
+    "note": "Cân bằng nghỉ dưỡng biển, spa và lịch trình nhẹ"
+  },
+  {
+    "id": "h_fiesta",
+    "name": "VinHolidays Fiesta Phú Quốc",
+    "tier": 4,
+    "zone": "Grand World",
+    "distanceToVinWondersMin": 8,
+    "distanceToSafariMin": 12,
+    "distanceToGrandWorldMin": 2,
+    "distanceToAirportMin": 48,
+    "amenities": [
+      "near_grand_world",
+      "pool",
+      "breakfast",
+      "shuttle",
+      "value_stay"
+    ],
+    "familyFit": 0.82,
+    "elderlyFit": 0.76,
+    "coupleFit": 0.72,
+    "groupFit": 0.9,
+    "note": "Giá tốt, gần khu show và ăn uống buổi tối"
+  },
+  {
+    "id": "h_melia",
+    "name": "Meliá Vinpearl Phú Quốc",
+    "tier": 5,
+    "zone": "Bãi Dài",
+    "distanceToVinWondersMin": 10,
+    "distanceToSafariMin": 12,
+    "distanceToGrandWorldMin": 11,
+    "distanceToAirportMin": 40,
+    "amenities": [
+      "villa",
+      "private_pool",
+      "beachfront",
+      "spa",
+      "shuttle",
+      "quiet_zone"
+    ],
+    "familyFit": 0.9,
+    "elderlyFit": 0.86,
+    "coupleFit": 0.94,
+    "groupFit": 0.76,
+    "note": "Thiên về nghỉ dưỡng premium và riêng tư"
+  },
+  {
+    "id": "h_discovery_coastalland",
+    "name": "Vinpearl Discovery Coastalland Phú Quốc",
+    "tier": 5,
+    "zone": "Gành Dầu",
+    "distanceToVinWondersMin": 9,
+    "distanceToSafariMin": 11,
+    "distanceToGrandWorldMin": 10,
+    "distanceToAirportMin": 47,
+    "amenities": [
+      "villa",
+      "private_pool",
+      "quiet_zone",
+      "buggy",
+      "golf_nearby"
+    ],
+    "familyFit": 0.88,
+    "elderlyFit": 0.82,
+    "coupleFit": 0.86,
+    "groupFit": 0.8,
+    "note": "Mock option để engine có thêm lựa chọn villa cao cấp"
+  }
+]

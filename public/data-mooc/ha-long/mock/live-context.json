@@ -1,0 +1,162 @@
+{
+  "updatedAt": "2026-06-04T09:00:00+07:00",
+  "controlMapping": {
+    "weather": "Weather selector",
+    "rainProb": "Rain probability slider",
+    "windLevel": "Wind level selector",
+    "bayCondition": "Bay/sea condition selector",
+    "boatStatus": "Resort boat / cruise status toggle",
+    "traffic": "Road traffic selector",
+    "crowd": "Crowd selector",
+    "queues": "Per-attraction queue override",
+    "energy": "Family energy selector",
+    "childTired": "Child tired toggle",
+    "elderlyMode": "Elderly mode toggle",
+    "location": "Current location selector",
+    "voucherExpiring": "Expiring voucher selector",
+    "dinnerSlotTight": "Dinner slot pressure toggle"
+  },
+  "presets": {
+    "normal_bay_day": {
+      "weather": "sunny",
+      "rainProb": 12,
+      "windLevel": "light",
+      "bayCondition": "calm",
+      "boatStatus": "normal",
+      "traffic": "medium",
+      "temperatureC": 31,
+      "crowd": "medium",
+      "queues": {
+        "hl_a_bay_day_cruise": 20,
+        "hl_a_resort_boat": 8,
+        "hl_a_typhoon_waterpark": 25,
+        "hl_a_sunwheel": 18
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "vinpearl_lobby",
+      "recommendedReflex": "Giữ lịch cruise buổi sáng, resort pool hoặc Sun Wheel buổi chiều"
+    },
+    "bay_cruise_weather_hold": {
+      "weather": "heavy_rain",
+      "rainProb": 90,
+      "windLevel": "strong",
+      "bayCondition": "rough",
+      "boatStatus": "weather_hold",
+      "traffic": "medium",
+      "temperatureC": 27,
+      "crowd": "low",
+      "queues": {
+        "hl_a_bay_day_cruise": 0,
+        "hl_a_indoor_pool": 12,
+        "hl_a_quang_ninh_museum": 18,
+        "hl_a_lobby_tea": 5
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "cruise_port",
+      "recommendedReflex": "Hủy/đổi cruise sang museum + indoor pool/spa; giữ slot cruise ngày mai"
+    },
+    "road_traffic_delay": {
+      "weather": "cloudy",
+      "rainProb": 35,
+      "windLevel": "medium",
+      "bayCondition": "slight_chop",
+      "boatStatus": "normal",
+      "traffic": "high",
+      "temperatureC": 30,
+      "crowd": "high",
+      "queues": {
+        "hl_a_resort_boat": 18,
+        "hl_a_seafood_dinner": 20
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "hanoi_pickup",
+      "roadDelayMin": 45,
+      "recommendedReflex": "Rút ngắn ngày 1, chuyển hoạt động sang dinner + check-in + nghỉ tại resort"
+    },
+    "overcrowded_sunworld": {
+      "weather": "sunny",
+      "rainProb": 5,
+      "windLevel": "light",
+      "bayCondition": "calm",
+      "boatStatus": "normal",
+      "traffic": "medium",
+      "temperatureC": 33,
+      "crowd": "high",
+      "queues": {
+        "hl_a_dragon_park": 58,
+        "hl_a_typhoon_waterpark": 55,
+        "hl_a_sunwheel": 40,
+        "hl_a_ba_deo_cable": 45
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "sunworld_gate",
+      "recommendedReflex": "Gợi ý Fastpass hoặc đảo sang cruise/indoor activity; tránh queue cao buổi trưa"
+    },
+    "family_fatigue_resort": {
+      "weather": "very_hot",
+      "rainProb": 0,
+      "windLevel": "light",
+      "bayCondition": "calm",
+      "boatStatus": "normal",
+      "traffic": "medium",
+      "temperatureC": 36,
+      "crowd": "medium",
+      "queues": {
+        "hl_a_resort_pool": 18,
+        "hl_a_indoor_pool": 8,
+        "hl_a_lobby_tea": 4
+      },
+      "energy": "low",
+      "childTired": true,
+      "elderlyMode": true,
+      "location": "resort_pool",
+      "recommendedReflex": "Chèn nghỉ trưa, chuyển indoor pool/afternoon tea, hoãn SunWorld outdoor"
+    },
+    "upsell_seafood": {
+      "weather": "sunny",
+      "rainProb": 10,
+      "windLevel": "light",
+      "bayCondition": "calm",
+      "boatStatus": "normal",
+      "traffic": "medium",
+      "temperatureC": 31,
+      "crowd": "medium",
+      "queues": {},
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "bai_chay",
+      "voucherExpiring": "hl_v_fnb_today",
+      "dinnerSlotTight": true,
+      "recommendedReflex": "Gợi ý giữ bàn Pavilion/Bãi Cháy Seafood và dùng voucher F&B trước khi hết hạn"
+    },
+    "checkout_cruise_tight": {
+      "weather": "cloudy",
+      "rainProb": 40,
+      "windLevel": "medium",
+      "bayCondition": "slight_chop",
+      "boatStatus": "normal",
+      "traffic": "high",
+      "temperatureC": 30,
+      "crowd": "medium",
+      "queues": {
+        "hl_a_sunset_cruise": 25,
+        "hl_a_resort_boat": 14
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "hotel_lobby",
+      "checkoutPressure": true,
+      "recommendedReflex": "Kích hoạt late checkout hoặc thay sunset cruise bằng museum/seafood gần điểm về"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "capacityRules": [
+    "room.capacity.adults must be >= party.adults + party.elderly",
+    "room.capacity.children must be >= party.children",
+    "transport.capacity must be >= party.adults + party.children + party.elderly",
+    "team users should prefer 29-seat coach or 16-seat van"
+  ],
+  "namHoiAnTransferRules": [
+    "If destination airport is DAD, include road transfer to Nam Hoi An",
+    "If oldTownTraffic=high, move Hội An Old Town earlier or keep resort dinner",
+    "If user has elderlyMode=true, prefer buggy and avoid long old town walk",
+    "If late arrival after 16:00, avoid VinWonders full park on day 1"
+  ],
+  "parkRules": [
+    "River Safari should be scheduled morning if weather is sunny/cloudy",
+    "If riverSafariStatus=delayed, swap with Bird Show/Folk Culture/Indoor Games",
+    "If rainProb >= 60, avoid Water World and outdoor shows",
+    "If heatIndex=high, avoid Adventure Land and outdoor walk between 12:00 and 15:30"
+  ],
+  "pacingRules": [
+    "relaxed pace: max 3 major activities/day",
+    "family with elderly: avoid more than 2 medium/high walkLevel activities in same day",
+    "childTired=true: insert rest block within next 60 minutes",
+    "elderlyMode=true: prefer buggy, indoor games, craft village, resort pool"
+  ],
+  "queueRules": [
+    "queueMin >= 40: suggest fastpass or alternate attraction",
+    "queueMin >= 55: avoid unless user interest is thrill/adventure and pace=active",
+    "River Safari queue >= 45: schedule Bird Show/Folk Culture first"
+  ],
+  "voucherRules": [
+    "expires within 24h: surface voucher in plan if applicable and user tier is eligible",
+    "F&B voucher: match restaurant.acceptsVoucher and minSpend",
+    "late checkout: recommend for afternoon/evening flights",
+    "old town dining voucher: only recommend if traffic forecast not high"
+  ]
+}

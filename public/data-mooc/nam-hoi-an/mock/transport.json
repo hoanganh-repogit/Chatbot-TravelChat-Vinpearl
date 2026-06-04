@@ -1,0 +1,107 @@
+[
+  {
+    "id": "nha_tr_airport_7",
+    "type": "Airport van 7 chỗ Đà Nẵng → Nam Hội An",
+    "capacity": 7,
+    "pricePerTrip": 780000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "weatherSensitive": false,
+    "useCases": [
+      "airport_transfer",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_tr_airport_16",
+    "type": "Airport van 16 chỗ",
+    "capacity": 16,
+    "pricePerTrip": 1350000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "weatherSensitive": false,
+    "useCases": [
+      "large_family",
+      "team_building"
+    ]
+  },
+  {
+    "id": "nha_tr_coach_29",
+    "type": "Coach 29 chỗ",
+    "capacity": 29,
+    "pricePerTrip": 2300000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 30,
+    "weatherSensitive": false,
+    "useCases": [
+      "event",
+      "large_group"
+    ]
+  },
+  {
+    "id": "nha_tr_resort_shuttle",
+    "type": "Resort shuttle Hội An Old Town",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 10,
+    "weatherSensitive": false,
+    "useCases": [
+      "old_town",
+      "scheduled_transfer"
+    ]
+  },
+  {
+    "id": "nha_tr_buggy",
+    "type": "Buggy nội khu resort/park",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 5,
+    "weatherSensitive": false,
+    "useCases": [
+      "elderly",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_tr_taxi_local",
+    "type": "Taxi địa phương 7 chỗ",
+    "capacity": 7,
+    "pricePerTrip": 180000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "weatherSensitive": false,
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_tr_beach_cart",
+    "type": "Xe điện biển Bình Minh",
+    "capacity": 6,
+    "pricePerTrip": 50000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "weatherSensitive": true,
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  }
+]

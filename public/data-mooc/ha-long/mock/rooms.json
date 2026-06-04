@@ -1,0 +1,270 @@
+[
+  {
+    "id": "hl_r_vp_deluxe",
+    "hotelId": "hl_h_vinpearl_resort_spa",
+    "name": "Deluxe Garden View",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King or 2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 3600000,
+    "currency": "VND",
+    "tags": [
+      "breakfast_included",
+      "garden_view",
+      "near_elevator"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "hl_r_vp_bayview",
+    "hotelId": "hl_h_vinpearl_resort_spa",
+    "name": "Deluxe Bay View",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King or 2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 4500000,
+    "currency": "VND",
+    "tags": [
+      "bay_view",
+      "breakfast_included",
+      "romantic"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "hl_r_vp_family_connecting",
+    "hotelId": "hl_h_vinpearl_resort_spa",
+    "name": "Connecting Bay View Rooms",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King or 4 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 8200000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "connecting",
+      "bay_view",
+      "near_elevator"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "hl_r_vp_executive_suite",
+    "hotelId": "hl_h_vinpearl_resort_spa",
+    "name": "Executive Bay Suite",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King + living room",
+    "breakfastIncluded": true,
+    "pricePerNight": 7800000,
+    "currency": "VND",
+    "tags": [
+      "suite",
+      "bay_view",
+      "quiet_zone",
+      "premium"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "hl_r_vp_family_suite",
+    "hotelId": "hl_h_vinpearl_resort_spa",
+    "name": "Family Suite Bay View",
+    "capacity": {
+      "adults": 3,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "1 King + 2 Single",
+    "breakfastIncluded": true,
+    "pricePerNight": 9300000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "suite",
+      "bay_view",
+      "near_elevator"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "hl_r_mainland_family",
+    "hotelId": "hl_h_bai_chay_mainland",
+    "name": "Family Connecting Rooms",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 Queen + 2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 4200000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "connecting",
+      "mainland_access",
+      "value"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "hl_r_mainland_standard",
+    "hotelId": "hl_h_bai_chay_mainland",
+    "name": "Standard Twin Room",
+    "capacity": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 1600000,
+    "currency": "VND",
+    "tags": [
+      "value",
+      "twin_room",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "hl_r_marina_suite",
+    "hotelId": "hl_h_marina_bay",
+    "name": "Marina Bay Suite",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 6200000,
+    "currency": "VND",
+    "tags": [
+      "suite",
+      "bay_view",
+      "near_cruise_port",
+      "romantic"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "hl_r_marina_family",
+    "hotelId": "hl_h_marina_bay",
+    "name": "2-Bedroom Marina Apartment",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 7600000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "apartment",
+      "near_cruise_port",
+      "bay_view"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "hl_r_hongai_view",
+    "hotelId": "hl_h_hon_gai_view",
+    "name": "Bay View Family Room",
+    "capacity": {
+      "adults": 3,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "1 King + 2 Single",
+    "breakfastIncluded": true,
+    "pricePerNight": 3500000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "bay_view",
+      "local_food"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "hl_r_team_twin",
+    "hotelId": "hl_h_team_resort",
+    "name": "Team Twin Room",
+    "capacity": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 1350000,
+    "currency": "VND",
+    "tags": [
+      "team_building",
+      "twin_room",
+      "value"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "hl_r_team_bulk",
+    "hotelId": "hl_h_team_resort",
+    "name": "Group Twin Package - 8 Rooms",
+    "capacity": {
+      "adults": 16,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "16 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 10500000,
+    "currency": "VND",
+    "tags": [
+      "team_building",
+      "bulk_rooms",
+      "near_beach",
+      "bbq_area"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "hl_r_team_villa",
+    "hotelId": "hl_h_team_resort",
+    "name": "Team Villa 6-Bedroom",
+    "capacity": {
+      "adults": 12,
+      "children": 4,
+      "elderly": 2
+    },
+    "beds": "6 King/Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 15800000,
+    "currency": "VND",
+    "tags": [
+      "large_group",
+      "villa",
+      "private_space",
+      "bbq_area"
+    ],
+    "cancellation": "free_before_7_days"
+  }
+]

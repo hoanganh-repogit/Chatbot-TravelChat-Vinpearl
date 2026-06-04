@@ -1,0 +1,154 @@
+[
+  {
+    "id": "nt_v_fnb_today",
+    "type": "F&B",
+    "title": "Giảm 30% F&B trên đảo - hết hạn hôm nay",
+    "value": 0.3,
+    "expires": "2026-06-14T23:59:00+07:00",
+    "minSpend": 400000,
+    "applicableZones": [
+      "Hòn Tre Resort",
+      "VinWonders",
+      "Luxury Resort"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_cable_priority",
+    "type": "Transport",
+    "title": "Priority boarding cáp treo cho VinClub Gold+",
+    "value": 0,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 0,
+    "applicableZones": [
+      "Cable Car Station"
+    ],
+    "tier": "Gold",
+    "stackable": true
+  },
+  {
+    "id": "nt_v_spa_overwater",
+    "type": "Spa",
+    "title": "Giảm 25% Overwater Spa",
+    "value": 0.25,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1200000,
+    "applicableZones": [
+      "Luxury Resort",
+      "Hòn Tre Resort"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_vinwonders_2d",
+    "type": "Ticket",
+    "title": "Ưu đãi 15% vé VinWonders 2 ngày",
+    "value": 0.15,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 2000000,
+    "applicableZones": [
+      "VinWonders"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_late_checkout",
+    "type": "Hotel",
+    "title": "Late checkout đến 14:00",
+    "value": 0,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 0,
+    "applicableZones": [
+      "Đảo Hòn Tre",
+      "Trần Phú Mainland",
+      "Mainland Harbour"
+    ],
+    "tier": "Gold",
+    "stackable": true
+  },
+  {
+    "id": "nt_v_diamond_dining",
+    "type": "F&B",
+    "title": "Diamond Dining Privilege - giảm 35%",
+    "value": 0.35,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 800000,
+    "applicableZones": [
+      "Hòn Tre Resort",
+      "Luxury Resort",
+      "Mainland City"
+    ],
+    "tier": "Diamond",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_family_meal",
+    "type": "Meal",
+    "title": "Tặng kid meal tại King's Garden",
+    "value": 150000,
+    "expires": "2026-06-24T23:59:00+07:00",
+    "minSpend": 1200000,
+    "applicableZones": [
+      "VinWonders"
+    ],
+    "tier": "Member",
+    "stackable": true
+  },
+  {
+    "id": "nt_v_waterpark_drink",
+    "type": "Drink",
+    "title": "Buy 1 Get 1 đồ uống Water Park/Pool Bar",
+    "value": 0.5,
+    "expires": "2026-06-20T23:59:00+07:00",
+    "minSpend": 220000,
+    "applicableZones": [
+      "VinWonders",
+      "Hòn Tre Resort"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_mainland_dining",
+    "type": "F&B",
+    "title": "Giảm 20% seafood đất liền Nha Trang",
+    "value": 0.2,
+    "expires": "2026-07-02T23:59:00+07:00",
+    "minSpend": 900000,
+    "applicableZones": [
+      "Mainland City"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_group_bbq",
+    "type": "F&B",
+    "title": "Group BBQ set giảm 18%",
+    "value": 0.18,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 3500000,
+    "applicableZones": [
+      "Mainland City",
+      "Hòn Tre Resort"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "nt_v_spa_tea",
+    "type": "Tea",
+    "title": "Tặng afternoon tea khi đặt spa",
+    "value": 320000,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1500000,
+    "applicableZones": [
+      "Luxury Resort"
+    ],
+    "tier": "Silver",
+    "stackable": true
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "id": "rst_giraffe",
+    "name": "Giraffe Restaurant",
+    "zone": "Safari",
+    "cuisine": [
+      "vietnamese",
+      "kids_menu",
+      "quick_lunch"
+    ],
+    "indoor": true,
+    "pricePerPax": 320000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:30",
+      "11:30",
+      "12:30",
+      "13:30",
+      "14:30"
+    ],
+    "acceptsVoucher": [
+      "v_safari_meal"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false
+  },
+  {
+    "id": "rst_flamingo",
+    "name": "Flamingo & Rhino Restaurant",
+    "zone": "Safari",
+    "cuisine": [
+      "asian",
+      "set_menu",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 280000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:45",
+      "11:45",
+      "12:45",
+      "13:45",
+      "14:45"
+    ],
+    "acceptsVoucher": [
+      "v_safari_meal"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false
+  },
+  {
+    "id": "rst_gateway",
+    "name": "The Gateway Restaurant",
+    "zone": "VinWonders",
+    "cuisine": [
+      "buffet",
+      "asian",
+      "western"
+    ],
+    "indoor": true,
+    "pricePerPax": 480000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "12:30",
+      "18:00"
+    ],
+    "acceptsVoucher": [
+      "v_fnb_today"
+    ],
+    "avgMealDurationMin": 75,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_oasis",
+    "name": "Oasis Snack",
+    "zone": "VinWonders",
+    "cuisine": [
+      "fast_food",
+      "snack",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 180000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:30",
+      "11:30",
+      "12:30",
+      "15:00",
+      "16:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false
+  },
+  {
+    "id": "rst_almaz",
+    "name": "Buffet Hải Sản Grand World",
+    "zone": "Grand World",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 550000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30",
+      "19:00"
+    ],
+    "acceptsVoucher": [
+      "v_fnb_today",
+      "v_diamond_dining"
+    ],
+    "avgMealDurationMin": 75,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_kimbusam",
+    "name": "Kimbusam BBQ",
+    "zone": "Grand World",
+    "cuisine": [
+      "korean_bbq",
+      "hotpot",
+      "group"
+    ],
+    "indoor": true,
+    "pricePerPax": 420000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "12:00",
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "v_fnb_today"
+    ],
+    "avgMealDurationMin": 75,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_goong",
+    "name": "Goong Steak & Pizza",
+    "zone": "Grand World",
+    "cuisine": [
+      "steak",
+      "pizza",
+      "western",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 460000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:30",
+      "18:00",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "v_fnb_today"
+    ],
+    "avgMealDurationMin": 75,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_pino",
+    "name": "PINO Bistro",
+    "zone": "Grand World",
+    "cuisine": [
+      "western",
+      "romantic",
+      "wine_pairing"
+    ],
+    "indoor": true,
+    "pricePerPax": 680000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00",
+      "20:30"
+    ],
+    "acceptsVoucher": [
+      "v_couple_dining"
+    ],
+    "avgMealDurationMin": 75,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_lotteria",
+    "name": "Lotteria Grand World",
+    "zone": "Grand World",
+    "cuisine": [
+      "fast_food",
+      "kids_menu",
+      "budget"
+    ],
+    "indoor": true,
+    "pricePerPax": 150000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "18:00",
+      "19:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_resort_sea",
+    "name": "Resort Seafood Grill",
+    "zone": "Resort",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "premium"
+    ],
+    "indoor": true,
+    "pricePerPax": 720000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "19:30"
+    ],
+    "acceptsVoucher": [
+      "v_fnb_today",
+      "v_diamond_dining"
+    ],
+    "avgMealDurationMin": 75,
+    "reservationRecommended": true
+  },
+  {
+    "id": "rst_pool_bar",
+    "name": "Pool Bar Light Bites",
+    "zone": "Resort",
+    "cuisine": [
+      "snack",
+      "drink",
+      "poolside"
+    ],
+    "indoor": false,
+    "pricePerPax": 260000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00"
+    ],
+    "acceptsVoucher": [
+      "v_pool_drink"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false
+  },
+  {
+    "id": "rst_breakfast",
+    "name": "Resort Breakfast Buffet",
+    "zone": "Resort",
+    "cuisine": [
+      "breakfast",
+      "buffet",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 0,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "08:30",
+      "09:30"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false
+  }
+]

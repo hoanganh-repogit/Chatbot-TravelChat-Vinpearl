@@ -31,6 +31,10 @@ dist-ssr/
 .env
 .venv
 
+# Local datasets
+VinPearl_dataset/
+Vinpearl_dataset/
+public/dataset/images
+
 # Docs
 docs/
-

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "t_vinwonders_1d",
+    "name": "Vé VinWonders Phú Quốc 1 ngày",
+    "covers": [
+      "VinWonders"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 950000,
+      "child": 710000,
+      "senior": 710000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "theme_park_only",
+      "short_trip"
+    ]
+  },
+  {
+    "id": "t_safari_1d",
+    "name": "Vé Vinpearl Safari Phú Quốc 1 ngày",
+    "covers": [
+      "Safari"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 750000,
+      "child": 560000,
+      "senior": 560000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "animal",
+      "family"
+    ]
+  },
+  {
+    "id": "t_grandworld_show",
+    "name": "Vé show Tinh hoa Việt Nam",
+    "covers": [
+      "GrandWorldShow"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 350000,
+      "child": 250000,
+      "senior": 250000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "night_show"
+    ]
+  },
+  {
+    "id": "t_combo_2park",
+    "name": "Combo VinWonders + Safari",
+    "covers": [
+      "VinWonders",
+      "Safari"
+    ],
+    "validDays": 2,
+    "pricePerPax": {
+      "adult": 1350000,
+      "child": 1020000,
+      "senior": 1020000
+    },
+    "savingVsSeparate": 0.21,
+    "currency": "VND",
+    "bestFor": [
+      "family",
+      "two_day"
+    ]
+  },
+  {
+    "id": "t_combo_3in1",
+    "name": "Combo VinWonders + Safari + Grand World Show",
+    "covers": [
+      "VinWonders",
+      "Safari",
+      "GrandWorldShow"
+    ],
+    "validDays": 3,
+    "pricePerPax": {
+      "adult": 1650000,
+      "child": 1250000,
+      "senior": 1250000
+    },
+    "savingVsSeparate": 0.19,
+    "currency": "VND",
+    "bestFor": [
+      "family",
+      "complete_trip",
+      "show"
+    ]
+  },
+  {
+    "id": "t_grand_tour",
+    "name": "Phú Quốc Passport 2 ngày",
+    "covers": [
+      "VinWonders",
+      "Safari",
+      "GrandWorld",
+      "WaterTaxi",
+      "GrandWorldShow"
+    ],
+    "validDays": 2,
+    "pricePerPax": {
+      "adult": 1950000,
+      "child": 1480000,
+      "senior": 1480000
+    },
+    "savingVsSeparate": 0.24,
+    "currency": "VND",
+    "bestFor": [
+      "active",
+      "full_experience"
+    ]
+  },
+  {
+    "id": "t_fastpass_gate",
+    "name": "Fastpass VinWonders Gate + Selected Rides",
+    "covers": [
+      "VinWondersFastpass"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 450000,
+      "child": 350000,
+      "senior": 350000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "overcrowded",
+      "active"
+    ]
+  },
+  {
+    "id": "t_night_safari",
+    "name": "Night Safari Tour",
+    "covers": [
+      "NightSafari"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 890000,
+      "child": 690000,
+      "senior": 690000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "premium",
+      "animals",
+      "night"
+    ]
+  },
+  {
+    "id": "t_vip_safari_bus",
+    "name": "Private Safari Bus Tour",
+    "covers": [
+      "Safari",
+      "PrivateBus"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 1800000,
+      "child": 1350000,
+      "senior": 1350000
+    },
+    "savingVsSeparate": 0.08,
+    "currency": "VND",
+    "bestFor": [
+      "elderly",
+      "premium",
+      "large_family"
+    ]
+  }
+]

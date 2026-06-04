@@ -1,0 +1,4745 @@
+[
+  {
+    "id": "hl_rt_han_limo_9_20260604",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-04",
+    "capacity": 9,
+    "pricePerTrip": 1701000,
+    "currency": "VND",
+    "estimatedDurationMin": 169,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260604",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-04",
+    "capacity": 16,
+    "pricePerTrip": 2687000,
+    "currency": "VND",
+    "estimatedDurationMin": 173,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260604",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-04",
+    "capacity": 4,
+    "pricePerTrip": 1302000,
+    "currency": "VND",
+    "estimatedDurationMin": 151,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260604",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-04",
+    "capacity": 7,
+    "pricePerTrip": 849000,
+    "currency": "VND",
+    "estimatedDurationMin": 63,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260604",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-04",
+    "capacity": 16,
+    "pricePerTrip": 1516000,
+    "currency": "VND",
+    "estimatedDurationMin": 77,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260604",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-04",
+    "capacity": 7,
+    "pricePerTrip": 1072000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260604",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-04",
+    "capacity": 7,
+    "pricePerTrip": 179000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260604",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-04",
+    "capacity": 6,
+    "pricePerTrip": 83000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260605",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-05",
+    "capacity": 9,
+    "pricePerTrip": 1898000,
+    "currency": "VND",
+    "estimatedDurationMin": 193,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260605",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-05",
+    "capacity": 16,
+    "pricePerTrip": 2939000,
+    "currency": "VND",
+    "estimatedDurationMin": 205,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260605",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-05",
+    "capacity": 4,
+    "pricePerTrip": 1495000,
+    "currency": "VND",
+    "estimatedDurationMin": 180,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260605",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-05",
+    "capacity": 7,
+    "pricePerTrip": 960000,
+    "currency": "VND",
+    "estimatedDurationMin": 69,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260605",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-05",
+    "capacity": 16,
+    "pricePerTrip": 1626000,
+    "currency": "VND",
+    "estimatedDurationMin": 94,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260605",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-05",
+    "capacity": 7,
+    "pricePerTrip": 1170000,
+    "currency": "VND",
+    "estimatedDurationMin": 108,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260605",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-05",
+    "capacity": 7,
+    "pricePerTrip": 202000,
+    "currency": "VND",
+    "estimatedDurationMin": 20,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260605",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-05",
+    "capacity": 6,
+    "pricePerTrip": 85000,
+    "currency": "VND",
+    "estimatedDurationMin": 12,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260606",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-06",
+    "capacity": 9,
+    "pricePerTrip": 1851000,
+    "currency": "VND",
+    "estimatedDurationMin": 190,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260606",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-06",
+    "capacity": 16,
+    "pricePerTrip": 2808000,
+    "currency": "VND",
+    "estimatedDurationMin": 204,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260606",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-06",
+    "capacity": 4,
+    "pricePerTrip": 1473000,
+    "currency": "VND",
+    "estimatedDurationMin": 209,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260606",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-06",
+    "capacity": 7,
+    "pricePerTrip": 931000,
+    "currency": "VND",
+    "estimatedDurationMin": 77,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260606",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-06",
+    "capacity": 16,
+    "pricePerTrip": 1536000,
+    "currency": "VND",
+    "estimatedDurationMin": 86,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260606",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-06",
+    "capacity": 7,
+    "pricePerTrip": 1158000,
+    "currency": "VND",
+    "estimatedDurationMin": 93,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260606",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-06",
+    "capacity": 7,
+    "pricePerTrip": 199000,
+    "currency": "VND",
+    "estimatedDurationMin": 21,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260606",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-06",
+    "capacity": 6,
+    "pricePerTrip": 91000,
+    "currency": "VND",
+    "estimatedDurationMin": 13,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260607",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-07",
+    "capacity": 9,
+    "pricePerTrip": 1859000,
+    "currency": "VND",
+    "estimatedDurationMin": 187,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260607",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-07",
+    "capacity": 16,
+    "pricePerTrip": 2864000,
+    "currency": "VND",
+    "estimatedDurationMin": 199,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260607",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-07",
+    "capacity": 4,
+    "pricePerTrip": 1488000,
+    "currency": "VND",
+    "estimatedDurationMin": 215,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260607",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-07",
+    "capacity": 7,
+    "pricePerTrip": 930000,
+    "currency": "VND",
+    "estimatedDurationMin": 73,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260607",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-07",
+    "capacity": 16,
+    "pricePerTrip": 1638000,
+    "currency": "VND",
+    "estimatedDurationMin": 97,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260607",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-07",
+    "capacity": 7,
+    "pricePerTrip": 1210000,
+    "currency": "VND",
+    "estimatedDurationMin": 96,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260607",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-07",
+    "capacity": 7,
+    "pricePerTrip": 192000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260607",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-07",
+    "capacity": 6,
+    "pricePerTrip": 90000,
+    "currency": "VND",
+    "estimatedDurationMin": 12,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260608",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-08",
+    "capacity": 9,
+    "pricePerTrip": 1691000,
+    "currency": "VND",
+    "estimatedDurationMin": 172,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260608",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-08",
+    "capacity": 16,
+    "pricePerTrip": 2692000,
+    "currency": "VND",
+    "estimatedDurationMin": 166,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260608",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-08",
+    "capacity": 4,
+    "pricePerTrip": 1332000,
+    "currency": "VND",
+    "estimatedDurationMin": 150,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260608",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-08",
+    "capacity": 7,
+    "pricePerTrip": 843000,
+    "currency": "VND",
+    "estimatedDurationMin": 56,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260608",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-08",
+    "capacity": 16,
+    "pricePerTrip": 1423000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260608",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-08",
+    "capacity": 7,
+    "pricePerTrip": 1043000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260608",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-08",
+    "capacity": 7,
+    "pricePerTrip": 182000,
+    "currency": "VND",
+    "estimatedDurationMin": 14,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260608",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-08",
+    "capacity": 6,
+    "pricePerTrip": 81000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260609",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-09",
+    "capacity": 9,
+    "pricePerTrip": 1652000,
+    "currency": "VND",
+    "estimatedDurationMin": 161,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260609",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-09",
+    "capacity": 16,
+    "pricePerTrip": 2600000,
+    "currency": "VND",
+    "estimatedDurationMin": 180,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260609",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-09",
+    "capacity": 4,
+    "pricePerTrip": 1351000,
+    "currency": "VND",
+    "estimatedDurationMin": 148,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260609",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-09",
+    "capacity": 7,
+    "pricePerTrip": 892000,
+    "currency": "VND",
+    "estimatedDurationMin": 61,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260609",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-09",
+    "capacity": 16,
+    "pricePerTrip": 1495000,
+    "currency": "VND",
+    "estimatedDurationMin": 69,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260609",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-09",
+    "capacity": 7,
+    "pricePerTrip": 1061000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260609",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-09",
+    "capacity": 7,
+    "pricePerTrip": 178000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260609",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-09",
+    "capacity": 6,
+    "pricePerTrip": 81000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260610",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-10",
+    "capacity": 9,
+    "pricePerTrip": 1675000,
+    "currency": "VND",
+    "estimatedDurationMin": 160,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260610",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-10",
+    "capacity": 16,
+    "pricePerTrip": 2641000,
+    "currency": "VND",
+    "estimatedDurationMin": 186,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260610",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-10",
+    "capacity": 4,
+    "pricePerTrip": 1356000,
+    "currency": "VND",
+    "estimatedDurationMin": 163,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260610",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-10",
+    "capacity": 7,
+    "pricePerTrip": 824000,
+    "currency": "VND",
+    "estimatedDurationMin": 61,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260610",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-10",
+    "capacity": 16,
+    "pricePerTrip": 1439000,
+    "currency": "VND",
+    "estimatedDurationMin": 65,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260610",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-10",
+    "capacity": 7,
+    "pricePerTrip": 1036000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260610",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-10",
+    "capacity": 7,
+    "pricePerTrip": 175000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260610",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-10",
+    "capacity": 6,
+    "pricePerTrip": 77000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260611",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-11",
+    "capacity": 9,
+    "pricePerTrip": 1755000,
+    "currency": "VND",
+    "estimatedDurationMin": 147,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260611",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-11",
+    "capacity": 16,
+    "pricePerTrip": 2520000,
+    "currency": "VND",
+    "estimatedDurationMin": 165,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260611",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-11",
+    "capacity": 4,
+    "pricePerTrip": 1287000,
+    "currency": "VND",
+    "estimatedDurationMin": 152,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260611",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-11",
+    "capacity": 7,
+    "pricePerTrip": 873000,
+    "currency": "VND",
+    "estimatedDurationMin": 68,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260611",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-11",
+    "capacity": 16,
+    "pricePerTrip": 1408000,
+    "currency": "VND",
+    "estimatedDurationMin": 76,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260611",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-11",
+    "capacity": 7,
+    "pricePerTrip": 1101000,
+    "currency": "VND",
+    "estimatedDurationMin": 76,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260611",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-11",
+    "capacity": 7,
+    "pricePerTrip": 188000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260611",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-11",
+    "capacity": 6,
+    "pricePerTrip": 78000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260612",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-12",
+    "capacity": 9,
+    "pricePerTrip": 1881000,
+    "currency": "VND",
+    "estimatedDurationMin": 203,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260612",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-12",
+    "capacity": 16,
+    "pricePerTrip": 2930000,
+    "currency": "VND",
+    "estimatedDurationMin": 224,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260612",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-12",
+    "capacity": 4,
+    "pricePerTrip": 1422000,
+    "currency": "VND",
+    "estimatedDurationMin": 181,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260612",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-12",
+    "capacity": 7,
+    "pricePerTrip": 957000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260612",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-12",
+    "capacity": 16,
+    "pricePerTrip": 1536000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260612",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-12",
+    "capacity": 7,
+    "pricePerTrip": 1133000,
+    "currency": "VND",
+    "estimatedDurationMin": 106,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260612",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-12",
+    "capacity": 7,
+    "pricePerTrip": 206000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260612",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-12",
+    "capacity": 6,
+    "pricePerTrip": 85000,
+    "currency": "VND",
+    "estimatedDurationMin": 12,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260613",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-13",
+    "capacity": 9,
+    "pricePerTrip": 1805000,
+    "currency": "VND",
+    "estimatedDurationMin": 186,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260613",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-13",
+    "capacity": 16,
+    "pricePerTrip": 2829000,
+    "currency": "VND",
+    "estimatedDurationMin": 220,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260613",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-13",
+    "capacity": 4,
+    "pricePerTrip": 1411000,
+    "currency": "VND",
+    "estimatedDurationMin": 193,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260613",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-13",
+    "capacity": 7,
+    "pricePerTrip": 946000,
+    "currency": "VND",
+    "estimatedDurationMin": 80,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260613",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-13",
+    "capacity": 16,
+    "pricePerTrip": 1569000,
+    "currency": "VND",
+    "estimatedDurationMin": 98,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260613",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-13",
+    "capacity": 7,
+    "pricePerTrip": 1136000,
+    "currency": "VND",
+    "estimatedDurationMin": 114,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260613",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-13",
+    "capacity": 7,
+    "pricePerTrip": 197000,
+    "currency": "VND",
+    "estimatedDurationMin": 21,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260613",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-13",
+    "capacity": 6,
+    "pricePerTrip": 86000,
+    "currency": "VND",
+    "estimatedDurationMin": 12,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260614",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-14",
+    "capacity": 9,
+    "pricePerTrip": 1815000,
+    "currency": "VND",
+    "estimatedDurationMin": 210,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260614",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-14",
+    "capacity": 16,
+    "pricePerTrip": 2844000,
+    "currency": "VND",
+    "estimatedDurationMin": 227,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260614",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-14",
+    "capacity": 4,
+    "pricePerTrip": 1437000,
+    "currency": "VND",
+    "estimatedDurationMin": 198,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260614",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-14",
+    "capacity": 7,
+    "pricePerTrip": 916000,
+    "currency": "VND",
+    "estimatedDurationMin": 84,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260614",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-14",
+    "capacity": 16,
+    "pricePerTrip": 1624000,
+    "currency": "VND",
+    "estimatedDurationMin": 92,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260614",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-14",
+    "capacity": 7,
+    "pricePerTrip": 1132000,
+    "currency": "VND",
+    "estimatedDurationMin": 93,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260614",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-14",
+    "capacity": 7,
+    "pricePerTrip": 195000,
+    "currency": "VND",
+    "estimatedDurationMin": 21,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260614",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-14",
+    "capacity": 6,
+    "pricePerTrip": 85000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260615",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-15",
+    "capacity": 9,
+    "pricePerTrip": 1682000,
+    "currency": "VND",
+    "estimatedDurationMin": 174,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260615",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-15",
+    "capacity": 16,
+    "pricePerTrip": 2517000,
+    "currency": "VND",
+    "estimatedDurationMin": 163,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260615",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-15",
+    "capacity": 4,
+    "pricePerTrip": 1292000,
+    "currency": "VND",
+    "estimatedDurationMin": 154,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260615",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-15",
+    "capacity": 7,
+    "pricePerTrip": 890000,
+    "currency": "VND",
+    "estimatedDurationMin": 64,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260615",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-15",
+    "capacity": 16,
+    "pricePerTrip": 1505000,
+    "currency": "VND",
+    "estimatedDurationMin": 65,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260615",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-15",
+    "capacity": 7,
+    "pricePerTrip": 1024000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260615",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-15",
+    "capacity": 7,
+    "pricePerTrip": 180000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260615",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-15",
+    "capacity": 6,
+    "pricePerTrip": 83000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260616",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-16",
+    "capacity": 9,
+    "pricePerTrip": 1665000,
+    "currency": "VND",
+    "estimatedDurationMin": 172,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260616",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-16",
+    "capacity": 16,
+    "pricePerTrip": 2694000,
+    "currency": "VND",
+    "estimatedDurationMin": 184,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260616",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-16",
+    "capacity": 4,
+    "pricePerTrip": 1274000,
+    "currency": "VND",
+    "estimatedDurationMin": 171,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260616",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-16",
+    "capacity": 7,
+    "pricePerTrip": 851000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260616",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-16",
+    "capacity": 16,
+    "pricePerTrip": 1514000,
+    "currency": "VND",
+    "estimatedDurationMin": 78,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260616",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-16",
+    "capacity": 7,
+    "pricePerTrip": 1016000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260616",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-16",
+    "capacity": 7,
+    "pricePerTrip": 179000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260616",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-16",
+    "capacity": 6,
+    "pricePerTrip": 82000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260617",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-17",
+    "capacity": 9,
+    "pricePerTrip": 1750000,
+    "currency": "VND",
+    "estimatedDurationMin": 151,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260617",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-17",
+    "capacity": 16,
+    "pricePerTrip": 2698000,
+    "currency": "VND",
+    "estimatedDurationMin": 188,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260617",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-17",
+    "capacity": 4,
+    "pricePerTrip": 1257000,
+    "currency": "VND",
+    "estimatedDurationMin": 159,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260617",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-17",
+    "capacity": 7,
+    "pricePerTrip": 836000,
+    "currency": "VND",
+    "estimatedDurationMin": 61,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260617",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-17",
+    "capacity": 16,
+    "pricePerTrip": 1476000,
+    "currency": "VND",
+    "estimatedDurationMin": 66,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260617",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-17",
+    "capacity": 7,
+    "pricePerTrip": 1081000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260617",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-17",
+    "capacity": 7,
+    "pricePerTrip": 185000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260617",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-17",
+    "capacity": 6,
+    "pricePerTrip": 83000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260618",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-18",
+    "capacity": 9,
+    "pricePerTrip": 1677000,
+    "currency": "VND",
+    "estimatedDurationMin": 151,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260618",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-18",
+    "capacity": 16,
+    "pricePerTrip": 2543000,
+    "currency": "VND",
+    "estimatedDurationMin": 176,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260618",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-18",
+    "capacity": 4,
+    "pricePerTrip": 1258000,
+    "currency": "VND",
+    "estimatedDurationMin": 165,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260618",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-18",
+    "capacity": 7,
+    "pricePerTrip": 842000,
+    "currency": "VND",
+    "estimatedDurationMin": 63,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260618",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-18",
+    "capacity": 16,
+    "pricePerTrip": 1522000,
+    "currency": "VND",
+    "estimatedDurationMin": 68,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260618",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-18",
+    "capacity": 7,
+    "pricePerTrip": 1022000,
+    "currency": "VND",
+    "estimatedDurationMin": 83,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260618",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-18",
+    "capacity": 7,
+    "pricePerTrip": 188000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260618",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-18",
+    "capacity": 6,
+    "pricePerTrip": 82000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260619",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-19",
+    "capacity": 9,
+    "pricePerTrip": 1823000,
+    "currency": "VND",
+    "estimatedDurationMin": 191,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260619",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-19",
+    "capacity": 16,
+    "pricePerTrip": 2865000,
+    "currency": "VND",
+    "estimatedDurationMin": 235,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260619",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-19",
+    "capacity": 4,
+    "pricePerTrip": 1426000,
+    "currency": "VND",
+    "estimatedDurationMin": 184,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260619",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-19",
+    "capacity": 7,
+    "pricePerTrip": 947000,
+    "currency": "VND",
+    "estimatedDurationMin": 80,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260619",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-19",
+    "capacity": 16,
+    "pricePerTrip": 1548000,
+    "currency": "VND",
+    "estimatedDurationMin": 92,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260619",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-19",
+    "capacity": 7,
+    "pricePerTrip": 1181000,
+    "currency": "VND",
+    "estimatedDurationMin": 111,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260619",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-19",
+    "capacity": 7,
+    "pricePerTrip": 200000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260619",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-19",
+    "capacity": 6,
+    "pricePerTrip": 89000,
+    "currency": "VND",
+    "estimatedDurationMin": 13,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260620",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-20",
+    "capacity": 9,
+    "pricePerTrip": 1929000,
+    "currency": "VND",
+    "estimatedDurationMin": 235,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260620",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-20",
+    "capacity": 16,
+    "pricePerTrip": 2808000,
+    "currency": "VND",
+    "estimatedDurationMin": 226,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260620",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-20",
+    "capacity": 4,
+    "pricePerTrip": 1445000,
+    "currency": "VND",
+    "estimatedDurationMin": 203,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260620",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-20",
+    "capacity": 7,
+    "pricePerTrip": 898000,
+    "currency": "VND",
+    "estimatedDurationMin": 86,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260620",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-20",
+    "capacity": 16,
+    "pricePerTrip": 1672000,
+    "currency": "VND",
+    "estimatedDurationMin": 92,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260620",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-20",
+    "capacity": 7,
+    "pricePerTrip": 1145000,
+    "currency": "VND",
+    "estimatedDurationMin": 105,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260620",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-20",
+    "capacity": 7,
+    "pricePerTrip": 193000,
+    "currency": "VND",
+    "estimatedDurationMin": 19,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260620",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-20",
+    "capacity": 6,
+    "pricePerTrip": 85000,
+    "currency": "VND",
+    "estimatedDurationMin": 14,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260621",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-21",
+    "capacity": 9,
+    "pricePerTrip": 1849000,
+    "currency": "VND",
+    "estimatedDurationMin": 214,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260621",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-21",
+    "capacity": 16,
+    "pricePerTrip": 2747000,
+    "currency": "VND",
+    "estimatedDurationMin": 229,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260621",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-21",
+    "capacity": 4,
+    "pricePerTrip": 1431000,
+    "currency": "VND",
+    "estimatedDurationMin": 208,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260621",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-21",
+    "capacity": 7,
+    "pricePerTrip": 934000,
+    "currency": "VND",
+    "estimatedDurationMin": 90,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260621",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-21",
+    "capacity": 16,
+    "pricePerTrip": 1637000,
+    "currency": "VND",
+    "estimatedDurationMin": 95,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260621",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-21",
+    "capacity": 7,
+    "pricePerTrip": 1190000,
+    "currency": "VND",
+    "estimatedDurationMin": 121,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260621",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-21",
+    "capacity": 7,
+    "pricePerTrip": 197000,
+    "currency": "VND",
+    "estimatedDurationMin": 19,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260621",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-21",
+    "capacity": 6,
+    "pricePerTrip": 91000,
+    "currency": "VND",
+    "estimatedDurationMin": 14,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260622",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-22",
+    "capacity": 9,
+    "pricePerTrip": 1754000,
+    "currency": "VND",
+    "estimatedDurationMin": 182,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260622",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-22",
+    "capacity": 16,
+    "pricePerTrip": 2503000,
+    "currency": "VND",
+    "estimatedDurationMin": 184,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260622",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-22",
+    "capacity": 4,
+    "pricePerTrip": 1311000,
+    "currency": "VND",
+    "estimatedDurationMin": 174,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260622",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-22",
+    "capacity": 7,
+    "pricePerTrip": 892000,
+    "currency": "VND",
+    "estimatedDurationMin": 66,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260622",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-22",
+    "capacity": 16,
+    "pricePerTrip": 1481000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260622",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-22",
+    "capacity": 7,
+    "pricePerTrip": 1073000,
+    "currency": "VND",
+    "estimatedDurationMin": 91,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260622",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-22",
+    "capacity": 7,
+    "pricePerTrip": 175000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260622",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-22",
+    "capacity": 6,
+    "pricePerTrip": 79000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260623",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-23",
+    "capacity": 9,
+    "pricePerTrip": 1692000,
+    "currency": "VND",
+    "estimatedDurationMin": 176,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260623",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-23",
+    "capacity": 16,
+    "pricePerTrip": 2554000,
+    "currency": "VND",
+    "estimatedDurationMin": 185,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260623",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-23",
+    "capacity": 4,
+    "pricePerTrip": 1305000,
+    "currency": "VND",
+    "estimatedDurationMin": 185,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260623",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-23",
+    "capacity": 7,
+    "pricePerTrip": 887000,
+    "currency": "VND",
+    "estimatedDurationMin": 73,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260623",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-23",
+    "capacity": 16,
+    "pricePerTrip": 1493000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260623",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-23",
+    "capacity": 7,
+    "pricePerTrip": 1057000,
+    "currency": "VND",
+    "estimatedDurationMin": 99,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260623",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-23",
+    "capacity": 7,
+    "pricePerTrip": 181000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260623",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-23",
+    "capacity": 6,
+    "pricePerTrip": 80000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260624",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-24",
+    "capacity": 9,
+    "pricePerTrip": 1717000,
+    "currency": "VND",
+    "estimatedDurationMin": 184,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260624",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-24",
+    "capacity": 16,
+    "pricePerTrip": 2553000,
+    "currency": "VND",
+    "estimatedDurationMin": 198,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260624",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-24",
+    "capacity": 4,
+    "pricePerTrip": 1306000,
+    "currency": "VND",
+    "estimatedDurationMin": 158,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260624",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-24",
+    "capacity": 7,
+    "pricePerTrip": 845000,
+    "currency": "VND",
+    "estimatedDurationMin": 61,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260624",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-24",
+    "capacity": 16,
+    "pricePerTrip": 1520000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260624",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-24",
+    "capacity": 7,
+    "pricePerTrip": 1091000,
+    "currency": "VND",
+    "estimatedDurationMin": 91,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260624",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-24",
+    "capacity": 7,
+    "pricePerTrip": 187000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260624",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-24",
+    "capacity": 6,
+    "pricePerTrip": 84000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260625",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-25",
+    "capacity": 9,
+    "pricePerTrip": 1672000,
+    "currency": "VND",
+    "estimatedDurationMin": 188,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260625",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-25",
+    "capacity": 16,
+    "pricePerTrip": 2626000,
+    "currency": "VND",
+    "estimatedDurationMin": 189,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260625",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-25",
+    "capacity": 4,
+    "pricePerTrip": 1308000,
+    "currency": "VND",
+    "estimatedDurationMin": 167,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260625",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-25",
+    "capacity": 7,
+    "pricePerTrip": 866000,
+    "currency": "VND",
+    "estimatedDurationMin": 63,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260625",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-25",
+    "capacity": 16,
+    "pricePerTrip": 1504000,
+    "currency": "VND",
+    "estimatedDurationMin": 84,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260625",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-25",
+    "capacity": 7,
+    "pricePerTrip": 1025000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260625",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-25",
+    "capacity": 7,
+    "pricePerTrip": 183000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260625",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-25",
+    "capacity": 6,
+    "pricePerTrip": 80000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260626",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-26",
+    "capacity": 9,
+    "pricePerTrip": 1856000,
+    "currency": "VND",
+    "estimatedDurationMin": 222,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260626",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-26",
+    "capacity": 16,
+    "pricePerTrip": 2883000,
+    "currency": "VND",
+    "estimatedDurationMin": 251,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260626",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-26",
+    "capacity": 4,
+    "pricePerTrip": 1479000,
+    "currency": "VND",
+    "estimatedDurationMin": 200,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260626",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-26",
+    "capacity": 7,
+    "pricePerTrip": 972000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260626",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-26",
+    "capacity": 16,
+    "pricePerTrip": 1589000,
+    "currency": "VND",
+    "estimatedDurationMin": 88,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260626",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-26",
+    "capacity": 7,
+    "pricePerTrip": 1117000,
+    "currency": "VND",
+    "estimatedDurationMin": 115,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260626",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-26",
+    "capacity": 7,
+    "pricePerTrip": 207000,
+    "currency": "VND",
+    "estimatedDurationMin": 23,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260626",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-26",
+    "capacity": 6,
+    "pricePerTrip": 91000,
+    "currency": "VND",
+    "estimatedDurationMin": 13,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260627",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-27",
+    "capacity": 9,
+    "pricePerTrip": 1875000,
+    "currency": "VND",
+    "estimatedDurationMin": 218,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260627",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-27",
+    "capacity": 16,
+    "pricePerTrip": 2759000,
+    "currency": "VND",
+    "estimatedDurationMin": 247,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260627",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-27",
+    "capacity": 4,
+    "pricePerTrip": 1421000,
+    "currency": "VND",
+    "estimatedDurationMin": 202,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260627",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-27",
+    "capacity": 7,
+    "pricePerTrip": 978000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260627",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-27",
+    "capacity": 16,
+    "pricePerTrip": 1660000,
+    "currency": "VND",
+    "estimatedDurationMin": 103,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260627",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-27",
+    "capacity": 7,
+    "pricePerTrip": 1120000,
+    "currency": "VND",
+    "estimatedDurationMin": 115,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260627",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-27",
+    "capacity": 7,
+    "pricePerTrip": 205000,
+    "currency": "VND",
+    "estimatedDurationMin": 21,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260627",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-27",
+    "capacity": 6,
+    "pricePerTrip": 89000,
+    "currency": "VND",
+    "estimatedDurationMin": 13,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260628",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-28",
+    "capacity": 9,
+    "pricePerTrip": 1912000,
+    "currency": "VND",
+    "estimatedDurationMin": 224,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260628",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-28",
+    "capacity": 16,
+    "pricePerTrip": 2850000,
+    "currency": "VND",
+    "estimatedDurationMin": 230,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260628",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-28",
+    "capacity": 4,
+    "pricePerTrip": 1481000,
+    "currency": "VND",
+    "estimatedDurationMin": 228,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260628",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-28",
+    "capacity": 7,
+    "pricePerTrip": 900000,
+    "currency": "VND",
+    "estimatedDurationMin": 93,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260628",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-28",
+    "capacity": 16,
+    "pricePerTrip": 1608000,
+    "currency": "VND",
+    "estimatedDurationMin": 100,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260628",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-28",
+    "capacity": 7,
+    "pricePerTrip": 1138000,
+    "currency": "VND",
+    "estimatedDurationMin": 122,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260628",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-28",
+    "capacity": 7,
+    "pricePerTrip": 197000,
+    "currency": "VND",
+    "estimatedDurationMin": 22,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260628",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-28",
+    "capacity": 6,
+    "pricePerTrip": 85000,
+    "currency": "VND",
+    "estimatedDurationMin": 14,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260629",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-29",
+    "capacity": 9,
+    "pricePerTrip": 1650000,
+    "currency": "VND",
+    "estimatedDurationMin": 171,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260629",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-29",
+    "capacity": 16,
+    "pricePerTrip": 2609000,
+    "currency": "VND",
+    "estimatedDurationMin": 190,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260629",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-29",
+    "capacity": 4,
+    "pricePerTrip": 1317000,
+    "currency": "VND",
+    "estimatedDurationMin": 182,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260629",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-29",
+    "capacity": 7,
+    "pricePerTrip": 881000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260629",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-29",
+    "capacity": 16,
+    "pricePerTrip": 1428000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260629",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-29",
+    "capacity": 7,
+    "pricePerTrip": 1094000,
+    "currency": "VND",
+    "estimatedDurationMin": 83,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260629",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-29",
+    "capacity": 7,
+    "pricePerTrip": 189000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260629",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-29",
+    "capacity": 6,
+    "pricePerTrip": 83000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260630",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-30",
+    "capacity": 9,
+    "pricePerTrip": 1681000,
+    "currency": "VND",
+    "estimatedDurationMin": 160,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260630",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-30",
+    "capacity": 16,
+    "pricePerTrip": 2509000,
+    "currency": "VND",
+    "estimatedDurationMin": 170,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260630",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-06-30",
+    "capacity": 4,
+    "pricePerTrip": 1362000,
+    "currency": "VND",
+    "estimatedDurationMin": 170,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260630",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-30",
+    "capacity": 7,
+    "pricePerTrip": 890000,
+    "currency": "VND",
+    "estimatedDurationMin": 70,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260630",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-06-30",
+    "capacity": 16,
+    "pricePerTrip": 1521000,
+    "currency": "VND",
+    "estimatedDurationMin": 84,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260630",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-06-30",
+    "capacity": 7,
+    "pricePerTrip": 1040000,
+    "currency": "VND",
+    "estimatedDurationMin": 96,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260630",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-30",
+    "capacity": 7,
+    "pricePerTrip": 184000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260630",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-06-30",
+    "capacity": 6,
+    "pricePerTrip": 77000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260701",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-01",
+    "capacity": 9,
+    "pricePerTrip": 1715000,
+    "currency": "VND",
+    "estimatedDurationMin": 193,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260701",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-01",
+    "capacity": 16,
+    "pricePerTrip": 2504000,
+    "currency": "VND",
+    "estimatedDurationMin": 196,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260701",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-01",
+    "capacity": 4,
+    "pricePerTrip": 1345000,
+    "currency": "VND",
+    "estimatedDurationMin": 187,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260701",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-01",
+    "capacity": 7,
+    "pricePerTrip": 834000,
+    "currency": "VND",
+    "estimatedDurationMin": 73,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260701",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-01",
+    "capacity": 16,
+    "pricePerTrip": 1394000,
+    "currency": "VND",
+    "estimatedDurationMin": 76,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260701",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-07-01",
+    "capacity": 7,
+    "pricePerTrip": 1091000,
+    "currency": "VND",
+    "estimatedDurationMin": 84,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260701",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-01",
+    "capacity": 7,
+    "pricePerTrip": 183000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260701",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-01",
+    "capacity": 6,
+    "pricePerTrip": 82000,
+    "currency": "VND",
+    "estimatedDurationMin": 12,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260702",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-02",
+    "capacity": 9,
+    "pricePerTrip": 1752000,
+    "currency": "VND",
+    "estimatedDurationMin": 163,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260702",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-02",
+    "capacity": 16,
+    "pricePerTrip": 2502000,
+    "currency": "VND",
+    "estimatedDurationMin": 187,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260702",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-02",
+    "capacity": 4,
+    "pricePerTrip": 1282000,
+    "currency": "VND",
+    "estimatedDurationMin": 168,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260702",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-02",
+    "capacity": 7,
+    "pricePerTrip": 881000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260702",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-02",
+    "capacity": 16,
+    "pricePerTrip": 1429000,
+    "currency": "VND",
+    "estimatedDurationMin": 80,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260702",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-07-02",
+    "capacity": 7,
+    "pricePerTrip": 1037000,
+    "currency": "VND",
+    "estimatedDurationMin": 97,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260702",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-02",
+    "capacity": 7,
+    "pricePerTrip": 185000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 25,
+    "traffic": "medium",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260702",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-02",
+    "capacity": 6,
+    "pricePerTrip": 81000,
+    "currency": "VND",
+    "estimatedDurationMin": 11,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260703",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-03",
+    "capacity": 9,
+    "pricePerTrip": 1891000,
+    "currency": "VND",
+    "estimatedDurationMin": 223,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260703",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-03",
+    "capacity": 16,
+    "pricePerTrip": 2756000,
+    "currency": "VND",
+    "estimatedDurationMin": 255,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260703",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-03",
+    "capacity": 4,
+    "pricePerTrip": 1374000,
+    "currency": "VND",
+    "estimatedDurationMin": 229,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260703",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-03",
+    "capacity": 7,
+    "pricePerTrip": 975000,
+    "currency": "VND",
+    "estimatedDurationMin": 80,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260703",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-03",
+    "capacity": 16,
+    "pricePerTrip": 1534000,
+    "currency": "VND",
+    "estimatedDurationMin": 89,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260703",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-07-03",
+    "capacity": 7,
+    "pricePerTrip": 1206000,
+    "currency": "VND",
+    "estimatedDurationMin": 123,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260703",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-03",
+    "capacity": 7,
+    "pricePerTrip": 205000,
+    "currency": "VND",
+    "estimatedDurationMin": 22,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260703",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-03",
+    "capacity": 6,
+    "pricePerTrip": 91000,
+    "currency": "VND",
+    "estimatedDurationMin": 14,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  },
+  {
+    "id": "hl_rt_han_limo_9_20260704",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-04",
+    "capacity": 9,
+    "pricePerTrip": 1959000,
+    "currency": "VND",
+    "estimatedDurationMin": 206,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_rt_han_van_16_20260704",
+    "type": "Private van 16 chỗ Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-04",
+    "capacity": 16,
+    "pricePerTrip": 2771000,
+    "currency": "VND",
+    "estimatedDurationMin": 244,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_rt_han_sedan_20260704",
+    "type": "Private sedan Hà Nội ↔ Hạ Long",
+    "from": "HAN",
+    "to": "HaLong",
+    "date": "2026-07-04",
+    "capacity": 4,
+    "pricePerTrip": 1445000,
+    "currency": "VND",
+    "estimatedDurationMin": 210,
+    "elderlyFriendly": false,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "couple",
+      "small_family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_7_20260704",
+    "type": "Airport van 7 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-04",
+    "capacity": 7,
+    "pricePerTrip": 930000,
+    "currency": "VND",
+    "estimatedDurationMin": 84,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "family"
+    ]
+  },
+  {
+    "id": "hl_rt_hph_16_20260704",
+    "type": "Airport van 16 chỗ Cát Bi ↔ Hạ Long",
+    "from": "HPH",
+    "to": "HaLong",
+    "date": "2026-07-04",
+    "capacity": 16,
+    "pricePerTrip": 1544000,
+    "currency": "VND",
+    "estimatedDurationMin": 98,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "group",
+      "flight_connection"
+    ]
+  },
+  {
+    "id": "hl_rt_vdo_7_20260704",
+    "type": "Airport van 7 chỗ Vân Đồn ↔ Hạ Long",
+    "from": "VDO",
+    "to": "HaLong",
+    "date": "2026-07-04",
+    "capacity": 7,
+    "pricePerTrip": 1109000,
+    "currency": "VND",
+    "estimatedDurationMin": 113,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "traffic": "high",
+    "useCases": [
+      "flight_connection",
+      "backup"
+    ]
+  },
+  {
+    "id": "hl_rt_city_taxi_20260704",
+    "type": "Taxi nội thành Bãi Cháy",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-04",
+    "capacity": 7,
+    "pricePerTrip": 196000,
+    "currency": "VND",
+    "estimatedDurationMin": 19,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "local_move",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_rt_electric_cart_20260704",
+    "type": "Xe điện Bãi Cháy short hop",
+    "from": "BaiChay",
+    "to": "HaLongLocal",
+    "date": "2026-07-04",
+    "capacity": 6,
+    "pricePerTrip": 85000,
+    "currency": "VND",
+    "estimatedDurationMin": 12,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "short_distance",
+      "elderly"
+    ]
+  }
+]

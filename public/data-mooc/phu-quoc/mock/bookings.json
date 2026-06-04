@@ -1,0 +1,51 @@
+[
+  {
+    "id": "bk_001",
+    "userId": "u_001",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vn1235_20260612",
+      "vn1832_20260615"
+    ],
+    "selectedHotelId": "h_wonderworld",
+    "selectedRoomId": "r_2br_villa",
+    "selectedTicketId": "t_combo_3in1",
+    "selectedTransportIds": [
+      "tr_greensm_7",
+      "tr_resort_shuttle",
+      "tr_buggy"
+    ],
+    "estimatedTotal": 49750000,
+    "currency": "VND",
+    "confidence": 0.91,
+    "explain": [
+      "Room đủ sức chứa 2 người lớn, 2 trẻ em và 1 người lớn tuổi",
+      "Combo 3-in-1 rẻ hơn mua lẻ và phủ đủ VinWonders + Safari + show",
+      "Bay sáng đi, chiều về giúp không lãng phí ngày đầu/cuối"
+    ]
+  },
+  {
+    "id": "bk_002",
+    "userId": "u_002",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "qh1621_20260620",
+      "qh1628_20260623"
+    ],
+    "selectedHotelId": "h_fiesta",
+    "selectedRoomId": "r_group_fiesta",
+    "selectedTicketId": "t_grand_tour",
+    "selectedTransportIds": [
+      "tr_resort_shuttle",
+      "tr_water_taxi"
+    ],
+    "estimatedTotal": 62500000,
+    "currency": "VND",
+    "confidence": 0.86,
+    "explain": [
+      "Gần Grand World, hợp nhóm thích night show",
+      "Ticket passport phủ nhiều trải nghiệm trong 2 ngày",
+      "Có thể thêm Fastpass nếu queue tăng"
+    ]
+  }
+]

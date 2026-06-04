@@ -1,0 +1,141 @@
+[
+  {
+    "id": "hl_v_fnb_today",
+    "type": "F&B",
+    "title": "Giảm 30% F&B Vinpearl Đảo Rều - hết hạn hôm nay",
+    "value": 0.3,
+    "expires": "2026-06-13T23:59:00+07:00",
+    "minSpend": 400000,
+    "applicableZones": [
+      "Vinpearl Đảo Rều",
+      "Resort"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_cruise_bundle",
+    "type": "Cruise",
+    "title": "Giảm 15% Hạ Long Bay Day Cruise",
+    "value": 0.15,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 2000000,
+    "applicableZones": [
+      "TuanChau",
+      "BaiChay",
+      "HaLongBay"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_spa_bundle",
+    "type": "Spa",
+    "title": "Giảm 25% Vinpearl Spa",
+    "value": 0.25,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1200000,
+    "applicableZones": [
+      "Vinpearl Đảo Rều"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_late_checkout",
+    "type": "Hotel",
+    "title": "Late checkout đến 14:00",
+    "value": 0,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 0,
+    "applicableZones": [
+      "Đảo Rều",
+      "Bãi Cháy Mainland",
+      "Marina"
+    ],
+    "tier": "Gold",
+    "stackable": true
+  },
+  {
+    "id": "hl_v_diamond_dining",
+    "type": "F&B",
+    "title": "Diamond Dining Privilege - giảm 35%",
+    "value": 0.35,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 800000,
+    "applicableZones": [
+      "Vinpearl Đảo Rều",
+      "Bãi Cháy",
+      "Marina"
+    ],
+    "tier": "Diamond",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_waterpark_drink",
+    "type": "Drink",
+    "title": "Buy 1 Get 1 Water Park drink",
+    "value": 0.5,
+    "expires": "2026-06-20T23:59:00+07:00",
+    "minSpend": 220000,
+    "applicableZones": [
+      "SunWorld",
+      "Bãi Cháy"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_mainland_dining",
+    "type": "F&B",
+    "title": "Giảm 20% seafood Bãi Cháy",
+    "value": 0.2,
+    "expires": "2026-07-02T23:59:00+07:00",
+    "minSpend": 900000,
+    "applicableZones": [
+      "Bãi Cháy"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_group_bbq",
+    "type": "F&B",
+    "title": "Group BBQ set giảm 18%",
+    "value": 0.18,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 3500000,
+    "applicableZones": [
+      "Bãi Cháy"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "hl_v_spa_tea",
+    "type": "Tea",
+    "title": "Tặng afternoon tea khi đặt spa",
+    "value": 320000,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1500000,
+    "applicableZones": [
+      "Vinpearl Đảo Rều"
+    ],
+    "tier": "Silver",
+    "stackable": true
+  },
+  {
+    "id": "hl_v_resort_boat_priority",
+    "type": "Transport",
+    "title": "Priority resort boat boarding cho VinClub Gold+",
+    "value": 0,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 0,
+    "applicableZones": [
+      "Bãi Cháy Pier",
+      "Đảo Rều"
+    ],
+    "tier": "Gold",
+    "stackable": true
+  }
+]

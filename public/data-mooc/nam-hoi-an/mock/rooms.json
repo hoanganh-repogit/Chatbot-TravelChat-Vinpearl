@@ -1,0 +1,270 @@
+[
+  {
+    "id": "nha_r_resort_deluxe",
+    "hotelId": "nha_h_resort_golf",
+    "name": "Deluxe Ocean View",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King or 2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 3400000,
+    "currency": "VND",
+    "tags": [
+      "sea_view",
+      "breakfast_included",
+      "near_elevator"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "nha_r_resort_family",
+    "hotelId": "nha_h_resort_golf",
+    "name": "Family Room Ocean View",
+    "capacity": {
+      "adults": 3,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "1 King + 2 Single",
+    "breakfastIncluded": true,
+    "pricePerNight": 5400000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "sea_view",
+      "near_elevator",
+      "kids"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "nha_r_resort_connecting",
+    "hotelId": "nha_h_resort_golf",
+    "name": "Connecting Deluxe Rooms",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King or 4 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 6500000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "connecting",
+      "near_elevator",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "nha_r_resort_suite",
+    "hotelId": "nha_h_resort_golf",
+    "name": "Executive Ocean Suite",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King + living room",
+    "breakfastIncluded": true,
+    "pricePerNight": 7200000,
+    "currency": "VND",
+    "tags": [
+      "suite",
+      "ocean_view",
+      "quiet_zone",
+      "premium"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "nha_r_villa_2br",
+    "hotelId": "nha_h_villas",
+    "name": "2-Bedroom Pool Villa",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 8600000,
+    "currency": "VND",
+    "tags": [
+      "villa",
+      "private_pool",
+      "beachfront",
+      "family"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "nha_r_villa_3br",
+    "hotelId": "nha_h_villas",
+    "name": "3-Bedroom Pool Villa",
+    "capacity": {
+      "adults": 6,
+      "children": 3,
+      "elderly": 2
+    },
+    "beds": "3 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 12200000,
+    "currency": "VND",
+    "tags": [
+      "multi_bedroom_villa",
+      "family",
+      "private_pool",
+      "buggy"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "nha_r_villa_4br",
+    "hotelId": "nha_h_villas",
+    "name": "4-Bedroom Beachfront Villa",
+    "capacity": {
+      "adults": 8,
+      "children": 4,
+      "elderly": 2
+    },
+    "beds": "4 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 16600000,
+    "currency": "VND",
+    "tags": [
+      "large_family",
+      "multi_bedroom_villa",
+      "beachfront",
+      "private_pool"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "nha_r_condotel_studio",
+    "hotelId": "nha_h_condotel",
+    "name": "Studio Sea View",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 2100000,
+    "currency": "VND",
+    "tags": [
+      "value",
+      "sea_view",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "nha_r_condotel_2br",
+    "hotelId": "nha_h_condotel",
+    "name": "2-Bedroom Apartment",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 4200000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "apartment",
+      "value",
+      "beachfront"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "nha_r_oldtown_deluxe",
+    "hotelId": "nha_h_oldtown_partner",
+    "name": "Old Town Deluxe Room",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 2300000,
+    "currency": "VND",
+    "tags": [
+      "old_town_access",
+      "value",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "nha_r_oldtown_family",
+    "hotelId": "nha_h_oldtown_partner",
+    "name": "Old Town Family Room",
+    "capacity": {
+      "adults": 3,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "1 King + 2 Single",
+    "breakfastIncluded": true,
+    "pricePerNight": 3600000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "old_town_access",
+      "local_food"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "nha_r_team_twin",
+    "hotelId": "nha_h_team_resort",
+    "name": "Team Twin Room",
+    "capacity": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 1350000,
+    "currency": "VND",
+    "tags": [
+      "team_building",
+      "twin_room",
+      "value"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "nha_r_team_bulk",
+    "hotelId": "nha_h_team_resort",
+    "name": "Group Twin Package - 9 Rooms",
+    "capacity": {
+      "adults": 18,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "18 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 11800000,
+    "currency": "VND",
+    "tags": [
+      "team_building",
+      "bulk_rooms",
+      "event_space",
+      "bbq_area"
+    ],
+    "cancellation": "free_before_7_days"
+  }
+]

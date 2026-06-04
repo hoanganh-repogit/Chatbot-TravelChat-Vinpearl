@@ -1,0 +1,153 @@
+{
+  "updatedAt": "2026-06-04T09:00:00+07:00",
+  "controlMapping": {
+    "weather": "Weather selector",
+    "rainProb": "Rain probability slider",
+    "heatIndex": "Heat index selector",
+    "riverSafariStatus": "River Safari boat status",
+    "oldTownTraffic": "Hoi An old town traffic selector",
+    "crowd": "Crowd selector",
+    "queues": "Per-attraction queue override",
+    "energy": "Family energy selector",
+    "childTired": "Child tired toggle",
+    "elderlyMode": "Elderly mode toggle",
+    "location": "Current location selector",
+    "voucherExpiring": "Expiring voucher selector",
+    "dinnerSlotTight": "Dinner slot pressure toggle"
+  },
+  "presets": {
+    "normal_resort_day": {
+      "weather": "sunny",
+      "rainProb": 12,
+      "heatIndex": "medium",
+      "riverSafariStatus": "normal",
+      "oldTownTraffic": "medium",
+      "temperatureC": 31,
+      "crowd": "medium",
+      "queues": {
+        "nha_a_river_safari": 20,
+        "nha_a_water_world": 25,
+        "nha_a_folk_island": 15,
+        "nha_a_mapping_show": 18
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "resort_lobby",
+      "recommendedReflex": "Giữ River Safari buổi sáng, Water World sau đó, nghỉ trưa tại resort"
+    },
+    "heavy_rain_culture_shift": {
+      "weather": "heavy_rain",
+      "rainProb": 88,
+      "heatIndex": "low",
+      "riverSafariStatus": "delayed",
+      "oldTownTraffic": "medium",
+      "temperatureC": 27,
+      "crowd": "low",
+      "queues": {
+        "nha_a_water_world": 5,
+        "nha_a_indoor_games": 32,
+        "nha_a_craft_village": 18,
+        "nha_a_4d_castle": 24
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "vinwonders_gate",
+      "recommendedReflex": "Đổi Water World/River Safari sang Indoor Games + Craft Village + spa/tea"
+    },
+    "river_safari_delay": {
+      "weather": "cloudy",
+      "rainProb": 45,
+      "heatIndex": "medium",
+      "riverSafariStatus": "delayed",
+      "oldTownTraffic": "low",
+      "temperatureC": 29,
+      "crowd": "medium",
+      "queues": {
+        "nha_a_river_safari": 55,
+        "nha_a_bird_show": 20,
+        "nha_a_folk_island": 16
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "river_safari_gate",
+      "recommendedReflex": "Chuyển sang Bird Show/Folk Culture trước, quay lại River Safari sau khi queue giảm"
+    },
+    "overcrowded_waterworld": {
+      "weather": "very_hot",
+      "rainProb": 5,
+      "heatIndex": "high",
+      "riverSafariStatus": "normal",
+      "oldTownTraffic": "medium",
+      "temperatureC": 36,
+      "crowd": "high",
+      "queues": {
+        "nha_a_water_world": 58,
+        "nha_a_lazy_river": 45,
+        "nha_a_adventure_land": 50,
+        "nha_a_indoor_games": 22
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "water_world",
+      "recommendedReflex": "Gợi ý Fastpass/đổi sang indoor + resort pool, tránh outdoor cao điểm trưa"
+    },
+    "family_fatigue": {
+      "weather": "very_hot",
+      "rainProb": 0,
+      "heatIndex": "high",
+      "riverSafariStatus": "normal",
+      "oldTownTraffic": "medium",
+      "temperatureC": 35,
+      "crowd": "medium",
+      "queues": {
+        "nha_a_folk_island": 24,
+        "nha_a_resort_pool": 12,
+        "nha_a_spa_akoya": 5
+      },
+      "energy": "low",
+      "childTired": true,
+      "elderlyMode": true,
+      "location": "folk_island",
+      "recommendedReflex": "Gọi buggy, chèn nghỉ trưa, chuyển spa/tea hoặc resort pool thay vì Adventure Land"
+    },
+    "oldtown_evening_traffic": {
+      "weather": "cloudy",
+      "rainProb": 35,
+      "heatIndex": "medium",
+      "riverSafariStatus": "normal",
+      "oldTownTraffic": "high",
+      "temperatureC": 29,
+      "crowd": "high",
+      "queues": {
+        "nha_a_old_town_evening": 40
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "resort_lobby",
+      "roadDelayMin": 35,
+      "recommendedReflex": "Đẩy giờ shuttle đi phố cổ sớm hơn hoặc đổi sang dinner tại resort"
+    },
+    "upsell_resort_dinner": {
+      "weather": "sunny",
+      "rainProb": 8,
+      "heatIndex": "medium",
+      "riverSafariStatus": "normal",
+      "oldTownTraffic": "medium",
+      "temperatureC": 30,
+      "crowd": "medium",
+      "queues": {},
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "resort",
+      "voucherExpiring": "nha_v_fnb_today",
+      "dinnerSlotTight": true,
+      "recommendedReflex": "Gợi ý giữ bàn Cocoon/Lantern và dùng voucher F&B trước khi hết hạn"
+    }
+  }
+}
