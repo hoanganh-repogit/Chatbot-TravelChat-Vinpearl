@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Compass, MessageSquare, Calendar, User, Signal, Wifi, Battery } from 'lucide-react'
+import { Compass, MessageSquare, Calendar, User, Signal, Wifi, Battery, Radio } from 'lucide-react'
 import ExploreScreen, { destinationsData } from './components/ExploreScreen'
 import ChatScreen from './components/ChatScreen'
 import DetailScreen from './components/DetailScreen'
 import ItineraryScreen from './components/ItineraryScreen'
 import AccountScreen from './components/AccountScreen'
+import LiveScreen from './components/LiveScreen'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('chat') // Default to chat welcome screen as Screen 1
@@ -64,6 +65,10 @@ export default function App() {
             />
           )}
 
+          {activeTab === 'live' && (
+            <LiveScreen />
+          )}
+
           {activeTab === 'account' && (
             <AccountScreen
               chatMessageCount={chatMessageCount}
@@ -121,6 +126,19 @@ export default function App() {
               <Calendar size={20} />
             </div>
             <span>Lịch trình</span>
+          </button>
+
+          <button
+            className={`nav-item ${activeTab === 'live' ? 'active' : ''}`}
+            onClick={() => {
+              setActiveTab('live')
+              setSelectedDestinationId(null)
+            }}
+          >
+            <div className="nav-item-icon-wrapper">
+              <Radio size={20} />
+            </div>
+            <span>Live</span>
           </button>
 
           <button
