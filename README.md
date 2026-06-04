@@ -2,6 +2,17 @@
 
 ## Trợ Lý Du Lịch Thông Minh Cá Nhân Hóa Trong Hệ Sinh Thái Vinpearl
 
+## Thông tin nhóm
+
+- Tên nhóm: E6
+- Lớp: E403
+- Thành viên:
+  - Hoàng Văn Anh - 2A202600762
+  - Nguyễn Trường Giang - 2A202600792
+  - Nguyễn Trọng Khánh - 2A202600796
+  - Phạm Ánh Dương - 2A202600815
+  - Nguyễn Lý Minh Kỳ - 2A202600782
+
 ---
 
 # 1. Tổng Quan Đề Tài
