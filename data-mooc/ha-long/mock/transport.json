@@ -1,0 +1,111 @@
+[
+  {
+    "id": "hl_tr_resort_boat",
+    "type": "Resort shuttle boat Bãi Cháy ↔ Đảo Rều",
+    "capacity": 12,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "weatherSensitive": true,
+    "useCases": [
+      "resort_transfer",
+      "short_boat",
+      "checkin_checkout"
+    ]
+  },
+  {
+    "id": "hl_tr_private_boat",
+    "type": "Private boat transfer Đảo Rều",
+    "capacity": 8,
+    "pricePerTrip": 750000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "weatherSensitive": true,
+    "useCases": [
+      "premium",
+      "urgent_transfer",
+      "late_night"
+    ]
+  },
+  {
+    "id": "hl_tr_limo_9",
+    "type": "Limousine 9 chỗ Hà Nội ↔ Hạ Long",
+    "capacity": 9,
+    "pricePerTrip": 1700000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "weatherSensitive": false,
+    "useCases": [
+      "family",
+      "comfort",
+      "door_to_door"
+    ]
+  },
+  {
+    "id": "hl_tr_van_16",
+    "type": "Private van 16 chỗ",
+    "capacity": 16,
+    "pricePerTrip": 2600000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 25,
+    "weatherSensitive": false,
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "hl_tr_city_taxi",
+    "type": "Taxi Bãi Cháy 7 chỗ",
+    "capacity": 7,
+    "pricePerTrip": 180000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "weatherSensitive": false,
+    "useCases": [
+      "local_move",
+      "seafood_dinner"
+    ]
+  },
+  {
+    "id": "hl_tr_electric_cart",
+    "type": "Xe điện Bãi Cháy",
+    "capacity": 6,
+    "pricePerTrip": 80000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "weatherSensitive": true,
+    "useCases": [
+      "short_distance",
+      "beach",
+      "night_market"
+    ]
+  },
+  {
+    "id": "hl_tr_cruise_shuttle",
+    "type": "Cruise port shuttle",
+    "capacity": 20,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "weatherSensitive": false,
+    "useCases": [
+      "hotel_to_cruise_port",
+      "group"
+    ]
+  }
+]

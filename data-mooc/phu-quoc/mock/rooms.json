@@ -1,0 +1,277 @@
+[
+  {
+    "id": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "name": "2-Bedroom Pool Villa",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 6800000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "villa",
+      "connecting",
+      "ground_floor_available",
+      "private_pool"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "name": "3-Bedroom Pool Villa",
+    "capacity": {
+      "adults": 6,
+      "children": 3,
+      "elderly": 2
+    },
+    "beds": "3 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 9200000,
+    "currency": "VND",
+    "tags": [
+      "large_family",
+      "villa",
+      "ground_floor_available",
+      "private_pool",
+      "premium"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "name": "4-Bedroom Pool Villa",
+    "capacity": {
+      "adults": 8,
+      "children": 4,
+      "elderly": 2
+    },
+    "beds": "4 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 12800000,
+    "currency": "VND",
+    "tags": [
+      "large_family",
+      "multi_bedroom_villa",
+      "ground_floor_available",
+      "private_pool",
+      "buggy_priority"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "name": "Family Suite Ocean View",
+    "capacity": {
+      "adults": 3,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "1 King + 2 Single",
+    "breakfastIncluded": true,
+    "pricePerNight": 5200000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "ocean_view",
+      "near_elevator",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "name": "Deluxe Garden View",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King or 2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 3200000,
+    "currency": "VND",
+    "tags": [
+      "couple",
+      "garden_view",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "name": "Connecting Deluxe Rooms",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King or 4 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 6100000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "connecting",
+      "near_elevator",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "name": "Connecting Standard Rooms",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 Queen + 2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 3600000,
+    "currency": "VND",
+    "tags": [
+      "budget_friendly",
+      "connecting",
+      "near_grand_world",
+      "breakfast_included"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "name": "Standard Twin Room",
+    "capacity": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "2 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 1650000,
+    "currency": "VND",
+    "tags": [
+      "value",
+      "twin_room",
+      "near_grand_world"
+    ],
+    "cancellation": "free_before_3_days"
+  },
+  {
+    "id": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "name": "Group Twin Package - 6 Rooms",
+    "capacity": {
+      "adults": 12,
+      "children": 0,
+      "elderly": 0
+    },
+    "beds": "12 Twin",
+    "breakfastIncluded": true,
+    "pricePerNight": 9300000,
+    "currency": "VND",
+    "tags": [
+      "team_building",
+      "value",
+      "near_grand_world",
+      "bulk_rooms"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_melia_1br",
+    "hotelId": "h_melia",
+    "name": "1-Bedroom Private Pool Villa",
+    "capacity": {
+      "adults": 2,
+      "children": 1,
+      "elderly": 0
+    },
+    "beds": "1 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 5600000,
+    "currency": "VND",
+    "tags": [
+      "couple",
+      "private_pool",
+      "quiet_zone",
+      "premium"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_melia_2br",
+    "hotelId": "h_melia",
+    "name": "2-Bedroom Lake View Villa",
+    "capacity": {
+      "adults": 4,
+      "children": 2,
+      "elderly": 1
+    },
+    "beds": "2 King + sofa",
+    "breakfastIncluded": true,
+    "pricePerNight": 7600000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "villa",
+      "private_pool",
+      "quiet_zone"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "name": "3-Bedroom Garden Villa",
+    "capacity": {
+      "adults": 6,
+      "children": 3,
+      "elderly": 2
+    },
+    "beds": "3 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 8800000,
+    "currency": "VND",
+    "tags": [
+      "family",
+      "villa",
+      "private_pool",
+      "quiet_zone"
+    ],
+    "cancellation": "free_before_7_days"
+  },
+  {
+    "id": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "name": "4-Bedroom Ocean Villa",
+    "capacity": {
+      "adults": 8,
+      "children": 4,
+      "elderly": 2
+    },
+    "beds": "4 King",
+    "breakfastIncluded": true,
+    "pricePerNight": 13600000,
+    "currency": "VND",
+    "tags": [
+      "large_family",
+      "villa",
+      "premium",
+      "private_pool",
+      "ocean_view"
+    ],
+    "cancellation": "free_before_7_days"
+  }
+]

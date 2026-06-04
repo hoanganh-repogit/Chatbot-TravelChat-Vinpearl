@@ -1,0 +1,56 @@
+[
+  {
+    "id": "nha_sr_001",
+    "userId": "nha_u_001",
+    "type": "restaurant_booking",
+    "status": "confirmed",
+    "time": "2026-06-13T18:30:00+07:00",
+    "detail": "Đã giữ bàn Cocoon Restaurant cho 5 người",
+    "linkedEntityId": "nha_rst_cocoon"
+  },
+  {
+    "id": "nha_sr_002",
+    "userId": "nha_u_001",
+    "type": "transport",
+    "status": "confirmed",
+    "time": "2026-06-13T08:35:00+07:00",
+    "detail": "Private van 7 chỗ đón tại sân bay Đà Nẵng đi Nam Hội An",
+    "linkedEntityId": "nha_gt_dad_7_20260613"
+  },
+  {
+    "id": "nha_sr_003",
+    "userId": "nha_u_003",
+    "type": "spa",
+    "status": "confirmed",
+    "time": "2026-06-27T16:00:00+07:00",
+    "detail": "Đã đặt Akoya Spa couple session 90 phút",
+    "linkedEntityId": "nha_a_spa_akoya"
+  },
+  {
+    "id": "nha_sr_004",
+    "userId": "nha_u_004",
+    "type": "buggy",
+    "status": "confirmed",
+    "time": "2026-06-09T14:15:00+07:00",
+    "detail": "Buggy hỗ trợ người lớn tuổi từ Folk Culture về resort nghỉ trưa",
+    "linkedEntityId": "nha_tr_buggy"
+  },
+  {
+    "id": "nha_sr_005",
+    "userId": "nha_u_005",
+    "type": "group_dining",
+    "status": "pending",
+    "time": "2026-07-02T19:00:00+07:00",
+    "detail": "Đang giữ BBQ & Beer cho 18 người",
+    "linkedEntityId": "nha_rst_bbq_team"
+  },
+  {
+    "id": "nha_sr_006",
+    "userId": "nha_u_002",
+    "type": "fastpass",
+    "status": "confirmed",
+    "time": "2026-06-21T10:00:00+07:00",
+    "detail": "Đã thêm Adventure Land Fastpass do queue dự báo cao",
+    "linkedEntityId": "nha_t_fastpass_adventure"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "hl_bk_001",
+    "userId": "hl_u_001",
+    "status": "draft_plan",
+    "selectedTransferIds": [
+      "hl_rt_han_limo_9_20260613",
+      "hl_rt_han_limo_9_20260615"
+    ],
+    "selectedHotelId": "hl_h_vinpearl_resort_spa",
+    "selectedRoomId": "hl_r_vp_family_connecting",
+    "selectedTicketId": "hl_t_resort_cruise_bundle",
+    "selectedTransportIds": [
+      "hl_tr_resort_boat",
+      "hl_tr_limo_9"
+    ],
+    "selectedCruiseId": "hl_cruise_day_shared_20260614",
+    "estimatedTotal": 38600000,
+    "currency": "VND",
+    "confidence": 0.9,
+    "explain": [
+      "Đi đường bộ từ Hà Nội là phương án chính, không cần bay",
+      "Connecting Bay View Rooms đủ sức chứa và gần thang máy cho người lớn tuổi",
+      "Cruise đặt vào ngày 2 để có buffer nếu ngày 1 mưa/gió"
+    ]
+  },
+  {
+    "id": "hl_bk_002",
+    "userId": "hl_u_003",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vn1171_20260627",
+      "vn1180_20260629"
+    ],
+    "selectedTransferIds": [
+      "hl_rt_hph_7_20260627"
+    ],
+    "selectedHotelId": "hl_h_vinpearl_resort_spa",
+    "selectedRoomId": "hl_r_vp_executive_suite",
+    "selectedTicketId": "hl_t_sunset_cruise",
+    "selectedTransportIds": [
+      "hl_tr_private_boat",
+      "hl_tr_city_taxi"
+    ],
+    "selectedCruiseId": "hl_cruise_sunset_20260628",
+    "estimatedTotal": 42500000,
+    "currency": "VND",
+    "confidence": 0.86,
+    "explain": [
+      "Suite bay view + sunset cruise phù hợp cặp đôi",
+      "Spa voucher tạo upsell tự nhiên nếu thời tiết xấu",
+      "Private boat chỉ nên giữ nếu vịnh êm"
+    ]
+  },
+  {
+    "id": "hl_bk_003",
+    "userId": "hl_u_005",
+    "status": "draft_plan",
+    "selectedTransferIds": [
+      "hl_rt_han_van_16_20260702",
+      "hl_rt_han_van_16_20260704"
+    ],
+    "selectedHotelId": "hl_h_team_resort",
+    "selectedRoomId": "hl_r_team_bulk",
+    "selectedTicketId": "hl_t_group_waterpark",
+    "selectedTransportIds": [
+      "hl_tr_van_16",
+      "hl_tr_cruise_shuttle"
+    ],
+    "selectedCruiseId": "hl_cruise_party_group_20260703",
+    "estimatedTotal": 58500000,
+    "currency": "VND",
+    "confidence": 0.84,
+    "explain": [
+      "Group twin package tối ưu cho 16 người",
+      "Private van 16 chỗ phù hợp team building từ Hà Nội",
+      "Cruise party có backup sang beach challenge nếu vịnh weather hold"
+    ]
+  }
+]

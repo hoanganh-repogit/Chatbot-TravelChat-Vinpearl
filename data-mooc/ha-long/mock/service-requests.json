@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hl_sr_001",
+    "userId": "hl_u_001",
+    "type": "restaurant_booking",
+    "status": "confirmed",
+    "time": "2026-06-13T18:30:00+07:00",
+    "detail": "Đã giữ bàn Bay View Restaurant cho 5 người tại Vinpearl Đảo Rều",
+    "linkedEntityId": "hl_rst_bayview"
+  },
+  {
+    "id": "hl_sr_002",
+    "userId": "hl_u_001",
+    "type": "transport",
+    "status": "confirmed",
+    "time": "2026-06-13T08:00:00+07:00",
+    "detail": "Limousine 9 chỗ đón tại Hà Nội, nối chuyến resort boat sang Đảo Rều",
+    "linkedEntityId": "hl_rt_han_limo_9_20260613"
+  },
+  {
+    "id": "hl_sr_003",
+    "userId": "hl_u_003",
+    "type": "spa",
+    "status": "confirmed",
+    "time": "2026-06-27T16:00:00+07:00",
+    "detail": "Đã đặt Vinpearl Spa couple session 90 phút",
+    "linkedEntityId": "hl_a_spa"
+  },
+  {
+    "id": "hl_sr_004",
+    "userId": "hl_u_004",
+    "type": "cruise_hold",
+    "status": "pending",
+    "time": "2026-06-09T08:30:00+07:00",
+    "detail": "Đang giữ slot Private Family Cruise, chờ xác nhận điều kiện vịnh",
+    "linkedEntityId": "hl_cruise_private_family_20260609"
+  },
+  {
+    "id": "hl_sr_005",
+    "userId": "hl_u_005",
+    "type": "group_dining",
+    "status": "pending",
+    "time": "2026-07-02T19:00:00+07:00",
+    "detail": "Đang giữ chỗ BBQ & Beer cho 16 người tại Bãi Cháy",
+    "linkedEntityId": "hl_rst_bbq_team"
+  },
+  {
+    "id": "hl_sr_006",
+    "userId": "hl_u_002",
+    "type": "fastpass",
+    "status": "confirmed",
+    "time": "2026-06-21T10:00:00+07:00",
+    "detail": "Đã thêm Dragon Park Fastpass do queue dự báo cao",
+    "linkedEntityId": "hl_t_fastpass_dragon"
+  }
+]

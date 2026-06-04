@@ -1,0 +1,4032 @@
+[
+  {
+    "id": "inv_r_2br_villa_20260604",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-04",
+    "availableUnits": 0,
+    "pricePerNight": 6584000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260605",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-05",
+    "availableUnits": 1,
+    "pricePerNight": 7922000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260606",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-06",
+    "availableUnits": 1,
+    "pricePerNight": 8313000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260607",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-07",
+    "availableUnits": 1,
+    "pricePerNight": 8573000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260608",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-08",
+    "availableUnits": 0,
+    "pricePerNight": 6821000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260609",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-09",
+    "availableUnits": 1,
+    "pricePerNight": 6990000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260610",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-10",
+    "availableUnits": 0,
+    "pricePerNight": 7239000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260611",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-11",
+    "availableUnits": 1,
+    "pricePerNight": 7004000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260612",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-12",
+    "availableUnits": 1,
+    "pricePerNight": 7949000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260613",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-13",
+    "availableUnits": 0,
+    "pricePerNight": 7980000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260614",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-14",
+    "availableUnits": 1,
+    "pricePerNight": 8036000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260615",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-15",
+    "availableUnits": 1,
+    "pricePerNight": 7091000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260616",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-16",
+    "availableUnits": 1,
+    "pricePerNight": 6842000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260617",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-17",
+    "availableUnits": 1,
+    "pricePerNight": 6821000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260618",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-18",
+    "availableUnits": 1,
+    "pricePerNight": 7326000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260619",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-19",
+    "availableUnits": 0,
+    "pricePerNight": 8536000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260620",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-20",
+    "availableUnits": 0,
+    "pricePerNight": 9277000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260621",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-21",
+    "availableUnits": 0,
+    "pricePerNight": 9337000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260622",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-22",
+    "availableUnits": 1,
+    "pricePerNight": 7931000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260623",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-23",
+    "availableUnits": 1,
+    "pricePerNight": 7436000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260624",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-24",
+    "availableUnits": 1,
+    "pricePerNight": 7594000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260625",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-25",
+    "availableUnits": 1,
+    "pricePerNight": 7431000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260626",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-26",
+    "availableUnits": 1,
+    "pricePerNight": 8699000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260627",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-27",
+    "availableUnits": 0,
+    "pricePerNight": 9019000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260628",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-28",
+    "availableUnits": 0,
+    "pricePerNight": 9361000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260629",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-29",
+    "availableUnits": 1,
+    "pricePerNight": 8107000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260630",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-30",
+    "availableUnits": 0,
+    "pricePerNight": 8001000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_2br_villa_20260701",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-01",
+    "availableUnits": 1,
+    "pricePerNight": 8207000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260702",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-02",
+    "availableUnits": 1,
+    "pricePerNight": 7324000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_2br_villa_20260703",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-03",
+    "availableUnits": 1,
+    "pricePerNight": 9281000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_2br_villa_20260704",
+    "roomId": "r_2br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-04",
+    "availableUnits": 1,
+    "pricePerNight": 9484000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260604",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-04",
+    "availableUnits": 1,
+    "pricePerNight": 9516000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260605",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-05",
+    "availableUnits": 1,
+    "pricePerNight": 11265000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260606",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-06",
+    "availableUnits": 0,
+    "pricePerNight": 10815000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260607",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-07",
+    "availableUnits": 0,
+    "pricePerNight": 10470000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260608",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-08",
+    "availableUnits": 1,
+    "pricePerNight": 9425000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260609",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-09",
+    "availableUnits": 1,
+    "pricePerNight": 9652000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260610",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-10",
+    "availableUnits": 1,
+    "pricePerNight": 9003000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260611",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-11",
+    "availableUnits": 1,
+    "pricePerNight": 9512000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260612",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-12",
+    "availableUnits": 1,
+    "pricePerNight": 10999000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260613",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-13",
+    "availableUnits": 0,
+    "pricePerNight": 11315000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260614",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-14",
+    "availableUnits": 0,
+    "pricePerNight": 10501000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260615",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-15",
+    "availableUnits": 1,
+    "pricePerNight": 9768000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260616",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-16",
+    "availableUnits": 1,
+    "pricePerNight": 9538000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260617",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-17",
+    "availableUnits": 1,
+    "pricePerNight": 9924000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260618",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-18",
+    "availableUnits": 1,
+    "pricePerNight": 9444000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260619",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-19",
+    "availableUnits": 1,
+    "pricePerNight": 10850000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260620",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-20",
+    "availableUnits": 0,
+    "pricePerNight": 11880000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260621",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-21",
+    "availableUnits": 0,
+    "pricePerNight": 12628000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260622",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-22",
+    "availableUnits": 0,
+    "pricePerNight": 9910000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260623",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-23",
+    "availableUnits": 0,
+    "pricePerNight": 10220000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260624",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-24",
+    "availableUnits": 1,
+    "pricePerNight": 10814000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260625",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-25",
+    "availableUnits": 1,
+    "pricePerNight": 10626000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_3br_villa_20260626",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-26",
+    "availableUnits": 1,
+    "pricePerNight": 11544000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260627",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-27",
+    "availableUnits": 1,
+    "pricePerNight": 12865000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260628",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-28",
+    "availableUnits": 0,
+    "pricePerNight": 12093000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260629",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-29",
+    "availableUnits": 1,
+    "pricePerNight": 9983000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260630",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-30",
+    "availableUnits": 1,
+    "pricePerNight": 10048000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260701",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-01",
+    "availableUnits": 1,
+    "pricePerNight": 10294000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260702",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-02",
+    "availableUnits": 1,
+    "pricePerNight": 10640000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_3br_villa_20260703",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-03",
+    "availableUnits": 0,
+    "pricePerNight": 12421000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_3br_villa_20260704",
+    "roomId": "r_3br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-04",
+    "availableUnits": 0,
+    "pricePerNight": 12130000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260604",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-04",
+    "availableUnits": 6,
+    "pricePerNight": 12900000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260605",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-05",
+    "availableUnits": 7,
+    "pricePerNight": 15705000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260606",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-06",
+    "availableUnits": 3,
+    "pricePerNight": 15359000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260607",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-07",
+    "availableUnits": 3,
+    "pricePerNight": 14675000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260608",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-08",
+    "availableUnits": 6,
+    "pricePerNight": 12380000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260609",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-09",
+    "availableUnits": 6,
+    "pricePerNight": 12919000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260610",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-10",
+    "availableUnits": 5,
+    "pricePerNight": 13695000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260611",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-11",
+    "availableUnits": 5,
+    "pricePerNight": 12828000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260612",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-12",
+    "availableUnits": 5,
+    "pricePerNight": 15374000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260613",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-13",
+    "availableUnits": 6,
+    "pricePerNight": 14708000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260614",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-14",
+    "availableUnits": 5,
+    "pricePerNight": 16032000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260615",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-15",
+    "availableUnits": 6,
+    "pricePerNight": 12328000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260616",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-16",
+    "availableUnits": 5,
+    "pricePerNight": 12565000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260617",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-17",
+    "availableUnits": 5,
+    "pricePerNight": 12827000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260618",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-18",
+    "availableUnits": 5,
+    "pricePerNight": 12904000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260619",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-19",
+    "availableUnits": 4,
+    "pricePerNight": 14666000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260620",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-20",
+    "availableUnits": 6,
+    "pricePerNight": 16655000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260621",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-21",
+    "availableUnits": 6,
+    "pricePerNight": 17854000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260622",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-22",
+    "availableUnits": 0,
+    "pricePerNight": 14033000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260623",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-23",
+    "availableUnits": 7,
+    "pricePerNight": 14525000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260624",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-24",
+    "availableUnits": 6,
+    "pricePerNight": 14232000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260625",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-25",
+    "availableUnits": 7,
+    "pricePerNight": 14250000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260626",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-26",
+    "availableUnits": 4,
+    "pricePerNight": 16590000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260627",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-27",
+    "availableUnits": 5,
+    "pricePerNight": 15990000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260628",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-28",
+    "availableUnits": 1,
+    "pricePerNight": 17500000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260629",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-29",
+    "availableUnits": 0,
+    "pricePerNight": 15048000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_4br_villa_20260630",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-06-30",
+    "availableUnits": 7,
+    "pricePerNight": 14158000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260701",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-01",
+    "availableUnits": 4,
+    "pricePerNight": 13887000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_4br_villa_20260702",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-02",
+    "availableUnits": 0,
+    "pricePerNight": 15347000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260703",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-03",
+    "availableUnits": 4,
+    "pricePerNight": 17391000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_4br_villa_20260704",
+    "roomId": "r_4br_villa",
+    "hotelId": "h_wonderworld",
+    "date": "2026-07-04",
+    "availableUnits": 6,
+    "pricePerNight": 17904000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260604",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-04",
+    "availableUnits": 5,
+    "pricePerNight": 5511000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260605",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-05",
+    "availableUnits": 7,
+    "pricePerNight": 6070000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260606",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-06",
+    "availableUnits": 0,
+    "pricePerNight": 6532000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260607",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-07",
+    "availableUnits": 6,
+    "pricePerNight": 6014000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260608",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-08",
+    "availableUnits": 6,
+    "pricePerNight": 5113000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260609",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-09",
+    "availableUnits": 7,
+    "pricePerNight": 5395000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260610",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-10",
+    "availableUnits": 7,
+    "pricePerNight": 5115000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260611",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-11",
+    "availableUnits": 7,
+    "pricePerNight": 5039000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260612",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-12",
+    "availableUnits": 5,
+    "pricePerNight": 6450000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260613",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-13",
+    "availableUnits": 4,
+    "pricePerNight": 6364000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260614",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-14",
+    "availableUnits": 6,
+    "pricePerNight": 6123000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260615",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-15",
+    "availableUnits": 7,
+    "pricePerNight": 5181000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260616",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-16",
+    "availableUnits": 6,
+    "pricePerNight": 5038000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260617",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-17",
+    "availableUnits": 0,
+    "pricePerNight": 5511000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260618",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-18",
+    "availableUnits": 6,
+    "pricePerNight": 5048000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260619",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-19",
+    "availableUnits": 5,
+    "pricePerNight": 6299000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260620",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-20",
+    "availableUnits": 2,
+    "pricePerNight": 7147000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260621",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-21",
+    "availableUnits": 6,
+    "pricePerNight": 6896000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260622",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-22",
+    "availableUnits": 6,
+    "pricePerNight": 6176000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260623",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-23",
+    "availableUnits": 7,
+    "pricePerNight": 5618000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260624",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-24",
+    "availableUnits": 6,
+    "pricePerNight": 5956000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260625",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-25",
+    "availableUnits": 6,
+    "pricePerNight": 5862000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260626",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-26",
+    "availableUnits": 0,
+    "pricePerNight": 7001000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260627",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-27",
+    "availableUnits": 7,
+    "pricePerNight": 7040000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260628",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-28",
+    "availableUnits": 6,
+    "pricePerNight": 7272000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260629",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-29",
+    "availableUnits": 4,
+    "pricePerNight": 5998000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260630",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-30",
+    "availableUnits": 4,
+    "pricePerNight": 6050000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260701",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-01",
+    "availableUnits": 6,
+    "pricePerNight": 6247000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260702",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-02",
+    "availableUnits": 5,
+    "pricePerNight": 5821000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260703",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-03",
+    "availableUnits": 3,
+    "pricePerNight": 7089000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_family_suite_spa_20260704",
+    "roomId": "r_family_suite_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-04",
+    "availableUnits": 2,
+    "pricePerNight": 7033000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260604",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-04",
+    "availableUnits": 6,
+    "pricePerNight": 3141000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260605",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-05",
+    "availableUnits": 6,
+    "pricePerNight": 3712000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260606",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-06",
+    "availableUnits": 7,
+    "pricePerNight": 3982000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260607",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-07",
+    "availableUnits": 3,
+    "pricePerNight": 4025000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260608",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-08",
+    "availableUnits": 6,
+    "pricePerNight": 3309000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260609",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-09",
+    "availableUnits": 6,
+    "pricePerNight": 3391000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260610",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-10",
+    "availableUnits": 5,
+    "pricePerNight": 3240000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260611",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-11",
+    "availableUnits": 6,
+    "pricePerNight": 3444000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260612",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-12",
+    "availableUnits": 6,
+    "pricePerNight": 3828000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260613",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-13",
+    "availableUnits": 6,
+    "pricePerNight": 3980000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260614",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-14",
+    "availableUnits": 6,
+    "pricePerNight": 4071000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260615",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-15",
+    "availableUnits": 5,
+    "pricePerNight": 3265000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260616",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-16",
+    "availableUnits": 5,
+    "pricePerNight": 3380000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260617",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-17",
+    "availableUnits": 0,
+    "pricePerNight": 3257000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260618",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-18",
+    "availableUnits": 6,
+    "pricePerNight": 3397000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260619",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-19",
+    "availableUnits": 6,
+    "pricePerNight": 3749000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260620",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-20",
+    "availableUnits": 7,
+    "pricePerNight": 4466000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260621",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-21",
+    "availableUnits": 2,
+    "pricePerNight": 4458000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260622",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-22",
+    "availableUnits": 7,
+    "pricePerNight": 3542000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260623",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-23",
+    "availableUnits": 0,
+    "pricePerNight": 3841000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260624",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-24",
+    "availableUnits": 5,
+    "pricePerNight": 3500000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260625",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-25",
+    "availableUnits": 4,
+    "pricePerNight": 3798000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260626",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-26",
+    "availableUnits": 4,
+    "pricePerNight": 4446000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260627",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-27",
+    "availableUnits": 6,
+    "pricePerNight": 4268000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260628",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-28",
+    "availableUnits": 4,
+    "pricePerNight": 4381000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260629",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-29",
+    "availableUnits": 0,
+    "pricePerNight": 3621000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260630",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-30",
+    "availableUnits": 6,
+    "pricePerNight": 3830000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260701",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-01",
+    "availableUnits": 5,
+    "pricePerNight": 3688000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260702",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-02",
+    "availableUnits": 7,
+    "pricePerNight": 3705000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260703",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-03",
+    "availableUnits": 4,
+    "pricePerNight": 4327000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_deluxe_spa_20260704",
+    "roomId": "r_deluxe_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-04",
+    "availableUnits": 0,
+    "pricePerNight": 4256000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260604",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-04",
+    "availableUnits": 5,
+    "pricePerNight": 5871000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260605",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-05",
+    "availableUnits": 7,
+    "pricePerNight": 7233000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260606",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-06",
+    "availableUnits": 7,
+    "pricePerNight": 7208000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260607",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-07",
+    "availableUnits": 4,
+    "pricePerNight": 7413000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260608",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-08",
+    "availableUnits": 7,
+    "pricePerNight": 6104000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260609",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-09",
+    "availableUnits": 7,
+    "pricePerNight": 6196000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260610",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-10",
+    "availableUnits": 6,
+    "pricePerNight": 5955000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260611",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-11",
+    "availableUnits": 5,
+    "pricePerNight": 6071000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260612",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-12",
+    "availableUnits": 3,
+    "pricePerNight": 7183000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260613",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-13",
+    "availableUnits": 5,
+    "pricePerNight": 7379000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260614",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-14",
+    "availableUnits": 7,
+    "pricePerNight": 7157000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260615",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-15",
+    "availableUnits": 5,
+    "pricePerNight": 5947000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260616",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-16",
+    "availableUnits": 6,
+    "pricePerNight": 6178000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260617",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-17",
+    "availableUnits": 7,
+    "pricePerNight": 6363000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260618",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-18",
+    "availableUnits": 5,
+    "pricePerNight": 6442000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260619",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-19",
+    "availableUnits": 5,
+    "pricePerNight": 7770000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260620",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-20",
+    "availableUnits": 4,
+    "pricePerNight": 7689000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260621",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-21",
+    "availableUnits": 6,
+    "pricePerNight": 8296000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260622",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-22",
+    "availableUnits": 5,
+    "pricePerNight": 6593000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260623",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-23",
+    "availableUnits": 5,
+    "pricePerNight": 7083000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260624",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-24",
+    "availableUnits": 7,
+    "pricePerNight": 6857000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260625",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-25",
+    "availableUnits": 5,
+    "pricePerNight": 6676000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260626",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-26",
+    "availableUnits": 3,
+    "pricePerNight": 7733000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260627",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-27",
+    "availableUnits": 3,
+    "pricePerNight": 7977000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260628",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-28",
+    "availableUnits": 7,
+    "pricePerNight": 8041000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260629",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-29",
+    "availableUnits": 6,
+    "pricePerNight": 7029000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260630",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-06-30",
+    "availableUnits": 6,
+    "pricePerNight": 6787000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260701",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-01",
+    "availableUnits": 7,
+    "pricePerNight": 6983000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260702",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-02",
+    "availableUnits": 7,
+    "pricePerNight": 7136000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260703",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-03",
+    "availableUnits": 1,
+    "pricePerNight": 8485000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_spa_20260704",
+    "roomId": "r_connecting_spa",
+    "hotelId": "h_resort_spa",
+    "date": "2026-07-04",
+    "availableUnits": 6,
+    "pricePerNight": 7683000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260604",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-04",
+    "availableUnits": 5,
+    "pricePerNight": 3494000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260605",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-05",
+    "availableUnits": 2,
+    "pricePerNight": 4419000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260606",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-06",
+    "availableUnits": 7,
+    "pricePerNight": 4532000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260607",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-07",
+    "availableUnits": 4,
+    "pricePerNight": 4403000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260608",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-08",
+    "availableUnits": 6,
+    "pricePerNight": 3543000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260609",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-09",
+    "availableUnits": 7,
+    "pricePerNight": 3612000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260610",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-10",
+    "availableUnits": 6,
+    "pricePerNight": 3694000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260611",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-11",
+    "availableUnits": 0,
+    "pricePerNight": 3628000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260612",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-12",
+    "availableUnits": 4,
+    "pricePerNight": 4470000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260613",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-13",
+    "availableUnits": 7,
+    "pricePerNight": 4406000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260614",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-14",
+    "availableUnits": 5,
+    "pricePerNight": 4143000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260615",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-15",
+    "availableUnits": 6,
+    "pricePerNight": 3873000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260616",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-16",
+    "availableUnits": 6,
+    "pricePerNight": 3815000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260617",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-17",
+    "availableUnits": 7,
+    "pricePerNight": 3595000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260618",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-18",
+    "availableUnits": 7,
+    "pricePerNight": 3680000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260619",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-19",
+    "availableUnits": 3,
+    "pricePerNight": 4402000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260620",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-20",
+    "availableUnits": 6,
+    "pricePerNight": 4838000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260621",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-21",
+    "availableUnits": 4,
+    "pricePerNight": 5022000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260622",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-22",
+    "availableUnits": 7,
+    "pricePerNight": 4307000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260623",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-23",
+    "availableUnits": 4,
+    "pricePerNight": 4270000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260624",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-24",
+    "availableUnits": 7,
+    "pricePerNight": 4244000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260625",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-25",
+    "availableUnits": 5,
+    "pricePerNight": 4072000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260626",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-26",
+    "availableUnits": 7,
+    "pricePerNight": 4799000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260627",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-27",
+    "availableUnits": 1,
+    "pricePerNight": 4945000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260628",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-28",
+    "availableUnits": 5,
+    "pricePerNight": 4880000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260629",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-29",
+    "availableUnits": 6,
+    "pricePerNight": 3969000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260630",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-30",
+    "availableUnits": 7,
+    "pricePerNight": 4025000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260701",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-01",
+    "availableUnits": 4,
+    "pricePerNight": 4050000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260702",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-02",
+    "availableUnits": 7,
+    "pricePerNight": 3930000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260703",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-03",
+    "availableUnits": 6,
+    "pricePerNight": 4656000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_connecting_fiesta_20260704",
+    "roomId": "r_connecting_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-04",
+    "availableUnits": 2,
+    "pricePerNight": 5033000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260604",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-04",
+    "availableUnits": 5,
+    "pricePerNight": 1727000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260605",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-05",
+    "availableUnits": 4,
+    "pricePerNight": 1989000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260606",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-06",
+    "availableUnits": 3,
+    "pricePerNight": 1890000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260607",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-07",
+    "availableUnits": 5,
+    "pricePerNight": 1919000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260608",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-08",
+    "availableUnits": 7,
+    "pricePerNight": 1702000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260609",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-09",
+    "availableUnits": 6,
+    "pricePerNight": 1586000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260610",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-10",
+    "availableUnits": 6,
+    "pricePerNight": 1728000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260611",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-11",
+    "availableUnits": 6,
+    "pricePerNight": 1697000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260612",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-12",
+    "availableUnits": 6,
+    "pricePerNight": 1959000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260613",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-13",
+    "availableUnits": 4,
+    "pricePerNight": 2100000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260614",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-14",
+    "availableUnits": 4,
+    "pricePerNight": 1892000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260615",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-15",
+    "availableUnits": 5,
+    "pricePerNight": 1770000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260616",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-16",
+    "availableUnits": 7,
+    "pricePerNight": 1683000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260617",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-17",
+    "availableUnits": 7,
+    "pricePerNight": 1743000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260618",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-18",
+    "availableUnits": 6,
+    "pricePerNight": 1686000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260619",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-19",
+    "availableUnits": 3,
+    "pricePerNight": 1961000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260620",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-20",
+    "availableUnits": 3,
+    "pricePerNight": 2146000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260621",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-21",
+    "availableUnits": 4,
+    "pricePerNight": 2136000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260622",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-22",
+    "availableUnits": 6,
+    "pricePerNight": 1991000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260623",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-23",
+    "availableUnits": 6,
+    "pricePerNight": 1967000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260624",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-24",
+    "availableUnits": 7,
+    "pricePerNight": 1989000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260625",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-25",
+    "availableUnits": 5,
+    "pricePerNight": 1903000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260626",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-26",
+    "availableUnits": 4,
+    "pricePerNight": 2259000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260627",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-27",
+    "availableUnits": 7,
+    "pricePerNight": 2067000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260628",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-28",
+    "availableUnits": 0,
+    "pricePerNight": 2140000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260629",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-29",
+    "availableUnits": 6,
+    "pricePerNight": 1885000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260630",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-30",
+    "availableUnits": 4,
+    "pricePerNight": 1937000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260701",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-01",
+    "availableUnits": 5,
+    "pricePerNight": 1898000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260702",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-02",
+    "availableUnits": 6,
+    "pricePerNight": 1986000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260703",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-03",
+    "availableUnits": 2,
+    "pricePerNight": 2150000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_twin_fiesta_20260704",
+    "roomId": "r_twin_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-04",
+    "availableUnits": 3,
+    "pricePerNight": 2127000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260604",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-04",
+    "availableUnits": 0,
+    "pricePerNight": 9551000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260605",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-05",
+    "availableUnits": 0,
+    "pricePerNight": 11551000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260606",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-06",
+    "availableUnits": 0,
+    "pricePerNight": 10953000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260607",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-07",
+    "availableUnits": 0,
+    "pricePerNight": 11485000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260608",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-08",
+    "availableUnits": 0,
+    "pricePerNight": 9352000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260609",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-09",
+    "availableUnits": 0,
+    "pricePerNight": 9826000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260610",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-10",
+    "availableUnits": 0,
+    "pricePerNight": 9016000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260611",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-11",
+    "availableUnits": 0,
+    "pricePerNight": 9167000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260612",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-12",
+    "availableUnits": 0,
+    "pricePerNight": 10893000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260613",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-13",
+    "availableUnits": 0,
+    "pricePerNight": 10854000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260614",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-14",
+    "availableUnits": 0,
+    "pricePerNight": 10842000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260615",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-15",
+    "availableUnits": 0,
+    "pricePerNight": 9040000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260616",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-16",
+    "availableUnits": 0,
+    "pricePerNight": 9965000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260617",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-17",
+    "availableUnits": 0,
+    "pricePerNight": 9459000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260618",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-18",
+    "availableUnits": 0,
+    "pricePerNight": 9286000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260619",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-19",
+    "availableUnits": 0,
+    "pricePerNight": 11394000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260620",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-20",
+    "availableUnits": 0,
+    "pricePerNight": 12965000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260621",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-21",
+    "availableUnits": 0,
+    "pricePerNight": 12961000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260622",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-22",
+    "availableUnits": 0,
+    "pricePerNight": 10619000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260623",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-23",
+    "availableUnits": 0,
+    "pricePerNight": 11095000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260624",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-24",
+    "availableUnits": 0,
+    "pricePerNight": 11160000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260625",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-25",
+    "availableUnits": 0,
+    "pricePerNight": 10678000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260626",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-26",
+    "availableUnits": 0,
+    "pricePerNight": 12338000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260627",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-27",
+    "availableUnits": 0,
+    "pricePerNight": 11842000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260628",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-28",
+    "availableUnits": 0,
+    "pricePerNight": 11627000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260629",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-29",
+    "availableUnits": 0,
+    "pricePerNight": 10946000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260630",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-06-30",
+    "availableUnits": 0,
+    "pricePerNight": 10506000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260701",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-01",
+    "availableUnits": 0,
+    "pricePerNight": 10836000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260702",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-02",
+    "availableUnits": 0,
+    "pricePerNight": 11169000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260703",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-03",
+    "availableUnits": 0,
+    "pricePerNight": 12700000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_group_fiesta_20260704",
+    "roomId": "r_group_fiesta",
+    "hotelId": "h_fiesta",
+    "date": "2026-07-04",
+    "availableUnits": 0,
+    "pricePerNight": 11623000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260604",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-04",
+    "availableUnits": 6,
+    "pricePerNight": 5825000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260605",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-05",
+    "availableUnits": 6,
+    "pricePerNight": 6742000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260606",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-06",
+    "availableUnits": 3,
+    "pricePerNight": 6850000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260607",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-07",
+    "availableUnits": 6,
+    "pricePerNight": 7103000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260608",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-08",
+    "availableUnits": 7,
+    "pricePerNight": 5783000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260609",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-09",
+    "availableUnits": 6,
+    "pricePerNight": 5885000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260610",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-10",
+    "availableUnits": 5,
+    "pricePerNight": 5833000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260611",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-11",
+    "availableUnits": 5,
+    "pricePerNight": 5676000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260612",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-12",
+    "availableUnits": 6,
+    "pricePerNight": 6433000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260613",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-13",
+    "availableUnits": 3,
+    "pricePerNight": 6769000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260614",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-14",
+    "availableUnits": 6,
+    "pricePerNight": 6436000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260615",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-15",
+    "availableUnits": 5,
+    "pricePerNight": 5980000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260616",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-16",
+    "availableUnits": 5,
+    "pricePerNight": 5721000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260617",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-17",
+    "availableUnits": 6,
+    "pricePerNight": 5828000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260618",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-18",
+    "availableUnits": 5,
+    "pricePerNight": 5925000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260619",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-19",
+    "availableUnits": 0,
+    "pricePerNight": 6680000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260620",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-20",
+    "availableUnits": 7,
+    "pricePerNight": 7805000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260621",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-21",
+    "availableUnits": 1,
+    "pricePerNight": 7240000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260622",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-22",
+    "availableUnits": 4,
+    "pricePerNight": 6757000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260623",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-23",
+    "availableUnits": 4,
+    "pricePerNight": 6692000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260624",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-24",
+    "availableUnits": 4,
+    "pricePerNight": 6304000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260625",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-25",
+    "availableUnits": 4,
+    "pricePerNight": 6121000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260626",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-26",
+    "availableUnits": 7,
+    "pricePerNight": 7332000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260627",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-27",
+    "availableUnits": 3,
+    "pricePerNight": 6992000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260628",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-28",
+    "availableUnits": 1,
+    "pricePerNight": 7617000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260629",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-29",
+    "availableUnits": 5,
+    "pricePerNight": 6207000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260630",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-06-30",
+    "availableUnits": 7,
+    "pricePerNight": 6680000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260701",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-07-01",
+    "availableUnits": 7,
+    "pricePerNight": 6484000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_1br_20260702",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-07-02",
+    "availableUnits": 0,
+    "pricePerNight": 6468000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_1br_20260703",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-07-03",
+    "availableUnits": 4,
+    "pricePerNight": 7031000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_1br_20260704",
+    "roomId": "r_melia_1br",
+    "hotelId": "h_melia",
+    "date": "2026-07-04",
+    "availableUnits": 7,
+    "pricePerNight": 7460000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260604",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-04",
+    "availableUnits": 1,
+    "pricePerNight": 7510000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260605",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-05",
+    "availableUnits": 1,
+    "pricePerNight": 9441000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260606",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-06",
+    "availableUnits": 1,
+    "pricePerNight": 9670000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260607",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-07",
+    "availableUnits": 1,
+    "pricePerNight": 8675000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260608",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-08",
+    "availableUnits": 1,
+    "pricePerNight": 7867000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260609",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-09",
+    "availableUnits": 0,
+    "pricePerNight": 7610000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260610",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-10",
+    "availableUnits": 1,
+    "pricePerNight": 7587000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260611",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-11",
+    "availableUnits": 1,
+    "pricePerNight": 7464000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260612",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-12",
+    "availableUnits": 1,
+    "pricePerNight": 8933000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260613",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-13",
+    "availableUnits": 1,
+    "pricePerNight": 8671000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260614",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-14",
+    "availableUnits": 0,
+    "pricePerNight": 8754000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260615",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-15",
+    "availableUnits": 1,
+    "pricePerNight": 7368000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260616",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-16",
+    "availableUnits": 1,
+    "pricePerNight": 7957000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260617",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-17",
+    "availableUnits": 1,
+    "pricePerNight": 7848000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260618",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-18",
+    "availableUnits": 1,
+    "pricePerNight": 7991000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260619",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-19",
+    "availableUnits": 1,
+    "pricePerNight": 8834000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260620",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-20",
+    "availableUnits": 1,
+    "pricePerNight": 9736000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260621",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-21",
+    "availableUnits": 0,
+    "pricePerNight": 10670000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260622",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-22",
+    "availableUnits": 1,
+    "pricePerNight": 8890000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260623",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-23",
+    "availableUnits": 1,
+    "pricePerNight": 8964000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260624",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-24",
+    "availableUnits": 1,
+    "pricePerNight": 8487000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260625",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-25",
+    "availableUnits": 1,
+    "pricePerNight": 8272000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260626",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-26",
+    "availableUnits": 1,
+    "pricePerNight": 10569000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260627",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-27",
+    "availableUnits": 0,
+    "pricePerNight": 10509000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260628",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-28",
+    "availableUnits": 1,
+    "pricePerNight": 10593000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260629",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-29",
+    "availableUnits": 1,
+    "pricePerNight": 8372000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260630",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-06-30",
+    "availableUnits": 1,
+    "pricePerNight": 8682000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260701",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-07-01",
+    "availableUnits": 1,
+    "pricePerNight": 8951000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_melia_2br_20260702",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-07-02",
+    "availableUnits": 1,
+    "pricePerNight": 8673000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_melia_2br_20260703",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-07-03",
+    "availableUnits": 0,
+    "pricePerNight": 9651000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_melia_2br_20260704",
+    "roomId": "r_melia_2br",
+    "hotelId": "h_melia",
+    "date": "2026-07-04",
+    "availableUnits": 1,
+    "pricePerNight": 10128000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260604",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-04",
+    "availableUnits": 1,
+    "pricePerNight": 9334000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260605",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-05",
+    "availableUnits": 0,
+    "pricePerNight": 10921000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260606",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-06",
+    "availableUnits": 1,
+    "pricePerNight": 10053000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260607",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-07",
+    "availableUnits": 1,
+    "pricePerNight": 10434000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260608",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-08",
+    "availableUnits": 1,
+    "pricePerNight": 9412000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260609",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-09",
+    "availableUnits": 0,
+    "pricePerNight": 9031000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260610",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-10",
+    "availableUnits": 1,
+    "pricePerNight": 9014000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260611",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-11",
+    "availableUnits": 1,
+    "pricePerNight": 9160000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260612",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-12",
+    "availableUnits": 1,
+    "pricePerNight": 10154000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260613",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-13",
+    "availableUnits": 1,
+    "pricePerNight": 10410000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260614",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-14",
+    "availableUnits": 1,
+    "pricePerNight": 10541000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260615",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-15",
+    "availableUnits": 1,
+    "pricePerNight": 9170000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260616",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-16",
+    "availableUnits": 1,
+    "pricePerNight": 9250000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260617",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-17",
+    "availableUnits": 1,
+    "pricePerNight": 8951000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260618",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-18",
+    "availableUnits": 1,
+    "pricePerNight": 8976000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260619",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-19",
+    "availableUnits": 1,
+    "pricePerNight": 11186000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260620",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-20",
+    "availableUnits": 0,
+    "pricePerNight": 11298000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260621",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-21",
+    "availableUnits": 0,
+    "pricePerNight": 11046000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260622",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-22",
+    "availableUnits": 1,
+    "pricePerNight": 10104000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260623",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-23",
+    "availableUnits": 1,
+    "pricePerNight": 9834000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260624",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-24",
+    "availableUnits": 1,
+    "pricePerNight": 10305000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260625",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-25",
+    "availableUnits": 1,
+    "pricePerNight": 10129000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260626",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-26",
+    "availableUnits": 0,
+    "pricePerNight": 12213000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260627",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-27",
+    "availableUnits": 1,
+    "pricePerNight": 12068000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260628",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-28",
+    "availableUnits": 0,
+    "pricePerNight": 12320000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260629",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-29",
+    "availableUnits": 1,
+    "pricePerNight": 9552000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260630",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-30",
+    "availableUnits": 1,
+    "pricePerNight": 9931000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260701",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-01",
+    "availableUnits": 1,
+    "pricePerNight": 10636000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260702",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-02",
+    "availableUnits": 1,
+    "pricePerNight": 9906000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260703",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-03",
+    "availableUnits": 0,
+    "pricePerNight": 11100000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_3br_20260704",
+    "roomId": "r_discovery_3br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-04",
+    "availableUnits": 1,
+    "pricePerNight": 11083000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260604",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-04",
+    "availableUnits": 1,
+    "pricePerNight": 14091000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260605",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-05",
+    "availableUnits": 1,
+    "pricePerNight": 15582000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260606",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-06",
+    "availableUnits": 1,
+    "pricePerNight": 15603000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260607",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-07",
+    "availableUnits": 1,
+    "pricePerNight": 16474000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260608",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-08",
+    "availableUnits": 1,
+    "pricePerNight": 13960000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260609",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-09",
+    "availableUnits": 1,
+    "pricePerNight": 13685000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260610",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-10",
+    "availableUnits": 1,
+    "pricePerNight": 14239000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260611",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-11",
+    "availableUnits": 1,
+    "pricePerNight": 13989000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260612",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-12",
+    "availableUnits": 1,
+    "pricePerNight": 15924000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260613",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-13",
+    "availableUnits": 0,
+    "pricePerNight": 16243000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260614",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-14",
+    "availableUnits": 1,
+    "pricePerNight": 16102000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260615",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-15",
+    "availableUnits": 1,
+    "pricePerNight": 14062000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260616",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-16",
+    "availableUnits": 1,
+    "pricePerNight": 14604000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260617",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-17",
+    "availableUnits": 1,
+    "pricePerNight": 14463000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260618",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-18",
+    "availableUnits": 1,
+    "pricePerNight": 14459000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260619",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-19",
+    "availableUnits": 1,
+    "pricePerNight": 17230000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260620",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-20",
+    "availableUnits": 1,
+    "pricePerNight": 17818000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260621",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-21",
+    "availableUnits": 1,
+    "pricePerNight": 18015000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260622",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-22",
+    "availableUnits": 1,
+    "pricePerNight": 15135000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260623",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-23",
+    "availableUnits": 1,
+    "pricePerNight": 14988000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260624",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-24",
+    "availableUnits": 1,
+    "pricePerNight": 14672000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260625",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-25",
+    "availableUnits": 1,
+    "pricePerNight": 15424000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260626",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-26",
+    "availableUnits": 0,
+    "pricePerNight": 18771000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260627",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-27",
+    "availableUnits": 0,
+    "pricePerNight": 17615000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260628",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-28",
+    "availableUnits": 0,
+    "pricePerNight": 18647000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260629",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-29",
+    "availableUnits": 1,
+    "pricePerNight": 15687000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260630",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-06-30",
+    "availableUnits": 1,
+    "pricePerNight": 15887000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260701",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-01",
+    "availableUnits": 1,
+    "pricePerNight": 15905000,
+    "currency": "VND",
+    "ratePlan": "vinclub_member_rate"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260702",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-02",
+    "availableUnits": 1,
+    "pricePerNight": 14823000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260703",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-03",
+    "availableUnits": 0,
+    "pricePerNight": 18345000,
+    "currency": "VND",
+    "ratePlan": "breakfast_flexible"
+  },
+  {
+    "id": "inv_r_discovery_4br_20260704",
+    "roomId": "r_discovery_4br",
+    "hotelId": "h_discovery_coastalland",
+    "date": "2026-07-04",
+    "availableUnits": 1,
+    "pricePerNight": 18345000,
+    "currency": "VND",
+    "ratePlan": "prepaid_saver"
+  }
+]

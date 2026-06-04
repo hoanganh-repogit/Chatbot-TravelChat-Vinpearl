@@ -1,0 +1,165 @@
+[
+  {
+    "id": "nha_v_fnb_today",
+    "type": "F&B",
+    "title": "Giảm 30% F&B Resort/VinWonders - hết hạn hôm nay",
+    "value": 0.3,
+    "expires": "2026-06-13T23:59:00+07:00",
+    "minSpend": 400000,
+    "applicableZones": [
+      "Resort",
+      "VinWonders"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_vinwonders_family",
+    "type": "Ticket",
+    "title": "Giảm 15% Family Combo River Safari",
+    "value": 0.15,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 1800000,
+    "applicableZones": [
+      "VinWonders",
+      "River Safari"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_spa_akoya",
+    "type": "Spa",
+    "title": "Giảm 25% Akoya Spa",
+    "value": 0.25,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1200000,
+    "applicableZones": [
+      "Resort"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_late_checkout",
+    "type": "Hotel",
+    "title": "Late checkout đến 14:00",
+    "value": 0,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 0,
+    "applicableZones": [
+      "Resort",
+      "Villa Zone",
+      "Condotel"
+    ],
+    "tier": "Gold",
+    "stackable": true
+  },
+  {
+    "id": "nha_v_diamond_dining",
+    "type": "F&B",
+    "title": "Diamond Dining Privilege - giảm 35%",
+    "value": 0.35,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 800000,
+    "applicableZones": [
+      "Resort",
+      "VinWonders",
+      "Golf"
+    ],
+    "tier": "Diamond",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_water_drink",
+    "type": "Drink",
+    "title": "Buy 1 Get 1 Water World drink",
+    "value": 0.5,
+    "expires": "2026-06-20T23:59:00+07:00",
+    "minSpend": 220000,
+    "applicableZones": [
+      "Water World",
+      "Resort Pool"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_family_meal",
+    "type": "Meal",
+    "title": "Tặng kid meal tại Riverine",
+    "value": 150000,
+    "expires": "2026-06-24T23:59:00+07:00",
+    "minSpend": 1200000,
+    "applicableZones": [
+      "VinWonders"
+    ],
+    "tier": "Member",
+    "stackable": true
+  },
+  {
+    "id": "nha_v_oldtown_dining",
+    "type": "F&B",
+    "title": "Giảm 20% dinner Hội An Old Town",
+    "value": 0.2,
+    "expires": "2026-07-02T23:59:00+07:00",
+    "minSpend": 900000,
+    "applicableZones": [
+      "HoiAnOldTown"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_group_bbq",
+    "type": "F&B",
+    "title": "Group BBQ set giảm 18%",
+    "value": 0.18,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 3500000,
+    "applicableZones": [
+      "Resort/Event"
+    ],
+    "tier": "Gold",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_golf_dining",
+    "type": "Golf",
+    "title": "Golf + clubhouse dining giảm 15%",
+    "value": 0.15,
+    "expires": "2026-07-04T23:59:00+07:00",
+    "minSpend": 1500000,
+    "applicableZones": [
+      "Golf"
+    ],
+    "tier": "Platinum",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_rooftop",
+    "type": "Bar",
+    "title": "Rooftop sunset drink giảm 20%",
+    "value": 0.2,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 600000,
+    "applicableZones": [
+      "Resort"
+    ],
+    "tier": "Silver",
+    "stackable": false
+  },
+  {
+    "id": "nha_v_spa_tea",
+    "type": "Tea",
+    "title": "Tặng afternoon tea khi đặt Akoya Spa",
+    "value": 300000,
+    "expires": "2026-06-30T23:59:00+07:00",
+    "minSpend": 1500000,
+    "applicableZones": [
+      "Resort"
+    ],
+    "tier": "Silver",
+    "stackable": true
+  }
+]

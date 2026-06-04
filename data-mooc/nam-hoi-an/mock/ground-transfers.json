@@ -1,0 +1,4776 @@
+[
+  {
+    "id": "nha_gt_dad_7_20260604",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-04",
+    "capacity": 7,
+    "pricePerTrip": 805000,
+    "currency": "VND",
+    "estimatedDurationMin": 52,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260604",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-04",
+    "capacity": 16,
+    "pricePerTrip": 1361000,
+    "currency": "VND",
+    "estimatedDurationMin": 62,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260604",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-04",
+    "capacity": 29,
+    "pricePerTrip": 2379000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260604",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-04",
+    "capacity": 7,
+    "pricePerTrip": 405000,
+    "currency": "VND",
+    "estimatedDurationMin": 26,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260604",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-04",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260604",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-04",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260604",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-04",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260604",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-04",
+    "capacity": 7,
+    "pricePerTrip": 182000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260605",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-05",
+    "capacity": 7,
+    "pricePerTrip": 838000,
+    "currency": "VND",
+    "estimatedDurationMin": 68,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260605",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-05",
+    "capacity": 16,
+    "pricePerTrip": 1479000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260605",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-05",
+    "capacity": 29,
+    "pricePerTrip": 2473000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260605",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-05",
+    "capacity": 7,
+    "pricePerTrip": 448000,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260605",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-05",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260605",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-05",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260605",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-05",
+    "capacity": 6,
+    "pricePerTrip": 53000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260605",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-05",
+    "capacity": 7,
+    "pricePerTrip": 195000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260606",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-06",
+    "capacity": 7,
+    "pricePerTrip": 868000,
+    "currency": "VND",
+    "estimatedDurationMin": 59,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260606",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-06",
+    "capacity": 16,
+    "pricePerTrip": 1428000,
+    "currency": "VND",
+    "estimatedDurationMin": 70,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260606",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-06",
+    "capacity": 29,
+    "pricePerTrip": 2553000,
+    "currency": "VND",
+    "estimatedDurationMin": 76,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260606",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-06",
+    "capacity": 7,
+    "pricePerTrip": 442000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260606",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-06",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260606",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-06",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260606",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-06",
+    "capacity": 6,
+    "pricePerTrip": 55000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260606",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-06",
+    "capacity": 7,
+    "pricePerTrip": 203000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260607",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-07",
+    "capacity": 7,
+    "pricePerTrip": 869000,
+    "currency": "VND",
+    "estimatedDurationMin": 62,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260607",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-07",
+    "capacity": 16,
+    "pricePerTrip": 1510000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260607",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-07",
+    "capacity": 29,
+    "pricePerTrip": 2527000,
+    "currency": "VND",
+    "estimatedDurationMin": 78,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260607",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-07",
+    "capacity": 7,
+    "pricePerTrip": 443000,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260607",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-07",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260607",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-07",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260607",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-07",
+    "capacity": 6,
+    "pricePerTrip": 53000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260607",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-07",
+    "capacity": 7,
+    "pricePerTrip": 201000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260608",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-08",
+    "capacity": 7,
+    "pricePerTrip": 793000,
+    "currency": "VND",
+    "estimatedDurationMin": 60,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260608",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-08",
+    "capacity": 16,
+    "pricePerTrip": 1408000,
+    "currency": "VND",
+    "estimatedDurationMin": 56,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260608",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-08",
+    "capacity": 29,
+    "pricePerTrip": 2331000,
+    "currency": "VND",
+    "estimatedDurationMin": 76,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260608",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-08",
+    "capacity": 7,
+    "pricePerTrip": 439000,
+    "currency": "VND",
+    "estimatedDurationMin": 26,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260608",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-08",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 27,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260608",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-08",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260608",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-08",
+    "capacity": 6,
+    "pricePerTrip": 49000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260608",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-08",
+    "capacity": 7,
+    "pricePerTrip": 183000,
+    "currency": "VND",
+    "estimatedDurationMin": 14,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260609",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-09",
+    "capacity": 7,
+    "pricePerTrip": 773000,
+    "currency": "VND",
+    "estimatedDurationMin": 55,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260609",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-09",
+    "capacity": 16,
+    "pricePerTrip": 1397000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260609",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-09",
+    "capacity": 29,
+    "pricePerTrip": 2366000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260609",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-09",
+    "capacity": 7,
+    "pricePerTrip": 403000,
+    "currency": "VND",
+    "estimatedDurationMin": 23,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260609",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-09",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260609",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-09",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260609",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-09",
+    "capacity": 6,
+    "pricePerTrip": 51000,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260609",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-09",
+    "capacity": 7,
+    "pricePerTrip": 186000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260610",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-10",
+    "capacity": 7,
+    "pricePerTrip": 762000,
+    "currency": "VND",
+    "estimatedDurationMin": 56,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260610",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-10",
+    "capacity": 16,
+    "pricePerTrip": 1309000,
+    "currency": "VND",
+    "estimatedDurationMin": 65,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260610",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-10",
+    "capacity": 29,
+    "pricePerTrip": 2301000,
+    "currency": "VND",
+    "estimatedDurationMin": 69,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260610",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-10",
+    "capacity": 7,
+    "pricePerTrip": 411000,
+    "currency": "VND",
+    "estimatedDurationMin": 27,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260610",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-10",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 31,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260610",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-10",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260610",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-10",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260610",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-10",
+    "capacity": 7,
+    "pricePerTrip": 178000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260611",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-11",
+    "capacity": 7,
+    "pricePerTrip": 781000,
+    "currency": "VND",
+    "estimatedDurationMin": 51,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260611",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-11",
+    "capacity": 16,
+    "pricePerTrip": 1339000,
+    "currency": "VND",
+    "estimatedDurationMin": 61,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260611",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-11",
+    "capacity": 29,
+    "pricePerTrip": 2352000,
+    "currency": "VND",
+    "estimatedDurationMin": 70,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260611",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-11",
+    "capacity": 7,
+    "pricePerTrip": 411000,
+    "currency": "VND",
+    "estimatedDurationMin": 25,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260611",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-11",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260611",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-11",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260611",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-11",
+    "capacity": 6,
+    "pricePerTrip": 50000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260611",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-11",
+    "capacity": 7,
+    "pricePerTrip": 183000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260612",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-12",
+    "capacity": 7,
+    "pricePerTrip": 834000,
+    "currency": "VND",
+    "estimatedDurationMin": 57,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260612",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-12",
+    "capacity": 16,
+    "pricePerTrip": 1442000,
+    "currency": "VND",
+    "estimatedDurationMin": 65,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260612",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-12",
+    "capacity": 29,
+    "pricePerTrip": 2430000,
+    "currency": "VND",
+    "estimatedDurationMin": 72,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260612",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-12",
+    "capacity": 7,
+    "pricePerTrip": 457000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260612",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-12",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 32,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260612",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-12",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260612",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-12",
+    "capacity": 6,
+    "pricePerTrip": 54000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260612",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-12",
+    "capacity": 7,
+    "pricePerTrip": 200000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260613",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-13",
+    "capacity": 7,
+    "pricePerTrip": 870000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260613",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-13",
+    "capacity": 16,
+    "pricePerTrip": 1516000,
+    "currency": "VND",
+    "estimatedDurationMin": 65,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260613",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-13",
+    "capacity": 29,
+    "pricePerTrip": 2547000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260613",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-13",
+    "capacity": 7,
+    "pricePerTrip": 442000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260613",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-13",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260613",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-13",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260613",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-13",
+    "capacity": 6,
+    "pricePerTrip": 55000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260613",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-13",
+    "capacity": 7,
+    "pricePerTrip": 192000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260614",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-14",
+    "capacity": 7,
+    "pricePerTrip": 844000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260614",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-14",
+    "capacity": 16,
+    "pricePerTrip": 1494000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260614",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-14",
+    "capacity": 29,
+    "pricePerTrip": 2605000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260614",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-14",
+    "capacity": 7,
+    "pricePerTrip": 451000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260614",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-14",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 35,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260614",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-14",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260614",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-14",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260614",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-14",
+    "capacity": 7,
+    "pricePerTrip": 199000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260615",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-15",
+    "capacity": 7,
+    "pricePerTrip": 787000,
+    "currency": "VND",
+    "estimatedDurationMin": 51,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260615",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-15",
+    "capacity": 16,
+    "pricePerTrip": 1346000,
+    "currency": "VND",
+    "estimatedDurationMin": 55,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260615",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-15",
+    "capacity": 29,
+    "pricePerTrip": 2273000,
+    "currency": "VND",
+    "estimatedDurationMin": 67,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260615",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-15",
+    "capacity": 7,
+    "pricePerTrip": 441000,
+    "currency": "VND",
+    "estimatedDurationMin": 25,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260615",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-15",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 31,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260615",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-15",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260615",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-15",
+    "capacity": 6,
+    "pricePerTrip": 50000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260615",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-15",
+    "capacity": 7,
+    "pricePerTrip": 186000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260616",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-16",
+    "capacity": 7,
+    "pricePerTrip": 778000,
+    "currency": "VND",
+    "estimatedDurationMin": 52,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260616",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-16",
+    "capacity": 16,
+    "pricePerTrip": 1373000,
+    "currency": "VND",
+    "estimatedDurationMin": 56,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260616",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-16",
+    "capacity": 29,
+    "pricePerTrip": 2307000,
+    "currency": "VND",
+    "estimatedDurationMin": 76,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260616",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-16",
+    "capacity": 7,
+    "pricePerTrip": 428000,
+    "currency": "VND",
+    "estimatedDurationMin": 25,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260616",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-16",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 31,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260616",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-16",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260616",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-16",
+    "capacity": 6,
+    "pricePerTrip": 50000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260616",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-16",
+    "capacity": 7,
+    "pricePerTrip": 177000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260617",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-17",
+    "capacity": 7,
+    "pricePerTrip": 753000,
+    "currency": "VND",
+    "estimatedDurationMin": 57,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260617",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-17",
+    "capacity": 16,
+    "pricePerTrip": 1359000,
+    "currency": "VND",
+    "estimatedDurationMin": 59,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260617",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-17",
+    "capacity": 29,
+    "pricePerTrip": 2276000,
+    "currency": "VND",
+    "estimatedDurationMin": 66,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260617",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-17",
+    "capacity": 7,
+    "pricePerTrip": 437000,
+    "currency": "VND",
+    "estimatedDurationMin": 27,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260617",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-17",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 32,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260617",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-17",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260617",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-17",
+    "capacity": 6,
+    "pricePerTrip": 49000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260617",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-17",
+    "capacity": 7,
+    "pricePerTrip": 183000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260618",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-18",
+    "capacity": 7,
+    "pricePerTrip": 758000,
+    "currency": "VND",
+    "estimatedDurationMin": 59,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260618",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-18",
+    "capacity": 16,
+    "pricePerTrip": 1391000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260618",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-18",
+    "capacity": 29,
+    "pricePerTrip": 2399000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260618",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-18",
+    "capacity": 7,
+    "pricePerTrip": 416000,
+    "currency": "VND",
+    "estimatedDurationMin": 24,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260618",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-18",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260618",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-18",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260618",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-18",
+    "capacity": 6,
+    "pricePerTrip": 48000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260618",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-18",
+    "capacity": 7,
+    "pricePerTrip": 186000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260619",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-19",
+    "capacity": 7,
+    "pricePerTrip": 817000,
+    "currency": "VND",
+    "estimatedDurationMin": 59,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260619",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-19",
+    "capacity": 16,
+    "pricePerTrip": 1472000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260619",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-19",
+    "capacity": 29,
+    "pricePerTrip": 2585000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260619",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-19",
+    "capacity": 7,
+    "pricePerTrip": 464000,
+    "currency": "VND",
+    "estimatedDurationMin": 26,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260619",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-19",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260619",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-19",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260619",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-19",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260619",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-19",
+    "capacity": 7,
+    "pricePerTrip": 187000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260620",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-20",
+    "capacity": 7,
+    "pricePerTrip": 809000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260620",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-20",
+    "capacity": 16,
+    "pricePerTrip": 1478000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260620",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-20",
+    "capacity": 29,
+    "pricePerTrip": 2458000,
+    "currency": "VND",
+    "estimatedDurationMin": 86,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260620",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-20",
+    "capacity": 7,
+    "pricePerTrip": 468000,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260620",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-20",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 39,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260620",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-20",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260620",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-20",
+    "capacity": 6,
+    "pricePerTrip": 57000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260620",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-20",
+    "capacity": 7,
+    "pricePerTrip": 202000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260621",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-21",
+    "capacity": 7,
+    "pricePerTrip": 820000,
+    "currency": "VND",
+    "estimatedDurationMin": 67,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260621",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-21",
+    "capacity": 16,
+    "pricePerTrip": 1518000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260621",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-21",
+    "capacity": 29,
+    "pricePerTrip": 2590000,
+    "currency": "VND",
+    "estimatedDurationMin": 85,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260621",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-21",
+    "capacity": 7,
+    "pricePerTrip": 454000,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260621",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-21",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 35,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260621",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-21",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260621",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-21",
+    "capacity": 6,
+    "pricePerTrip": 53000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260621",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-21",
+    "capacity": 7,
+    "pricePerTrip": 203000,
+    "currency": "VND",
+    "estimatedDurationMin": 19,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260622",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-22",
+    "capacity": 7,
+    "pricePerTrip": 767000,
+    "currency": "VND",
+    "estimatedDurationMin": 61,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260622",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-22",
+    "capacity": 16,
+    "pricePerTrip": 1304000,
+    "currency": "VND",
+    "estimatedDurationMin": 60,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260622",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-22",
+    "capacity": 29,
+    "pricePerTrip": 2251000,
+    "currency": "VND",
+    "estimatedDurationMin": 79,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260622",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-22",
+    "capacity": 7,
+    "pricePerTrip": 427000,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260622",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-22",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 35,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260622",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-22",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260622",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-22",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260622",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-22",
+    "capacity": 7,
+    "pricePerTrip": 188000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260623",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-23",
+    "capacity": 7,
+    "pricePerTrip": 803000,
+    "currency": "VND",
+    "estimatedDurationMin": 57,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260623",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-23",
+    "capacity": 16,
+    "pricePerTrip": 1311000,
+    "currency": "VND",
+    "estimatedDurationMin": 63,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260623",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-23",
+    "capacity": 29,
+    "pricePerTrip": 2406000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260623",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-23",
+    "capacity": 7,
+    "pricePerTrip": 412000,
+    "currency": "VND",
+    "estimatedDurationMin": 26,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260623",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-23",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 35,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260623",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-23",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260623",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-23",
+    "capacity": 6,
+    "pricePerTrip": 49000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260623",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-23",
+    "capacity": 7,
+    "pricePerTrip": 177000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260624",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-24",
+    "capacity": 7,
+    "pricePerTrip": 782000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260624",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-24",
+    "capacity": 16,
+    "pricePerTrip": 1380000,
+    "currency": "VND",
+    "estimatedDurationMin": 60,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260624",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-24",
+    "capacity": 29,
+    "pricePerTrip": 2398000,
+    "currency": "VND",
+    "estimatedDurationMin": 70,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260624",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-24",
+    "capacity": 7,
+    "pricePerTrip": 439000,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260624",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-24",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 35,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260624",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-24",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260624",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-24",
+    "capacity": 6,
+    "pricePerTrip": 51000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260624",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-24",
+    "capacity": 7,
+    "pricePerTrip": 178000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260625",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-25",
+    "capacity": 7,
+    "pricePerTrip": 788000,
+    "currency": "VND",
+    "estimatedDurationMin": 63,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260625",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-25",
+    "capacity": 16,
+    "pricePerTrip": 1328000,
+    "currency": "VND",
+    "estimatedDurationMin": 66,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260625",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-25",
+    "capacity": 29,
+    "pricePerTrip": 2246000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260625",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-25",
+    "capacity": 7,
+    "pricePerTrip": 425000,
+    "currency": "VND",
+    "estimatedDurationMin": 26,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260625",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-25",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 31,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260625",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-25",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260625",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-25",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260625",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-25",
+    "capacity": 7,
+    "pricePerTrip": 176000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260626",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-26",
+    "capacity": 7,
+    "pricePerTrip": 846000,
+    "currency": "VND",
+    "estimatedDurationMin": 73,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260626",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-26",
+    "capacity": 16,
+    "pricePerTrip": 1448000,
+    "currency": "VND",
+    "estimatedDurationMin": 78,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260626",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-26",
+    "capacity": 29,
+    "pricePerTrip": 2422000,
+    "currency": "VND",
+    "estimatedDurationMin": 77,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260626",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-26",
+    "capacity": 7,
+    "pricePerTrip": 452000,
+    "currency": "VND",
+    "estimatedDurationMin": 31,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260626",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-26",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260626",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-26",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260626",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-26",
+    "capacity": 6,
+    "pricePerTrip": 57000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260626",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-26",
+    "capacity": 7,
+    "pricePerTrip": 188000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260627",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-27",
+    "capacity": 7,
+    "pricePerTrip": 816000,
+    "currency": "VND",
+    "estimatedDurationMin": 70,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260627",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-27",
+    "capacity": 16,
+    "pricePerTrip": 1435000,
+    "currency": "VND",
+    "estimatedDurationMin": 70,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260627",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-27",
+    "capacity": 29,
+    "pricePerTrip": 2394000,
+    "currency": "VND",
+    "estimatedDurationMin": 93,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260627",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-27",
+    "capacity": 7,
+    "pricePerTrip": 459000,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260627",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-27",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 39,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260627",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-27",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260627",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-27",
+    "capacity": 6,
+    "pricePerTrip": 54000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260627",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-27",
+    "capacity": 7,
+    "pricePerTrip": 195000,
+    "currency": "VND",
+    "estimatedDurationMin": 17,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260628",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-28",
+    "capacity": 7,
+    "pricePerTrip": 818000,
+    "currency": "VND",
+    "estimatedDurationMin": 60,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260628",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-28",
+    "capacity": 16,
+    "pricePerTrip": 1444000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260628",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-28",
+    "capacity": 29,
+    "pricePerTrip": 2481000,
+    "currency": "VND",
+    "estimatedDurationMin": 92,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260628",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-28",
+    "capacity": 7,
+    "pricePerTrip": 449000,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260628",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-28",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 37,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260628",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-28",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260628",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-28",
+    "capacity": 6,
+    "pricePerTrip": 53000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260628",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-28",
+    "capacity": 7,
+    "pricePerTrip": 195000,
+    "currency": "VND",
+    "estimatedDurationMin": 19,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260629",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-29",
+    "capacity": 7,
+    "pricePerTrip": 756000,
+    "currency": "VND",
+    "estimatedDurationMin": 58,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260629",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-29",
+    "capacity": 16,
+    "pricePerTrip": 1373000,
+    "currency": "VND",
+    "estimatedDurationMin": 72,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260629",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-29",
+    "capacity": 29,
+    "pricePerTrip": 2394000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260629",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-29",
+    "capacity": 7,
+    "pricePerTrip": 426000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260629",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-29",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 32,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260629",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-29",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260629",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-29",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260629",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-29",
+    "capacity": 7,
+    "pricePerTrip": 176000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260630",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-30",
+    "capacity": 7,
+    "pricePerTrip": 750000,
+    "currency": "VND",
+    "estimatedDurationMin": 59,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260630",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-30",
+    "capacity": 16,
+    "pricePerTrip": 1364000,
+    "currency": "VND",
+    "estimatedDurationMin": 64,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260630",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-06-30",
+    "capacity": 29,
+    "pricePerTrip": 2215000,
+    "currency": "VND",
+    "estimatedDurationMin": 80,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260630",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-30",
+    "capacity": 7,
+    "pricePerTrip": 434000,
+    "currency": "VND",
+    "estimatedDurationMin": 29,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260630",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-06-30",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260630",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-06-30",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260630",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-06-30",
+    "capacity": 6,
+    "pricePerTrip": 49000,
+    "currency": "VND",
+    "estimatedDurationMin": 8,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260630",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-06-30",
+    "capacity": 7,
+    "pricePerTrip": 184000,
+    "currency": "VND",
+    "estimatedDurationMin": 16,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260701",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-01",
+    "capacity": 7,
+    "pricePerTrip": 768000,
+    "currency": "VND",
+    "estimatedDurationMin": 60,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260701",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-01",
+    "capacity": 16,
+    "pricePerTrip": 1395000,
+    "currency": "VND",
+    "estimatedDurationMin": 72,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260701",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-01",
+    "capacity": 29,
+    "pricePerTrip": 2352000,
+    "currency": "VND",
+    "estimatedDurationMin": 81,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260701",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-01",
+    "capacity": 7,
+    "pricePerTrip": 407000,
+    "currency": "VND",
+    "estimatedDurationMin": 27,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260701",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-01",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 34,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260701",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-07-01",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 5,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260701",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-07-01",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260701",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-07-01",
+    "capacity": 7,
+    "pricePerTrip": 189000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260702",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-02",
+    "capacity": 7,
+    "pricePerTrip": 758000,
+    "currency": "VND",
+    "estimatedDurationMin": 64,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260702",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-02",
+    "capacity": 16,
+    "pricePerTrip": 1309000,
+    "currency": "VND",
+    "estimatedDurationMin": 60,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260702",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-02",
+    "capacity": 29,
+    "pricePerTrip": 2291000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 20,
+    "traffic": "medium",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260702",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-02",
+    "capacity": 7,
+    "pricePerTrip": 437000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "medium",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260702",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-02",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 30,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260702",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-07-02",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260702",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-07-02",
+    "capacity": 6,
+    "pricePerTrip": 49000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "traffic": "medium",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260702",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-07-02",
+    "capacity": 7,
+    "pricePerTrip": 186000,
+    "currency": "VND",
+    "estimatedDurationMin": 15,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "medium",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260703",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-03",
+    "capacity": 7,
+    "pricePerTrip": 812000,
+    "currency": "VND",
+    "estimatedDurationMin": 71,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260703",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-03",
+    "capacity": 16,
+    "pricePerTrip": 1414000,
+    "currency": "VND",
+    "estimatedDurationMin": 75,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260703",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-03",
+    "capacity": 29,
+    "pricePerTrip": 2422000,
+    "currency": "VND",
+    "estimatedDurationMin": 93,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260703",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-03",
+    "capacity": 7,
+    "pricePerTrip": 436000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260703",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-03",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 38,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260703",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-07-03",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 7,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260703",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-07-03",
+    "capacity": 6,
+    "pricePerTrip": 52000,
+    "currency": "VND",
+    "estimatedDurationMin": 10,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260703",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-07-03",
+    "capacity": 7,
+    "pricePerTrip": 192000,
+    "currency": "VND",
+    "estimatedDurationMin": 19,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 12,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_7_20260704",
+    "type": "Green SM / private van 7 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-04",
+    "capacity": 7,
+    "pricePerTrip": 867000,
+    "currency": "VND",
+    "estimatedDurationMin": 68,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 6,
+    "traffic": "high",
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "comfort"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_16_20260704",
+    "type": "Private van 16 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-04",
+    "capacity": 16,
+    "pricePerTrip": 1519000,
+    "currency": "VND",
+    "estimatedDurationMin": 74,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nha_gt_dad_29_20260704",
+    "type": "Coach 29 chỗ DAD → Nam Hội An",
+    "from": "DAD",
+    "to": "NamHoiAn",
+    "date": "2026-07-04",
+    "capacity": 29,
+    "pricePerTrip": 2431000,
+    "currency": "VND",
+    "estimatedDurationMin": 82,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "team_building",
+      "event"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_7_20260704",
+    "type": "Private van 7 chỗ Hội An Old Town ↔ Resort",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-04",
+    "capacity": 7,
+    "pricePerTrip": 453000,
+    "currency": "VND",
+    "estimatedDurationMin": 28,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "old_town_evening",
+      "family"
+    ]
+  },
+  {
+    "id": "nha_gt_hoian_shuttle_20260704",
+    "type": "Resort shuttle Hội An Old Town",
+    "from": "HoiAnOldTown",
+    "to": "NamHoiAn",
+    "date": "2026-07-04",
+    "capacity": 18,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 36,
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "traffic": "high",
+    "useCases": [
+      "scheduled_transfer",
+      "old_town"
+    ]
+  },
+  {
+    "id": "nha_gt_resort_buggy_20260704",
+    "type": "Buggy nội khu resort/park",
+    "from": "Resort",
+    "to": "Local",
+    "date": "2026-07-04",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "estimatedDurationMin": 6,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "elderly",
+      "short_distance",
+      "resort"
+    ]
+  },
+  {
+    "id": "nha_gt_beach_cart_20260704",
+    "type": "Xe điện biển Bình Minh",
+    "from": "Resort",
+    "to": "Beach",
+    "date": "2026-07-04",
+    "capacity": 6,
+    "pricePerTrip": 54000,
+    "currency": "VND",
+    "estimatedDurationMin": 9,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 20,
+    "traffic": "high",
+    "useCases": [
+      "beach",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nha_gt_taxi_local_20260704",
+    "type": "Taxi địa phương Nam Hội An",
+    "from": "NamHoiAn",
+    "to": "Local",
+    "date": "2026-07-04",
+    "capacity": 7,
+    "pricePerTrip": 188000,
+    "currency": "VND",
+    "estimatedDurationMin": 18,
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "traffic": "high",
+    "useCases": [
+      "backup",
+      "local_move"
+    ]
+  }
+]

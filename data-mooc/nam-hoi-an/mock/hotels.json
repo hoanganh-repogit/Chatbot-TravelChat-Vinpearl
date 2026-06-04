@@ -1,0 +1,145 @@
+[
+  {
+    "id": "nha_h_resort_golf",
+    "name": "Vinpearl Resort & Golf Nam Hội An",
+    "tier": 5,
+    "zone": "Bình Minh Beach / Nam Hội An",
+    "distanceToVinWondersMin": 6,
+    "distanceToGolfMin": 4,
+    "distanceToBeachMin": 2,
+    "distanceToHoiAnOldTownMin": 25,
+    "distanceToDaNangAirportMin": 55,
+    "accessModes": [
+      "road",
+      "resort_shuttle",
+      "buggy"
+    ],
+    "amenities": [
+      "beachfront",
+      "golf",
+      "akoya_spa",
+      "kids_club",
+      "pool",
+      "buggy",
+      "shuttle",
+      "event_space"
+    ],
+    "familyFit": 0.92,
+    "elderlyFit": 0.88,
+    "coupleFit": 0.87,
+    "groupFit": 0.84,
+    "note": "Resort chính, phù hợp gia đình muốn kết hợp VinWonders, golf, biển và Hội An"
+  },
+  {
+    "id": "nha_h_villas",
+    "name": "Vinpearl Nam Hội An Villas",
+    "tier": 5,
+    "zone": "Bình Minh Beach / Villa Zone",
+    "distanceToVinWondersMin": 8,
+    "distanceToGolfMin": 5,
+    "distanceToBeachMin": 1,
+    "distanceToHoiAnOldTownMin": 28,
+    "distanceToDaNangAirportMin": 58,
+    "accessModes": [
+      "road",
+      "buggy",
+      "private_transfer"
+    ],
+    "amenities": [
+      "multi_bedroom_villa",
+      "private_pool",
+      "beachfront",
+      "buggy",
+      "quiet_zone",
+      "family_kitchen"
+    ],
+    "familyFit": 0.94,
+    "elderlyFit": 0.86,
+    "coupleFit": 0.82,
+    "groupFit": 0.88,
+    "note": "Mock villa option cho đại gia đình và nhóm cần không gian riêng"
+  },
+  {
+    "id": "nha_h_condotel",
+    "name": "Nam Hội An Beachfront Condotel",
+    "tier": 4,
+    "zone": "Bình Minh Beach",
+    "distanceToVinWondersMin": 10,
+    "distanceToGolfMin": 7,
+    "distanceToBeachMin": 2,
+    "distanceToHoiAnOldTownMin": 25,
+    "distanceToDaNangAirportMin": 55,
+    "accessModes": [
+      "road",
+      "shuttle"
+    ],
+    "amenities": [
+      "beachfront",
+      "apartment",
+      "pool",
+      "breakfast",
+      "value_stay"
+    ],
+    "familyFit": 0.8,
+    "elderlyFit": 0.78,
+    "coupleFit": 0.74,
+    "groupFit": 0.86,
+    "note": "Mock value option gần biển, dễ scale cho nhóm đông"
+  },
+  {
+    "id": "nha_h_oldtown_partner",
+    "name": "Hoi An Old Town Partner Hotel",
+    "tier": 4,
+    "zone": "Hội An Old Town",
+    "distanceToVinWondersMin": 30,
+    "distanceToGolfMin": 28,
+    "distanceToBeachMin": 12,
+    "distanceToHoiAnOldTownMin": 3,
+    "distanceToDaNangAirportMin": 45,
+    "accessModes": [
+      "road",
+      "shuttle"
+    ],
+    "amenities": [
+      "old_town_access",
+      "pool",
+      "breakfast",
+      "local_food_nearby",
+      "value_stay"
+    ],
+    "familyFit": 0.74,
+    "elderlyFit": 0.76,
+    "coupleFit": 0.86,
+    "groupFit": 0.7,
+    "note": "Mock partner hotel cho khách ưu tiên phố cổ hơn resort"
+  },
+  {
+    "id": "nha_h_team_resort",
+    "name": "Nam Hội An Team Resort",
+    "tier": 4,
+    "zone": "Bình Minh Beach / Event Zone",
+    "distanceToVinWondersMin": 9,
+    "distanceToGolfMin": 6,
+    "distanceToBeachMin": 3,
+    "distanceToHoiAnOldTownMin": 26,
+    "distanceToDaNangAirportMin": 57,
+    "accessModes": [
+      "road",
+      "coach",
+      "buggy"
+    ],
+    "amenities": [
+      "bulk_rooms",
+      "team_activity",
+      "event_space",
+      "bbq_area",
+      "pool",
+      "parking"
+    ],
+    "familyFit": 0.72,
+    "elderlyFit": 0.68,
+    "coupleFit": 0.6,
+    "groupFit": 0.95,
+    "note": "Mock option tối ưu team building"
+  }
+]

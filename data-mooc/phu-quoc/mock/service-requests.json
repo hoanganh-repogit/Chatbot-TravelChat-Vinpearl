@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sr_001",
+    "userId": "u_001",
+    "type": "restaurant_booking",
+    "status": "confirmed",
+    "time": "2026-06-12T18:30:00+07:00",
+    "detail": "Đã giữ bàn buffet hải sản cho 5 người tại Grand World",
+    "linkedEntityId": "rst_almaz"
+  },
+  {
+    "id": "sr_002",
+    "userId": "u_001",
+    "type": "transport",
+    "status": "confirmed",
+    "time": "2026-06-12T09:00:00+07:00",
+    "detail": "Green SM 7 chỗ đón tại sân bay Phú Quốc",
+    "linkedEntityId": "tr_greensm_7"
+  },
+  {
+    "id": "sr_003",
+    "userId": "u_003",
+    "type": "spa",
+    "status": "confirmed",
+    "time": "2026-06-28T16:00:00+07:00",
+    "detail": "Đã đặt Akoya Spa couple session 90 phút",
+    "linkedEntityId": "a_spa_akoya"
+  },
+  {
+    "id": "sr_004",
+    "userId": "u_004",
+    "type": "buggy",
+    "status": "confirmed",
+    "time": "2026-06-08T14:15:00+07:00",
+    "detail": "Buggy nội khu hỗ trợ người lớn tuổi về villa nghỉ trưa",
+    "linkedEntityId": "tr_buggy"
+  },
+  {
+    "id": "sr_005",
+    "userId": "u_005",
+    "type": "group_dining",
+    "status": "pending",
+    "time": "2026-07-02T19:00:00+07:00",
+    "detail": "Đang giữ chỗ BBQ cho 12 người tại Grand World",
+    "linkedEntityId": "rst_kimbusam"
+  }
+]

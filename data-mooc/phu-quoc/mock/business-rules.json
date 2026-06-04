@@ -1,0 +1,28 @@
+{
+  "capacityRules": [
+    "room.capacity.adults must be >= party.adults + party.elderly",
+    "room.capacity.children must be >= party.children",
+    "transport.capacity must be >= party.adults + party.children + party.elderly"
+  ],
+  "pacingRules": [
+    "relaxed pace: max 3 major activities/day",
+    "family with elderly: avoid more than 2 medium/high walkLevel activities in same day",
+    "childTired=true: insert rest block within next 60 minutes",
+    "elderlyMode=true: prefer buggy, shuttle, indoor, low walkLevel"
+  ],
+  "weatherRules": [
+    "rainProb >= 60: deprioritize weatherSensitive=true unless attraction is signature and near",
+    "heavy_rain: replace water_park/outdoor_walk with indoor attractions",
+    "very_hot: avoid outdoor activity between 12:00 and 15:30"
+  ],
+  "queueRules": [
+    "queueMin >= 40: suggest fastpass or alternate attraction",
+    "queueMin >= 55: avoid unless user interest is thrill_ride and pace=active",
+    "queue delta > 20 minutes: notify user as live itinerary reflex"
+  ],
+  "voucherRules": [
+    "expires within 24h: surface voucher in plan if applicable and user tier is eligible",
+    "F&B voucher: match restaurant.acceptsVoucher and minSpend",
+    "late checkout: recommend for afternoon return flights"
+  ]
+}

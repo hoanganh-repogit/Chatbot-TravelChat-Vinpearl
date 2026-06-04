@@ -1,0 +1,366 @@
+[
+  {
+    "id": "hl_rst_bayview",
+    "name": "Bay View Restaurant",
+    "zone": "Vinpearl Đảo Rều",
+    "cuisine": [
+      "buffet",
+      "vietnamese",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 560000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "11:30",
+      "12:30",
+      "18:00",
+      "18:30",
+      "19:00"
+    ],
+    "acceptsVoucher": [
+      "hl_v_fnb_today",
+      "hl_v_diamond_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": true,
+    "requiresRoadTransfer": false
+  },
+  {
+    "id": "hl_rst_pavilion",
+    "name": "Pavilion Seafood",
+    "zone": "Vinpearl Đảo Rều",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "family"
+    ],
+    "indoor": true,
+    "pricePerPax": 680000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30",
+      "19:30"
+    ],
+    "acceptsVoucher": [
+      "hl_v_fnb_today",
+      "hl_v_diamond_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": true,
+    "requiresRoadTransfer": false
+  },
+  {
+    "id": "hl_rst_lobby_tea",
+    "name": "Bay View Afternoon Tea",
+    "zone": "Vinpearl Đảo Rều",
+    "cuisine": [
+      "tea",
+      "dessert",
+      "romantic"
+    ],
+    "indoor": true,
+    "pricePerPax": 320000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00"
+    ],
+    "acceptsVoucher": [
+      "hl_v_spa_tea"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": true,
+    "requiresRoadTransfer": false
+  },
+  {
+    "id": "hl_rst_spa_light",
+    "name": "Spa Wellness Light Meal",
+    "zone": "Vinpearl Đảo Rều",
+    "cuisine": [
+      "healthy",
+      "spa",
+      "light_meal"
+    ],
+    "indoor": true,
+    "pricePerPax": 380000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "12:00",
+      "14:00",
+      "16:00"
+    ],
+    "acceptsVoucher": [
+      "hl_v_spa_bundle"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": true,
+    "requiresRoadTransfer": false
+  },
+  {
+    "id": "hl_rst_baichay_seafood",
+    "name": "Bãi Cháy Seafood House",
+    "zone": "Bãi Cháy",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 520000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "hl_v_mainland_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_nightmarket",
+    "name": "Night Market Seafood Stall",
+    "zone": "Bãi Cháy",
+    "cuisine": [
+      "seafood",
+      "street_food",
+      "budget"
+    ],
+    "indoor": false,
+    "pricePerPax": 260000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00",
+      "21:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_bbq_team",
+    "name": "Bãi Cháy BBQ & Beer",
+    "zone": "Bãi Cháy",
+    "cuisine": [
+      "bbq",
+      "beer_pairing",
+      "group"
+    ],
+    "indoor": true,
+    "pricePerPax": 430000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "hl_v_group_bbq"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_marina",
+    "name": "Marina Bay Fine Dining",
+    "zone": "Tuần Châu / Marina",
+    "cuisine": [
+      "western",
+      "seafood",
+      "romantic"
+    ],
+    "indoor": true,
+    "pricePerPax": 820000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "hl_v_couple_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_cruise_lunch",
+    "name": "Cruise Lunch On Board",
+    "zone": "Cruise",
+    "cuisine": [
+      "set_menu",
+      "seafood",
+      "vietnamese"
+    ],
+    "indoor": true,
+    "pricePerPax": 0,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "12:30"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": false
+  },
+  {
+    "id": "hl_rst_waterpark_snack",
+    "name": "Water Park Snack Bar",
+    "zone": "SunWorld",
+    "cuisine": [
+      "fast_food",
+      "kids_menu",
+      "snack"
+    ],
+    "indoor": false,
+    "pricePerPax": 170000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "slots": [
+      "10:30",
+      "11:30",
+      "12:30",
+      "14:30",
+      "16:30"
+    ],
+    "acceptsVoucher": [
+      "hl_v_waterpark_drink"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_dragon_fastfood",
+    "name": "Dragon Park Fast Food",
+    "zone": "SunWorld",
+    "cuisine": [
+      "fast_food",
+      "snack",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 190000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:30",
+      "11:30",
+      "12:30",
+      "15:00",
+      "16:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_museum_cafe",
+    "name": "Museum Café",
+    "zone": "Hòn Gai",
+    "cuisine": [
+      "coffee",
+      "dessert",
+      "light_meal"
+    ],
+    "indoor": true,
+    "pricePerPax": 150000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "09:30",
+      "10:30",
+      "14:00",
+      "15:00",
+      "16:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": true
+  },
+  {
+    "id": "hl_rst_breakfast_mainland",
+    "name": "Mainland Breakfast Buffet",
+    "zone": "Bãi Cháy Mainland",
+    "cuisine": [
+      "breakfast",
+      "buffet",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 0,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "08:30",
+      "09:30"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresBoatTransfer": false,
+    "requiresRoadTransfer": false
+  }
+]

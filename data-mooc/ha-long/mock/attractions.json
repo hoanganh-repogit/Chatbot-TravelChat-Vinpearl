@@ -1,0 +1,507 @@
+[
+  {
+    "id": "hl_a_resort_boat",
+    "name": "Resort Boat Transfer to Đảo Rều",
+    "park": "Transport",
+    "indoor": false,
+    "type": "boat_transfer",
+    "intensity": "low",
+    "openHours": [
+      "06:30",
+      "23:00"
+    ],
+    "avgDurationMin": 8,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 8,
+    "zone": "Bãi Cháy ↔ Đảo Rều",
+    "tags": [
+      "short_boat",
+      "resort"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_bay_day_cruise",
+    "name": "Hạ Long Bay Day Cruise",
+    "park": "HaLongBay",
+    "indoor": false,
+    "type": "bay_cruise",
+    "intensity": "medium",
+    "openHours": [
+      "08:30",
+      "16:30"
+    ],
+    "avgDurationMin": 240,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 25,
+    "zone": "Tuần Châu / Hạ Long Bay",
+    "tags": [
+      "signature",
+      "weather_sensitive",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "hl_a_sunset_cruise",
+    "name": "Sunset Bay Cruise",
+    "park": "HaLongBay",
+    "indoor": false,
+    "type": "sunset_cruise",
+    "intensity": "low",
+    "openHours": [
+      "16:00",
+      "19:00"
+    ],
+    "avgDurationMin": 150,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Hạ Long Bay",
+    "tags": [
+      "romantic",
+      "signature",
+      "weather_sensitive"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "hl_a_private_cruise",
+    "name": "Private Family Cruise",
+    "park": "HaLongBay",
+    "indoor": false,
+    "type": "private_cruise",
+    "intensity": "low",
+    "openHours": [
+      "09:00",
+      "18:00"
+    ],
+    "avgDurationMin": 210,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 10,
+    "zone": "Hạ Long Bay",
+    "tags": [
+      "premium",
+      "family",
+      "elderly_friendly"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "hl_a_kayak_luon",
+    "name": "Kayak Luồn Cave Area",
+    "park": "HaLongBay",
+    "indoor": false,
+    "type": "kayak",
+    "intensity": "medium",
+    "openHours": [
+      "09:30",
+      "16:00"
+    ],
+    "avgDurationMin": 60,
+    "walkLevel": "medium",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 20,
+    "zone": "Luồn Cave",
+    "tags": [
+      "active",
+      "weather_sensitive"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_sung_sot_cave",
+    "name": "Sung Sot Cave Walk",
+    "park": "HaLongBay",
+    "indoor": false,
+    "type": "cave_walk",
+    "intensity": "medium",
+    "openHours": [
+      "08:30",
+      "16:30"
+    ],
+    "avgDurationMin": 75,
+    "walkLevel": "high",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 22,
+    "zone": "Sung Sot Cave",
+    "tags": [
+      "bay_cruise",
+      "stairs"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_titop",
+    "name": "Ti Top Island Viewpoint",
+    "park": "HaLongBay",
+    "indoor": false,
+    "type": "viewpoint",
+    "intensity": "high",
+    "openHours": [
+      "09:00",
+      "16:30"
+    ],
+    "avgDurationMin": 60,
+    "walkLevel": "high",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 28,
+    "zone": "Ti Top Island",
+    "tags": [
+      "view",
+      "stairs",
+      "active"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_ba_deo_cable",
+    "name": "Queen Cable Car",
+    "park": "SunWorld",
+    "indoor": false,
+    "type": "cable_car",
+    "intensity": "low",
+    "openHours": [
+      "14:00",
+      "22:00"
+    ],
+    "avgDurationMin": 20,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 18,
+    "zone": "Bãi Cháy ↔ Ba Đèo",
+    "tags": [
+      "view",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_sunwheel",
+    "name": "Sun Wheel",
+    "park": "SunWorld",
+    "indoor": false,
+    "type": "observation",
+    "intensity": "low",
+    "openHours": [
+      "14:00",
+      "22:00"
+    ],
+    "avgDurationMin": 35,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 20,
+    "zone": "Ba Đèo Hill",
+    "tags": [
+      "view",
+      "night"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_dragon_park",
+    "name": "Dragon Park Thrill Rides",
+    "park": "SunWorld",
+    "indoor": false,
+    "type": "theme_park",
+    "intensity": "high",
+    "openHours": [
+      "09:00",
+      "18:00"
+    ],
+    "avgDurationMin": 120,
+    "walkLevel": "medium",
+    "kidFriendly": false,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 35,
+    "zone": "Bãi Cháy",
+    "tags": [
+      "thrill",
+      "active"
+    ],
+    "minHeightCm": 120,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_typhoon_waterpark",
+    "name": "Typhoon Water Park",
+    "park": "SunWorld",
+    "indoor": false,
+    "type": "water_park",
+    "intensity": "medium",
+    "openHours": [
+      "09:00",
+      "18:00"
+    ],
+    "avgDurationMin": 150,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "weatherSensitive": true,
+    "defaultQueueMin": 32,
+    "zone": "Bãi Cháy",
+    "tags": [
+      "water_park",
+      "summer"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_mystic_mountain",
+    "name": "Mystic Mountain Indoor Arcade",
+    "park": "SunWorld",
+    "indoor": true,
+    "type": "indoor_arcade",
+    "intensity": "low",
+    "openHours": [
+      "14:00",
+      "22:00"
+    ],
+    "avgDurationMin": 80,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 14,
+    "zone": "Ba Đèo Hill",
+    "tags": [
+      "rain_safe",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_bai_chay_beach",
+    "name": "Bãi Cháy Beach Time",
+    "park": "Bãi Cháy",
+    "indoor": false,
+    "type": "beach",
+    "intensity": "low",
+    "openHours": [
+      "06:00",
+      "18:30"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 8,
+    "zone": "Bãi Cháy Beach",
+    "tags": [
+      "relax",
+      "sunset"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_night_market",
+    "name": "Hạ Long Night Market",
+    "park": "Bãi Cháy",
+    "indoor": false,
+    "type": "night_market",
+    "intensity": "low",
+    "openHours": [
+      "18:00",
+      "23:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "medium",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 12,
+    "zone": "Bãi Cháy",
+    "tags": [
+      "food",
+      "shopping"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_quang_ninh_museum",
+    "name": "Quảng Ninh Museum",
+    "park": "Hòn Gai",
+    "indoor": true,
+    "type": "museum",
+    "intensity": "low",
+    "openHours": [
+      "08:00",
+      "17:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 10,
+    "zone": "Hòn Gai",
+    "tags": [
+      "rain_safe",
+      "culture"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_resort_pool",
+    "name": "Vinpearl Resort Pool",
+    "park": "Resort",
+    "indoor": false,
+    "type": "pool",
+    "intensity": "low",
+    "openHours": [
+      "06:00",
+      "20:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 5,
+    "zone": "Đảo Rều",
+    "tags": [
+      "relax",
+      "kids"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_indoor_pool",
+    "name": "Vinpearl Indoor Pool",
+    "park": "Resort",
+    "indoor": true,
+    "type": "indoor_pool",
+    "intensity": "low",
+    "openHours": [
+      "06:00",
+      "21:00"
+    ],
+    "avgDurationMin": 75,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 5,
+    "zone": "Đảo Rều",
+    "tags": [
+      "rain_safe",
+      "elderly"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  },
+  {
+    "id": "hl_a_spa",
+    "name": "Vinpearl Spa Session",
+    "park": "Resort",
+    "indoor": true,
+    "type": "spa",
+    "intensity": "low",
+    "openHours": [
+      "10:00",
+      "22:00"
+    ],
+    "avgDurationMin": 90,
+    "walkLevel": "low",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 5,
+    "zone": "Đảo Rều Spa",
+    "tags": [
+      "romantic",
+      "voucher",
+      "rain_safe"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "hl_a_seafood_dinner",
+    "name": "Bãi Cháy Seafood Dinner",
+    "park": "Bãi Cháy",
+    "indoor": true,
+    "type": "dining_trip",
+    "intensity": "low",
+    "openHours": [
+      "18:00",
+      "22:00"
+    ],
+    "avgDurationMin": 120,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": true,
+    "defaultQueueMin": 10,
+    "zone": "Bãi Cháy",
+    "tags": [
+      "seafood",
+      "family"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": true
+  },
+  {
+    "id": "hl_a_lobby_tea",
+    "name": "Bay View Afternoon Tea",
+    "park": "Resort",
+    "indoor": true,
+    "type": "tea",
+    "intensity": "low",
+    "openHours": [
+      "14:00",
+      "17:00"
+    ],
+    "avgDurationMin": 60,
+    "walkLevel": "low",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "weatherSensitive": false,
+    "defaultQueueMin": 4,
+    "zone": "Vinpearl Lobby",
+    "tags": [
+      "rain_safe",
+      "upsell"
+    ],
+    "minHeightCm": null,
+    "requiresBooking": false
+  }
+]

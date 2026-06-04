@@ -1,0 +1,203 @@
+[
+  {
+    "id": "hl_tpl_family_2n1d_relaxed",
+    "name": "Hạ Long family 2N1Đ relaxed",
+    "target": {
+      "partyType": "family",
+      "pace": "relaxed",
+      "elderly": true
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Road transfer + resort + seafood",
+        "blocks": [
+          "hanoi_pickup",
+          "road_transfer",
+          "resort_boat",
+          "checkin",
+          "indoor_pool",
+          "seafood_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Bay cruise + light checkout",
+        "blocks": [
+          "bay_day_cruise",
+          "lunch_onboard",
+          "late_checkout",
+          "road_transfer_back"
+        ]
+      }
+    ],
+    "rules": [
+      "avoid_cave_stairs_if_elderly",
+      "insert_rest_after_150min",
+      "replace_cruise_if_bayCondition_rough"
+    ]
+  },
+  {
+    "id": "hl_tpl_family_3n2d_balanced",
+    "name": "Hạ Long family 3N2Đ balanced",
+    "target": {
+      "partyType": "family",
+      "pace": "relaxed",
+      "elderly": true
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + resort rest",
+        "blocks": [
+          "road_transfer",
+          "resort_boat",
+          "checkin",
+          "resort_pool",
+          "bayview_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Bay cruise",
+        "blocks": [
+          "bay_day_cruise",
+          "optional_kayak",
+          "afternoon_tea",
+          "indoor_pool"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Museum or Sun Wheel + return",
+        "blocks": [
+          "quang_ninh_museum",
+          "lunch",
+          "road_transfer_back"
+        ]
+      }
+    ],
+    "rules": [
+      "cruise_on_best_weather_day",
+      "late_checkout_if_road_traffic_high"
+    ]
+  },
+  {
+    "id": "hl_tpl_active_friends_3n2d",
+    "name": "Hạ Long active friends 3N2Đ",
+    "target": {
+      "partyType": "friends",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + Sun World",
+        "blocks": [
+          "road_transfer",
+          "dragon_park",
+          "typhoon_waterpark",
+          "night_market"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Bay cruise + party",
+        "blocks": [
+          "bay_day_cruise",
+          "kayak",
+          "sunset_cruise",
+          "bar"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Beach + return",
+        "blocks": [
+          "bai_chay_beach",
+          "seafood_lunch",
+          "road_transfer_back"
+        ]
+      }
+    ],
+    "rules": [
+      "offer_fastpass_if_queue_gt_40",
+      "move_waterpark_if_heavy_rain",
+      "watch_bay_condition_for_kayak"
+    ]
+  },
+  {
+    "id": "hl_tpl_couple_2n1d",
+    "name": "Hạ Long couple premium 2N1Đ",
+    "target": {
+      "partyType": "couple",
+      "pace": "balanced",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + spa + fine dining",
+        "blocks": [
+          "road_transfer",
+          "resort_boat",
+          "suite_checkin",
+          "spa",
+          "bayview_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Sunset or day cruise + return",
+        "blocks": [
+          "slow_breakfast",
+          "sunset_or_day_cruise",
+          "late_checkout",
+          "road_transfer_back"
+        ]
+      }
+    ],
+    "rules": [
+      "prioritize_spa_voucher",
+      "prefer_sunset_cruise_if_bay_calm",
+      "avoid_transfer_when_windy"
+    ]
+  },
+  {
+    "id": "hl_tpl_team_2n1d",
+    "name": "Hạ Long team building 2N1Đ",
+    "target": {
+      "partyType": "team",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Road transfer + water park + BBQ",
+        "blocks": [
+          "hanoi_pickup",
+          "private_van",
+          "group_checkin",
+          "waterpark",
+          "bbq_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Cruise party or beach challenge + return",
+        "blocks": [
+          "group_cruise_or_beach",
+          "team_photo",
+          "road_transfer_back"
+        ]
+      }
+    ],
+    "rules": [
+      "use_16seat_van",
+      "book_group_dining_early",
+      "cruise_party_only_if_bay_calm"
+    ]
+  }
+]

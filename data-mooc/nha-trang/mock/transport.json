@@ -1,0 +1,127 @@
+[
+  {
+    "id": "nt_tr_airport_7",
+    "type": "Airport van 7 chỗ Cam Ranh → Cable Car Station",
+    "capacity": 7,
+    "pricePerTrip": 520000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 45,
+    "weatherSensitive": false,
+    "useCases": [
+      "airport_transfer",
+      "family",
+      "rain"
+    ]
+  },
+  {
+    "id": "nt_tr_airport_16",
+    "type": "Airport van 16 chỗ Cam Ranh → Harbour",
+    "capacity": 16,
+    "pricePerTrip": 980000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 48,
+    "weatherSensitive": false,
+    "useCases": [
+      "team_building",
+      "large_family"
+    ]
+  },
+  {
+    "id": "nt_tr_cable_car",
+    "type": "Vinpearl Cable Car",
+    "capacity": 8,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 15,
+    "weatherSensitive": true,
+    "useCases": [
+      "mainland_to_island",
+      "signature_transfer",
+      "view"
+    ]
+  },
+  {
+    "id": "nt_tr_speedboat",
+    "type": "Speedboat to Hòn Tre",
+    "capacity": 12,
+    "pricePerTrip": 350000,
+    "currency": "VND",
+    "elderlyFriendly": false,
+    "acAndStepFree": false,
+    "etaMin": 10,
+    "weatherSensitive": true,
+    "useCases": [
+      "backup_transfer",
+      "late_night",
+      "premium"
+    ]
+  },
+  {
+    "id": "nt_tr_vip_boat",
+    "type": "VIP Private Speedboat",
+    "capacity": 8,
+    "pricePerTrip": 1800000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "weatherSensitive": true,
+    "useCases": [
+      "premium",
+      "couple",
+      "urgent_transfer"
+    ]
+  },
+  {
+    "id": "nt_tr_resort_buggy",
+    "type": "Buggy nội khu Hòn Tre",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 5,
+    "weatherSensitive": false,
+    "useCases": [
+      "in_resort",
+      "elderly",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "nt_tr_shuttle",
+    "type": "Resort Shuttle",
+    "capacity": 20,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 10,
+    "weatherSensitive": false,
+    "useCases": [
+      "hotel_to_vinwonders",
+      "scheduled_transfer"
+    ]
+  },
+  {
+    "id": "nt_tr_city_taxi",
+    "type": "Nha Trang City Taxi 7 chỗ",
+    "capacity": 7,
+    "pricePerTrip": 220000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 8,
+    "weatherSensitive": false,
+    "useCases": [
+      "mainland_dinner",
+      "city_transfer"
+    ]
+  }
+]
