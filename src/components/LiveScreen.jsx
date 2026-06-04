@@ -24,13 +24,6 @@ import {
   Users,
   Wand2,
 } from 'lucide-react'
-import liveContextMock from '../../data-mooc/phu-quoc/mock/live-context.json'
-import attractions from '../../data-mooc/phu-quoc/mock/attractions.json'
-import latestQueues from '../../data-mooc/phu-quoc/mock/latest-queues.json'
-import vouchers from '../../data-mooc/phu-quoc/mock/vouchers.json'
-import transport from '../../data-mooc/phu-quoc/mock/transport.json'
-import restaurants from '../../data-mooc/phu-quoc/mock/restaurants.json'
-import itineraryTemplates from '../../data-mooc/phu-quoc/mock/itinerary-templates.json'
 import {
   buildLiveData,
   buildSuggestion,
@@ -42,21 +35,13 @@ import {
   normalizeLiveContext,
   optimizeTimeline,
 } from '../lib/liveOptimization'
-
-const REQUIRED_PRESETS = ['normal_day', 'rainy_afternoon', 'overcrowded', 'family_fatigue', 'upsell']
+import { getDestinationName, normalizeDestinationId } from '../lib/destinations'
+import { loadLiveMoocClientData } from '../utils/liveMoocData'
 
 const WEATHER_OPTIONS = ['sunny', 'light_rain', 'heavy_rain', 'very_hot', 'thunderstorm']
 const CROWD_OPTIONS = ['low', 'medium', 'high', 'overcrowded']
 const ENERGY_OPTIONS = ['high', 'medium', 'low']
 const LOCATION_OPTIONS = ['resort_lobby', 'vinwonders_gate', 'typhoon_world', 'aquarium', 'safari', 'grand_world']
-
-const QUEUE_CONTROLS = [
-  { id: 'a_typhoon_world', label: 'Water Park' },
-  { id: 'a_sea_shell', label: 'Sea Shell' },
-  { id: 'a_roller_coaster', label: 'Roller Coaster' },
-  { id: 'a_safari_bus', label: 'Safari' },
-  { id: 'a_grand_world_show', label: 'Show' },
-]
 
 const presetLabels = {
   normal_day: 'Normal',
@@ -97,9 +82,11 @@ const locationLabels = {
 }
 
 export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_quoc' }) {
+  const normalizedDestinationId = normalizeDestinationId(destinationId)
+  const localMoocData = useMemo(() => loadLiveMoocClientData(normalizedDestinationId), [normalizedDestinationId])
   const fallbackData = useMemo(
-    () => buildLiveData({ attractions, restaurants, transport, vouchers, itineraryTemplates, latestQueues }),
-    []
+    () => buildLiveData(localMoocData),
+    [localMoocData]
   )
   const fallbackTimeline = useMemo(
     () => itineraryToLiveTimeline(confirmedItinerary, fallbackData) || createInitialTimeline(fallbackData),
@@ -107,10 +94,10 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
   )
   const liveDay = getLiveDay(confirmedItinerary)
   const [data, setData] = useState(fallbackData)
-  const [presets, setPresets] = useState(liveContextMock.presets)
+  const [presets, setPresets] = useState(localMoocData.liveContext.presets)
   const [initialTimeline, setInitialTimeline] = useState(fallbackTimeline)
   const [selectedPreset, setSelectedPreset] = useState('normal_day')
-  const [liveContext, setLiveContext] = useState(() => normalizeLiveContext(liveContextMock.presets.normal_day))
+  const [liveContext, setLiveContext] = useState(() => normalizeLiveContext(localMoocData.liveContext.presets.normal_day))
   const [timeline, setTimeline] = useState(fallbackTimeline)
   const [itemLocks, setItemLocks] = useState({})
   const [toasts, setToasts] = useState([])
@@ -131,25 +118,46 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
     let cancelled = false
 
     async function bootstrap() {
+      const localPresets = localMoocData.liveContext.presets
+      const localPresetId = localPresets[selectedPreset] ? selectedPreset : Object.keys(localPresets)[0]
+      const localTimeline = fallbackTimeline
+
+      setData(fallbackData)
+      setPresets(localPresets)
+      setSelectedPreset(localPresetId)
+      setInitialTimeline(localTimeline)
+      setTimeline(localTimeline)
+      setLiveContext(normalizeLiveContext(localPresets[localPresetId]))
+      setItemLocks({})
+      setToasts([])
+      setReasons([])
+      setExplanation('')
+      setServerSuggestion('')
+      setAiProvider('')
+
       try {
-        const payload = await apiGet('/api/live/bootstrap')
+        const payload = await apiGet(`/api/live/bootstrap?destinationId=${encodeURIComponent(normalizedDestinationId)}`)
         if (cancelled) return
 
         const remoteData = buildLiveData({
-          attractions,
+          destinationId: normalizedDestinationId,
+          destinationName: getDestinationName(normalizedDestinationId),
+          attractions: localMoocData.attractions,
           restaurants: payload.restaurants,
           transport: payload.transport,
           vouchers: payload.vouchers,
-          itineraryTemplates,
+          itineraryTemplates: localMoocData.itineraryTemplates,
           latestQueues: payload.latestQueues,
         })
 
         setData(remoteData)
         setPresets(payload.presets)
+        const remotePresetId = payload.presets[selectedPreset] ? selectedPreset : Object.keys(payload.presets)[0]
         const nextInitialTimeline = itineraryToLiveTimeline(confirmedItinerary, remoteData) || payload.initialTimeline
         setInitialTimeline(nextInitialTimeline)
         setTimeline(nextInitialTimeline)
-        setLiveContext(normalizeLiveContext(payload.presets.normal_day))
+        setSelectedPreset(remotePresetId)
+        setLiveContext(normalizeLiveContext(payload.presets[remotePresetId]))
         setBackendAvailable(true)
       } catch {
         if (cancelled) return
@@ -163,7 +171,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
     return () => {
       cancelled = true
     }
-  }, [confirmedItinerary])
+  }, [confirmedItinerary, fallbackData, fallbackTimeline, localMoocData, normalizedDestinationId])
 
   useEffect(() => {
     if (!backendAvailable) {
@@ -177,7 +185,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       try {
         // Deterministic + fast: live warnings/suggestion only. The provider
         // pill is driven by /optimize, so a control change never regresses it.
-        const payload = await apiPost('/api/live/suggest', { timeline, liveContext })
+        const payload = await apiPost('/api/live/suggest', { destinationId: normalizedDestinationId, timeline, liveContext })
         if (cancelled) return
         setServerSuggestion(payload.suggestion)
         setWarningsByItem(payload.warningsByItem || {})
@@ -193,7 +201,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
       cancelled = true
       window.clearTimeout(timer)
     }
-  }, [timeline, liveContext, backendAvailable])
+  }, [timeline, liveContext, backendAvailable, normalizedDestinationId])
 
   const updateContext = (patch) => {
     setLiveContext((current) => ({ ...current, ...patch }))
@@ -205,7 +213,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
   const selectPreset = (presetId) => {
     setSelectedPreset(presetId)
-    setLiveContext(normalizeLiveContext(presets[presetId]))
+    setLiveContext(normalizeLiveContext(presets[presetId] || Object.values(presets)[0]))
     setTimeline(initialTimeline)
     setItemLocks({})
     setToasts([])
@@ -250,7 +258,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
     setActionBusy(true)
     try {
-      const payload = await apiPost('/api/live/action', { action, params })
+      const payload = await apiPost('/api/live/action', { destinationId: normalizedDestinationId, action, params })
       appendToast(payload.toast)
     } catch {
       setBackendAvailable(false)
@@ -268,7 +276,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
 
     setOptimizing(true)
     try {
-      const payload = await apiPost('/api/live/optimize', { timeline, liveContext, itemLocks })
+      const payload = await apiPost('/api/live/optimize', { destinationId: normalizedDestinationId, timeline, liveContext, itemLocks })
       setTimeline(payload.timeline)
       setServerSuggestion(payload.suggestion)
       setToasts(payload.toasts || [])
@@ -300,7 +308,7 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
             <p className="live-kicker">Vinpearl Journey Concierge</p>
             <h2 className="live-title">Live Reflex</h2>
             <p className="live-subtitle">
-              Ngày {liveDay?.dayNum || 2} · {formatDestinationName(destinationId)} · {confirmedItinerary?.title || 'Lịch trình demo'}
+              Ngày {liveDay?.dayNum || 1} · {getDestinationName(normalizedDestinationId)} · {confirmedItinerary?.title || 'Lịch trình demo'}
             </p>
           </div>
           <div className="live-hero-icon">
@@ -335,6 +343,8 @@ export default function LiveScreen({ confirmedItinerary, destinationId = 'phu_qu
             liveContext={liveContext}
             selectedPreset={selectedPreset}
             presetHint={presetHint}
+            presets={presets}
+            data={data}
             onPreset={selectPreset}
             onChange={updateContext}
             onQueueChange={updateQueue}
@@ -583,7 +593,20 @@ function providerPillLabel({ backendAvailable, optimizing, aiProvider }) {
   return 'AI · sẵn sàng'
 }
 
-function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPreset, onChange, onQueueChange }) {
+function SimulationControlPanel({ liveContext, selectedPreset, presetHint, presets, data, onPreset, onChange, onQueueChange }) {
+  const presetIds = useMemo(() => {
+    const ids = Object.keys(presets || {})
+    return ids.length ? ids : ['normal_day']
+  }, [presets])
+  const queueControls = useMemo(() => {
+    const controls = (data?.attractions || [])
+      .filter((item) => item.defaultQueueMin != null || data.latestQueues?.[item.id] != null)
+      .slice(0, 5)
+      .map((item) => ({ id: item.id, label: item.name }))
+    return controls.length ? controls : (data?.attractions || []).slice(0, 5).map((item) => ({ id: item.id, label: item.name }))
+  }, [data])
+  const voucherOptions = data?.vouchers || []
+
   return (
     <section className="live-control-panel">
       <div className="live-control-header">
@@ -599,14 +622,14 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPre
 
       <ControlSection step={1} title="Kịch bản mẫu" hint="Chọn nhanh một tình huống có sẵn">
         <div className="live-preset-grid">
-          {REQUIRED_PRESETS.map((presetId) => (
+          {presetIds.map((presetId) => (
             <button
               key={presetId}
               type="button"
               className={`live-preset-btn ${selectedPreset === presetId ? 'active' : ''}`}
               onClick={() => onPreset(presetId)}
             >
-              {presetLabels[presetId]}
+              {presetLabels[presetId] || presetId}
             </button>
           ))}
         </div>
@@ -682,7 +705,7 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPre
         />
         <div className="live-queue-panel">
           <p className="live-mini-title">Thời gian chờ (phút)</p>
-          {QUEUE_CONTROLS.map((control) => (
+          {queueControls.map((control) => (
             <label className="live-queue-row" key={control.id}>
               <span>{control.label}</span>
               <input
@@ -705,8 +728,9 @@ function SimulationControlPanel({ liveContext, selectedPreset, presetHint, onPre
             onChange={(event) => onChange({ voucherExpiring: event.target.value })}
           >
             <option value="">Không dùng</option>
-            <option value="v_fnb_today">Giảm 30% F&B hôm nay</option>
-            <option value="v_safari_meal">Voucher bữa ăn Safari</option>
+            {voucherOptions.map((voucher) => (
+              <option value={voucher.id} key={voucher.id}>{voucher.title}</option>
+            ))}
           </select>
         </label>
       </ControlSection>
@@ -765,7 +789,11 @@ function ToggleControl({ label, checked, onChange }) {
 
 function getLiveDay(itinerary) {
   if (!itinerary?.days?.length) return null
-  return itinerary.days.find((day) => day.dayNum === 2) || itinerary.days[0]
+  const explicitDayNum = itinerary.liveDayNum || itinerary.activeDayNum || itinerary.currentDayNum
+  return itinerary.days.find((day) => day.dayNum === explicitDayNum)
+    || itinerary.days.find((day) => day.isLive || day.isCurrent)
+    || itinerary.days.find((day) => day.events?.length)
+    || itinerary.days[0]
 }
 
 function itineraryToLiveTimeline(itinerary, data) {
@@ -936,7 +964,6 @@ function findCurrentIndex(timeline, nowMinutes) {
 // Gợi ý phương tiện di chuyển giữa hai điểm theo bối cảnh thực tế.
 function pickTransport(from, to, ctx, data) {
   const vehicles = data?.transport || []
-  const byId = (id) => vehicles.find((v) => v.id === id)
   const fromZone = normalizeText(from?.zone || 'resort')
   const toZone = normalizeText(to?.zone || '')
   const sameZone = Boolean(fromZone) && fromZone === toZone
@@ -948,23 +975,29 @@ function pickTransport(from, to, ctx, data) {
     etaMin: vehicle?.etaMin ?? 8,
     price: vehicle?.pricePerTrip ?? 0,
     bookable: true,
-    vehicleId: vehicle?.id || 'tr_greensm_7',
+    vehicleId: vehicle?.id || null,
     note,
   })
+  const vehicleByType = (pattern) => vehicles.find((vehicle) => pattern.test(`${vehicle.type || ''} ${vehicle.id || ''}`))
+  const coveredVehicle = vehicles.find((vehicle) => vehicle.acAndStepFree || vehicle.elderlyFriendly)
+    || vehicleByType(/green|car|taxi|xe|boat|shuttle/i)
+    || vehicles[0]
+  const buggy = vehicleByType(/buggy|cart|xe dien|electric/i) || coveredVehicle
+  const shuttle = vehicleByType(/shuttle|bus|van|boat|transfer/i) || coveredVehicle
 
   if (sameZone && !elderly && !rainy) {
     return { mode: 'Đi bộ', etaMin: 5, price: 0, bookable: false, vehicleId: null, note: 'Cùng khu vực, đi bộ ~5 phút' }
   }
   if (rainy) {
-    return make(byId('tr_greensm_7'), 'Có mái che, tránh mưa', 'Green SM xe điện')
+    return make(coveredVehicle, 'Có mái che, tránh mưa', 'Xe nội khu')
   }
   if (elderly) {
-    return make(byId(sameZone ? 'tr_buggy' : 'tr_greensm_7'), 'Ưu tiên xe êm, lên xuống dễ', 'Buggy nội khu')
+    return make(sameZone ? buggy : coveredVehicle, 'Ưu tiên xe êm, lên xuống dễ', 'Xe hỗ trợ')
   }
   if (sameZone) {
-    return make(byId('tr_buggy'), 'Buggy nội khu di chuyển nhanh', 'Buggy nội khu')
+    return make(buggy, 'Buggy nội khu di chuyển nhanh', 'Buggy nội khu')
   }
-  return make(byId('tr_resort_shuttle') || byId('tr_greensm_7'), 'Tuyến shuttle nối khu', 'Resort Shuttle')
+  return make(shuttle, 'Tuyến shuttle nối khu', 'Resort Shuttle')
 }
 
 function formatMinutes(total) {
@@ -982,16 +1015,6 @@ function formatVnd(value) {
 function shortZone(zone) {
   if (!zone) return 'Vinpearl'
   return zone.length > 16 ? `${zone.slice(0, 15)}…` : zone
-}
-
-function formatDestinationName(destinationId) {
-  const labels = {
-    phu_quoc: 'Phú Quốc',
-    nha_trang: 'Nha Trang',
-    hoi_an: 'Nam Hội An',
-    ha_long: 'Hạ Long',
-  }
-  return labels[destinationId] || 'Vinpearl'
 }
 
 async function apiGet(url) {

@@ -5,12 +5,15 @@ import {
   getQueueMin,
   optimizeTimeline,
 } from '../lib/liveOptimization.js'
+import { normalizeDestinationId } from '../lib/destinations.js'
 import { createBootstrapPayload, loadLiveMoocData } from './liveData.js'
 import { explainOptimization } from './llmGateway.js'
 
-export async function handleLiveApi({ method, pathname, body }) {
+export async function handleLiveApi({ method, pathname, searchParams, body }) {
+  const destinationId = getRequestDestinationId(searchParams, body)
+
   if (method === 'GET' && pathname === '/api/live/bootstrap') {
-    return jsonResponse(createBootstrapPayload())
+    return jsonResponse(createBootstrapPayload(destinationId))
   }
 
   if (method === 'POST' && pathname === '/api/live/suggest') {
@@ -20,7 +23,7 @@ export async function handleLiveApi({ method, pathname, body }) {
     // /suggest fires on every control change, so it must be instant and free:
     // deterministic warnings + headline suggestion only. The LLM is reserved
     // for the explicit /optimize action where a spinner covers the latency.
-    const data = loadLiveMoocData()
+    const data = loadLiveMoocData(destinationId)
     const warningsByItem = buildWarningsByItem(timeline, liveContext)
     const suggestion = buildSuggestion(timeline, liveContext, data.engineData)
 
@@ -31,7 +34,7 @@ export async function handleLiveApi({ method, pathname, body }) {
     const { timeline, liveContext, itemLocks = {} } = body || {}
     assertLivePayload(timeline, liveContext)
 
-    const data = loadLiveMoocData()
+    const data = loadLiveMoocData(destinationId)
     const result = optimizeTimeline(timeline, liveContext, itemLocks, data.engineData)
     const explanation = await explainOptimization({
       suggestion: result.suggestion,
@@ -52,7 +55,7 @@ export async function handleLiveApi({ method, pathname, body }) {
   if (method === 'POST' && pathname === '/api/live/action') {
     const { action, params = {} } = body || {}
     if (!action) return jsonResponse({ error: 'Missing action' }, 400)
-    return jsonResponse(executeMockAction(action, params))
+    return jsonResponse(executeMockAction(action, params, destinationId))
   }
 
   return jsonResponse({ error: 'Not found' }, 404)
@@ -71,13 +74,16 @@ function buildWarningsByItem(timeline, liveContext) {
   )
 }
 
-function executeMockAction(action, params) {
-  const data = loadLiveMoocData()
+function executeMockAction(action, params, destinationId) {
+  const data = loadLiveMoocData(destinationId)
 
   if (action === 'call_green_sm') {
-    const transport = data.transport.find((item) => item.id === (params.transportId || 'tr_greensm_7'))
+    const transport = data.transport.find((item) => item.id === params.transportId)
       || data.transport.find((item) => item.elderlyFriendly && item.acAndStepFree)
-    const confirmation = findConfirmation(data, 'transport', transport?.id)
+      || data.transport[0]
+    if (!transport) return actionFailure('Không tìm thấy phương tiện phù hợp')
+
+    const confirmation = findConfirmation(data, 'transport', transport.id)
       || makeConfirmation('transport', transport?.id, `${transport?.type || 'Green SM'} đang đến điểm đón`)
 
     return {
@@ -90,8 +96,11 @@ function executeMockAction(action, params) {
 
   if (action === 'reserve_restaurant') {
     const restaurant = data.restaurants.find((item) => item.id === params.restaurantId)
-      || data.restaurants.find((item) => item.id === 'rst_almaz')
-    const slot = params.slot || restaurant.slots?.find((item) => item >= '18:00') || restaurant.slots?.[0]
+      || data.restaurants.find((item) => item.slots?.some((slot) => slot >= '18:00'))
+      || data.restaurants[0]
+    if (!restaurant) return actionFailure('Không tìm thấy nhà hàng phù hợp')
+
+    const slot = params.slot || restaurant.slots?.find((item) => item >= '18:00') || restaurant.slots?.[0] || '18:00'
     const confirmation = findConfirmation(data, 'restaurant_booking', restaurant.id)
       || makeConfirmation('restaurant_booking', restaurant.id, `Đã giữ bàn ${restaurant.name} lúc ${slot}`)
 
@@ -114,7 +123,7 @@ function executeMockAction(action, params) {
       }
     }
 
-    const targetId = params.targetId || params.restaurantId || 'rst_almaz'
+    const targetId = params.targetId || params.restaurantId || data.restaurants[0]?.id || 'live'
     return {
       success: true,
       confirmation: makeConfirmation('voucher', targetId, `Đã áp dụng ${voucher.title}`),
@@ -124,14 +133,18 @@ function executeMockAction(action, params) {
   }
 
   if (action === 'reserve_spa') {
-    const confirmation = findConfirmation(data, 'spa', params.spaId || 'a_spa_akoya')
-      || makeConfirmation('spa', params.spaId || 'a_spa_akoya', 'Đã giữ Akoya Spa session')
+    const spa = data.attractions.find((item) => item.id === params.spaId)
+      || data.attractions.find((item) => /spa/i.test(`${item.id} ${item.name}`))
+    if (!spa) return actionFailure('Không tìm thấy spa phù hợp')
+
+    const confirmation = findConfirmation(data, 'spa', spa.id)
+      || makeConfirmation('spa', spa.id, `Đã giữ ${spa.name}`)
 
     return {
       success: true,
       confirmation,
-      toast: '✓ Đã giữ Akoya Spa session',
-      data: data.attractions.find((item) => item.id === (params.spaId || 'a_spa_akoya')) || null,
+      toast: `✓ Đã giữ ${spa.name}`,
+      data: spa,
     }
   }
 
@@ -141,6 +154,19 @@ function executeMockAction(action, params) {
     toast: `Action không được hỗ trợ: ${action}`,
     data: null,
   }
+}
+
+function actionFailure(toast) {
+  return {
+    success: false,
+    confirmation: null,
+    toast,
+    data: null,
+  }
+}
+
+function getRequestDestinationId(searchParams, body) {
+  return normalizeDestinationId(searchParams?.get('destinationId') || body?.destinationId)
 }
 
 function findConfirmation(data, type, linkedEntityId) {

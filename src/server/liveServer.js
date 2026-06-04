@@ -25,6 +25,7 @@ const server = http.createServer(async (req, res) => {
     const response = await handleLiveApi({
       method: req.method,
       pathname: url.pathname,
+      searchParams: url.searchParams,
       body,
     })
     writeResponse(res, response)

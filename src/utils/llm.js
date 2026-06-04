@@ -1,8 +1,8 @@
 import { getWeatherForecast } from './rag'
 
 // Environment variables loaded by Vite
-const API_KEY = import.meta.env.VITE_CUSTOM_LLM_KEY || 'sk-MCkLdiMLeEi443oKQ3IipGBuiup7k28wpabKS3Sk3BbKwHT0w5vC7Vgjdkjkv8Xa';
-const BASE_URL = '/api-llm/zen/go/v1';
+const API_KEY = import.meta.env.VITE_CUSTOM_LLM_KEY || '';
+const BASE_URL = import.meta.env.VITE_CUSTOM_LLM_BASE_URL || '/api-llm/zen/go/v1';
 const MODEL_NAME = import.meta.env.VITE_CUSTOM_LLM_MODEL || 'deepseek-v4-flash';
 
 let cachedHotels = null;
@@ -121,6 +121,11 @@ export async function getRAGContext(query, destinationId = 'phu_quoc') {
 
 // Invoke custom LLM completions API
 export async function executeLLMChat(messages, systemPrompt = '') {
+  if (!API_KEY) {
+    console.warn('VITE_CUSTOM_LLM_KEY is not configured; skipping browser LLM call.');
+    return null;
+  }
+
   const url = `${BASE_URL.replace(/\/$/, '')}/chat/completions`;
   const headers = {
     'Content-Type': 'application/json',
