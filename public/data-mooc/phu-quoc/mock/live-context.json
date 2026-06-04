@@ -1,0 +1,131 @@
+{
+  "updatedAt": "2026-06-04T09:00:00+07:00",
+  "controlMapping": {
+    "weather": "Weather selector",
+    "rainProb": "Rain probability slider",
+    "crowd": "Crowd selector",
+    "queues": "Per-attraction queue override",
+    "energy": "Family energy selector",
+    "childTired": "Child tired toggle",
+    "elderlyMode": "Elderly mode toggle",
+    "location": "Current location selector",
+    "voucherExpiring": "Expiring voucher selector",
+    "dinnerSlotTight": "Dinner slot pressure toggle"
+  },
+  "presets": {
+    "normal_day": {
+      "weather": "sunny",
+      "rainProb": 10,
+      "temperatureC": 30,
+      "crowd": "medium",
+      "queues": {
+        "a_roller_coaster": 15,
+        "a_typhoon_world": 20,
+        "a_sea_shell": 10,
+        "a_safari_bus": 15,
+        "a_indoor_show": 5,
+        "a_grand_world_show": 10
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "vinwonders_gate",
+      "recommendedReflex": "Giữ lịch outdoor buổi sáng, indoor sau ăn trưa"
+    },
+    "rainy_afternoon": {
+      "weather": "heavy_rain",
+      "rainProb": 85,
+      "temperatureC": 27,
+      "crowd": "low",
+      "queues": {
+        "a_typhoon_world": 5,
+        "a_sea_shell": 25,
+        "a_indoor_show": 30,
+        "a_teddy_bear": 12
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "vinwonders_gate",
+      "recommendedReflex": "Đổi Water Park sang Aquarium/Teddy Bear, đẩy outdoor sang ngày mai"
+    },
+    "overcrowded": {
+      "weather": "sunny",
+      "rainProb": 5,
+      "temperatureC": 31,
+      "crowd": "high",
+      "queues": {
+        "a_roller_coaster": 55,
+        "a_typhoon_world": 50,
+        "a_sea_shell": 20,
+        "a_safari_bus": 28
+      },
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "typhoon_world",
+      "recommendedReflex": "Đề xuất Fastpass hoặc đảo sang Safari/Grand World nhẹ hơn"
+    },
+    "family_fatigue": {
+      "weather": "very_hot",
+      "rainProb": 0,
+      "temperatureC": 34,
+      "crowd": "medium",
+      "queues": {
+        "a_roller_coaster": 30,
+        "a_safari_bus": 18,
+        "a_giraffe_restaurant": 20
+      },
+      "energy": "low",
+      "childTired": true,
+      "elderlyMode": true,
+      "location": "safari",
+      "recommendedReflex": "Chèn nghỉ trưa, gọi buggy/shuttle, chuyển sang hoạt động indoor hoặc low-walk"
+    },
+    "upsell": {
+      "weather": "sunny",
+      "rainProb": 10,
+      "temperatureC": 30,
+      "crowd": "medium",
+      "queues": {},
+      "energy": "high",
+      "childTired": false,
+      "elderlyMode": false,
+      "location": "grand_world",
+      "voucherExpiring": "v_fnb_today",
+      "dinnerSlotTight": true,
+      "recommendedReflex": "Gợi ý giữ bàn sớm và dùng voucher F&B trước khi hết hạn"
+    },
+    "airport_delay": {
+      "weather": "cloudy",
+      "rainProb": 35,
+      "temperatureC": 29,
+      "crowd": "medium",
+      "queues": {
+        "a_grand_world_show": 10
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "airport",
+      "flightDelayMin": 80,
+      "recommendedReflex": "Rút ngắn ngày 1, ưu tiên check-in + ăn tối + show gần khách sạn"
+    },
+    "last_day_checkout": {
+      "weather": "sunny",
+      "rainProb": 15,
+      "temperatureC": 32,
+      "crowd": "medium",
+      "queues": {
+        "a_teddy_bear": 10,
+        "a_bamboo_legend": 5
+      },
+      "energy": "medium",
+      "childTired": false,
+      "elderlyMode": true,
+      "location": "hotel_lobby",
+      "checkoutPressure": true,
+      "recommendedReflex": "Kích hoạt late checkout, chọn hoạt động gần Grand World trước giờ ra sân bay"
+    }
+  }
+}

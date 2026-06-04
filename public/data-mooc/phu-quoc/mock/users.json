@@ -1,0 +1,216 @@
+[
+  {
+    "id": "u_001",
+    "name": "Gia đình Minh",
+    "origin": "HAN",
+    "destination": "PQC",
+    "travelWindow": {
+      "start": "2026-06-12",
+      "end": "2026-06-15",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Gold",
+      "points": 12400
+    },
+    "party": {
+      "adults": 2,
+      "children": 2,
+      "elderly": 1,
+      "childAges": [
+        5,
+        8
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "theme_park",
+        "safari",
+        "show",
+        "fine_dining"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "comfort",
+      "roomPreference": [
+        "villa",
+        "connecting",
+        "ground_floor_available"
+      ],
+      "mealPreference": [
+        "seafood",
+        "vietnamese",
+        "kids_menu"
+      ]
+    }
+  },
+  {
+    "id": "u_002",
+    "name": "Nhóm bạn Linh",
+    "origin": "HAN",
+    "destination": "PQC",
+    "travelWindow": {
+      "start": "2026-06-20",
+      "end": "2026-06-23",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Platinum",
+      "points": 28700
+    },
+    "party": {
+      "adults": 4,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "active",
+      "interests": [
+        "theme_park",
+        "water_park",
+        "night_show",
+        "food"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "near_entertainment",
+        "breakfast_included"
+      ],
+      "mealPreference": [
+        "bbq",
+        "seafood",
+        "bar"
+      ]
+    }
+  },
+  {
+    "id": "u_003",
+    "name": "Cặp đôi Huy & An",
+    "origin": "SGN",
+    "destination": "PQC",
+    "travelWindow": {
+      "start": "2026-06-28",
+      "end": "2026-07-01",
+      "nights": 3
+    },
+    "vinclub": {
+      "tier": "Silver",
+      "points": 5200
+    },
+    "party": {
+      "adults": 2,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "balanced",
+      "interests": [
+        "spa",
+        "fine_dining",
+        "show",
+        "beach"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "comfort",
+      "roomPreference": [
+        "ocean_view",
+        "quiet_zone"
+      ],
+      "mealPreference": [
+        "western",
+        "seafood",
+        "romantic"
+      ]
+    }
+  },
+  {
+    "id": "u_004",
+    "name": "Đại gia đình Phương",
+    "origin": "DAD",
+    "destination": "PQC",
+    "travelWindow": {
+      "start": "2026-06-07",
+      "end": "2026-06-11",
+      "nights": 4
+    },
+    "vinclub": {
+      "tier": "Diamond",
+      "points": 61500
+    },
+    "party": {
+      "adults": 6,
+      "children": 3,
+      "elderly": 2,
+      "childAges": [
+        4,
+        7,
+        11
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "interests": [
+        "safari",
+        "kids_club",
+        "show",
+        "buffet"
+      ],
+      "avoidLongWalk": true,
+      "budgetStyle": "premium",
+      "roomPreference": [
+        "multi_bedroom_villa",
+        "private_pool",
+        "buggy"
+      ],
+      "mealPreference": [
+        "buffet",
+        "vietnamese",
+        "kids_menu"
+      ]
+    }
+  },
+  {
+    "id": "u_005",
+    "name": "Team building Alpha",
+    "origin": "HAN",
+    "destination": "PQC",
+    "travelWindow": {
+      "start": "2026-07-02",
+      "end": "2026-07-04",
+      "nights": 2
+    },
+    "vinclub": {
+      "tier": "Gold",
+      "points": 19800
+    },
+    "party": {
+      "adults": 12,
+      "children": 0,
+      "elderly": 0,
+      "childAges": []
+    },
+    "preferences": {
+      "pace": "active",
+      "interests": [
+        "team_activity",
+        "grand_world",
+        "water_park",
+        "night_show"
+      ],
+      "avoidLongWalk": false,
+      "budgetStyle": "value",
+      "roomPreference": [
+        "twin_room",
+        "near_grand_world"
+      ],
+      "mealPreference": [
+        "buffet",
+        "bbq",
+        "beer_pairing"
+      ]
+    }
+  }
+]

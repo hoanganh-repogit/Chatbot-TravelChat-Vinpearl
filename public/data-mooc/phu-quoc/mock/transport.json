@@ -1,0 +1,104 @@
+[
+  {
+    "id": "tr_greensm_7",
+    "type": "Green SM xe điện 7 chỗ",
+    "capacity": 7,
+    "pricePerTrip": 220000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 8,
+    "useCases": [
+      "airport_transfer",
+      "family_move",
+      "rain"
+    ]
+  },
+  {
+    "id": "tr_greensm_16",
+    "type": "Green SM van 16 chỗ",
+    "capacity": 16,
+    "pricePerTrip": 420000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 14,
+    "useCases": [
+      "team_building",
+      "large_family",
+      "airport_transfer"
+    ]
+  },
+  {
+    "id": "tr_resort_shuttle",
+    "type": "Resort Shuttle",
+    "capacity": 20,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": true,
+    "etaMin": 12,
+    "useCases": [
+      "hotel_to_park",
+      "scheduled_transfer"
+    ]
+  },
+  {
+    "id": "tr_buggy",
+    "type": "Buggy nội khu",
+    "capacity": 5,
+    "pricePerTrip": 0,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 5,
+    "useCases": [
+      "in_resort",
+      "elderly",
+      "short_distance"
+    ]
+  },
+  {
+    "id": "tr_taxi_4",
+    "type": "Taxi 4 chỗ",
+    "capacity": 4,
+    "pricePerTrip": 180000,
+    "currency": "VND",
+    "elderlyFriendly": false,
+    "acAndStepFree": false,
+    "etaMin": 6,
+    "useCases": [
+      "couple",
+      "quick_move"
+    ]
+  },
+  {
+    "id": "tr_taxi_7",
+    "type": "Taxi 7 chỗ",
+    "capacity": 7,
+    "pricePerTrip": 250000,
+    "currency": "VND",
+    "elderlyFriendly": true,
+    "acAndStepFree": false,
+    "etaMin": 9,
+    "useCases": [
+      "family",
+      "backup"
+    ]
+  },
+  {
+    "id": "tr_water_taxi",
+    "type": "Water Taxi Grand World",
+    "capacity": 6,
+    "pricePerTrip": 350000,
+    "currency": "VND",
+    "elderlyFriendly": false,
+    "acAndStepFree": false,
+    "etaMin": 15,
+    "useCases": [
+      "experience",
+      "grand_world",
+      "sunset"
+    ]
+  }
+]

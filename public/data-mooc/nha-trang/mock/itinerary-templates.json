@@ -1,0 +1,182 @@
+[
+  {
+    "id": "nt_tpl_family_3n2d_relaxed",
+    "name": "Nha Trang family island 3N2Đ relaxed",
+    "target": {
+      "partyType": "family",
+      "pace": "relaxed",
+      "elderly": true
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + cable car + resort rest",
+        "blocks": [
+          "airport_transfer",
+          "cable_car",
+          "checkin",
+          "resort_rest",
+          "island_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Sea World + King's Garden + Tata Show",
+        "blocks": [
+          "sea_world_aquarium",
+          "mermaid_show",
+          "lunch",
+          "nap",
+          "kings_garden",
+          "tata_show"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Light VinWonders + checkout",
+        "blocks": [
+          "world_garden",
+          "sky_wheel",
+          "souvenir",
+          "cable_car_return",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "prefer_cable_car_if_calm",
+      "insert_rest_after_120min",
+      "avoid_waterpark_if_rainProb_gt_60"
+    ]
+  },
+  {
+    "id": "nt_tpl_active_3n2d",
+    "name": "Nha Trang active friends 3N2Đ",
+    "target": {
+      "partyType": "friends",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + water park + beach",
+        "blocks": [
+          "cable_car",
+          "tropical_waterpark",
+          "pool_bar",
+          "beach_time"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Thrill rides + night show",
+        "blocks": [
+          "zipline",
+          "alpine_coaster",
+          "sky_wheel",
+          "tata_show",
+          "late_dinner"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Photo spots + city seafood",
+        "blocks": [
+          "world_garden",
+          "japanese_garden",
+          "mainland_seafood",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "offer_fastpass_if_queue_gt_40",
+      "watch_wind_for_zipline",
+      "move_waterpark_if_heavy_rain"
+    ]
+  },
+  {
+    "id": "nt_tpl_couple_3n2d",
+    "name": "Nha Trang couple luxury 3N2Đ",
+    "target": {
+      "partyType": "couple",
+      "pace": "balanced",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + private villa + spa",
+        "blocks": [
+          "airport_transfer",
+          "speedboat",
+          "villa_checkin",
+          "overwater_spa",
+          "romantic_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Sea World + gardens + Tata Show",
+        "blocks": [
+          "aquarium",
+          "japanese_garden",
+          "beach_sunset",
+          "tata_show"
+        ]
+      },
+      {
+        "day": 3,
+        "theme": "Slow morning + late checkout",
+        "blocks": [
+          "breakfast",
+          "pool",
+          "late_checkout",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "prioritize_spa_voucher",
+      "prefer_romantic_dining_slot",
+      "avoid_transfer_when_windy"
+    ]
+  },
+  {
+    "id": "nt_tpl_team_2n1d",
+    "name": "Nha Trang team building 2N1Đ",
+    "target": {
+      "partyType": "team",
+      "pace": "active",
+      "elderly": false
+    },
+    "days": [
+      {
+        "day": 1,
+        "theme": "Arrival + group water park + BBQ",
+        "blocks": [
+          "airport_transfer",
+          "group_checkin",
+          "waterpark",
+          "bbq_dinner"
+        ]
+      },
+      {
+        "day": 2,
+        "theme": "Thrill challenge + return",
+        "blocks": [
+          "zipline",
+          "alpine_coaster",
+          "group_photo",
+          "airport_transfer"
+        ]
+      }
+    ],
+    "rules": [
+      "use_group_daypass",
+      "book_group_dining_early",
+      "prefer_16seat_van"
+    ]
+  }
+]

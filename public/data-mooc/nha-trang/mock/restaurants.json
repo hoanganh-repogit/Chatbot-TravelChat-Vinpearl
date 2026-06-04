@@ -1,0 +1,359 @@
+[
+  {
+    "id": "nt_rst_lagoon",
+    "name": "Lagoon Restaurant",
+    "zone": "Hòn Tre Resort",
+    "cuisine": [
+      "buffet",
+      "vietnamese",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 520000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "11:30",
+      "12:30",
+      "18:00",
+      "18:30",
+      "19:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_fnb_today",
+      "nt_v_diamond_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_orchid",
+    "name": "Orchid Restaurant",
+    "zone": "Hòn Tre Resort",
+    "cuisine": [
+      "asian",
+      "seafood",
+      "family"
+    ],
+    "indoor": true,
+    "pricePerPax": 470000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30",
+      "19:30"
+    ],
+    "acceptsVoucher": [
+      "nt_v_fnb_today"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_jasmine",
+    "name": "Jasmine Garden Dining",
+    "zone": "Hòn Tre Resort",
+    "cuisine": [
+      "vietnamese",
+      "set_menu",
+      "elderly_friendly"
+    ],
+    "indoor": true,
+    "pricePerPax": 390000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:30",
+      "18:00",
+      "19:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_fnb_today"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_luxury_beach",
+    "name": "Luxury Beachfront Dinner",
+    "zone": "Luxury Resort",
+    "cuisine": [
+      "seafood",
+      "romantic",
+      "premium"
+    ],
+    "indoor": true,
+    "pricePerPax": 950000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_couple_dining",
+      "nt_v_diamond_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_spa_tea",
+    "name": "Overwater Spa Tea Lounge",
+    "zone": "Luxury Resort",
+    "cuisine": [
+      "tea",
+      "dessert",
+      "romantic"
+    ],
+    "indoor": true,
+    "pricePerPax": 320000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_spa_tea"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_sea_world",
+    "name": "Sea World Café",
+    "zone": "VinWonders",
+    "cuisine": [
+      "fast_food",
+      "kids_menu",
+      "snack"
+    ],
+    "indoor": true,
+    "pricePerPax": 180000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "15:00",
+      "16:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_tropical",
+    "name": "Tropical Paradise Snack Bar",
+    "zone": "VinWonders",
+    "cuisine": [
+      "fast_food",
+      "snack",
+      "drink"
+    ],
+    "indoor": false,
+    "pricePerPax": 160000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "slots": [
+      "10:30",
+      "11:30",
+      "12:30",
+      "14:30",
+      "16:30"
+    ],
+    "acceptsVoucher": [
+      "nt_v_waterpark_drink"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_festive",
+    "name": "Festive Hill Buffet",
+    "zone": "VinWonders",
+    "cuisine": [
+      "buffet",
+      "asian",
+      "western"
+    ],
+    "indoor": true,
+    "pricePerPax": 430000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30"
+    ],
+    "acceptsVoucher": [
+      "nt_v_fnb_today"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_kings",
+    "name": "King's Garden Family Lunch",
+    "zone": "VinWonders",
+    "cuisine": [
+      "vietnamese",
+      "kids_menu",
+      "quick_lunch"
+    ],
+    "indoor": true,
+    "pricePerPax": 260000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:45",
+      "11:45",
+      "12:45",
+      "13:45"
+    ],
+    "acceptsVoucher": [
+      "nt_v_family_meal"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_mainland_seafood",
+    "name": "Nha Trang Mainland Seafood",
+    "zone": "Mainland City",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "group"
+    ],
+    "indoor": true,
+    "pricePerPax": 560000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "19:30",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_mainland_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": true
+  },
+  {
+    "id": "nt_rst_city_bbq",
+    "name": "City BBQ & Beer",
+    "zone": "Mainland City",
+    "cuisine": [
+      "bbq",
+      "beer_pairing",
+      "group"
+    ],
+    "indoor": true,
+    "pricePerPax": 420000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_group_bbq"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": true
+  },
+  {
+    "id": "nt_rst_poolbar",
+    "name": "Island Pool Bar",
+    "zone": "Hòn Tre Resort",
+    "cuisine": [
+      "snack",
+      "drink",
+      "poolside"
+    ],
+    "indoor": false,
+    "pricePerPax": 240000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "slots": [
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00"
+    ],
+    "acceptsVoucher": [
+      "nt_v_waterpark_drink"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nt_rst_breakfast_beachfront",
+    "name": "Beachfront Breakfast",
+    "zone": "Mainland Hotel",
+    "cuisine": [
+      "breakfast",
+      "buffet",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 0,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "08:30",
+      "09:30"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  }
+]

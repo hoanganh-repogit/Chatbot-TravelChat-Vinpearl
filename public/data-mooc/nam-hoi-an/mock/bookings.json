@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nha_bk_001",
+    "userId": "nha_u_001",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vn1711_20260613",
+      "vn1724_20260616"
+    ],
+    "selectedTransferIds": [
+      "nha_gt_dad_7_20260613",
+      "nha_gt_dad_7_20260616"
+    ],
+    "selectedHotelId": "nha_h_resort_golf",
+    "selectedRoomId": "nha_r_resort_connecting",
+    "selectedTicketId": "nha_t_resort_park_bundle",
+    "selectedTransportIds": [
+      "nha_tr_airport_7",
+      "nha_tr_buggy",
+      "nha_tr_resort_shuttle"
+    ],
+    "estimatedTotal": 41800000,
+    "currency": "VND",
+    "confidence": 0.91,
+    "explain": [
+      "Bay sáng đến Đà Nẵng giúp còn thời gian check-in và nghỉ tại resort",
+      "Connecting Deluxe Rooms đủ sức chứa 2 người lớn, 2 trẻ em và 1 người lớn tuổi",
+      "Bundle Resort + VinWonders phù hợp lịch 3N2Đ relaxed"
+    ]
+  },
+  {
+    "id": "nha_bk_002",
+    "userId": "nha_u_003",
+    "status": "draft_plan",
+    "selectedTransferIds": [
+      "nha_gt_hoian_7_20260627"
+    ],
+    "selectedHotelId": "nha_h_resort_golf",
+    "selectedRoomId": "nha_r_resort_suite",
+    "selectedTicketId": "nha_t_spa_couple",
+    "selectedTransportIds": [
+      "nha_tr_taxi_local",
+      "nha_tr_resort_shuttle"
+    ],
+    "estimatedTotal": 37200000,
+    "currency": "VND",
+    "confidence": 0.86,
+    "explain": [
+      "Suite biển + spa phù hợp cặp đôi",
+      "Old Town evening nên có buffer nếu traffic cao",
+      "Voucher rooftop/spa tạo upsell tự nhiên"
+    ]
+  },
+  {
+    "id": "nha_bk_003",
+    "userId": "nha_u_005",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vj620_20260702",
+      "vj633_20260704"
+    ],
+    "selectedTransferIds": [
+      "nha_gt_dad_29_20260702",
+      "nha_gt_dad_29_20260704"
+    ],
+    "selectedHotelId": "nha_h_team_resort",
+    "selectedRoomId": "nha_r_team_bulk",
+    "selectedTicketId": "nha_t_group_daypass",
+    "selectedTransportIds": [
+      "nha_tr_coach_29",
+      "nha_tr_buggy"
+    ],
+    "estimatedTotal": 60500000,
+    "currency": "VND",
+    "confidence": 0.84,
+    "explain": [
+      "Coach 29 chỗ phù hợp đoàn 18 người",
+      "Group Twin Package tối ưu chi phí",
+      "Group day pass rẻ hơn mua lẻ cho đoàn đông"
+    ]
+  }
+]

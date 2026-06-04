@@ -1,0 +1,75 @@
+[
+  {
+    "id": "nt_bk_001",
+    "userId": "nt_u_001",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vn1551_20260614",
+      "vn1564_20260617"
+    ],
+    "selectedHotelId": "nt_h_resort",
+    "selectedRoomId": "nt_r_resort_connecting",
+    "selectedTicketId": "nt_t_resort_park_bundle",
+    "selectedTransportIds": [
+      "nt_tr_airport_7",
+      "nt_tr_cable_car",
+      "nt_tr_resort_buggy"
+    ],
+    "estimatedTotal": 43200000,
+    "currency": "VND",
+    "confidence": 0.9,
+    "explain": [
+      "Connecting room đủ sức chứa gia đình 2 người lớn, 2 trẻ em, 1 người lớn tuổi",
+      "Bundle resort + VinWonders giảm thao tác mua vé/cáp treo riêng",
+      "Cáp treo phù hợp nếu thời tiết ổn; có speedboat backup nếu delay"
+    ]
+  },
+  {
+    "id": "nt_bk_002",
+    "userId": "nt_u_003",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vn1947_20260628",
+      "vn1948_20260630"
+    ],
+    "selectedHotelId": "nt_h_luxury",
+    "selectedRoomId": "nt_r_luxury_1br",
+    "selectedTicketId": "nt_t_spa_couple",
+    "selectedTransportIds": [
+      "nt_tr_vip_boat",
+      "nt_tr_airport_7"
+    ],
+    "estimatedTotal": 48500000,
+    "currency": "VND",
+    "confidence": 0.87,
+    "explain": [
+      "Luxury villa phù hợp cặp đôi ưu tiên riêng tư",
+      "Spa voucher và dinner slot romantic tạo upsell tự nhiên",
+      "VIP boat chỉ nên giữ nếu biển êm"
+    ]
+  },
+  {
+    "id": "nt_bk_003",
+    "userId": "nt_u_005",
+    "status": "draft_plan",
+    "selectedFlightIds": [
+      "vj602_20260702",
+      "vj611_20260704"
+    ],
+    "selectedHotelId": "nt_h_harbour",
+    "selectedRoomId": "nt_r_harbour_group",
+    "selectedTicketId": "nt_t_group_daypass",
+    "selectedTransportIds": [
+      "nt_tr_airport_16",
+      "nt_tr_cable_car"
+    ],
+    "estimatedTotal": 61800000,
+    "currency": "VND",
+    "confidence": 0.84,
+    "explain": [
+      "Group room package tối ưu chi phí cho 14 người",
+      "Gần cáp treo giúp giảm friction khi đi VinWonders",
+      "Group day pass rẻ hơn mua lẻ cho đoàn đông"
+    ]
+  }
+]

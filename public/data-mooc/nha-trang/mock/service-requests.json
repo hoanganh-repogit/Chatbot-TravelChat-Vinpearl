@@ -1,0 +1,56 @@
+[
+  {
+    "id": "nt_sr_001",
+    "userId": "nt_u_001",
+    "type": "restaurant_booking",
+    "status": "confirmed",
+    "time": "2026-06-14T18:30:00+07:00",
+    "detail": "Đã giữ bàn Lagoon Restaurant cho 5 người tại Hòn Tre Resort",
+    "linkedEntityId": "nt_rst_lagoon"
+  },
+  {
+    "id": "nt_sr_002",
+    "userId": "nt_u_001",
+    "type": "transport",
+    "status": "confirmed",
+    "time": "2026-06-14T09:20:00+07:00",
+    "detail": "Airport van 7 chỗ đón tại Cam Ranh, nối chuyến cáp treo sang Hòn Tre",
+    "linkedEntityId": "nt_tr_airport_7"
+  },
+  {
+    "id": "nt_sr_003",
+    "userId": "nt_u_003",
+    "type": "spa",
+    "status": "confirmed",
+    "time": "2026-06-27T16:00:00+07:00",
+    "detail": "Đã đặt Overwater Spa couple session 90 phút",
+    "linkedEntityId": "nt_a_spa_overwater"
+  },
+  {
+    "id": "nt_sr_004",
+    "userId": "nt_u_004",
+    "type": "buggy",
+    "status": "confirmed",
+    "time": "2026-06-09T14:15:00+07:00",
+    "detail": "Buggy nội khu hỗ trợ người lớn tuổi từ King's Garden về resort nghỉ trưa",
+    "linkedEntityId": "nt_tr_resort_buggy"
+  },
+  {
+    "id": "nt_sr_005",
+    "userId": "nt_u_005",
+    "type": "group_dining",
+    "status": "pending",
+    "time": "2026-07-02T19:00:00+07:00",
+    "detail": "Đang giữ chỗ City BBQ & Beer cho 14 người",
+    "linkedEntityId": "nt_rst_city_bbq"
+  },
+  {
+    "id": "nt_sr_006",
+    "userId": "nt_u_002",
+    "type": "fastpass",
+    "status": "confirmed",
+    "time": "2026-06-22T10:00:00+07:00",
+    "detail": "Đã thêm Thrill Ride Fastpass cho Zipline + Alpine Coaster",
+    "linkedEntityId": "nt_t_thrill_fastpass"
+  }
+]

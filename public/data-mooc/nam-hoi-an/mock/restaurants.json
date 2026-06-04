@@ -1,0 +1,355 @@
+[
+  {
+    "id": "nha_rst_cocoon",
+    "name": "Cocoon Restaurant",
+    "zone": "Resort",
+    "cuisine": [
+      "buffet",
+      "vietnamese",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 520000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "11:30",
+      "12:30",
+      "18:00",
+      "18:30",
+      "19:00"
+    ],
+    "acceptsVoucher": [
+      "nha_v_fnb_today",
+      "nha_v_diamond_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_lantern",
+    "name": "Lantern Seafood",
+    "zone": "Resort",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "family"
+    ],
+    "indoor": true,
+    "pricePerPax": 620000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30",
+      "19:30"
+    ],
+    "acceptsVoucher": [
+      "nha_v_fnb_today",
+      "nha_v_diamond_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_latitude",
+    "name": "Latitude Rooftop Bar",
+    "zone": "Resort",
+    "cuisine": [
+      "bar",
+      "western",
+      "romantic"
+    ],
+    "indoor": true,
+    "pricePerPax": 480000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "17:30",
+      "18:30",
+      "19:30",
+      "20:30"
+    ],
+    "acceptsVoucher": [
+      "nha_v_rooftop"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_akoya_tea",
+    "name": "Akoya Spa Tea Lounge",
+    "zone": "Resort",
+    "cuisine": [
+      "tea",
+      "dessert",
+      "romantic"
+    ],
+    "indoor": true,
+    "pricePerPax": 300000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00"
+    ],
+    "acceptsVoucher": [
+      "nha_v_spa_tea"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_riverine",
+    "name": "Riverine Restaurant",
+    "zone": "VinWonders",
+    "cuisine": [
+      "vietnamese",
+      "kids_menu",
+      "quick_lunch"
+    ],
+    "indoor": true,
+    "pricePerPax": 260000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:45",
+      "11:45",
+      "12:45",
+      "13:45"
+    ],
+    "acceptsVoucher": [
+      "nha_v_family_meal"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_harbor_buffet",
+    "name": "Harbor Corner Buffet",
+    "zone": "VinWonders",
+    "cuisine": [
+      "buffet",
+      "asian",
+      "western"
+    ],
+    "indoor": true,
+    "pricePerPax": 420000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:00",
+      "18:00",
+      "18:30"
+    ],
+    "acceptsVoucher": [
+      "nha_v_fnb_today"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_waterworld",
+    "name": "Water World Snack Bar",
+    "zone": "VinWonders",
+    "cuisine": [
+      "fast_food",
+      "kids_menu",
+      "drink"
+    ],
+    "indoor": false,
+    "pricePerPax": 170000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": false,
+    "slots": [
+      "10:30",
+      "11:30",
+      "12:30",
+      "14:30",
+      "16:30"
+    ],
+    "acceptsVoucher": [
+      "nha_v_water_drink"
+    ],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_indoor_cafe",
+    "name": "Indoor Games Café",
+    "zone": "VinWonders",
+    "cuisine": [
+      "coffee",
+      "snack",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 160000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "10:00",
+      "11:00",
+      "12:00",
+      "15:00",
+      "16:00"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_oldtown_seafood",
+    "name": "Hoi An Old Town Seafood",
+    "zone": "HoiAnOldTown",
+    "cuisine": [
+      "seafood",
+      "vietnamese",
+      "romantic"
+    ],
+    "indoor": true,
+    "pricePerPax": 520000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "nha_v_oldtown_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": true
+  },
+  {
+    "id": "nha_rst_oldtown_cao_lau",
+    "name": "Cao Lầu Hội An",
+    "zone": "HoiAnOldTown",
+    "cuisine": [
+      "vietnamese",
+      "local_food",
+      "budget"
+    ],
+    "indoor": true,
+    "pricePerPax": 180000,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "17:30",
+      "18:30",
+      "19:30",
+      "20:30"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": true,
+    "requiresTransfer": true
+  },
+  {
+    "id": "nha_rst_bbq_team",
+    "name": "Bình Minh BBQ & Beer",
+    "zone": "Resort/Event",
+    "cuisine": [
+      "bbq",
+      "beer_pairing",
+      "group"
+    ],
+    "indoor": true,
+    "pricePerPax": 430000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "18:00",
+      "18:30",
+      "19:00",
+      "20:00"
+    ],
+    "acceptsVoucher": [
+      "nha_v_group_bbq"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_golf_club",
+    "name": "Golf Clubhouse Dining",
+    "zone": "Golf",
+    "cuisine": [
+      "western",
+      "vietnamese",
+      "premium"
+    ],
+    "indoor": true,
+    "pricePerPax": 560000,
+    "currency": "VND",
+    "kidFriendly": false,
+    "elderlyFriendly": true,
+    "slots": [
+      "11:30",
+      "12:30",
+      "17:30",
+      "18:30"
+    ],
+    "acceptsVoucher": [
+      "nha_v_golf_dining"
+    ],
+    "avgMealDurationMin": 80,
+    "reservationRecommended": true,
+    "requiresTransfer": false
+  },
+  {
+    "id": "nha_rst_breakfast_condotel",
+    "name": "Beachfront Breakfast Buffet",
+    "zone": "Condotel",
+    "cuisine": [
+      "breakfast",
+      "buffet",
+      "kids_menu"
+    ],
+    "indoor": true,
+    "pricePerPax": 0,
+    "currency": "VND",
+    "kidFriendly": true,
+    "elderlyFriendly": true,
+    "slots": [
+      "06:30",
+      "07:30",
+      "08:30",
+      "09:30"
+    ],
+    "acceptsVoucher": [],
+    "avgMealDurationMin": 45,
+    "reservationRecommended": false,
+    "requiresTransfer": false
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "nt_t_vinwonders_1d",
+    "name": "Vé VinWonders Nha Trang 1 ngày kèm cáp treo khứ hồi",
+    "covers": [
+      "VinWonders",
+      "CableCarRoundTrip"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 950000,
+      "child": 710000,
+      "senior": 710000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "theme_park_only",
+      "short_trip"
+    ]
+  },
+  {
+    "id": "nt_t_vinwonders_2d",
+    "name": "VinWonders Nha Trang 2 ngày unlimited kèm cáp treo",
+    "covers": [
+      "VinWonders",
+      "CableCarRoundTrip",
+      "Unlimited2Days"
+    ],
+    "validDays": 2,
+    "pricePerPax": {
+      "adult": 1350000,
+      "child": 1020000,
+      "senior": 1020000
+    },
+    "savingVsSeparate": 0.18,
+    "currency": "VND",
+    "bestFor": [
+      "family",
+      "relaxed",
+      "split_park_days"
+    ]
+  },
+  {
+    "id": "nt_t_evening_show",
+    "name": "Evening Show Add-on: Tata Show",
+    "covers": [
+      "TataShow"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 350000,
+      "child": 250000,
+      "senior": 250000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "night_show",
+      "signature"
+    ]
+  },
+  {
+    "id": "nt_t_waterpark_fastpass",
+    "name": "Water Park Fastpass",
+    "covers": [
+      "TropicalParadiseFastpass"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 420000,
+      "child": 320000,
+      "senior": 320000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "overcrowded",
+      "active",
+      "water_park"
+    ]
+  },
+  {
+    "id": "nt_t_thrill_fastpass",
+    "name": "Thrill Ride Fastpass: Zipline + Alpine Coaster",
+    "covers": [
+      "Zipline",
+      "AlpineCoasterFastpass"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 520000,
+      "child": 0,
+      "senior": 0
+    },
+    "savingVsSeparate": 0.08,
+    "currency": "VND",
+    "bestFor": [
+      "active",
+      "queue_high"
+    ]
+  },
+  {
+    "id": "nt_t_resort_park_bundle",
+    "name": "Resort + VinWonders Bundle",
+    "covers": [
+      "VinWonders",
+      "CableCarRoundTrip",
+      "ResortGuestBenefit"
+    ],
+    "validDays": 3,
+    "pricePerPax": {
+      "adult": 1200000,
+      "child": 900000,
+      "senior": 900000
+    },
+    "savingVsSeparate": 0.22,
+    "currency": "VND",
+    "bestFor": [
+      "island_resort",
+      "family",
+      "multi_day"
+    ]
+  },
+  {
+    "id": "nt_t_vip_island_transfer",
+    "name": "VIP Speedboat Island Transfer",
+    "covers": [
+      "Speedboat",
+      "PriorityPier"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 680000,
+      "child": 520000,
+      "senior": 520000
+    },
+    "savingVsSeparate": 0,
+    "currency": "VND",
+    "bestFor": [
+      "weather_buffer",
+      "premium",
+      "elderly"
+    ]
+  },
+  {
+    "id": "nt_t_group_daypass",
+    "name": "Group Day Pass 10+ VinWonders",
+    "covers": [
+      "VinWonders",
+      "CableCarRoundTrip",
+      "GroupEntry"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 820000,
+      "child": 650000,
+      "senior": 650000
+    },
+    "savingVsSeparate": 0.14,
+    "currency": "VND",
+    "bestFor": [
+      "team_building",
+      "large_group"
+    ]
+  },
+  {
+    "id": "nt_t_spa_couple",
+    "name": "Couple Spa Add-on",
+    "covers": [
+      "OverwaterSpa"
+    ],
+    "validDays": 1,
+    "pricePerPax": {
+      "adult": 1350000,
+      "child": 0,
+      "senior": 1150000
+    },
+    "savingVsSeparate": 0.12,
+    "currency": "VND",
+    "bestFor": [
+      "couple",
+      "rainy_day",
+      "premium"
+    ]
+  }
+]

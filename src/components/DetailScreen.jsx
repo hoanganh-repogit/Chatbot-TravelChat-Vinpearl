@@ -58,8 +58,22 @@ export default function DetailScreen({ destination, onClose, onGenerateItinerary
             ))}
           </div>
 
+          {/* Map widget section */}
+          <div className="detail-map-section" style={{ marginTop: '24px' }}>
+            <h2 className="detail-highlights-title" style={{ fontSize: '16px', fontWeight: '700', color: '#1e293b', marginBottom: '10px' }}>
+              Vị trí trên bản đồ
+            </h2>
+            <div className="detail-map-wrapper" style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid #cbd5e1' }}>
+              <iframe
+                src={`/map.html?destId=${destination.id}`}
+                style={{ width: '100%', height: '180px', border: 'none', display: 'block' }}
+                title="Bản đồ resort"
+              />
+            </div>
+          </div>
+
           {/* Highlights */}
-          <div className="detail-highlights-section">
+          <div className="detail-highlights-section" style={{ marginTop: '24px' }}>
             <h2 className="detail-highlights-title">Điểm nổi bật</h2>
             <ul className="detail-highlights-list">
               {destination.highlights.map((high, idx) => (
@@ -87,7 +101,7 @@ export default function DetailScreen({ destination, onClose, onGenerateItinerary
         >
           Tạo lịch trình
         </button>
-        <button className="detail-btn primary">
+        <button className="detail-btn primary" onClick={() => alert(`Chào mừng bạn đến với ${destination.name}!`)}>
           Xem resort
         </button>
       </div>
